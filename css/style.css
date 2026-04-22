@@ -671,7 +671,7 @@ text-align: center;
 padding: 3em 0;
 }
 .featured_content {
-background: #f6f6f6;
+background: #f0f8f3; 
 width:100%;
 padding:10px 0;
 }
@@ -1826,5 +1826,38 @@ padding-top: 12px;
     padding: 2px 6px !important;
     font-size: 12px !important;
   }
+
+  /* Slider móvil */
+  .flexslider .slides img {
+    object-fit: cover;
+    object-position: left center;
+    height: 420px;
+    width: 100%;
+  }
+
+  .flex-caption {
+    left: 5% !important;
+    right: 5% !important;
+    width: 90% !important;
+    font-size: 13px !important;
+  }
+
+  .flex-caption h3 {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+  }
+
+  .flex-caption p {
+    font-size: 12px !important;
+  }
+
+  .flex-caption {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+    bottom: 20px !important;
+}
+
 }
  
