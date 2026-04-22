@@ -412,7 +412,7 @@ bottom: -30px;
 /*Tarjetas*/
 .alfa-cards-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
         padding: 20px 0 40px;
       }
@@ -1935,4 +1935,286 @@ padding-top: 12px;
 
 	@media (max-width: 480px) {
     .ns-bg { font-size:55px; }
+}
+
+alfa-page { font-family: 'Prompt', sans-serif; }
+
+  /* HERO */
+  .alfa-hero {
+    background: #0b5640;
+    padding: 80px 24px 64px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .alfa-hero-bg {
+    position: absolute;
+    inset: 0;
+    font-size: 200px;
+    font-weight: 900;
+    color: rgba(58,249,162,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    letter-spacing: -10px;
+    font-family: 'Prompt', sans-serif;
+  }
+  .alfa-hero-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #3AF9A2;
+    margin-bottom: 12px;
+    font-family: 'Prompt', sans-serif;
+  }
+  .alfa-hero h1 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    font-family: 'Prompt', sans-serif;
+  }
+  .alfa-hero h1 span { color: #3AF9A2; }
+  .alfa-hero-sub {
+    font-size: 15px;
+    color: rgba(255,255,255,0.75);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.75;
+    font-family: 'Prompt', sans-serif;
+  }
+  .alfa-hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+  .alfa-hero-stat { text-align: center; }
+  .alfa-hero-stat-num {
+    font-size: 30px;
+    font-weight: 700;
+    color: #3AF9A2;
+    display: block;
+    font-family: 'Prompt', sans-serif;
+  }
+  .alfa-hero-stat-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: 'Prompt', sans-serif;
+  }
+
+  /* SECCIONES */
+  .alfa-section { padding: 64px 0; }
+  .alfa-section-inner { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .alfa-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #018d38;
+    margin-bottom: 8px;
+    font-family: 'Prompt', sans-serif;
+  }
+  .alfa-section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0b3d25;
+    margin-bottom: 16px;
+    line-height: 1.25;
+    font-family: 'Prompt', sans-serif;
+  }
+  .alfa-section-body {
+    font-size: 15px;
+    color: #4a7a5e;
+    line-height: 1.75;
+    max-width: 680px;
+    font-family: 'Prompt', sans-serif;
+  }
+
+  /* CRISIS */
+  .alfa-crisis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 36px;
+  }
+  .alfa-crisis-card {
+    background: #f0f8f3;
+    border-radius: 10px;
+    padding: 24px 20px;
+    border-left: 3px solid #018d38;
+  }
+  .alfa-crisis-num {
+    font-size: 34px;
+    font-weight: 700;
+    color: #018d38;
+    line-height: 1;
+    margin-bottom: 8px;
+    font-family: 'Prompt', sans-serif;
+  }
+  .alfa-crisis-text {
+    font-size: 13px;
+    color: #2d4a38;
+    line-height: 1.65;
+    font-family: 'Prompt', sans-serif;
+  }
+  .alfa-footnote {
+    font-size: 11px;
+    color: #888;
+    margin-top: 16px;
+    font-family: 'Prompt', sans-serif;
+  }
+
+  /* PROGRAMAS */
+  .alfa-prog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 36px;
+  }
+  .alfa-prog-card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1.5px solid #d6ede2;
+    padding: 28px 22px;
+  }
+  .alfa-prog-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: #018d38;
+    color: #fff;
+    padding: 3px 12px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    font-family: 'Prompt', sans-serif;
+  }
+  .alfa-prog-badge.piloto { background: #0b5640; }
+  .alfa-prog-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0b3d25;
+    margin-bottom: 4px;
+    font-family: 'Prompt', sans-serif;
+  }
+  .alfa-prog-grado {
+    font-size: 12px;
+    color: #018d38;
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-family: 'Prompt', sans-serif;
+  }
+  .alfa-prog-card p {
+    font-size: 13px;
+    color: #4a7a5e;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    font-family: 'Prompt', sans-serif;
+  }
+  .alfa-prog-num {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0b5640;
+    font-family: 'Prompt', sans-serif;
+  }
+  .alfa-prog-num-label {
+    font-size: 11px;
+    color: #888;
+    font-weight: 400;
+    font-family: 'Prompt', sans-serif;
+  }
+
+  /* ECOSISTEMA */
+  .alfa-eco { background: #0b5640; }
+  .alfa-eco .alfa-eyebrow { color: #3AF9A2; }
+  .alfa-eco .alfa-section-title { color: #fff; }
+  .alfa-eco-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 36px;
+  }
+  .alfa-eco-card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 22px 18px;
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+  .alfa-eco-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #3AF9A2;
+    color: #0b5640;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    font-family: 'Prompt', sans-serif;
+  }
+  .alfa-eco-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+    font-family: 'Prompt', sans-serif;
+  }
+  .alfa-eco-card p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.65;
+    font-family: 'Prompt', sans-serif;
+  }
+
+  /* CIFRAS */
+  .alfa-cifras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+    margin-top: 36px;
+  }
+  .alfa-cifra-card {
+    text-align: center;
+    padding: 28px 16px;
+    border-radius: 10px;
+    background: #f0f8f3;
+  }
+  .alfa-cifra-num {
+    font-size: 32px;
+    font-weight: 700;
+    color: #018d38;
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Prompt', sans-serif;
+  }
+  .alfa-cifra-label {
+    font-size: 11px;
+    color: #4a7a5e;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: 'Prompt', sans-serif;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .alfa-hero h1 { font-size: 26px; }
+    .alfa-hero-stats { gap: 24px; }
+    .alfa-section-title { font-size: 22px; }
+    .alfa-hero-bg { font-size: 100px; }
+  }
+
+  .alfa-cifras-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
 }
