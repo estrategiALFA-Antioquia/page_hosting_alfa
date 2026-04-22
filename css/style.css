@@ -409,6 +409,104 @@ bottom: -30px;
     background: #ffffff !important;
 }
 
+/*Tarjetas*/
+.alfa-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 20px 0 40px;
+      }
+      @media (max-width: 768px) {
+        .alfa-cards-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 480px) {
+        .alfa-cards-grid { grid-template-columns: 1fr; }
+      }
+      .alfa-fc {
+        height: 200px;
+        perspective: 900px;
+        cursor: pointer;
+      }
+      .alfa-fi {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.55s cubic-bezier(.4,0,.2,1);
+      }
+      .alfa-fc:hover .alfa-fi {
+        transform: rotateY(180deg);
+      }
+      .alfa-ff, .alfa-fb {
+        position: absolute;
+        inset: 0;
+        border-radius: 12px;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 18px;
+        text-align: center;
+      }
+      .alfa-ff {
+        background: #ffffff;
+        border: 1.5px solid #d6ede2;
+      }
+      .alfa-fb {
+        background: #018d38;
+        transform: rotateY(180deg);
+      }
+      .alfa-ic { width: 52px; height: 52px; margin-bottom: 10px; }
+      .alfa-ct {
+        font-size: 13px;
+        font-weight: 700;
+        color: #0b3d25;
+        margin: 0 0 4px;
+        font-family: 'Prompt', sans-serif;
+      }
+      .alfa-cs {
+        font-size: 11px;
+        color: #4a7a5e;
+        line-height: 1.5;
+        margin: 0;
+        font-family: 'Prompt', sans-serif;
+      }
+      .alfa-bt {
+        font-size: 12px;
+        font-weight: 500;
+        color: rgba(255,255,255,0.75);
+        margin: 0 0 6px;
+        font-family: 'Prompt', sans-serif;
+        letter-spacing: 0.04em;
+      }
+      .alfa-bd {
+        font-size: 13px;
+        color: #ffffff;
+        line-height: 1.6;
+        margin: 0 0 14px;
+        font-family: 'Prompt', sans-serif;
+        font-weight: 400;
+      }
+      .alfa-bb {
+        font-size: 11px;
+        font-weight: 600;
+        color: #018d38;
+        background: #ffffff;
+        border: none;
+        border-radius: 20px;
+        padding: 6px 16px;
+        text-decoration: none;
+        display: inline-block;
+        font-family: 'Prompt', sans-serif;
+        transition: background 0.2s;
+      }
+      .alfa-bb:hover { background: #e8f5ee; color: #018d38; text-decoration: none; }
+
+
+
+
 /* Testimonial
 ----------------------------------*/
 .testimonial-area {
@@ -575,10 +673,10 @@ padding: 3em 0;
 .featured_content {
 background: #f6f6f6;
 width:100%;
-padding:60px 0;
+padding:10px 0;
 }
 .feature_grid1 .fa{
-color: #6E6E6E;
+color: #fdfcfc;
 border: 1px solid #0A6352;
 border-radius: 50%;
 width: 85px;
@@ -596,6 +694,16 @@ color: #666;
 font-size: 0.95em;
 line-height: 1.5em;
 margin-bottom: 1em;
+}
+
+.alfa-bd {
+    color: #ffffff !important;
+}
+.alfa-bt {
+    color: rgba(255,255,255,0.75) !important;
+}
+.alfa-ct {
+    color: #0b5640 !important;
 }
 
 .feature_btn {
