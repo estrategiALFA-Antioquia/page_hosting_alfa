@@ -326,8 +326,8 @@ right:0px;
 }
 .flex-caption {zoom: 1;
 bottom: 35px; background-color: rgba(11, 86, 64, 1); color: #fff; margin: 0; padding: 25px 30px 25px 25px; position: absolute; right: 5%; left: auto; width: auto; max-width: 45%; border-radius: 8px 0 0 8px; display: inline-block; }
-.flex-caption h3 {color: #3AF9A2; letter-spacing: 1px; margin-bottom: 8px; text-transform: none;font-size: 20px;}
-.flex-caption p {margin: 0 0 15px;}
+.flex-caption h3 {letter-spacing: 1px; margin-bottom: 8px; text-transform: none;font-size: 20px;}
+.flex-caption p {margin: 0 0 15px;text-align: center; font-weight: 400;}
 .skill-home{
 margin-bottom:50px;
 }
@@ -402,6 +402,13 @@ margin: 20px 0;
 .carousel-indicators {
 bottom: -30px;
 }
+.flex-control-paging li a {
+    background: rgba(255,255,255,0.5) !important;
+}
+.flex-control-paging li a.flex-active {
+    background: #ffffff !important;
+}
+
 /* Testimonial
 ----------------------------------*/
 .testimonial-area {
