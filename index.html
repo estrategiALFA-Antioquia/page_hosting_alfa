@@ -257,57 +257,6 @@
 </div>
 </div>
 
-</section>
-	<div class="testimonial-area">
-    <div class="testimonial-solid">
-        <div class="container"> 
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="">
-                        <a href="#"></a>
-                    </li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1" class="">
-                        <a href="#"></a>
-                    </li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2" class="active">
-                        <a href="#"></a>
-                    </li>
-                    <li data-target="#carousel-example-generic" data-slide-to="3" class="">
-                        <a href="#"></a>
-                    </li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="item">
-                        <p>Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
-                        <p>
-                            <b>- Mark John -</b>
-                        </p>
-                    </div>
-                    <div class="item">
-                        <p>Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
-                        <p>
-                            <b>- Jaison Warner -</b>
-                        </p>
-                    </div>
-                    <div class="item active">
-                        <p>Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
-                        <p>
-                            <b>- Tony Antonio -</b>
-                        </p>
-                    </div>
-                    <div class="item">
-                        <p>Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
-                        <p>
-                            <b>- Leena Doe -</b>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 <section id="noticias" style="position:relative; padding:3rem 0 2rem; overflow:hidden; font-family:'Prompt',sans-serif;">
   <div class="ns-bg">NOTICIAS</div>
   <div class="ns-inner">
@@ -395,99 +344,78 @@
 
 
 
+<section id="aliados" style="position:relative; padding:3rem 0; background:#fff; border-top:1px solid #e8f0eb; font-family:'Prompt',sans-serif;">
+  <!-- <div style="position:absolute; left:50%; top:25%; transform:translate(-50%,-50%); font-size:100px; font-weight:900; color:rgba(1,141,56,0.2); letter-spacing:-4px; pointer-events:none; line-height:1; white-space:nowrap; z-index:0;">ALIADOS</div> -->
+  <div class="al-inner">
+    <div class="al-split">
+
+      <!-- OPERADORES -->
+      <div class="al-left">
+        <span class="al-label">Aliados operadores</span>
+        <div style="display:flex; gap:24px; margin-top:12px; max-width:500px;">
+
+          <!-- COLUMNA 1 -->
+          <div class="al-fade-wrap" id="alFadeWrap1" style="flex:1;">
+            <div class="al-fade-logo active">
+              <img src="img/aliados/Fundacion-Fraternidad-de-Medellin-1.png" alt="Fraternidad Medellín" style="max-width:180px; max-height:80px; object-fit:contain;">
+            </div>
+            <div class="al-fade-logo">
+              <img src="img/aliados/corpoeducacion.png" alt="Corpoeducación" style="max-width:180px; max-height:80px; object-fit:contain;">
+            </div>
+            <div class="al-fade-logo">
+              <img src="img/aliados/rotor.png" alt="ROTOR" style="max-width:180px; max-height:80px; object-fit:contain;">
+            </div>
+          </div>
+
+          <!-- COLUMNA 2 -->
+          <div class="al-fade-wrap" id="alFadeWrap2" style="flex:1;">
+            <div class="al-fade-logo active">
+              <img src="img/aliados/cta.jpg" alt="CTA" style="max-width:180px; max-height:80px; object-fit:contain;">
+            </div>
+            <div class="al-fade-logo">
+              <img src="img/aliados/ucn.svg" alt="U. Católica del Norte" style="max-width:180px; max-height:80px; object-fit:contain;">
+            </div>
+            <!--div class="al-fade-logo">
+              <img src="img/aliados/activa.png" alt="ACTIVA" style="max-width:180px; max-height:80px; object-fit:contain;">
+            </div> -->
+          </div>
+
+        </div>
+      </div><!-- cierre al-left -->
+
+      <div class="al-divider"></div>
+
+      <!-- BANCO MUNDIAL -->
+      <div class="al-right">
+        <span class="al-right-label">Aliado técnico</span>
+        
+        <img src="img/aliados/bm_2.png" alt="Banco Mundial" style="max-width:270px; max-height:80px; object-fit:contain;">
+      </div>
+
+    </div><!-- cierre al-split -->
+  </div><!-- cierre al-inner -->
+
+  <script>
+    var al1 = 0;
+    var al1logos = document.querySelectorAll('#alFadeWrap1 .al-fade-logo');
+    setInterval(function() {
+      al1logos[al1].classList.remove('active');
+      al1 = (al1 + 1) % al1logos.length;
+      al1logos[al1].classList.add('active');
+    }, 3500);
+
+    var al2 = 0;
+    var al2logos = document.querySelectorAll('#alFadeWrap2 .al-fade-logo');
+    setInterval(function() {
+      al2logos[al2].classList.remove('active');
+      al2 = (al2 + 1) % al2logos.length;
+      al2logos[al2].classList.add('active');
+    }, 4000);
+  </script>
+
+</section>
 
 
-
-	<section id="content">
-	
-	
-	<div class="container">
-		
-	     <div class="row">
-							<div class="col-md-8">
-								<!-- Heading and para -->
-								<div class="block-heading-two">
-									<h3><span>Why Choose Us?</span></h3>
-								</div>
-								<p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur. <br><br>Sed ut perspiciaatis iste natus error sit voluptatem probably haven't heard of them accusamus.</p>
-								<p>Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo quasi architecto beatae vitae dicta sunt explicabo.</p>
-							</div>
-							<div class="col-md-4">
-								<div class="block-heading-two">
-									<h3><span>Our Solution</span></h3>
-								</div>		
-								<!-- Accordion starts -->
-								<div class="panel-group" id="accordion-alt3">
-								 <!-- Panel. Use "panel-XXX" class for different colors. Replace "XXX" with color. -->
-								  <div class="panel">	
-									<!-- Panel heading -->
-									 <div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3">
-											<i class="fa fa-angle-right"></i> Accordion Heading Text Item # 1
-										  </a>
-										</h4>
-									 </div>
-									 <div id="collapseOne-alt3" class="panel-collapse collapse">
-										<!-- Panel body -->
-										<div class="panel-body">
-										  Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-										</div>
-									 </div>
-								  </div>
-								  <div class="panel">
-									 <div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseTwo-alt3">
-											<i class="fa fa-angle-right"></i> Accordion Heading Text Item # 2
-										  </a>
-										</h4>
-									 </div>
-									 <div id="collapseTwo-alt3" class="panel-collapse collapse">
-										<div class="panel-body">
-										  Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-										</div>
-									 </div>
-								  </div>
-								  <div class="panel">
-									 <div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3">
-											<i class="fa fa-angle-right"></i> Accordion Heading Text Item # 3
-										  </a>
-										</h4>
-									 </div>
-									 <div id="collapseThree-alt3" class="panel-collapse collapse">
-										<div class="panel-body">
-										  Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-										</div>
-									 </div>
-								  </div>
-								  <div class="panel">
-									 <div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3">
-											<i class="fa fa-angle-right"></i> Accordion Heading Text Item # 4
-										  </a>
-										</h4>
-									 </div>
-									 <div id="collapseFour-alt3" class="panel-collapse collapse">
-										<div class="panel-body">
-										  Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-										</div>
-									 </div>
-								  </div>
-								</div>
-								<!-- Accordion ends -->
-								
-							</div>
-							
-					
-							
-						</div>
-	
-	
-	</div>
 	
 	
 	<footer>

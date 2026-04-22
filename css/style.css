@@ -1860,7 +1860,7 @@ padding-top: 12px;
 }
 
 }
-    .ns-bg { position:absolute; right:60%; top:25%; transform:translate(-50%, -50%); font-size:100px; font-weight:900; color:rgba(1,141,56,0.3); letter-spacing:-4px; pointer-events:none; line-height:1; white-space:nowrap; z-index:0; }
+    .ns-bg { position:absolute; right:50%; top:25%; transform:translate(-50%, -50%); font-size:100px; font-weight:900; color:rgba(1,141,56,0.3); letter-spacing:-4px; pointer-events:none; line-height:1; white-space:nowrap; z-index:0; }
     .ns-inner { position:relative; z-index:1; max-width:1140px; margin:0 auto; padding:0 24px; }
     .ns-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:24px; }
     .ns-label { font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#018d38; padding-bottom:8px; border-bottom:2px solid #018d38; display:inline-block; font-family:'Prompt',sans-serif; }
@@ -1902,9 +1902,33 @@ padding-top: 12px;
 }
 
 #noticias {
-    background: #ffffff;
+    background: #f0f8f3;
     border-top: 1px solid #e8f0eb;
 }
 
 .ns-cat { text-align:right; color:#018d38 !important; }
 .ns-date { text-align:right; color:#0b3d25 !important; }
+
+	.al-inner { max-width:1140px; margin:0 auto; padding:0 24px; display:flex; justify-content:center; }
+    .al-split { display:flex; align-items:flex-start; gap:80px; justify-content:center; }
+    .al-left { flex:1; }
+    .al-label { font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#018d38; padding-bottom:6px; border-bottom:1.5px solid #018d38; display:inline-block; margin-bottom:16px; font-family:'Prompt',sans-serif; }
+    .al-divider { display:none; }
+    .al-right { flex-shrink:0; display:flex; flex-direction:column; align-items:flex-start; gap:8px; padding-top:0; margin-top:0; }
+    .al-right-label { font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#018d38; font-family:'Prompt',sans-serif; padding-bottom:6px; border-bottom:1.5px solid #018d38; display:inline-block; margin-bottom:16px; }
+    .al-fade-wrap { position:relative; height:64px; min-width:200px; }
+    .al-fade-logo { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity 0.8s; }
+    .al-fade-logo.active { opacity:1; }
+    .al-fade-logo img { max-width:160px; max-height:56px; object-fit:contain; }
+    .al-fade-logo .al-ph { height:56px; padding:0 20px; border:1.5px solid #d6ede2; border-radius:6px; display:flex; align-items:center; justify-content:center; background:#f8fdf9; min-width:160px; }
+    .al-fade-logo .al-ph span { font-size:11px; color:#0b5640; font-weight:600; text-align:center; font-family:'Prompt',sans-serif; }
+    .al-bm-ph { width:130px; height:56px; border:1.5px solid #d6ede2; border-radius:6px; display:flex; align-items:center; justify-content:center; background:#f8fdf9; }
+    .al-bm-ph span { font-size:11px; color:#0b5640; font-weight:600; font-family:'Prompt',sans-serif; }
+    .al-bm-img { max-width:130px; max-height:56px; object-fit:contain; }
+    @media (max-width:600px) {
+      .al-split { flex-direction:column; align-items:flex-start; gap:24px; }
+      .al-divider { width:100%; height:1px; margin:0; }
+      .al-right { align-items:flex-start; }
+    }
+
+	.al-right { align-self:center; }
