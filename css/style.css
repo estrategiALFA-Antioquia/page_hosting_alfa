@@ -1814,4 +1814,17 @@ padding-top: 12px;
 
 }
 
+@media (max-width: 768px) {
+  .logo-gob {
+    height: 50px !important;
+  }
+  .navbar-brand {
+    font-size: 13px !important;
+    gap: 6px !important;
+  }
+  .navbar-brand span {
+    padding: 2px 6px !important;
+    font-size: 12px !important;
+  }
+}
  
