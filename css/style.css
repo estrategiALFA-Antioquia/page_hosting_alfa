@@ -2526,3 +2526,452 @@ alfa-page { font-family: 'Prompt', sans-serif; }
     .doc-fase { border-right: none; border-bottom: 1px solid #d6ede2; }
     .doc-fase:last-child { border-bottom: none; }
   }
+
+
+    * { box-sizing: border-box; }
+  .fac-page { font-family: 'Prompt', sans-serif; }
+
+  /* HERO */
+  .fac-hero {
+    background: #0b5640;
+    padding: 80px 24px 64px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .fac-hero-bg {
+    position: absolute;
+    inset: 0;
+    font-size: 140px;
+    font-weight: 900;
+    color: rgba(58,249,162,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    letter-spacing: -6px;
+    font-family: 'Prompt', sans-serif;
+    white-space: nowrap;
+  }
+  .fac-hero-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #3AF9A2;
+    margin-bottom: 12px;
+    font-family: 'Prompt', sans-serif;
+  }
+  .fac-hero h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    font-family: 'Prompt', sans-serif;
+  }
+  .fac-hero h1 span { color: #3AF9A2; }
+  .fac-hero-sub {
+    font-size: 15px;
+    color: rgba(255,255,255,0.78);
+    max-width: 560px;
+    margin: 0 auto 36px;
+    line-height: 1.75;
+    font-family: 'Prompt', sans-serif;
+  }
+  .fac-hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+  .fac-hero-stat {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    padding: 12px 20px;
+  }
+  .fac-hero-stat-num { font-size: 24px; font-weight: 700; color: #3AF9A2; font-family: 'Prompt', sans-serif; }
+  .fac-hero-stat-label { font-size: 13px; color: rgba(255,255,255,0.7); font-family: 'Prompt', sans-serif; }
+
+  /* ÍNDICE STICKY */
+  .fac-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 2px solid #d6ede2;
+    padding: 0 24px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .fac-nav-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0;
+  }
+  .fac-nav a {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #4a7a5e;
+    text-decoration: none;
+    padding: 14px 16px;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    font-family: 'Prompt', sans-serif;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .fac-nav a:hover, .fac-nav a.active {
+    color: #018d38;
+    border-bottom-color: #018d38;
+    text-decoration: none;
+  }
+
+  /* SECCIONES */
+  .fac-section { padding: 64px 0; }
+  .fac-inner { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .fac-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #018d38;
+    margin-bottom: 8px;
+    font-family: 'Prompt', sans-serif;
+  }
+  .fac-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #0b3d25;
+    margin-bottom: 16px;
+    line-height: 1.25;
+    font-family: 'Prompt', sans-serif;
+  }
+  .fac-body {
+    font-size: 14px;
+    color: #4a7a5e;
+    line-height: 1.75;
+    max-width: 680px;
+    font-family: 'Prompt', sans-serif;
+    margin-bottom: 0;
+  }
+
+  /* ROL */
+  .fac-rol-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 28px;
+  }
+
+   .fac-rol-card {
+    background: #fff;
+    border-radius: 10px;
+    border: 1.5px solid #d6ede2;
+    padding: 22px 18px;
+  }
+  .fac-rol-card h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0b3d25;
+    margin-bottom: 8px;
+    font-family: 'Prompt', sans-serif;
+  }
+  .fac-rol-card p {
+    font-size: 12px;
+    color: #4a7a5e;
+    line-height: 1.65;
+    margin: 0;
+    font-family: 'Prompt', sans-serif;
+  }
+  .fac-rol-icon {
+    width: 36px;
+    height: 36px;
+    background: #f0f8f3;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+
+  /* DÍA LABEL */
+  .fac-dia-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 1.5px solid #d6ede2;
+  }
+  .fac-dia-badge {
+    background: #0b5640;
+    color: #3AF9A2;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-family: 'Prompt', sans-serif;
+    white-space: nowrap;
+  }
+  .fac-dia-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0b3d25;
+    font-family: 'Prompt', sans-serif;
+    margin: 0;
+  }
+
+  /* VIDEOS */
+  .fac-videos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .fac-video-card {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #d6ede2;
+    overflow: hidden;
+  }
+  .fac-video-thumb {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background: #0b3d25;
+    overflow: hidden;
+  }
+  .fac-video-thumb img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .fac-video-play {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(11,56,64,0.35);
+    transition: background 0.2s;
+  }
+  .fac-video-card:hover .fac-video-play { background: rgba(11,56,64,0.55); }
+  .fac-video-play-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #018d38;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fac-video-body { padding: 14px; }
+  .fac-video-part {
+    font-size: 10px;
+    font-weight: 700;
+    color: #018d38;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+    font-family: 'Prompt', sans-serif;
+  }
+  .fac-video-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0b3d25;
+    line-height: 1.4;
+    font-family: 'Prompt', sans-serif;
+  }
+
+  /* RECURSOS DEL DÍA */
+  .fac-recursos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .fac-recurso-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #018d38;
+    text-decoration: none;
+    background: #f0f8f3;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #d6ede2;
+    font-family: 'Prompt', sans-serif;
+    transition: background 0.2s;
+  }
+  .fac-recurso-btn:hover { background: #d6ede2; color: #018d38; text-decoration: none; }
+
+  /* SEPARADOR DÍA */
+  .fac-dia-block { margin-bottom: 48px; }
+
+  /* TANGERINE */
+  .fac-tang-section { background: #f0f8f3; }
+  .fac-tang-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 32px;
+    align-items: start;
+  }
+  .fac-qr-block {
+    background: #fff;
+    border-radius: 12px;
+    border: 1.5px solid #d6ede2;
+    padding: 28px;
+    text-align: center;
+  }
+  .fac-qr-block img {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 14px;
+  }
+  .fac-qr-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0b3d25;
+    margin-bottom: 4px;
+    font-family: 'Prompt', sans-serif;
+  }
+  .fac-qr-sub {
+    font-size: 11px;
+    color: #4a7a5e;
+    font-family: 'Prompt', sans-serif;
+  }
+  .fac-tang-videos { display: flex; flex-direction: column; gap: 12px; }
+  .fac-tang-video-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #d6ede2;
+    padding: 12px 14px;
+    text-decoration: none;
+    transition: border-color 0.2s;
+  }
+  .fac-tang-video-row:hover { border-color: #018d38; text-decoration: none; }
+  .fac-tang-play {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #018d38;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .fac-tang-video-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0b3d25;
+    font-family: 'Prompt', sans-serif;
+  }
+  .fac-tang-video-sub {
+    font-size: 11px;
+    color: #4a7a5e;
+    font-family: 'Prompt', sans-serif;
+  }
+
+  /* MATERIALES */
+  .fac-mat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin-top: 28px;
+  }
+  .fac-mat-card {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #d6ede2;
+    padding: 18px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .fac-mat-icon {
+    width: 36px;
+    height: 36px;
+    background: #f0f8f3;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fac-mat-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0b3d25;
+    line-height: 1.4;
+    font-family: 'Prompt', sans-serif;
+  }
+  .fac-mat-desc {
+    font-size: 11px;
+    color: #4a7a5e;
+    line-height: 1.55;
+    flex: 1;
+    font-family: 'Prompt', sans-serif;
+  }
+  .fac-mat-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #018d38;
+    text-decoration: none;
+    background: #f0f8f3;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #d6ede2;
+    width: fit-content;
+    font-family: 'Prompt', sans-serif;
+    transition: background 0.2s;
+  }
+  .fac-mat-btn:hover { background: #d6ede2; color: #018d38; text-decoration: none; }
+
+  @media (max-width: 768px) {
+    .fac-hero h1 { font-size: 24px; }
+    .fac-tang-grid { grid-template-columns: 1fr; }
+    .fac-hero-bg { font-size: 70px; }
+  }
+
+  .fac-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 2px solid #d6ede2;
+    padding: 0;
+}
+
+.fac-nav-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+.fac-nav a {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    padding: 16px 24px !important;
+}
