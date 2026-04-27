@@ -521,57 +521,140 @@ function mostrarTab(tab) {
 
 
   <!-- MATERIALES -->
-  <section id="materiales" class="fac-section" style="background:#fff;">
-    <div class="fac-inner">
-      <p class="fac-eyebrow">Materiales pedagógicos</p>
-      <h2 class="fac-title">Recursos para el acompañamiento en aula</h2>
-      <div class="fac-mat-grid">
-
-        <div class="fac-mat-card">
-          <div class="fac-mat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-          <span class="fac-mat-name">Guía pedagógica ATAL — Docente</span>
-          <span class="fac-mat-desc">Instrucciones y secuencias para implementar ATAL en transición y 1.° grado.</span>
-          <a href="#" class="fac-mat-btn">↓ Descargar</a>
-        </div>
-
-        <div class="fac-mat-card">
-          <div class="fac-mat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-          <span class="fac-mat-name">Guía pedagógica Kalulu — Docente</span>
-          <span class="fac-mat-desc">Fundamentos metodológicos y rutinas de implementación para 2.° grado.</span>
-          <a href="#" class="fac-mat-btn">↓ Descargar</a>
-        </div>
-
-        <div class="fac-mat-card">
-          <div class="fac-mat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-          <span class="fac-mat-name">Protocolo de observación de aula</span>
-          <span class="fac-mat-desc">Formato para registrar indicadores de fidelidad instruccional durante las visitas.</span>
-          <a href="#" class="fac-mat-btn">↓ Descargar</a>
-        </div>
-
-        <div class="fac-mat-card">
-          <div class="fac-mat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-          <span class="fac-mat-name">Cuaderno de trabajo ATAL — Estudiante</span>
-          <span class="fac-mat-desc">Material de trabajo para las actividades de lectura y escritura en el aula.</span>
-          <a href="#" class="fac-mat-btn">↓ Descargar</a>
-        </div>
-
-        <div class="fac-mat-card">
-          <div class="fac-mat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-          <span class="fac-mat-name">Libro de historias ATAL</span>
-          <span class="fac-mat-desc">Textos para fortalecer el lenguaje oral y la comprensión lectora.</span>
-          <a href="#" class="fac-mat-btn">↓ Descargar</a>
-        </div>
-
-        <div class="fac-mat-card">
-          <div class="fac-mat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
-          <span class="fac-mat-name">Juegos pedagógicos Kalulu</span>
-          <span class="fac-mat-desc">Revueltos y bingo para reforzar correspondencias grafema-fonema en 2.° grado.</span>
-          <a href="#" class="fac-mat-btn">↓ Descargar</a>
-        </div>
-
+   <script>
+function matTab(btn, panelId) {
+  var container = btn.closest('.fac-inner, .doc-inner');
+  container.querySelectorAll('.mat-tab-btn').forEach(function(b) { b.classList.remove('active'); });
+  container.querySelectorAll('.mat-panel').forEach(function(p) { p.classList.remove('active'); });
+  btn.classList.add('active');
+  document.getElementById(panelId).classList.add('active');
+}
+function matSubTab(btn, subPanelId, parentPanelId) {
+  var parentPanel = document.getElementById(parentPanelId);
+  parentPanel.querySelectorAll('.mat-subtab-btn').forEach(function(b) { b.classList.remove('active'); });
+  parentPanel.querySelectorAll('.mat-subpanel').forEach(function(p) { p.classList.remove('active'); });
+  btn.classList.add('active');
+  document.getElementById(subPanelId).classList.add('active');
+}
+</script>
+ <!-- ==================== [FACILITADORES] section id="materiales" ==================== -->
+<section id="materiales" class="fac-section" style="background:#fff;">
+  <div class="fac-inner">
+    <p class="fac-eyebrow">Materiales pedagógicos</p>
+    <h2 class="fac-title">Recursos para el acompañamiento en aula</h2>
+    <p class="fac-body">Aquí encuentras los materiales del programa ATAL para transición y primer grado, diferenciados por grado y por destinatario.</p>
+ 
+    <div style="margin-top:28px;">
+      <div class="mat-tabs">
+        <button class="mat-tab-btn active" onclick="matTab(this,'fac-trans')">ATAL Transición</button>
+        <button class="mat-tab-btn" onclick="matTab(this,'fac-prim')">ATAL Primero</button>
       </div>
+ 
+      <!-- TRANSICIÓN -->
+      <div id="fac-trans" class="mat-panel active">
+        <p class="mat-sublabel">Para el docente</p>
+        <div class="mat-cards">
+          <div class="mat-card">
+            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <span class="mat-card-name">Guía docente — Primer semestre (Tomo 1)</span>
+            <span class="mat-card-desc">Secuencias y estrategias para implementar ATAL en transición durante el primer semestre.</span>
+            <a href="https://drive.google.com/file/d/1wDUDPYgySaaPkGUst0yMiUKcIen11hyG/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+          </div>
+          <div class="mat-card">
+            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <span class="mat-card-name">Guía docente — Segundo semestre (Tomo 2)</span>
+            <span class="mat-card-desc">Secuencias y estrategias para implementar ATAL en transición durante el segundo semestre.</span>
+            <a href="https://drive.google.com/file/d/1yW4RQ59LyxjZ6oLu5iQbdO4imFZMe3f8/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+          </div>
+               
+        </div>
+ 
+        <p class="mat-sublabel">Para el estudiante</p>
+        <div class="mat-cards">
+          <div class="mat-card">
+            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+            <span class="mat-card-name">Cuaderno de trabajo 1</span>
+            <span class="mat-card-desc">Material de trabajo para las actividades de lectura y escritura.</span>
+            <a href="https://drive.google.com/file/d/1C8rnPlRehTDcYRLOwK3aL4tNUVh5jHRr/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+          </div>
+          <div class="mat-card">
+            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+            <span class="mat-card-name">Cuaderno de trabajo 2</span>
+            <span class="mat-card-desc">Material de trabajo para las actividades de lectura y escritura.</span>
+            <a href="https://drive.google.com/file/d/1sg2M42mi_1LsiQYdg7HNzE64Dd5o1CZw/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+          </div>
+          <div class="mat-card">
+            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <span class="mat-card-name">Libro de cuentos para niños</span>
+            <span class="mat-card-desc">Textos para fortalecer el lenguaje oral y la comprensión lectora en transición.</span>
+            <a href="https://drive.google.com/file/d/1j1M8Mn8cLCYyAnaFNhP_HoNwZI7XgA1L/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- PRIMERO -->
+      <div id="fac-prim" class="mat-panel">
+        <p class="mat-sublabel">Para el docente</p>
+        <div class="mat-cards">
+          <div class="mat-card">
+            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <span class="mat-card-name">Guía docente — 2da edición</span>
+            <span class="mat-card-desc">Guía pedagógica completa para implementar ATAL en primer grado.</span>
+            <a href="https://drive.google.com/file/d/142b2a9PvCkX1DRO1zKO0OmWjXbYzpZIx/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+          </div>
+          <div class="mat-card">
+            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <span class="mat-card-name">Guía docente — Primer semestre (Unidades 1 y 2)</span>
+            <span class="mat-card-desc">Secuencias para el primer semestre de primer grado.</span>
+            <a href="https://drive.google.com/file/d/1dsWomn-sdzfYQgBAHxzJCahpGQ01HKwG/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+          </div>
+          <div class="mat-card">
+            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <span class="mat-card-name">Guía docente — Segundo semestre (Unidades 3 y 4)</span>
+            <span class="mat-card-desc">Secuencias para el segundo semestre de primer grado.</span>
+            <a href="https://drive.google.com/file/d/1rWE5QeidVlvzfHWDB5a9E3IV4EWP_RML/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+          </div>
+        </div>
+ 
+        <p class="mat-sublabel">Para el estudiante</p>
+        <div class="mat-cards">
+          <div class="mat-card">
+            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+            <span class="mat-card-name">Cuaderno de trabajo — Unidad 1</span>
+            <span class="mat-card-desc">Actividades de lectura y escritura para la primera unidad.</span>
+            <a href="https://drive.google.com/file/d/1FC2BbovxJHOY6DHS_oiSP_3_rRuSn11h/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+          </div>
+          <div class="mat-card">
+            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+            <span class="mat-card-name">Cuaderno de trabajo — Unidad 2</span>
+            <span class="mat-card-desc">Actividades de lectura y escritura para la segunda unidad.</span>
+            <a href="https://drive.google.com/file/d/12vS7Ct9PRyZjgwfC8RU4i4pcZpEwKHBb/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+          </div>
+          <div class="mat-card">
+            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+            <span class="mat-card-name">Cuaderno de trabajo — Unidad 3</span>
+            <span class="mat-card-desc">Actividades de lectura y escritura para la tercera unidad.</span>
+            <a href="https://drive.google.com/file/d/1eO2jyhgbqzS7z61sY66HU0rZ9Qm2K6iS/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+          </div>
+          <div class="mat-card">
+            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+            <span class="mat-card-name">Cuaderno de trabajo — Unidad 4</span>
+            <span class="mat-card-desc">Actividades de lectura y escritura para la cuarta unidad.</span>
+            <a href="https://drive.google.com/file/d/1y3HqTNBRwyzh5PzuQ_KR62KiURAwlAwz/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+          </div>
+          <div class="mat-card">
+            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <span class="mat-card-name">Libro de cuentos para niños</span>
+            <span class="mat-card-desc">Textos para fortalecer el lenguaje oral y la comprensión lectora en primer grado.</span>
+            <a href="https://drive.google.com/file/d/1y9jOOEeepdYL9wqom9y3Q43Gu-CPA3fb/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+          </div>
+        </div>
+      </div>
+ 
     </div>
-  </section>
+  </div>
+</section>
+<!-- ==================== FIN [FACILITADORES] ==================== -->
 
 	<!-- Footer -->
 	<footer style="background:#0b5640; color:#fff; font-family:'Prompt',sans-serif; padding:48px 0 0;">
