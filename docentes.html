@@ -53,151 +53,297 @@
 	</header>
 	<!-- end header -->
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<title>Docentes — Estrategia ALFA</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="icon" type="image/x-icon" href="img/favicon.ico">
-<link href="css/bootstrap.min.css" rel="stylesheet" />
-<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
-<link href="css/flexslider.css" rel="stylesheet" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet" />
-
-  <!-- HERO -->
+ <!-- HERO -->
   <div class="doc-hero">
     <div class="doc-hero-bg">DOCENTES</div>
     <div style="position:relative; z-index:1;">
       <p class="doc-hero-eyebrow">Estrategia ALFA — Docentes</p>
-      <h1>Usted es quien hace posible<br>que un niño <span>aprenda a leer</span></h1>
-      <p class="doc-hero-sub">Aquí encuentra los materiales pedagógicos, recursos de formación y herramientas de apoyo para implementar ALFA en su aula.</p>
+      <h1>Recursos para <span>docentes</span></h1>
+      <p class="doc-hero-sub">Aquí encuentras los materiales pedagógicos y recursos de apoyo para implementar ATAL, Kalulu y Avanza+ en tu aula.</p>
       <div class="doc-hero-stat">
         <span class="doc-hero-stat-num">6.845</span>
-        <span class="doc-hero-stat-label">docentes acompañados en 2026</span>
+        <span class="doc-hero-stat-label">docentes</span>
       </div>
     </div>
   </div>
-
-  <!-- SU ROL -->
-  <div class="doc-section" style="background:#fff;">
+ 
+  <!-- STICKY NAV -->
+  <nav class="doc-nav">
+    <div class="doc-nav-inner">
+      <a href="#rol">Tu rol</a>
+      <a href="#materiales">Materiales</a>
+      <a href="#acompanamiento">Acompañamiento</a>
+      <a href="#canal">Canal WhatsApp</a>
+    </div>
+  </nav>
+ 
+  <!-- TU ROL -->
+  <section id="rol" class="doc-section" style="background:#fff;">
     <div class="doc-inner">
-      <p class="doc-eyebrow">Su rol en ALFA</p>
+      <p class="doc-eyebrow">Tu rol en ALFA</p>
       <h2 class="doc-title">El docente lidera la transformación pedagógica</h2>
-      <p class="doc-body">ALFA no reemplaza la experiencia del docente — la potencia. Usted lleva la propuesta a la práctica y dinamiza el cambio en su institución educativa.</p>
+      <p class="doc-body">ALFA no reemplaza tu experiencia — la potencia. Tú llevas la propuesta a la práctica y dinamizas el cambio en tu institución educativa.</p>
       <div class="doc-rol-grid">
         <div class="doc-rol-card">
           <span class="doc-rol-badge">Transición y 1.° grado</span>
           <h3>Con ATAL</h3>
-          <p>Implementa el método fonético sistemático con los materiales ATAL. Un facilitador lo acompaña semanalmente en el aula con tres modalidades progresivas: modelación, coanimación y observación.</p>
+          <p>Implementas el método fonético sistemático con los materiales ATAL. Un facilitador te acompaña en el aula con tres modalidades progresivas: modelación, coanimación y observación.</p>
         </div>
         <div class="doc-rol-card">
           <span class="doc-rol-badge">2.° grado</span>
           <h3>Con Kalulu</h3>
-          <p>Identifica los estudiantes con rezago lector e implementa las rutinas Kalulu. Cuenta con videos de apoyo por WhatsApp, encuentros presenciales y virtuales de formación.</p>
+          <p>Identificas los estudiantes con rezago lector e implementas las rutinas Kalulu. Cuentas con videos de apoyo y encuentros de formación presenciales y virtuales.</p>
+        </div>
+        <div class="doc-rol-card">
+          <span class="doc-rol-badge" style="background:#0b5640;">6.° a 9.° grado — Piloto</span>
+          <h3>Con Avanza+</h3>
+          <p>Implementas el programa Avanza+ para estudiantes de secundaria con rezago en lectoescritura. Este es un piloto voluntario en 2026 con miras a una escala mayor en 2027.</p>
         </div>
       </div>
     </div>
-  </div>
-
+  </section>
+ 
   <!-- MATERIALES -->
-  <div class="doc-section" style="background:#f8fdf9;">
+  <section id="materiales" class="doc-section" style="background:#f8fdf9;">
     <div class="doc-inner">
       <p class="doc-eyebrow">Recursos y materiales</p>
-      <h2 class="doc-title">Todo lo que necesita para implementar ALFA</h2>
-
-      <div style="margin-top:32px;">
-        <p class="doc-mat-label">Materiales ATAL — Transición y 1.° grado</p>
-        <div class="doc-mat-grid">
-
-          <div class="doc-mat-card">
-            <div class="doc-mat-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            </div>
-            <span class="doc-mat-name">Guía pedagógica del docente</span>
-            <span class="doc-mat-desc">Instrucciones y secuencias para implementar ATAL en el aula.</span>
-            <!-- Reemplace # por el link de Drive cuando tenga el archivo -->
-            <a href="#" class="doc-mat-btn">↓ Descargar</a>
+      <h2 class="doc-title">Todo lo que necesitas para implementar ALFA</h2>
+ 
+      <div style="margin-top:28px;">
+        <div class="mat-tabs">
+          <button class="mat-tab-btn active" onclick="matTab(this,'doc-atal')">ATAL</button>
+          <button class="mat-tab-btn" onclick="matTab(this,'doc-trans-gob')">Transición</button>
+          <button class="mat-tab-btn" onclick="matTab(this,'doc-kalulu')">Kalulu</button>
+          <button class="mat-tab-btn" onclick="matTab(this,'doc-avanza')">Avanza+</button>
+        </div>
+ 
+        <!-- ATAL -->
+        <div id="doc-atal" class="mat-panel active">
+          <div class="mat-subtabs" style="margin-top:20px;">
+            <button class="mat-subtab-btn active" onclick="matSubTab(this,'atal-trans','doc-atal')">Transición</button>
+            <button class="mat-subtab-btn" onclick="matSubTab(this,'atal-prim','doc-atal')">Primero</button>
           </div>
-
-          <div class="doc-mat-card">
-            <div class="doc-mat-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+ 
+          <!-- ATAL Transición -->
+          <div id="atal-trans" class="mat-subpanel active">
+            <p class="mat-sublabel">Para el docente</p>
+            <div class="mat-cards">
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                <span class="mat-card-name">Guía docente — Primer semestre (Tomo 1)</span>
+                <span class="mat-card-desc">Secuencias para implementar ATAL en transición durante el primer semestre.</span>
+                <a href="https://drive.google.com/file/d/1wDUDPYgySaaPkGUst0yMiUKcIen11hyG/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                <span class="mat-card-name">Guía docente — Segundo semestre (Tomo 2)</span>
+                <span class="mat-card-desc">Secuencias para implementar ATAL en transición durante el segundo semestre.</span>
+                <a href="https://drive.google.com/file/d/1yW4RQ59LyxjZ6oLu5iQbdO4imFZMe3f8/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
+              </div>
+            <p class="mat-sublabel">Para el estudiante</p>
+            <div class="mat-cards">
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+                <span class="mat-card-name">Cuaderno de trabajo — Unidad 1</span>
+                <span class="mat-card-desc">Material de trabajo para las actividades del primer periodo.</span>
+                <a href="https://drive.google.com/file/d/1C8rnPlRehTDcYRLOwK3aL4tNUVh5jHRr/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+                <span class="mat-card-name">Cuaderno de trabajo — Unidad 2</span>
+                <span class="mat-card-desc">Material de trabajo para las actividades del segundo periodo.</span>
+                <a href="https://drive.google.com/file/d/1sg2M42mi_1LsiQYdg7HNzE64Dd5o1CZw/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+                <span class="mat-card-name">Libro de cuentos para niños</span>
+                <span class="mat-card-desc">Textos para fortalecer el lenguaje oral y la comprensión lectora.</span>
+                <a href="https://drive.google.com/file/d/1j1M8Mn8cLCYyAnaFNhP_HoNwZI7XgA1L/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
             </div>
-            <span class="doc-mat-name">Cuaderno de trabajo del estudiante</span>
-            <span class="doc-mat-desc">Material de trabajo para las actividades de lectura y escritura.</span>
-            <!-- Reemplace # por el link de Drive cuando tenga el archivo -->
-            <a href="#" class="doc-mat-btn">↓ Descargar</a>
           </div>
-
-          <div class="doc-mat-card">
-            <div class="doc-mat-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+ 
+          <!-- ATAL Primero -->
+          <div id="atal-prim" class="mat-subpanel">
+            <p class="mat-sublabel">Para el docente</p>
+            <div class="mat-cards">
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                <span class="mat-card-name">Guía docente</span>
+                <span class="mat-card-desc">Guía pedagógica completa para implementar ATAL en primer grado.</span>
+                <a href="https://drive.google.com/file/d/142b2a9PvCkX1DRO1zKO0OmWjXbYzpZIx/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                <span class="mat-card-name">Guía docente — Primer semestre (Unidades 1 y 2)</span>
+                <span class="mat-card-desc">Secuencias para el primer semestre de primer grado.</span>
+                <a href="https://drive.google.com/file/d/1dsWomn-sdzfYQgBAHxzJCahpGQ01HKwG/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                <span class="mat-card-name">Guía docente — Segundo semestre (Unidades 3 y 4)</span>
+                <span class="mat-card-desc">Secuencias para el segundo semestre de primer grado.</span>
+                <a href="https://drive.google.com/file/d/1rWE5QeidVlvzfHWDB5a9E3IV4EWP_RML/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
             </div>
-            <span class="doc-mat-name">Libro de historias</span>
-            <span class="doc-mat-desc">Textos para fortalecer el lenguaje oral y la comprensión lectora.</span>
-            <!-- Reemplace # por el link de Drive cuando tenga el archivo -->
-            <a href="#" class="doc-mat-btn">↓ Descargar</a>
+            <p class="mat-sublabel">Para el estudiante</p>
+            <div class="mat-cards">
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+                <span class="mat-card-name">Cuaderno de trabajo — Unidad 1</span>
+                <span class="mat-card-desc">Actividades de lectura y escritura para la primera unidad.</span>
+                <a href="https://drive.google.com/file/d/1FC2BbovxJHOY6DHS_oiSP_3_rRuSn11h/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+                <span class="mat-card-name">Cuaderno de trabajo — Unidad 2</span>
+                <span class="mat-card-desc">Actividades de lectura y escritura para la segunda unidad.</span>
+                <a href="https://drive.google.com/file/d/12vS7Ct9PRyZjgwfC8RU4i4pcZpEwKHBb/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+                <span class="mat-card-name">Cuaderno de trabajo — Unidad 3</span>
+                <span class="mat-card-desc">Actividades de lectura y escritura para la tercera unidad.</span>
+                <a href="https://drive.google.com/file/d/1eO2jyhgbqzS7z61sY66HU0rZ9Qm2K6iS/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+                <span class="mat-card-name">Cuaderno de trabajo — Unidad 4</span>
+                <span class="mat-card-desc">Actividades de lectura y escritura para la cuarta unidad.</span>
+                <a href="https://drive.google.com/file/d/1y3HqTNBRwyzh5PzuQ_KR62KiURAwlAwz/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+                <span class="mat-card-name">Libro de cuentos para niños</span>
+                <span class="mat-card-desc">Textos para fortalecer el lenguaje oral y la comprensión lectora.</span>
+                <a href="https://drive.google.com/file/d/1y9jOOEeepdYL9wqom9y3Q43Gu-CPA3fb/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
+            </div>
           </div>
-
+        </div>
+        
+        <!-- TRANSICIÓN GOBERNACIÓN -->
+        <div id="doc-trans-gob" class="mat-panel">
+          <div style="margin-top:20px;">
+            <p class="mat-sublabel">Materiales — Transición Gobernación</p>
+            <div class="mat-cards">
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                <span class="mat-card-name">Material 1</span>
+                <span class="mat-card-desc">Próximamente disponible.</span>
+                <a href="#" class="mat-card-btn">↓ Descargar</a>
+              </div>
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                <span class="mat-card-name">Material 2</span>
+                <span class="mat-card-desc">Próximamente disponible.</span>
+                <a href="#" class="mat-card-btn">↓ Descargar</a>
+              </div>
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                <span class="mat-card-name">Material 3</span>
+                <span class="mat-card-desc">Próximamente disponible.</span>
+                <a href="#" class="mat-card-btn">↓ Descargar</a>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <p class="doc-mat-label">Materiales Kalulu — 2.° grado</p>
-        <div class="doc-mat-grid">
 
-          <div class="doc-mat-card">
-            <div class="doc-mat-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <!-- KALULU -->
+        <div id="doc-kalulu" class="mat-panel">
+          <div style="margin-top:20px;">
+            <p class="mat-sublabel">Para el docente</p>
+            <div class="mat-cards">
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+                <span class="mat-card-name">Kalulu en contexto: qué es y cómo empezar</span>
+                <span class="mat-card-desc">Presentación introductoria del programa para docentes de segundo grado.</span>
+                <a href="https://drive.google.com/file/d/1dW07jkxdywzYZ4HWDiSY1pCB48BTPJq7/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                <span class="mat-card-name">Guía pedagógica Kalulu</span>
+                <span class="mat-card-desc">Fundamentos metodológicos y rutinas de implementación para 2.° grado.</span>
+                <a href="https://drive.google.com/file/d/1bz-TcUY9ahZoBzep1PZrIYjXFIPLfLjh/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                <span class="mat-card-name">Guía docente cuadernillos Kalulu</span>
+                <span class="mat-card-desc">Instrucciones específicas para el uso de los cuadernillos en el aula.</span>
+                <a href="https://drive.google.com/file/d/164p3W0N3wmr9PGjUNW9lR-84iGLRFz7h/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
+                <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+                <span class="mat-card-name">Bingo pedagógico</span>
+                <span class="mat-card-desc">Juego para reforzar correspondencias grafema-fonema en el aula.</span>
+                <a href="https://drive.google.com/file/d/1UnBHPUQuYe5tTidaciNHRbjYX1PqAqfO/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
             </div>
-            <span class="doc-mat-name">Guía pedagógica Kalulu</span>
-            <span class="doc-mat-desc">Fundamentos metodológicos y rutinas de implementación.</span>
-            <!-- Reemplace # por el link de Drive cuando tenga el archivo -->
-            <a href="#" class="doc-mat-btn">↓ Descargar</a>
+            <p class="mat-sublabel">Para el estudiante</p>
+            <div class="mat-cards">
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+                <span class="mat-card-name">Cuadernillo del estudiante 1</span>
+                <span class="mat-card-desc">Lectura y escritura de sílabas, palabras y oraciones — primer cuadernillo.</span>
+                <a href="https://drive.google.com/file/d/1XaGHDLaICB0nSRzCTRraV_2km1NFe6vC/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+                <span class="mat-card-name">Cuadernillo del estudiante 2</span>
+                <span class="mat-card-desc">Lectura y escritura de sílabas, palabras y oraciones — segundo cuadernillo.</span>
+                <a href="https://drive.google.com/file/d/1ugM1hYydLk9AZBRRjBtNJ9Am16c1PCzo/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
+              </div>
           </div>
-
-          <div class="doc-mat-card">
-            <div class="doc-mat-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-            </div>
-            <span class="doc-mat-name">Cuadernillos 1 y 2</span>
-            <span class="doc-mat-desc">Lectura y escritura de sílabas, palabras, oraciones y textos cortos.</span>
-            <!-- Reemplace # por el link de Drive cuando tenga el archivo -->
-            <a href="#" class="doc-mat-btn">↓ Descargar</a>
-          </div>
-
-          <div class="doc-mat-card">
-            <div class="doc-mat-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            </div>
-            <span class="doc-mat-name">Libro de historias Kalulu</span>
-            <span class="doc-mat-desc">Vocabulario avanzado y comprensión del lenguaje oral.</span>
-            <!-- Reemplace # por el link de Drive cuando tenga el archivo -->
-            <a href="#" class="doc-mat-btn">↓ Descargar</a>
-          </div>
-
-          <div class="doc-mat-card">
-            <div class="doc-mat-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-            </div>
-            <span class="doc-mat-name">Juegos pedagógicos</span>
-            <span class="doc-mat-desc">Revueltos y bingo para reforzar correspondencias grafema-fonema.</span>
-            <!-- Reemplace # por el link de Drive cuando tenga el archivo -->
-            <a href="#" class="doc-mat-btn">↓ Descargar</a>
-          </div>
-
         </div>
+ 
+        <!-- AVANZA+ -->
+        <div id="doc-avanza" class="mat-panel">
+          <div style="margin-top:20px;">
+            <p class="mat-sublabel">Para el docente</p>
+            <div class="mat-cards">
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                <span class="mat-card-name">Manual docente — Módulo 1</span>
+                <span class="mat-card-desc">Guía de implementación del primer módulo para 6.° a 9.° grado.</span>
+                <a href="https://drive.google.com/file/d/1FTgO6Gu8Gh7ztfAS5_act0Hg-ylE6ZOK/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                <span class="mat-card-name">Manual docente — Módulo 2</span>
+                <span class="mat-card-desc">Guía de implementación del segundo módulo para 6.° a 9.° grado.</span>
+                <a href="https://drive.google.com/file/d/1LzW9QaTuJ6vLLG9_qvCrQpVjC8hOr23Z/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
+            </div>
+            <p class="mat-sublabel">Para el estudiante</p>
+            <div class="mat-cards">
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+                <span class="mat-card-name">Cuadernillo del estudiante — Módulo 1</span>
+                <span class="mat-card-desc">Material de trabajo para el primer módulo de Avanza+.</span>
+                <a href="https://drive.google.com/file/d/1QFitOVzytCHL5aU6ewoB_YEHpzDxyEZJ/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
+              <div class="mat-card">
+                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+                <span class="mat-card-name">Cuadernillo del estudiante — Módulo 2</span>
+                <span class="mat-card-desc">Material de trabajo para el segundo módulo de Avanza+.</span>
+                <a href="https://drive.google.com/file/d/1tvBCctpXEak1clB9WDKtt84-BKxbNG82/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
       </div>
     </div>
-  </div>
-
-  <!-- FASES ACOMPAÑAMIENTO -->
-  <div class="doc-section" style="background:#fff;">
+  </section>
+ 
+  <!-- ACOMPAÑAMIENTO -->
+  <section id="acompanamiento" class="doc-section" style="background:#fff;">
     <div class="doc-inner">
       <p class="doc-eyebrow">El acompañamiento en el aula</p>
-      <h2 class="doc-title">Tres fases progresivas con su facilitador</h2>
+      <h2 class="doc-title">Tres fases progresivas con tu facilitador</h2>
       <p class="doc-body">Para docentes de transición y 1.° grado, un facilitador realiza mínimo 20–24 visitas al año siguiendo esta progresión:</p>
       <div class="doc-fases">
         <div class="doc-fase">
@@ -208,17 +354,17 @@
         <div class="doc-fase">
           <div class="doc-fase-num">2</div>
           <h4>Coanimación</h4>
-          <p>El facilitador y el docente codirigen la clase juntos, compartiendo el liderazgo pedagógico.</p>
+          <p>El facilitador y tú codirigen la clase juntos, compartiendo el liderazgo pedagógico.</p>
         </div>
         <div class="doc-fase">
           <div class="doc-fase-num">3</div>
           <h4>Observación</h4>
-          <p>El docente implementa de forma autónoma mientras el facilitador observa y retroalimenta.</p>
+          <p>Tú implementas de forma autónoma mientras el facilitador observa y retroalimenta.</p>
         </div>
       </div>
     </div>
-  </div>
-
+  </section>
+ 
   <!-- CTA WHATSAPP -->
   <div class="doc-cta">
     <h2>¿Tiene dudas sobre la implementación?</h2>
@@ -230,6 +376,46 @@
     </a>
   </div>
 
+  <script>
+function matTab(btn, panelId) {
+  var container = btn.closest('.doc-inner');
+  container.querySelectorAll('.mat-tab-btn').forEach(function(b) { b.classList.remove('active'); });
+  container.querySelectorAll('.mat-panel').forEach(function(p) { p.classList.remove('active'); });
+  btn.classList.add('active');
+  document.getElementById(panelId).classList.add('active');
+}
+function matSubTab(btn, subPanelId, parentPanelId) {
+  var parentPanel = document.getElementById(parentPanelId);
+  parentPanel.querySelectorAll('.mat-subtab-btn').forEach(function(b) { b.classList.remove('active'); });
+  parentPanel.querySelectorAll('.mat-subpanel').forEach(function(p) { p.classList.remove('active'); });
+  btn.classList.add('active');
+  document.getElementById(subPanelId).classList.add('active');
+}
+ 
+/* Sticky nav activo al hacer scroll */
+var secciones = ['rol','materiales','acompanamiento','canal'];
+window.addEventListener('scroll', function() {
+  var scrollPos = window.scrollY + 100;
+  secciones.forEach(function(id) {
+    var el = document.getElementById(id);
+    var link = document.querySelector('.doc-nav a[href="#' + id + '"]');
+    if (el && link) {
+      if (el.offsetTop <= scrollPos && el.offsetTop + el.offsetHeight > scrollPos) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    }
+  });
+});
+document.querySelectorAll('.doc-nav a').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) { window.scrollTo({ top: target.offsetTop - 60, behavior: 'smooth' }); }
+  });
+});
+</script>
 
 <!-- Footer -->	
 <footer style="background:#0b5640; color:#fff; font-family:'Prompt',sans-serif; padding:48px 0 0;border-top: 50px solid #f2f5f3;">
