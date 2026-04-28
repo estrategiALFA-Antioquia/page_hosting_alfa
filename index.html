@@ -38,7 +38,7 @@
                     </button>
                     <!-- <a class="navbar-brand" href="index.html" style="font-family:'Prompt',sans-serif; font-size:15px; font-weight:400; color:#ffffff; text-decoration:none;">Alfabetización Inicial <span style="background:#ffffff; color:#0b5640; padding:2px 10px; border-radius:4px; font-weight:600;">en Antioquia</span></a> -->
 					 <a class="navbar-brand" href="index.html" style="font-family:'Prompt',sans-serif; font-size:18px; font-weight:500; color:#ffffff !important; text-decoration:none; white-space:nowrap; display:flex; align-items:center; gap:10px;">
-  					<img src="img/alfa_logo.png" alt="Gobernación de Antioquia" style="height:100px; width:auto;" class="logo-gob">
+  					<img src="img/gob_verde.png" alt="Gobernación de Antioquia" style="height:100px; width:auto;" class="logo-gob">
   					Alfabetización Inicial&nbsp;<span style="background:#ffffff; color:#0b5640; padding:2px 8px; border-radius:4px; font-weight:600;">en Antioquia</span>
 						</a>
                 </div>
@@ -257,6 +257,80 @@
 </div>
 </div>
 
+<!-- SECCIÓN DE ALIADOS -->
+<section id="aliados" style="position:relative; padding:3rem 0; background:#fff; border-top:1px solid #e8f0eb; font-family:'Prompt',sans-serif;">
+  <!-- <div style="position:absolute; left:50%; top:25%; transform:translate(-50%,-50%); font-size:100px; font-weight:900; color:rgba(1,141,56,0.2); letter-spacing:-4px; pointer-events:none; line-height:1; white-space:nowrap; z-index:0;">ALIADOS</div> -->
+  <div class="al-inner">
+    <div class="al-split">
+
+      <!-- OPERADORES -->
+      <div class="al-left">
+        <span class="al-label">Aliados operadores</span>
+        <div style="display:flex; gap:24px; margin-top:12px; max-width:500px;">
+
+          <!-- COLUMNA 1 -->
+          <div class="al-fade-wrap" id="alFadeWrap1" style="flex:1;">
+            <div class="al-fade-logo active">
+              <img src="img/aliados/Fundacion-Fraternidad-de-Medellin-1.png" alt="Fraternidad Medellín" style="max-width:180px; max-height:80px; object-fit:contain;">
+            </div>
+            <div class="al-fade-logo">
+              <img src="img/aliados/corpoeducacion.png" alt="Corpoeducación" style="max-width:180px; max-height:80px; object-fit:contain;">
+            </div>
+            <div class="al-fade-logo">
+              <img src="img/aliados/rotor.png" alt="ROTOR" style="max-width:180px; max-height:80px; object-fit:contain;">
+            </div>
+          </div>
+
+          <!-- COLUMNA 2 -->
+          <div class="al-fade-wrap" id="alFadeWrap2" style="flex:1;">
+            <div class="al-fade-logo active">
+              <img src="img/aliados/cta.jpg" alt="CTA" style="max-width:180px; max-height:80px; object-fit:contain;">
+            </div>
+            <div class="al-fade-logo">
+              <img src="img/aliados/ucn.svg" alt="U. Católica del Norte" style="max-width:180px; max-height:80px; object-fit:contain;">
+            </div>
+            <!--div class="al-fade-logo">
+              <img src="img/aliados/activa.png" alt="ACTIVA" style="max-width:180px; max-height:80px; object-fit:contain;">
+            </div> -->
+          </div>
+
+        </div>
+      </div><!-- cierre al-left -->
+
+      <div class="al-divider"></div>
+
+      <!-- BANCO MUNDIAL -->
+      <div class="al-right">
+        <span class="al-right-label">Aliado técnico</span>
+        
+        <img src="img/aliados/bm_2.png" alt="Banco Mundial" style="max-width:270px; max-height:80px; object-fit:contain;">
+      </div>
+
+    </div><!-- cierre al-split -->
+  </div><!-- cierre al-inner -->
+
+  <script>
+    var al1 = 0;
+    var al1logos = document.querySelectorAll('#alFadeWrap1 .al-fade-logo');
+    setInterval(function() {
+      al1logos[al1].classList.remove('active');
+      al1 = (al1 + 1) % al1logos.length;
+      al1logos[al1].classList.add('active');
+    }, 3500);
+
+    var al2 = 0;
+    var al2logos = document.querySelectorAll('#alFadeWrap2 .al-fade-logo');
+    setInterval(function() {
+      al2logos[al2].classList.remove('active');
+      al2 = (al2 + 1) % al2logos.length;
+      al2logos[al2].classList.add('active');
+    }, 4000);
+  </script>
+
+</section>
+
+
+<!-- SECCIÓN DE NOTICIAS -->
 <section id="noticias" style="position:relative; padding:3rem 0 2rem; overflow:hidden; font-family:'Prompt',sans-serif;">
   <div class="ns-bg">NOTICIAS</div>
   <div class="ns-inner">
