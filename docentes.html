@@ -254,55 +254,178 @@
           </div>
         </div>
         -->
+          <!-- KALULU -->
+<div id="doc-kalulu" class="mat-panel">
+  <div class="mat-subtabs" style="margin-top:20px; flex-wrap:wrap;">
+    <button class="mat-subtab-btn active" onclick="matSubTab(this,'kal-presentacion','doc-kalulu')">Webinars</button>
+    <button class="mat-subtab-btn" onclick="matSubTab(this,'kal-materiales','doc-kalulu')">Materiales</button>
+    <button class="mat-subtab-btn" onclick="matSubTab(this,'kal-evaluacion','doc-kalulu')">Evaluación</button>
+    <button class="mat-subtab-btn" onclick="matSubTab(this,'kal-sonidos','doc-kalulu')">Recursos de apoyo</button>
+    <button class="mat-subtab-btn" onclick="matSubTab(this,'kal-web','doc-kalulu')">Kalulu Web</button>
+    
+  </div>
 
-        <!-- KALULU -->
-        <div id="doc-kalulu" class="mat-panel">
-          <div style="margin-top:20px;">
-            <p class="mat-sublabel">Para el docente</p>
-            <div class="mat-cards">
-              <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-                <span class="mat-card-name">Kalulu en contexto: qué es y cómo empezar</span>
-                <span class="mat-card-desc">Presentación introductoria del programa para docentes de segundo grado.</span>
-                <a href="https://drive.google.com/file/d/1dW07jkxdywzYZ4HWDiSY1pCB48BTPJq7/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+  <!-- PRESENTACIÓN -->
+  <div id="kal-presentacion" class="mat-subpanel active">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:20px;">
+      <div style="position:relative; padding-top:56.25%; overflow:hidden; border-radius:10px; border:1px solid #d6ede2;">
+        <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/b4yv6vTyFxc" title="Kalulu en contexto" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px; justify-content:center;">
+        <p style="font-size:11px; font-weight:700; color:#018d38; letter-spacing:0.1em; text-transform:uppercase; margin:0 0 8px; font-family:'Prompt',sans-serif;">Webinar - Miércoles 29 de abril</p>
+        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin:0; font-family:'Prompt',sans-serif;">Kalulu en contexto: qué es y cómo empezar</p>
+        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">Grabación del webinar para docentes de Antioquia de grado segundo que buscan potenciar la alfabetización inicial en sus aulas. Conoce el método Kalulu y el material que está llegando a las instituciones educativas.</p>
+        <a href="https://drive.google.com/file/d/1IiGU6hVsqhRMQ4NsLN-ePL9DApD-b5RK/view?usp=sharing" target="_blank" class="mat-card-btn" style="width:fit-content;">↓ Descargar presentación</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- RECURSOS DE APOYO -->
+  <div id="kal-sonidos" class="mat-subpanel">
+    <div class="mat-cards" style="margin-top:20px;">
+      <div class="mat-card">
+        <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></div>
+        <span class="mat-card-name">Videos de fonemas</span>
+        <span class="mat-card-desc">Recursos de audio y video para trabajar los fonemas con los estudiantes en el aula.</span>
+        <a href="https://sites.google.com/fundacionaprenderaquererte.org/manglar/inicio/fonemas_1" target="_blank" class="mat-card-btn">↗ Abrir recurso</a>
+      </div>
+    </div>
+    <div class="mat-cards" style="margin-top:20px;">
+      <div class="mat-card">
+         <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <span class="mat-card-name">Hoja de pauta Montessori</span>
+        <span class="mat-card-desc">Papel pautado con triple línea para guiar la escritura de letras mayúsculas y minúsculas. Recurso complementario para trabajar la dimensión y proporción de las letras en el aula.</span>
+        <a href="https://drive.google.com/file/d/1-7dU8ORyWF6u2UjItLsUJ5WtZqLrPHao/view?usp=sharing" target="_blank" class="mat-card-btn">↗ Descargar</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MATERIALES DIGITALES -->
+  <div id="kal-materiales" class="mat-subpanel">
+    <div style="margin-top:20px;">
+      <p class="mat-sublabel">Para el docente</p>
+      <div class="mat-cards" style="margin-bottom:20px;">
+          <div class="mat-card">
+          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+          <span class="mat-card-name">Calendario Kalulu</span>
+          <span class="mat-card-desc">Planificador de sesiones para organizar la implementación en el aula.</span>
+          <a href="https://drive.google.com/file/d/1fBYekyKiXfL4NDve6bvoJ5JtbRoeZYEH/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+        </div>
+        <div class="mat-card">
+          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <span class="mat-card-name">Guía pedagógica</span>
+          <span class="mat-card-desc">Fundamentos metodológicos y rutinas de implementación para 2.° grado.</span>
+          <a href="https://drive.google.com/file/d/1oPFxmdzQQcUHkSnO-rspJNugFlBnsxza/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+        </div>
+        <div class="mat-card">
+          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+          <span class="mat-card-name">Juego revueltos</span>
+          <span class="mat-card-desc">Juego para reforzar correspondencias grafema-fonema en el aula.</span>
+          <a href="https://drive.google.com/file/d/11Kse-L8BSJkMcUb7TNIRYswwqKgmu6d8/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+        </div>
+        <div class="mat-card">
+          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+          <span class="mat-card-name">Bingo</span>
+          <span class="mat-card-desc">Bingo pedagógico para reforzar el aprendizaje fonético.</span>
+          <a href="https://drive.google.com/file/d/1dGzRjvNJk-E3gRhXtsVOQ7xniFwA6ZmG/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+        </div>
+        <div class="mat-card">
+          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <span class="mat-card-name">Lectómetro</span>
+          <span class="mat-card-desc">Herramienta para medir el nivel lector de los estudiantes.</span>
+          <a href="https://drive.google.com/file/d/1Y5TWCNUUHAebdIsSSnl8eBE6kReZJU0p/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+        </div>
+
+      </div>
+      <p class="mat-sublabel">Para el estudiante</p>
+      <div class="mat-cards">
+        <div class="mat-card">
+          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+          <span class="mat-card-name">Cuadernillo 1</span>
+          <span class="mat-card-desc">Primer cuadernillo de lectura y escritura para 2.° grado.</span>
+          <a href="https://drive.google.com/file/d/1kxyeROd3osdFSDuzN96b4-g7B4b24OUl/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+        </div>
+        <div class="mat-card">
+          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+          <span class="mat-card-name">Cuadernillo 2</span>
+          <span class="mat-card-desc">Segundo cuadernillo de lectura y escritura para 2.° grado.</span>
+          <a href="https://drive.google.com/file/d/1RyZRa5TAL9RKf0f1pb-N0tZhxKrJKNA4/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+        </div>
+        <div class="mat-card">
+          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+          <span class="mat-card-name">Cuadernillo 3</span>
+          <span class="mat-card-desc">Tercer cuadernillo de lectura y escritura para 2.° grado.</span>
+          <a href="https://drive.google.com/file/d/1pxuPPwi7x-uuMDp9IrNwcHZAqF0uJA1V/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KALULU WEB -->
+  <div id="kal-web" class="mat-subpanel">
+    <div class="mat-cards" style="margin-top:20px;">
+      <div class="mat-card">
+        <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <span class="mat-card-name">Kalulu Web</span>
+        <span class="mat-card-desc">Accede a la aplicación Kalulu directamente desde el navegador, sin necesidad de instalar nada.</span>
+        <a href="https://kalulu.excellolab.org/langue/colombie/" target="_blank" class="mat-card-btn">↗ Abrir página</a>
+      </div>
+      <div class="mat-card">
+        <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+        <span class="mat-card-name">Kalulu — Google Play</span>
+        <span class="mat-card-desc">Descarga la aplicación Kalulu en dispositivos Android desde la Play Store.</span>
+        <a href="https://play.google.com/store/apps/details?id=org.godotengine.kalulu&hl=fr" target="_blank" class="mat-card-btn">↗ Descargar en Play Store</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- EVALUACIÓN -->
+  <div id="kal-evaluacion" class="mat-subpanel">
+    <div style="margin-top:20px;">
+      <p class="mat-sublabel">Evaluación inicial — Para el docente</p>
+      <div class="mat-cards" style="margin-bottom:20px;">
+        <div class="mat-card">
+          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <span class="mat-card-name">Archivos para el docente</span>
+          <span class="mat-card-desc">Materiales de apoyo para aplicar la evaluación inicial.</span>
+          <a href="https://drive.google.com/file/d/1V_U0gsAbuuha9J0sj9KtBlTuJWAz-pAk/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+        </div>
+        <div class="mat-card">
+          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <span class="mat-card-name">Instrucciones para la aplicación</span>
+          <span class="mat-card-desc">Guía paso a paso para aplicar la evaluación inicial correctamente.</span>
+          <a href="https://drive.google.com/file/d/1ZJNrG6kltMzVSPUpVQA4eappGkeSUy7T/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+        </div>
+        <div class="mat-card">
+          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+          <span class="mat-card-name">Herramienta de sistematización</span>
+          <span class="mat-card-desc">Hoja de cálculo para registrar los resultados de la evaluación inicial.</span>
+          <a href="https://docs.google.com/spreadsheets/d/1QuV-28oT1h7HVsFMq7hhvR7aHO5fuS9o/edit?usp=sharing" target="_blank" class="mat-card-btn">↗ Abrir en Sheets</a>
+        </div>
+      </div>
+      <p class="mat-sublabel">Evaluación inicial — Para el estudiante</p>
+      <div class="mat-cards" style="margin-bottom:20px;">
+        <div class="mat-card">
+          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+          <span class="mat-card-name">Archivos para los niños y niñas</span>
+          <span class="mat-card-desc">Material para que los estudiantes realicen la evaluación inicial.</span>
+          <a href="https://drive.google.com/file/d/1ZSC8jECO_3_JazsuoMcKNxHe3bIBP-us/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+        </div>
               </div>
-              <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-                <span class="mat-card-name">Guía pedagógica Kalulu</span>
-                <span class="mat-card-desc">Fundamentos metodológicos y rutinas de implementación para 2.° grado.</span>
-                <a href="https://drive.google.com/file/d/1bz-TcUY9ahZoBzep1PZrIYjXFIPLfLjh/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-              </div>
-              <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-                <span class="mat-card-name">Guía docente cuadernillos Kalulu</span>
-                <span class="mat-card-desc">Instrucciones específicas para el uso de los cuadernillos en el aula.</span>
-                <a href="https://drive.google.com/file/d/164p3W0N3wmr9PGjUNW9lR-84iGLRFz7h/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-              </div>
+              <p class="mat-sublabel">Evaluación formativa</p>
+              <div class="mat-cards">
                 <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
-                <span class="mat-card-name">Bingo pedagógico</span>
-                <span class="mat-card-desc">Juego para reforzar correspondencias grafema-fonema en el aula.</span>
-                <a href="https://drive.google.com/file/d/1UnBHPUQuYe5tTidaciNHRbjYX1PqAqfO/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+                  <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+                  <span class="mat-card-name">Evaluación formativa</span>
+                  <span class="mat-card-desc">Hoja de cálculo para el seguimiento formativo del proceso lector.</span>
+                  <a href="https://docs.google.com/spreadsheets/d/14MNrFioqSp2wWrLB5azXswlLmlnsl5Eh/edit?usp=sharing" target="_blank" class="mat-card-btn">↗ Abrir en Sheets</a>
+                </div>
               </div>
             </div>
-            <p class="mat-sublabel">Para el estudiante</p>
-            <div class="mat-cards">
-              <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-                <span class="mat-card-name">Cuadernillo del estudiante 1</span>
-                <span class="mat-card-desc">Lectura y escritura de sílabas, palabras y oraciones — primer cuadernillo.</span>
-                <a href="https://drive.google.com/file/d/1XaGHDLaICB0nSRzCTRraV_2km1NFe6vC/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-              </div>
-              <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-                <span class="mat-card-name">Cuadernillo del estudiante 2</span>
-                <span class="mat-card-desc">Lectura y escritura de sílabas, palabras y oraciones — segundo cuadernillo.</span>
-                <a href="https://drive.google.com/file/d/1ugM1hYydLk9AZBRRjBtNJ9Am16c1PCzo/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-              </div>
-              </div>
           </div>
+
         </div>
- 
+      
         <!-- AVANZA+ -->
         <div id="doc-avanza" class="mat-panel">
           <div style="margin-top:20px;">
