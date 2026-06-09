@@ -3264,3 +3264,18 @@ alfa-page { font-family: 'Prompt', sans-serif; }
     .doc-fase { border-right: none; border-bottom: 1px solid #d6ede2; }
     .doc-fase:last-child { border-bottom: none; }
   }
+
+  /*CLAVES ALFA*/
+  #ca-grid .ca-card { background:#fff; border-radius:12px; overflow:hidden; border:1px solid #c5e8d3; }
+    #ca-grid .ca-img-wrap { position:relative; overflow:hidden; cursor:zoom-in; }
+    #ca-grid .ca-img-wrap:hover .ca-hint { opacity:1; }
+    #ca-grid .ca-hint { position:absolute; inset:0; background:rgba(11,86,64,0.18); display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity 0.2s; }
+    #ca-grid .ca-hint span { width:40px; height:40px; border-radius:50%; background:#fff; display:flex; align-items:center; justify-content:center; font-size:22px; color:#0b5640; font-weight:700; }
+    #ca-grid img { width:100%; height:auto; display:block; }
+    #ca-grid .ca-body { padding:14px 16px; }
+    #ca-grid .ca-year { font-size:11px; color:#888; margin-bottom:2px; font-family:'Prompt',sans-serif; }
+    #ca-grid .ca-tag { font-size:11px; font-weight:700; color:#018d38; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:6px; font-family:'Prompt',sans-serif; }
+    #ca-grid .ca-title { font-size:13px; font-weight:600; color:#0b5640; line-height:1.4; margin-bottom:4px; font-family:'Prompt',sans-serif; }
+    #ca-grid .ca-day { font-size:11px; color:#888; font-family:'Prompt',sans-serif; }
+    #ca-prev:hover, #ca-next:hover { background:#0b5640 !important; color:#fff !important; }
+    #ca-lb.open { display:flex !important; }

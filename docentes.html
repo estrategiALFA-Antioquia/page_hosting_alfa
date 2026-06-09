@@ -76,6 +76,7 @@
       <a href="#rol">Tu rol</a>
       <a href="#materiales">Materiales</a>
       <a href="#acompanamiento">Acompañamiento</a>
+      <a href="#claves-alfa">Claves ALFA</a>
       <!--<a href="#canal">Canal WhatsApp</a>-->
     </div>
   </nav>
@@ -484,7 +485,52 @@
       </div>
     </div>
   </section>
+  
+  <!-- CLAVES ALFA -->
+<section id="claves-alfa" class="doc-section" style="background:#e8f5ed;">
+  <div class="doc-inner" style="position:relative;">
+    <!-- Título decorativo de fondo -->
+    <div style="position:absolute; top:-10px; left:230px; font-size:110px; font-weight:700; color:#c5e8d3; letter-spacing:-2px; line-height:1; pointer-events:none; user-select:none; font-family:'Prompt',sans-serif;">CLAVES ALFA</div>
+
+    <!-- Encabezado + flechas -->
+    <div style="display:flex; align-items:flex-start; justify-content:space-between; position:relative; z-index:1; margin-bottom:28px;">
+      <div>
+        <p style="font-size:11px; font-weight:700; color:#018d38; letter-spacing:0.1em; text-transform:uppercase; margin:0 0 6px; font-family:'Prompt',sans-serif;">Serie del canal de docentes · WhatsApp</p>
+        <h2 style="font-size:28px; font-weight:700; color:#0b5640; margin:0; font-family:'Prompt',sans-serif;">Claves ALFA para el aula</h2>
+      </div>
+      <div style="display:flex; gap:8px; align-items:center;">
+        <button id="ca-prev" onclick="caPrev()" aria-label="Anterior" style="width:36px; height:36px; border-radius:50%; border:1.5px solid #0b5640; background:transparent; display:flex; align-items:center; justify-content:center; cursor:pointer; color:#0b5640; font-size:16px;">&#8592;</button>
+        <button id="ca-next" onclick="caNext()" aria-label="Siguiente" style="width:36px; height:36px; border-radius:50%; border:1.5px solid #0b5640; background:transparent; display:flex; align-items:center; justify-content:center; cursor:pointer; color:#0b5640; font-size:16px;">&#8594;</button>
+      </div>
+    </div>
+
+    <!-- Grid de tarjetas -->
+    <div id="ca-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:20px; position:relative; z-index:1; margin-top:60px;"></div>
+
+    <!-- Lightbox -->
+    <div id="ca-lb" onclick="caCloseLB()" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.75); z-index:9999; align-items:center; justify-content:center; padding:1rem;">
+    <div onclick="event.stopPropagation()" style="background:#fff; border-radius:12px; max-width:420px; width:100%; overflow-y:auto; max-height:90vh;">
+      <img id="ca-lb-img" src="" alt="" style="width:100%; display:block;" />
+      <div style="padding:16px 20px;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">
+          <div>
+            <div id="ca-lb-sem" style="font-size:13px; color:#0b5640; font-weight:600; font-family:'Prompt',sans-serif;"></div>
+            
+          </div>
+          <button type="button" onclick="caCloseLB(); return false;" style="width:32px; height:32px; border-radius:50%; border:none; background:#f0f0f0; color:#555; font-size:14px; cursor:pointer; display:flex; align-items:center; justify-content:center;">✕</button>
+        </div>
+        <p id="ca-lb-desc" style="font-size:13px; color:#3a5a4a; line-height:1.7; margin:0; font-family:'Prompt',sans-serif; text-align:justify; white-space:pre-line;"></p>
+      </div>
+    </div>
+  </div>
+
+
+    
+  
+</section>
  
+
+
   <!-- CTA WHATSAPP -->
   <div class="doc-cta">
     <h2>¿Tiene dudas sobre la implementación?</h2>
@@ -629,5 +675,6 @@ document.querySelectorAll('.doc-nav a').forEach(function(a) {
 <script src="js/jquery.flexslider.js"></script>
 <script src="js/animate.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/claves-alfa.js"></script>
 </body>
 </html>
