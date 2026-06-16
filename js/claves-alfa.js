@@ -1,5 +1,21 @@
 var caSemanas = [
   {
+    id: 3,
+    titulo: "Un buen lector es un  descifrador experto",
+    tarjetas: [
+      {
+        dia: "Lunes 16 jun",
+        src: "img/claves_alfa/sem_3/lunes.png",
+        desc: "La escritura es una invención notable, porque permite fijar la palabra sobre un soporte permanente. Es como afirma el proverbio latino: “Las palabras vuelan, pero lo escrito queda”. La escritura se parece a un código secreto que encripta los sonidos, las sílabas o las palabras de una lengua. Como ocurre con cualquier código secreto, descifrarlo requiere aprendizaje. Un buen lector es un descifrador experto.\n\n Nuestra escritura se organiza en un alfabeto: denota cada uno de los sonidos elementales de la lengua hablada, esto es, los fonemas –como el sonido p y el sonido a de la sílaba pa –. En una palabra escrita en español, cada letra o grupo de letras que llamamos “grafema” corresponde a un fonema de la lengua hablada. Además, algunos grafemas pueden pronunciarse de maneras distintas según los contextos en que aparezcan: pensemos en las palabras \u201cgato\u201d y \u201cgenio\u201d o en las palabras \u201crey\u201d y \u201cyo\u201d.\n\n Fuente: Dehaene, S. (dir.). (2015). Aprender a leer. De las ciencias cognitivas al aula. Siglo Veintiuno Editores."
+      },
+      {
+        dia: "Viernes 19 jun",
+        src: "img/claves_alfa/sem_3/viernes.png",
+        desc: "Todos los buenos lectores saben decodificar a la vez los sonidos y los morfemas de las palabras. Aprender a decodificar la escritura exige aprender dos vías de lectura: el pasaje de las letras a los sonidos y el pasaje de las letras a los significados."
+      }
+    ]
+  },
+  {
     id: 2,
     titulo: "Leer no se aprende de forma natural ni solo con el tiempo",
     tarjetas: [
