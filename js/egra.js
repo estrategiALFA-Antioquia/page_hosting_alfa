@@ -12,7 +12,7 @@ var coberturaPorMunicipio = {};
 
 // ── Colores ───────────────────────────────────────────────────
 function colorCalor(pct, sinDatos) {
-  if (sinDatos) return '#d0d0d0'; // gris para municipios no en ALFA
+  if (sinDatos) return '#a0a0a0'; // gris para municipios no en ALFA
   if (pct === 0)   return '#e8f5ee';
   if (pct < 0.25)  return '#b3d9c5';
   if (pct < 0.50)  return '#5dcaa5';
@@ -316,7 +316,9 @@ function badgeLink(link) {
 
 function toTitleCase(str) {
   if (!str) return '';
-  return str.toLowerCase().replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+  return str.toLowerCase().replace(/(?:^|\s|-)(\S)/g, function (match, c) {
+    return match.replace(c, c.toUpperCase());
+  });
 }
 
 function escHtml(str) {
