@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Resultados de la evaluación EGRA por institución educativa en los 116 municipios de Antioquia." />
 <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-<!-- CSS del sitio -->
 <link href="css/bootstrap.min.css" rel="stylesheet" />
 <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
 <link href="css/jcarousel.css" rel="stylesheet" />
@@ -16,15 +15,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet" />
-<!-- Leaflet para el mapa -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
-<!-- CSS propio de la página EGRA -->
 <link href="css/egra.css" rel="stylesheet" />
 </head>
 <body>
 <div id="wrapper">
 
-  <!-- HEADER (idéntico al resto del sitio) -->
+  <!-- HEADER -->
   <header>
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
@@ -45,7 +42,7 @@
             <li><a href="alfa.html">Sobre ALFA</a></li>
             <li><a href="facilitadores.html">Facilitadores</a></li>
             <li><a href="docentes.html">Docentes</a></li>
-            <li class="active"><a href="egra.html">Resultados EGRA</a></li>
+            <li class="active"><a href="egra.html">EGRA</a></li>
             <li><a href="contact.html">Contacto</a></li>
           </ul>
         </div>
@@ -55,6 +52,7 @@
 
   <!-- HERO -->
   <section class="egra-hero">
+    <div class="egra-hero-bg">EGRA</div>
     <div class="egra-hero-inner">
       <p class="egra-hero-label">Evaluación de Lectura en Grados Iniciales</p>
       <h1 class="egra-hero-title">Resultados <span class="egra-hero-accent">EGRA</span> por institución</h1>
@@ -85,16 +83,40 @@
     <aside class="egra-map-panel">
       <div class="egra-map-header">
         <p class="egra-map-title">Seleccioná un municipio</p>
-        <p class="egra-map-hint">Hacé clic para filtrar la tabla</p>
+        <p class="egra-map-hint">Hacé clic para filtrar · Hover para ver cobertura</p>
       </div>
       <div id="egra-map"></div>
-      <button class="egra-map-reset" id="btnResetMapa" style="display:none;">
-        ✕ Ver todos los municipios
-      </button>
+      <!-- Leyenda mapa de calor -->
+      <div class="egra-leyenda">
+        <span class="egra-leyenda-label">0%</span>
+        <div class="egra-leyenda-bar"></div>
+        <span class="egra-leyenda-label">100%</span>
+      </div>
+      <div class="egra-leyenda-ends">
+        <span class="egra-leyenda-end">Sin informes</span>
+        <span class="egra-leyenda-end">Cobertura completa</span>
+      </div>
+      <button class="egra-map-reset" id="btnResetMapa" style="display:none;">✕ Ver todos</button>
     </aside>
 
-    <!-- PANEL DERECHO: FILTROS + TABLA -->
+    <!-- PANEL DERECHO -->
     <section class="egra-table-panel">
+
+      <!-- ENCABEZADO CONTEXTUAL (aparece al seleccionar municipio) -->
+      <div class="egra-contexto" id="egraContexto">
+        <div class="egra-contexto-info">
+          <span class="egra-contexto-municipio" id="ctxMunicipio"></span>
+          <div class="egra-contexto-meta">
+            <span class="egra-contexto-chip">Subregión: <strong id="ctxSubregion"></strong></span>
+            <span class="egra-contexto-chip">Operador: <strong id="ctxOperador"></strong></span>
+            <span class="egra-contexto-chip">Sedes: <strong id="ctxSedes"></strong></span>
+          </div>
+        </div>
+        <div class="egra-contexto-cobertura">
+          <div class="egra-contexto-pct" id="ctxPct">—</div>
+          <div class="egra-contexto-pct-label">con informe</div>
+        </div>
+      </div>
 
       <!-- FILTROS -->
       <div class="egra-filters">
@@ -116,7 +138,7 @@
         </div>
       </div>
 
-      <!-- CONTADOR Y TABLA -->
+      <!-- TABLA -->
       <div class="egra-table-wrap">
         <p class="egra-count" id="contadorResultados">Cargando…</p>
         <div class="egra-table-scroll">
@@ -125,15 +147,13 @@
               <tr>
                 <th>Sede</th>
                 <th>Institución</th>
-                <th>Municipio</th>
-                <th>Subregión</th>
+                <th class="col-municipio">Municipio</th>
                 <th>Operador</th>
                 <th>Línea base 2026</th>
-                <th>Noviembre 2026</th>
               </tr>
             </thead>
             <tbody id="tablaBody">
-              <tr><td colspan="7" class="egra-loading">Cargando datos…</td></tr>
+              <tr><td colspan="5" class="egra-loading">Cargando datos…</td></tr>
             </tbody>
           </table>
         </div>
@@ -142,13 +162,13 @@
     </section>
   </div>
 
-  <!-- NOTA AL PIE DE LA SECCIÓN -->
+  <!-- NOTA -->
   <div class="egra-nota">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-    Los informes corresponden a la evaluación EGRA de línea base aplicada entre abril y mayo de 2026. Las sedes marcadas como <strong>"En proceso de evaluación"</strong> serán actualizadas a medida que los informes estén disponibles.
+    Informes de la evaluación EGRA de línea base, aplicada entre abril y mayo de 2026. Las sedes marcadas como <strong>"En proceso"</strong> serán actualizadas a medida que los informes estén disponibles.
   </div>
 
-  <!-- FOOTER (idéntico al resto del sitio) -->
+  <!-- FOOTER -->
   <footer style="background:#0b5640; color:#fff; font-family:'Prompt',sans-serif; padding:48px 0 0;">
     <div style="max-width:1140px; margin:0 auto; padding:0 24px; display:grid; grid-template-columns:0.5fr 1.2fr 1fr 1fr; gap:40px;">
       <div style="display:flex; align-items:flex-start; padding-top:4px;">
@@ -160,9 +180,7 @@
           Calle 42B N.° 52-106<br>Centro Administrativo Departamental<br>José María Córdova – La Alpujarra<br><br>
           Lunes a jueves: 7:30 a.m. – 12:00 m. / 1:30 p.m. – 5:15 p.m.<br>
           Viernes: 7:30 a.m. – 12:00 m. / 1:30 p.m. – 4:00 p.m.<br><br>
-          Línea de atención: 01 8000 4 19000 · 409 9000<br>
-          WhatsApp: 322 834 1290<br>
-          <a href="mailto:gestiondocumental@antioquia.gov.co" style="color:rgba(255,255,255,0.75); text-decoration:none;">gestiondocumental@antioquia.gov.co</a>
+          Línea de atención: 01 8000 4 19000 · 409 9000
         </p>
       </div>
       <div>
@@ -194,16 +212,12 @@
     <style>footer a:hover { color:#3AF9A2 !important; } @media (max-width:768px) { footer > div:first-child { grid-template-columns:1fr !important; } }</style>
   </footer>
 
-</div><!-- end wrapper -->
+</div>
 
-<!-- Scripts base -->
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<!-- Leaflet -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<!-- PapaParse para leer el CSV -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
-<!-- Lógica de la página -->
 <script src="js/egra.js"></script>
 </body>
 </html>

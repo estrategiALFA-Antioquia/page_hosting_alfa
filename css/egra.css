@@ -3,82 +3,108 @@
    Estrategia ALFA · estrategialfa.org
 ───────────────────────────────────────────────────────────── */
 
+/* ── Forzar Prompt en toda la página EGRA ─────────────────── */
+body,
+.egra-hero, .egra-main, .egra-filters, .egra-table,
+.egra-nota, .egra-map-panel, .egra-table-panel {
+  font-family: 'Prompt', sans-serif !important;
+}
+
 /* ── Hero ─────────────────────────────────────────────────── */
 .egra-hero {
-  background: linear-gradient(135deg, #0b5640 0%, #018d38 100%);
-  padding: 56px 24px 48px;
+  background: #0b5640;
+  padding: 80px 24px 64px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.egra-hero-bg {
+  position: absolute;
+  inset: 0;
+  font-size: 160px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  letter-spacing: -8px;
   font-family: 'Prompt', sans-serif;
+  white-space: nowrap;
 }
 .egra-hero-inner {
   max-width: 960px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 .egra-hero-label {
   font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #3AF9A2;
   margin: 0 0 12px;
+  font-family: 'Prompt', sans-serif !important;
 }
 .egra-hero-title {
   font-size: 36px;
   font-weight: 700;
   color: #ffffff;
-  margin: 0 0 12px;
-  line-height: 1.15;
+  margin: 0 0 16px;
+  line-height: 1.2;
+  font-family: 'Prompt', sans-serif !important;
 }
-.egra-hero-accent {
-  color: #3AF9A2;
-}
+.egra-hero-accent { color: #3AF9A2; }
 .egra-hero-sub {
   font-size: 15px;
-  color: rgba(255,255,255,0.82);
-  margin: 0 0 32px;
-  max-width: 600px;
-  line-height: 1.65;
+  color: rgba(255,255,255,0.78);
+  margin: 0 auto 36px;
+  max-width: 560px;
+  line-height: 1.75;
+  font-family: 'Prompt', sans-serif !important;
 }
 .egra-hero-stats {
   display: flex;
   align-items: center;
-  gap: 24px;
+  justify-content: center;
+  gap: 32px;
   flex-wrap: wrap;
 }
 .egra-stat {
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 12px 20px;
 }
 .egra-stat-n {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
-  color: #ffffff;
+  color: #3AF9A2;
   line-height: 1;
+  font-family: 'Prompt', sans-serif !important;
 }
 .egra-stat-l {
-  font-size: 12px;
-  color: rgba(255,255,255,0.65);
-  margin-top: 4px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  font-family: 'Prompt', sans-serif !important;
 }
-.egra-stat-div {
-  width: 1px;
-  height: 36px;
-  background: rgba(255,255,255,0.25);
-}
+.egra-stat-div { display: none; }
 
 /* ── Layout principal ─────────────────────────────────────── */
 .egra-main {
   display: flex;
   align-items: flex-start;
-  gap: 0;
-  max-width: 100%;
   min-height: 600px;
-  font-family: 'Prompt', sans-serif;
 }
 
 /* ── Panel mapa ───────────────────────────────────────────── */
 .egra-map-panel {
-  width: 340px;
-  min-width: 280px;
+  width: 420px;
+  min-width: 320px;
   flex-shrink: 0;
   background: #f0f8f3;
   border-right: 1px solid #d6ede2;
@@ -89,26 +115,26 @@
   display: flex;
   flex-direction: column;
 }
-.egra-map-header {
-  margin-bottom: 12px;
-}
+.egra-map-header { margin-bottom: 12px; }
 .egra-map-title {
   font-size: 13px;
   font-weight: 600;
   color: #0b5640;
   margin: 0 0 2px;
+  font-family: 'Prompt', sans-serif !important;
 }
 .egra-map-hint {
   font-size: 11px;
   color: #6a9a80;
   margin: 0;
+  font-family: 'Prompt', sans-serif !important;
 }
 #egra-map {
   flex: 1;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid #b3d9c5;
-  min-height: 400px;
+  min-height: 450px;
   background: #e8f5ee;
 }
 .egra-map-reset {
@@ -119,29 +145,60 @@
   color: #fff;
   border: none;
   border-radius: 6px;
-  font-family: 'Prompt', sans-serif;
+  font-family: 'Prompt', sans-serif !important;
   font-size: 12px;
   font-weight: 500;
   cursor: pointer;
   transition: background 0.15s;
 }
-.egra-map-reset:hover {
-  background: #0b5640;
+.egra-map-reset:hover { background: #0b5640; }
+
+/* Leyenda mapa de calor */
+.egra-leyenda {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.egra-leyenda-label {
+  font-size: 10px;
+  color: #6a9a80;
+  font-family: 'Prompt', sans-serif !important;
+  white-space: nowrap;
+}
+.egra-leyenda-bar {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #e8f5ee, #3AF9A2, #018d38, #0b5640);
+  min-width: 80px;
+}
+.egra-leyenda-ends {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2px;
+}
+.egra-leyenda-end {
+  font-size: 10px;
+  color: #6a9a80;
+  font-family: 'Prompt', sans-serif !important;
 }
 
 /* Tooltip del mapa */
 .egra-tooltip {
-  background: #0b5640;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-family: 'Prompt', sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  padding: 4px 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  background: #0b5640 !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 6px !important;
+  font-family: 'Prompt', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  padding: 6px 10px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important;
 }
-.egra-tooltip::before { display: none; }
+.egra-tooltip::before { display: none !important; }
 
 /* ── Panel tabla ──────────────────────────────────────────── */
 .egra-table-panel {
@@ -149,6 +206,55 @@
   min-width: 0;
   padding: 24px;
   overflow: hidden;
+}
+
+/* ── Encabezado contextual ────────────────────────────────── */
+.egra-contexto {
+  display: none;
+  background: #0b5640;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.egra-contexto.visible { display: flex; }
+.egra-contexto-info { display: flex; flex-direction: column; gap: 4px; }
+.egra-contexto-municipio {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  font-family: 'Prompt', sans-serif !important;
+}
+.egra-contexto-meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.egra-contexto-chip {
+  font-size: 11px;
+  color: rgba(255,255,255,0.75);
+  font-family: 'Prompt', sans-serif !important;
+}
+.egra-contexto-chip strong { color: #3AF9A2; }
+.egra-contexto-cobertura {
+  text-align: right;
+}
+.egra-contexto-pct {
+  font-size: 28px;
+  font-weight: 700;
+  color: #3AF9A2;
+  line-height: 1;
+  font-family: 'Prompt', sans-serif !important;
+}
+.egra-contexto-pct-label {
+  font-size: 10px;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: 'Prompt', sans-serif !important;
 }
 
 /* ── Filtros ──────────────────────────────────────────────── */
@@ -165,10 +271,7 @@
   gap: 4px;
   min-width: 160px;
 }
-.egra-filter-search {
-  flex: 1;
-  min-width: 220px;
-}
+.egra-filter-search { flex: 1; min-width: 220px; }
 .egra-filter-label {
   font-size: 11px;
   font-weight: 600;
@@ -176,13 +279,14 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin: 0;
+  font-family: 'Prompt', sans-serif !important;
 }
 .egra-select,
 .egra-input {
   padding: 8px 12px;
   border: 1px solid #b3d9c5;
   border-radius: 6px;
-  font-family: 'Prompt', sans-serif;
+  font-family: 'Prompt', sans-serif !important;
   font-size: 13px;
   color: #2d4a38;
   background: #fff;
@@ -208,15 +312,14 @@
   font-weight: 500;
   padding: 12px 16px 0;
   margin: 0;
+  font-family: 'Prompt', sans-serif !important;
 }
-.egra-table-scroll {
-  overflow-x: auto;
-}
+.egra-table-scroll { overflow-x: auto; }
 .egra-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 13px;
-  font-family: 'Prompt', sans-serif;
+  font-family: 'Prompt', sans-serif !important;
 }
 .egra-table thead th {
   background: #f0f8f3;
@@ -229,21 +332,27 @@
   border-bottom: 1px solid #d6ede2;
   white-space: nowrap;
   text-align: left;
+  font-family: 'Prompt', sans-serif !important;
 }
 .egra-table tbody tr {
   border-bottom: 1px solid #f0f8f3;
   transition: background 0.1s;
 }
-.egra-table tbody tr:hover {
-  background: #f7fcf9;
-}
+.egra-table tbody tr:hover { background: #f7fcf9; }
 .egra-table tbody td {
   padding: 10px 14px;
   color: #2d4a38;
   vertical-align: middle;
+  font-family: 'Prompt', sans-serif !important;
 }
-.egra-td-sede {
-  font-weight: 500;
+.egra-td-sede { font-weight: 500; }
+.egra-td-municipio-sub {
+  font-size: 11px;
+  color: #6a9a80;
+  font-weight: 400;
+  display: block;
+  margin-top: 2px;
+  font-family: 'Prompt', sans-serif !important;
 }
 .egra-loading,
 .egra-empty {
@@ -251,7 +360,11 @@
   padding: 40px !important;
   color: #6a9a80;
   font-size: 14px;
+  font-family: 'Prompt', sans-serif !important;
 }
+
+/* Ocultar columna municipio cuando hay filtro activo */
+.egra-table.municipio-activo .col-municipio { display: none; }
 
 /* ── Badges de estado ─────────────────────────────────────── */
 .egra-badge {
@@ -262,6 +375,7 @@
   font-weight: 500;
   white-space: nowrap;
   text-decoration: none;
+  font-family: 'Prompt', sans-serif !important;
 }
 .egra-badge-ok {
   background: #018d38;
@@ -278,36 +392,25 @@
   color: #6a9a80;
   border: 1px solid #b3d9c5;
 }
-.egra-badge-soon {
-  background: #fffbe6;
-  color: #8a7000;
-  border: 1px solid #ffe066;
-}
 
 /* ── Nota al pie ──────────────────────────────────────────── */
 .egra-nota {
-  max-width: 100%;
   background: #f0f8f3;
   border-top: 1px solid #d6ede2;
   padding: 16px 32px;
   font-size: 12px;
   color: #4a7a5e;
-  font-family: 'Prompt', sans-serif;
+  font-family: 'Prompt', sans-serif !important;
   display: flex;
   align-items: flex-start;
   gap: 8px;
   line-height: 1.6;
 }
-.egra-nota svg {
-  flex-shrink: 0;
-  margin-top: 1px;
-}
+.egra-nota svg { flex-shrink: 0; margin-top: 1px; }
 
 /* ── Responsive ───────────────────────────────────────────── */
 @media (max-width: 900px) {
-  .egra-main {
-    flex-direction: column;
-  }
+  .egra-main { flex-direction: column; }
   .egra-map-panel {
     width: 100%;
     height: auto;
@@ -315,19 +418,11 @@
     border-right: none;
     border-bottom: 1px solid #d6ede2;
   }
-  #egra-map {
-    min-height: 300px;
-    max-height: 360px;
-  }
-  .egra-hero-title {
-    font-size: 26px;
-  }
+  #egra-map { min-height: 300px; max-height: 380px; }
+  .egra-hero-title { font-size: 26px; }
+  .egra-contexto-pct { font-size: 22px; }
 }
 @media (max-width: 600px) {
-  .egra-filters {
-    flex-direction: column;
-  }
-  .egra-filter-group {
-    min-width: 100%;
-  }
+  .egra-filters { flex-direction: column; }
+  .egra-filter-group { min-width: 100%; }
 }
