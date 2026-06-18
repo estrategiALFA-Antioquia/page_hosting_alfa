@@ -426,3 +426,131 @@ body,
   .egra-filters { flex-direction: column; }
   .egra-filter-group { min-width: 100%; }
 }
+
+/* ── Ancho del panel mapa ────────────────────────────────────── */
+.egra-map-panel {
+  width: 500px !important;
+  min-width: 400px !important;
+}
+
+/* ── Leyenda ─────────────────────────────────────────────────── */
+.egra-leyenda { margin-top: 10px; }
+.egra-leyenda-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.egra-leyenda-label {
+  font-size: 10px;
+  color: #6a9a80;
+  font-family: 'Prompt', sans-serif !important;
+  white-space: nowrap;
+}
+.egra-leyenda-bar {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #e8f5ee, #5dcaa5, #018d38, #0b5640);
+}
+.egra-leyenda-ends {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2px;
+}
+.egra-leyenda-end {
+  font-size: 10px;
+  color: #6a9a80;
+  font-family: 'Prompt', sans-serif !important;
+}
+.egra-leyenda-gris {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+.egra-leyenda-gris-box {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background: #d0d0d0;
+  flex-shrink: 0;
+}
+
+/* ── Fondo del panel mapa en blanco para mejor contraste ─────── */
+.egra-map-panel {
+  background: #ffffff !important;
+  border-right: 1px solid #e0e0e0 !important;
+}
+#egra-map {
+  background: #f5f5f5 !important;
+  border: 1px solid #e0e0e0 !important;
+  min-height: 500px !important;
+}
+
+/* ── Nota arriba de filtros ──────────────────────────────────── */
+.egra-nota {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #d6ede2;
+  background: #f8fdf9;
+  padding: 10px 14px;
+  font-size: 12px;
+  color: #4a7a5e;
+  font-family: 'Prompt', sans-serif !important;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.6;
+}
+
+/* ── Ayuda ───────────────────────────────────────────────────── */
+.egra-ayuda-wrap { margin-bottom: 12px; }
+.egra-ayuda-btn {
+  font-size: 12px;
+  font-weight: 600;
+  color: #018d38;
+  background: none;
+  border: 1px solid #b3d9c5;
+  border-radius: 20px;
+  padding: 5px 14px;
+  cursor: pointer;
+  font-family: 'Prompt', sans-serif !important;
+  transition: all 0.15s;
+}
+.egra-ayuda-btn:hover { background: #f0f8f3; }
+.egra-ayuda-panel {
+  margin-top: 10px;
+  background: #f0f8f3;
+  border: 1px solid #d6ede2;
+  border-radius: 8px;
+  padding: 14px 18px;
+}
+.egra-ayuda-lista {
+  margin: 0;
+  padding: 0 0 0 16px;
+}
+.egra-ayuda-lista li {
+  font-size: 12px;
+  color: #2d4a38;
+  line-height: 1.7;
+  font-family: 'Prompt', sans-serif !important;
+  margin-bottom: 4px;
+}
+.egra-ayuda-lista li:last-child { margin-bottom: 0; }
+
+/* ── Badge Ver informe — sobrescribir Bootstrap ──────────────── */
+a.egra-badge-ok,
+a.egra-badge-ok:link,
+a.egra-badge-ok:visited,
+a.egra-badge-ok:hover,
+a.egra-badge-ok:focus,
+a.egra-badge-ok:active {
+  background: #018d38 !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+a.egra-badge-ok:hover { background: #0b5640 !important; }
+a.egra-badge-ok:active { background: #0b5640 !important; opacity: 0.9 !important; }

@@ -10,11 +10,10 @@
 <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
 <link href="css/jcarousel.css" rel="stylesheet" />
 <link href="css/flexslider.css" rel="stylesheet" />
-<link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
 <link href="css/egra.css" rel="stylesheet" />
 </head>
@@ -62,12 +61,10 @@
           <span class="egra-stat-n" id="statSedes">3.959</span>
           <span class="egra-stat-l">sedes evaluadas</span>
         </div>
-        <div class="egra-stat-div"></div>
         <div class="egra-stat">
           <span class="egra-stat-n">116</span>
           <span class="egra-stat-l">municipios</span>
         </div>
-        <div class="egra-stat-div"></div>
         <div class="egra-stat">
           <span class="egra-stat-n" id="statInformes">—</span>
           <span class="egra-stat-l">informes disponibles</span>
@@ -86,15 +83,20 @@
         <p class="egra-map-hint">Hacé clic para filtrar · Hover para ver cobertura</p>
       </div>
       <div id="egra-map"></div>
-      <!-- Leyenda mapa de calor -->
       <div class="egra-leyenda">
-        <span class="egra-leyenda-label">0%</span>
-        <div class="egra-leyenda-bar"></div>
-        <span class="egra-leyenda-label">100%</span>
-      </div>
-      <div class="egra-leyenda-ends">
-        <span class="egra-leyenda-end">Sin informes</span>
-        <span class="egra-leyenda-end">Cobertura completa</span>
+        <div class="egra-leyenda-row">
+          <span class="egra-leyenda-label">0%</span>
+          <div class="egra-leyenda-bar"></div>
+          <span class="egra-leyenda-label">100%</span>
+        </div>
+        <div class="egra-leyenda-ends">
+          <span class="egra-leyenda-end">Sin informes</span>
+          <span class="egra-leyenda-end">Cobertura completa</span>
+        </div>
+        <div class="egra-leyenda-gris">
+          <span class="egra-leyenda-gris-box"></span>
+          <span class="egra-leyenda-end">Municipio no incluido en ALFA</span>
+        </div>
       </div>
       <button class="egra-map-reset" id="btnResetMapa" style="display:none;">✕ Ver todos</button>
     </aside>
@@ -102,7 +104,20 @@
     <!-- PANEL DERECHO -->
     <section class="egra-table-panel">
 
-      <!-- ENCABEZADO CONTEXTUAL (aparece al seleccionar municipio) -->
+      <!-- AYUDA -->
+      <div class="egra-ayuda-wrap">
+        <button class="egra-ayuda-btn" id="btnAyuda">¿Cómo usar esta página?</button>
+        <div class="egra-ayuda-panel" id="panelAyuda" style="display:none;">
+          <ul class="egra-ayuda-lista">
+            <li><strong>Mapa:</strong> hacé clic en un municipio para ver solo sus sedes en la tabla. Hacé clic de nuevo para deseleccionar.</li>
+            <li><strong>Subregión / Operador:</strong> filtrá por zona geográfica u operador responsable.</li>
+            <li><strong>Informe:</strong> filtrá entre sedes que ya tienen informe disponible y las que están en proceso.</li>
+            <li><strong>Buscar:</strong> escribí el nombre de una sede o institución para encontrarla directamente.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ENCABEZADO CONTEXTUAL -->
       <div class="egra-contexto" id="egraContexto">
         <div class="egra-contexto-info">
           <span class="egra-contexto-municipio" id="ctxMunicipio"></span>
@@ -118,6 +133,12 @@
         </div>
       </div>
 
+      <!-- NOTA (arriba de los filtros) -->
+      <div class="egra-nota">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:1px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Informes de línea base EGRA, aplicada entre abril y mayo de 2026. Las sedes <strong>"En proceso"</strong> se actualizarán a medida que los informes estén disponibles.
+      </div>
+
       <!-- FILTROS -->
       <div class="egra-filters">
         <div class="egra-filter-group">
@@ -130,6 +151,14 @@
           <label class="egra-filter-label">Operador</label>
           <select class="egra-select" id="filtroOperador">
             <option value="">Todos</option>
+          </select>
+        </div>
+        <div class="egra-filter-group">
+          <label class="egra-filter-label">Informe</label>
+          <select class="egra-select" id="filtroDisponibilidad">
+            <option value="">Todos</option>
+            <option value="disponible">Con informe</option>
+            <option value="proceso">En proceso</option>
           </select>
         </div>
         <div class="egra-filter-group egra-filter-search">
@@ -162,12 +191,6 @@
     </section>
   </div>
 
-  <!-- NOTA -->
-  <div class="egra-nota">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-    Informes de la evaluación EGRA de línea base, aplicada entre abril y mayo de 2026. Las sedes marcadas como <strong>"En proceso"</strong> serán actualizadas a medida que los informes estén disponibles.
-  </div>
-
   <!-- FOOTER -->
   <footer style="background:#0b5640; color:#fff; font-family:'Prompt',sans-serif; padding:48px 0 0;">
     <div style="max-width:1140px; margin:0 auto; padding:0 24px; display:grid; grid-template-columns:0.5fr 1.2fr 1fr 1fr; gap:40px;">
@@ -190,7 +213,7 @@
           <li style="margin-bottom:10px;"><a href="alfa.html" style="font-size:13px; color:rgba(255,255,255,0.75); text-decoration:none; font-family:'Prompt',sans-serif;">Sobre ALFA</a></li>
           <li style="margin-bottom:10px;"><a href="facilitadores.html" style="font-size:13px; color:rgba(255,255,255,0.75); text-decoration:none; font-family:'Prompt',sans-serif;">Facilitadores</a></li>
           <li style="margin-bottom:10px;"><a href="docentes.html" style="font-size:13px; color:rgba(255,255,255,0.75); text-decoration:none; font-family:'Prompt',sans-serif;">Docentes</a></li>
-          <li style="margin-bottom:10px;"><a href="egra.html" style="font-size:13px; color:#3AF9A2; text-decoration:none; font-family:'Prompt',sans-serif;">Resultados EGRA</a></li>
+          <li style="margin-bottom:10px;"><a href="egra.html" style="font-size:13px; color:#3AF9A2; text-decoration:none; font-family:'Prompt',sans-serif;">EGRA</a></li>
           <li style="margin-bottom:10px;"><a href="contact.html" style="font-size:13px; color:rgba(255,255,255,0.75); text-decoration:none; font-family:'Prompt',sans-serif;">Contacto</a></li>
         </ul>
       </div>
