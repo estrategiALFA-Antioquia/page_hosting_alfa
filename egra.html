@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Resultados EGRA — Estrategia ALFA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Resultados de la evaluación EGRA por institución educativa en los 116 municipios de Antioquia." />
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+<!-- CSS del sitio -->
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+<link href="css/jcarousel.css" rel="stylesheet" />
+<link href="css/flexslider.css" rel="stylesheet" />
+<link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" />
+<!-- Leaflet para el mapa -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<!-- CSS propio de la página EGRA -->
+<link href="css/egra.css" rel="stylesheet" />
+</head>
+<body>
+<div id="wrapper">
+
+  <!-- HEADER (idéntico al resto del sitio) -->
+  <header>
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html" style="font-family:'Prompt',sans-serif; font-size:18px; font-weight:500; color:#ffffff !important; text-decoration:none; white-space:nowrap; display:flex; align-items:center; gap:10px;">
+            <img src="img/gob_verde.png" alt="Gobernación de Antioquia" style="height:100px; width:auto;" class="logo-gob">
+            Alfabetización Inicial&nbsp;<span style="background:#ffffff; color:#0b5640; padding:2px 8px; border-radius:4px; font-weight:600;">en Antioquia</span>
+          </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="alfa.html">Sobre ALFA</a></li>
+            <li><a href="facilitadores.html">Facilitadores</a></li>
+            <li><a href="docentes.html">Docentes</a></li>
+            <li class="active"><a href="egra.html">Resultados EGRA</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="egra-hero">
+    <div class="egra-hero-inner">
+      <p class="egra-hero-label">Evaluación de Lectura en Grados Iniciales</p>
+      <h1 class="egra-hero-title">Resultados <span class="egra-hero-accent">EGRA</span> por institución</h1>
+      <p class="egra-hero-sub">Consultá el informe de línea base 2026 de cada sede educativa en los 116 municipios de Antioquia.</p>
+      <div class="egra-hero-stats">
+        <div class="egra-stat">
+          <span class="egra-stat-n" id="statSedes">3.959</span>
+          <span class="egra-stat-l">sedes evaluadas</span>
+        </div>
+        <div class="egra-stat-div"></div>
+        <div class="egra-stat">
+          <span class="egra-stat-n">116</span>
+          <span class="egra-stat-l">municipios</span>
+        </div>
+        <div class="egra-stat-div"></div>
+        <div class="egra-stat">
+          <span class="egra-stat-n" id="statInformes">—</span>
+          <span class="egra-stat-l">informes disponibles</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="egra-main">
+
+    <!-- PANEL IZQUIERDO: MAPA -->
+    <aside class="egra-map-panel">
+      <div class="egra-map-header">
+        <p class="egra-map-title">Seleccioná un municipio</p>
+        <p class="egra-map-hint">Hacé clic para filtrar la tabla</p>
+      </div>
+      <div id="egra-map"></div>
+      <button class="egra-map-reset" id="btnResetMapa" style="display:none;">
+        ✕ Ver todos los municipios
+      </button>
+    </aside>
+
+    <!-- PANEL DERECHO: FILTROS + TABLA -->
+    <section class="egra-table-panel">
+
+      <!-- FILTROS -->
+      <div class="egra-filters">
+        <div class="egra-filter-group">
+          <label class="egra-filter-label">Subregión</label>
+          <select class="egra-select" id="filtroSubregion">
+            <option value="">Todas</option>
+          </select>
+        </div>
+        <div class="egra-filter-group">
+          <label class="egra-filter-label">Operador</label>
+          <select class="egra-select" id="filtroOperador">
+            <option value="">Todos</option>
+          </select>
+        </div>
+        <div class="egra-filter-group egra-filter-search">
+          <label class="egra-filter-label">Buscar sede o institución</label>
+          <input type="text" class="egra-input" id="filtroBusqueda" placeholder="Ej: Escuela Rural El Pino…">
+        </div>
+      </div>
+
+      <!-- CONTADOR Y TABLA -->
+      <div class="egra-table-wrap">
+        <p class="egra-count" id="contadorResultados">Cargando…</p>
+        <div class="egra-table-scroll">
+          <table class="egra-table" id="tablaEGRA">
+            <thead>
+              <tr>
+                <th>Sede</th>
+                <th>Institución</th>
+                <th>Municipio</th>
+                <th>Subregión</th>
+                <th>Operador</th>
+                <th>Línea base 2026</th>
+                <th>Noviembre 2026</th>
+              </tr>
+            </thead>
+            <tbody id="tablaBody">
+              <tr><td colspan="7" class="egra-loading">Cargando datos…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- NOTA AL PIE DE LA SECCIÓN -->
+  <div class="egra-nota">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    Los informes corresponden a la evaluación EGRA de línea base aplicada entre abril y mayo de 2026. Las sedes marcadas como <strong>"En proceso de evaluación"</strong> serán actualizadas a medida que los informes estén disponibles.
+  </div>
+
+  <!-- FOOTER (idéntico al resto del sitio) -->
+  <footer style="background:#0b5640; color:#fff; font-family:'Prompt',sans-serif; padding:48px 0 0;">
+    <div style="max-width:1140px; margin:0 auto; padding:0 24px; display:grid; grid-template-columns:0.5fr 1.2fr 1fr 1fr; gap:40px;">
+      <div style="display:flex; align-items:flex-start; padding-top:4px;">
+        <img src="img/gob_verde.png" alt="Gobernación de Antioquia" style="height:100px; width:auto;">
+      </div>
+      <div>
+        <p style="font-size:11px; font-weight:700; color:#3AF9A2; letter-spacing:0.08em; text-transform:uppercase; margin:0 0 12px; font-family:'Prompt',sans-serif;">Gobernación de Antioquia — Secretaría de Educación</p>
+        <p style="font-size:12px; color:rgba(255,255,255,0.75); line-height:1.8; margin:0; font-family:'Prompt',sans-serif;">
+          Calle 42B N.° 52-106<br>Centro Administrativo Departamental<br>José María Córdova – La Alpujarra<br><br>
+          Lunes a jueves: 7:30 a.m. – 12:00 m. / 1:30 p.m. – 5:15 p.m.<br>
+          Viernes: 7:30 a.m. – 12:00 m. / 1:30 p.m. – 4:00 p.m.<br><br>
+          Línea de atención: 01 8000 4 19000 · 409 9000<br>
+          WhatsApp: 322 834 1290<br>
+          <a href="mailto:gestiondocumental@antioquia.gov.co" style="color:rgba(255,255,255,0.75); text-decoration:none;">gestiondocumental@antioquia.gov.co</a>
+        </p>
+      </div>
+      <div>
+        <p style="font-size:11px; font-weight:700; color:#3AF9A2; letter-spacing:0.1em; text-transform:uppercase; margin:0 0 16px; padding-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.15); font-family:'Prompt',sans-serif;">Navegación</p>
+        <ul style="list-style:none; margin:0; padding:0;">
+          <li style="margin-bottom:10px;"><a href="index.html" style="font-size:13px; color:rgba(255,255,255,0.75); text-decoration:none; font-family:'Prompt',sans-serif;">Inicio</a></li>
+          <li style="margin-bottom:10px;"><a href="alfa.html" style="font-size:13px; color:rgba(255,255,255,0.75); text-decoration:none; font-family:'Prompt',sans-serif;">Sobre ALFA</a></li>
+          <li style="margin-bottom:10px;"><a href="facilitadores.html" style="font-size:13px; color:rgba(255,255,255,0.75); text-decoration:none; font-family:'Prompt',sans-serif;">Facilitadores</a></li>
+          <li style="margin-bottom:10px;"><a href="docentes.html" style="font-size:13px; color:rgba(255,255,255,0.75); text-decoration:none; font-family:'Prompt',sans-serif;">Docentes</a></li>
+          <li style="margin-bottom:10px;"><a href="egra.html" style="font-size:13px; color:#3AF9A2; text-decoration:none; font-family:'Prompt',sans-serif;">Resultados EGRA</a></li>
+          <li style="margin-bottom:10px;"><a href="contact.html" style="font-size:13px; color:rgba(255,255,255,0.75); text-decoration:none; font-family:'Prompt',sans-serif;">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-size:11px; font-weight:700; color:#3AF9A2; letter-spacing:0.1em; text-transform:uppercase; margin:0 0 16px; padding-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.15); font-family:'Prompt',sans-serif;">Enlaces útiles</p>
+        <ul style="list-style:none; margin:0; padding:0;">
+          <li style="margin-bottom:10px;"><a href="https://www.seduca.gov.co" target="_blank" style="font-size:13px; color:rgba(255,255,255,0.75); text-decoration:none; font-family:'Prompt',sans-serif;">Secretaría de Educación</a></li>
+          <li style="margin-bottom:10px;"><a href="https://www.antioquia.gov.co" target="_blank" style="font-size:13px; color:rgba(255,255,255,0.75); text-decoration:none; font-family:'Prompt',sans-serif;">Gobernación de Antioquia</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="background:#002821; margin-top:40px; padding:16px 24px;">
+      <div style="max-width:1140px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+        <p style="font-size:11px; color:rgba(255,255,255,0.5); margin:0; font-family:'Prompt',sans-serif;">
+          © 2026 <span style="color:#3AF9A2;">Estrategia ALFA</span> — Alfabetización Inicial en Antioquia
+        </p>
+      </div>
+    </div>
+    <style>footer a:hover { color:#3AF9A2 !important; } @media (max-width:768px) { footer > div:first-child { grid-template-columns:1fr !important; } }</style>
+  </footer>
+
+</div><!-- end wrapper -->
+
+<!-- Scripts base -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- Leaflet -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<!-- PapaParse para leer el CSV -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<!-- Lógica de la página -->
+<script src="js/egra.js"></script>
+</body>
+</html>
