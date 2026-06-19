@@ -607,3 +607,11 @@ a.egra-badge-ok:active { background: #0b5640 !important; opacity: 0.9 !important
 
   .egra-table-scroll { overflow-x: auto; }
 }
+
+@media (max-width: 600px) {
+  /* Ocultar columna Municipio en móvil */
+  .egra-table th.col-municipio,
+  .egra-table td.col-municipio {
+    display: none !important;
+  }
+}
