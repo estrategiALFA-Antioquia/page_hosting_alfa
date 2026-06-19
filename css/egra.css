@@ -615,3 +615,20 @@ a.egra-badge-ok:active { background: #0b5640 !important; opacity: 0.9 !important
     display: none !important;
   }
 }
+
+@media (max-width: 600px) {
+  .egra-table {
+    font-size: 11px !important;
+  }
+  .egra-table thead th {
+    font-size: 10px !important;
+    padding: 8px 8px !important;
+  }
+  .egra-table tbody td {
+    padding: 8px 8px !important;
+  }
+  .egra-badge {
+    font-size: 10px !important;
+    padding: 3px 7px !important;
+  }
+}
