@@ -146,12 +146,22 @@ function seleccionarMunicipio(codigo, nombre) {
   filtrarTabla();
   document.getElementById('btnResetMapa').style.display = 'block';
   document.getElementById('btnResetMapa').textContent = '✕ ' + toTitleCase(nombre);
+  
+  // Actualizar selector de subregión automáticamente
+  var sede = todasLasSedes.find(function(s) {
+    return s.municipio_id.trim().padStart(5, '0') === codigo;
+  });
+  if (sede) {
+    document.getElementById('filtroSubregion').value = sede.subregion;
+  }
 }
+
 
 function limpiarMunicipio() {
   municipioActivo = null;
   actualizarEstilosMapa();
   document.getElementById('btnResetMapa').style.display = 'none';
+  document.getElementById('filtroSubregion').value = '';  // ← agregar esta línea
   filtrarTabla();
 }
 
@@ -250,6 +260,8 @@ function filtrarTabla() {
 
   actualizarContexto(resultado);
   renderizarTabla(resultado);
+  actualizarEstilosMapa();
+  iluminarSubregion();
 }
 
 function actualizarContexto(sedes) {
@@ -322,4 +334,34 @@ function toTitleCase(str) {
 function escHtml(str) {
   if (!str) return '';
   return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+function iluminarSubregion() {
+  var subregion = document.getElementById('filtroSubregion').value;
+  if (!capaMapa || municipioActivo) return;
+  
+  // Obtener códigos de municipios de la subregión seleccionada
+  var codigos = new Set(
+    todasLasSedes
+      .filter(function(s) { return !subregion || s.subregion === subregion; })
+      .map(function(s) { return s.municipio_id.trim().padStart(5, '0'); })
+  );
+
+  capaMapa.eachLayer(function(layer) {
+    var codigo = layer.feature.properties.mpio_cdgo;
+    var noData = sinDatos(codigo);
+    var cob    = coberturaPorMunicipio[codigo];
+    var pct    = (cob && cob.total > 0) ? cob.conLink / cob.total : 0;
+    var fill   = colorCalor(pct, noData);
+
+    if (!subregion) {
+      // Sin filtro → estilo normal
+      layer.setStyle({ fillColor: fill, fillOpacity: noData ? 0.4 : 0.8, color: '#fff', weight: 1 });
+    } else if (codigos.has(codigo)) {
+      // En la subregión → destacar
+      layer.setStyle({ fillColor: fill, fillOpacity: 1, color: '#fff', weight: 2 });
+    } else {
+      // Fuera de la subregión → atenuar
+      layer.setStyle({ fillColor: fill, fillOpacity: 0.2, color: '#fff', weight: 0.5 });
+    }
+  });
 }
