@@ -648,3 +648,14 @@ a.egra-badge-ok:active { background: #0b5640 !important; opacity: 0.9 !important
 .egra-limpiar-btn:hover {
   background: #fdf0ef;
 }
+
+.egra-filters {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d6ede2;
+  margin-bottom: 0;
+}
