@@ -216,7 +216,7 @@ function poblarFiltros() {
 }
 
 function registrarFiltros() {
-  ['filtroSubregion', 'filtroOperador', 'filtroBusqueda', 'filtroDisponibilidad'].forEach(function (id) {
+  ['filtroSubregion', 'filtroOperador', 'filtroBusqueda'].forEach(function (id) {
     var el = document.getElementById(id);
     if (el) {
       el.addEventListener('change', filtrarTabla);
@@ -230,7 +230,7 @@ function filtrarTabla() {
   var subregion      = document.getElementById('filtroSubregion').value;
   var operador       = document.getElementById('filtroOperador').value;
   var busqueda       = document.getElementById('filtroBusqueda').value.toLowerCase().trim();
-  var disponibilidad = document.getElementById('filtroDisponibilidad').value;
+  
 
   var resultado = todasLasSedes.filter(function (sede) {
     if (municipioActivo) {
@@ -245,8 +245,6 @@ function filtrarTabla() {
                 sede.municipio.toLowerCase().includes(busqueda);
       if (!hay) return false;
     }
-    if (disponibilidad === 'disponible' && !(sede.link_linea_base && sede.link_linea_base.trim() !== '')) return false;
-    if (disponibilidad === 'proceso'    &&   sede.link_linea_base && sede.link_linea_base.trim() !== '')   return false;
     return true;
   });
 
