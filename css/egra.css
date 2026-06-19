@@ -334,6 +334,14 @@ body,
   text-align: left;
   font-family: 'Prompt', sans-serif !important;
 }
+
+.egra-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #f0f8f3;
+}
+
 .egra-table tbody tr {
   border-bottom: 1px solid #f0f8f3;
   transition: background 0.1s;
@@ -650,7 +658,6 @@ a.egra-badge-ok:active { background: #0b5640 !important; opacity: 0.9 !important
 }
 
 .egra-filters {
-  position: sticky;
   top: 0;
   background: #fff;
   z-index: 10;
@@ -659,3 +666,4 @@ a.egra-badge-ok:active { background: #0b5640 !important; opacity: 0.9 !important
   border-bottom: 1px solid #d6ede2;
   margin-bottom: 0;
 }
+
