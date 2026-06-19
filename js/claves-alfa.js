@@ -1,5 +1,21 @@
 var caSemanas = [
   {
+    id: 4,
+    titulo: "Confundir \u201cb\u201d y \u201cd\u201d no es dislexia",
+    tarjetas: [
+      {
+        dia: "Lunes 22 jun",
+        src: "img/claves_alfa/sem_4/lunes.png",
+        desc: "La enseñanza de la lectura se enfrenta también a dificultades vinculadas con el reciclaje neuronal. En los niños de nivel inicial o jardín de infantes, la región visual que debe servir para la lectura no está inactiva. Todavía no responde a las letras, aunque reconoce otras formas, como los objetos o los rostros. Así, la evolución nos jugó una mala pasada: esta región no puede evitar interpretar que las formas simétricas en espejo corresponden a un solo y mismo objeto.\n\n Todos los niños, no sólo los disléxicos, confunden transitoriamente las letras en espejo. La “caja de letras del cerebro” debe desaprender esta semejanza entre las letras en espejo.\n\n El aprendizaje del gesto de escritura parece tener en esto un papel fundamental. En efecto, la experiencia demuestra que los ejercicios sencillos de trazado de letras con el dedo mejoran considerablemente el aprendizaje de la lectura. Además, orienta al niño en el espacio, ayudándolo a comprender que la cadena de letras debe leerse de izquierda a derecha.\n\n Fuente: Dehaene, S. (dir.). (2015). Aprender a leer. De las ciencias cognitivas al aula. Siglo Veintiuno Editores."
+      },
+      {
+        dia: "Viernes 27 jun",
+        src: "img/claves_alfa/sem_4/viernes.png",
+        desc: "La confusión de las letras en espejo, como “b” y “d”, es una propiedad normal del sistema visual de los niños pequeños antes de que aprendan a leer. Su desaprendizaje requiere esfuerzos. La práctica del gesto de escritura acelera el aprendizaje de la lectura."
+      }
+    ]
+  },
+  {
     id: 3,
     titulo: "Un buen lector es un  descifrador experto",
     tarjetas: [
