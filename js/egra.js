@@ -231,7 +231,19 @@ function poblarFiltros() {
 }
 
 function registrarFiltros() {
-  ['filtroSubregion', 'filtroOperador', 'filtroBusqueda'].forEach(function (id) {
+  // Al cambiar subregión manualmente → limpiar municipio activo del mapa
+  document.getElementById('filtroSubregion').addEventListener('change', function() {
+    if (municipioActivo) {
+      municipioActivo = null;
+      document.getElementById('btnMunicipioActivo').style.display = 'none';
+      actualizarEstilosMapa();
+    }
+    iluminarSubregion();
+    filtrarTabla();
+  });
+
+  // Operador y búsqueda → solo filtrar
+  ['filtroOperador', 'filtroBusqueda'].forEach(function (id) {
     var el = document.getElementById(id);
     if (el) {
       el.addEventListener('change', filtrarTabla);
