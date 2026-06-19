@@ -42,9 +42,6 @@ function iniciarMapa() {
   mapaLeaflet = L.map('egra-map', {
     zoomControl: true,
     scrollWheelZoom: false,
-    doubleClickZoom: false,
-    dragging: false,
-    touchZoom: false,
     attributionControl: false
   });
 
