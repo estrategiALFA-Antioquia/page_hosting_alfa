@@ -632,3 +632,19 @@ a.egra-badge-ok:active { background: #0b5640 !important; opacity: 0.9 !important
     padding: 3px 7px !important;
   }
 }
+.egra-limpiar-btn {
+  font-size: 12px;
+  font-weight: 600;
+  color: #c0392b;
+  background: none;
+  border: 1px solid #e8b4b0;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-family: 'Prompt', sans-serif !important;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.egra-limpiar-btn:hover {
+  background: #fdf0ef;
+}

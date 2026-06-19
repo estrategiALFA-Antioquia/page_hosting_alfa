@@ -25,7 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
   iniciarMapa();
   cargarCSV();
   registrarFiltros();
-  document.getElementById('btnResetMapa').addEventListener('click', limpiarMunicipio);
+  //document.getElementById('btnResetMapa').addEventListener('click', limpiarMunicipio);
+  document.getElementById('btnMunicipioActivo').addEventListener('click', limpiarMunicipio);
   // Toggle ayuda
   var btnAyuda = document.getElementById('btnAyuda');
   if (btnAyuda) {
@@ -142,26 +143,30 @@ function actualizarEstilosMapa() {
 
 function seleccionarMunicipio(codigo, nombre) {
   municipioActivo = codigo;
-  actualizarEstilosMapa();
-  filtrarTabla();
-  document.getElementById('btnResetMapa').style.display = 'block';
-  document.getElementById('btnResetMapa').textContent = '✕ ' + toTitleCase(nombre);
-  
-  // Actualizar selector de subregión automáticamente
+
+  // Actualizar selector de subregión
   var sede = todasLasSedes.find(function(s) {
     return s.municipio_id.trim().padStart(5, '0') === codigo;
   });
   if (sede) {
     document.getElementById('filtroSubregion').value = sede.subregion;
   }
-}
 
+  actualizarEstilosMapa();
+  iluminarSubregion();
+  filtrarTabla();
+
+  document.getElementById('btnResetMapa').style.display = 'none'; // se mueve arriba
+  document.getElementById('btnMunicipioActivo').style.display = 'flex';
+  document.getElementById('btnMunicipioActivo').textContent = '✕ ' + toTitleCase(nombre);
+}
 
 function limpiarMunicipio() {
   municipioActivo = null;
   actualizarEstilosMapa();
-  document.getElementById('btnResetMapa').style.display = 'none';
-  document.getElementById('filtroSubregion').value = '';  // ← agregar esta línea
+  document.getElementById('btnMunicipioActivo').style.display = 'none';
+  document.getElementById('filtroSubregion').value = '';
+  iluminarSubregion();
   filtrarTabla();
 }
 
@@ -364,4 +369,14 @@ function iluminarSubregion() {
       layer.setStyle({ fillColor: fill, fillOpacity: 0.2, color: '#fff', weight: 0.5 });
     }
   });
+}
+function limpiarFiltros() {
+  municipioActivo = null;
+  document.getElementById('filtroSubregion').value = '';
+  document.getElementById('filtroOperador').value = '';
+  document.getElementById('filtroBusqueda').value = '';
+  document.getElementById('btnMunicipioActivo').style.display = 'none';
+  actualizarEstilosMapa();
+  iluminarSubregion();
+  filtrarTabla();
 }

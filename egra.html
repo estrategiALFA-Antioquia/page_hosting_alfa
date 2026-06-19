@@ -98,7 +98,7 @@
           <span class="egra-leyenda-end">Municipio no incluido en ALFA</span>
         </div>
       </div>
-      <button class="egra-map-reset" id="btnResetMapa" style="display:none;">✕ Ver todos</button>
+      <button class="egra-map-reset" id="btnMunicipioActivo" style="display:none; margin-bottom:8px;">✕ Ver todos</button>
     </aside>
 
     <!-- PANEL DERECHO -->
@@ -140,6 +140,9 @@
 
       <!-- FILTROS -->
       <div class="egra-filters">
+        <div class="egra-filter-group" style="justify-content:flex-end; align-self:flex-end;">
+        <button class="egra-limpiar-btn" onclick="limpiarFiltros()">✕ Limpiar filtros</button>
+        </div>
         <div class="egra-filter-group">
           <label class="egra-filter-label">Subregión</label>
           <select class="egra-select" id="filtroSubregion">
