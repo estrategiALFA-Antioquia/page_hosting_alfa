@@ -1,4 +1,20 @@
 var caSemanas = [
+    {
+    id: 5,
+    titulo: "Leer mal no siempre es dislexia",
+    tarjetas: [
+      {
+        dia: "Lunes 29 jun",
+        src: "img/claves_alfa/sem_5/lunes.png",
+        desc: "Algunos niños experimentan dificultades considerables para aprender a leer. ¿Todos los niños que leen mal son disléxicos? No. Para empezar, antes de hablar de dislexia, hay que asegurarse de que el niño no sufre un déficit sensorial. Los pequeños casi no se quejan, y muchas veces los casos de disminución auditiva no se detectan, al igual que sucede con los problemas de visión. Los especialistas no hablan de dislexia hasta que se descartan los problemas periféricos –esto es, sensoriales–, o bien un déficit de la inteligencia global o una educación de calidad o cantidad insuficiente. \n\n De todos modos, la dislexia es una enfermedad real. Está presente en todos los contextos socioeconómicos, incluso en los más favorecidos. También aparece en todos los países, a pesar de que su impacto práctico sea más evidente en las lenguas alfabéticas más opacas –como el inglés y, aunque en menor medida, el francés– que en las de grafías transparentes, como la propia del español.\n\n Fuente: Dehaene, S. (dir.). (2015). Aprender a leer. De las ciencias cognitivas al aula. Siglo Veintiuno Editores."
+      },
+      {
+        dia: "Viernes 3 jul",
+        src: "img/claves_alfa/sem_5/viernes.png",
+        desc: "La dislexia es una anomalía neurobiológica temprana, que a menudo tiene un origen genético. Los niños disléxicos presentan una desorganización y una subactivación de las regiones del lóbulo temporal del hemisferio izquierdo del cerebro que sustentan la lectura. Sin embargo, casi siempre una enseñanza paciente e intensiva de las correspondencias entre grafemas y fonemas permite compensar gran parte del déficit. En todos los casos, es fundamental descartar la posibilidad de una disminución auditiva o de un déficit visual antes de hablar de dislexia. \n\n Fuente: Dehaene, S. (dir.). (2015). Aprender a leer. De las ciencias cognitivas al aula. Siglo Veintiuno Editores."
+      }
+    ]
+  },
   {
     id: 4,
     titulo: "Confundir \u201cb\u201d y \u201cd\u201d no es dislexia",
