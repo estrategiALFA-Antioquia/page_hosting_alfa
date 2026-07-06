@@ -1,4 +1,22 @@
 var caSemanas = [
+        {
+    id: 6,
+    titulo: "El método importa y la escuela puede marcar la diferencia",
+    tarjetas: [
+      {
+        dia: "Lunes 6 jul",
+        src: "img/claves_alfa/sem_6/lunes.png",
+        desc: "🔍 Cuando un niño no aprende a leer, la causa no está en su familia ni en su barrio. Está en la calidad de la enseñanza que recibe. Y esa enseñanza depende del método, que no es un detalle, es la clave.\n\n ✅ Prueba esta semana: revisa cómo presentas una letra nueva. ¿Partes del sonido o del nombre? ¿Sigues una progresión definida? Esa sola pregunta te dice mucho sobre el método que estás usando."
+      },
+      {
+        dia: "Viernes 10 jul",
+        src: "img/claves_alfa/sem_6/viernes.png",
+        desc: "¿Alguna vez has atribuido las dificultades lectoras de un estudiante a su familia o su entorno? ¿Qué cambiarías en tu práctica si asumieras que la enseñanza en el aula es el factor decisivo?"
+      }
+    ]
+  },
+
+
     {
     id: 5,
     titulo: "Leer mal no siempre es dislexia",
