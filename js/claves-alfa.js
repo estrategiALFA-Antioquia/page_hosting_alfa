@@ -1,4 +1,20 @@
 var caSemanas = [
+          {
+    id: 7,
+    titulo: "Lo que le pida a las familias cambia lo que pasa en el aula",
+    tarjetas: [
+      {
+        dia: "Lunes 13 jul",
+        src: "img/claves_alfa/sem_7/lunes.png",
+        desc: "🔍 La evidencia sobre participación familiar tiene un hallazgo incómodo: pedirle a las familias que revisen tareas y supervisen el cuaderno tiene, en la mayoría de los estudios, efectos nulos o negativos sobre el aprendizaje. Lo que sí produce la diferencia es la lectura compartida, la conversación cotidiana con vocabulario variado y la colaboración directa entre tú y las familias de tus estudiantes. El problema casi nunca es la familia. Casi siempre es el pedido. \n\n ✅ Prueba esto esta semana: en el próximo contacto con familias, cambia el pedido. En lugar de “revisa que haga la tarea”, di: Esta semana, en cualquier momento del día, pregúntale a tu hijo qué aprendió hoy y escucha la respuesta completa. Una instrucción, sin materiales, menos de cinco minutos."
+      },
+      {
+        dia: "Viernes 17 jul",
+        src: "img/claves_alfa/sem_7/viernes.png",
+        desc: "¿Cómo involucras actualmente a las familias de tus estudiantes en el proceso lector? ¿Les pides que supervisen tareas o que conversen, lean juntos, cuenten historias? La respuesta dice mucho sobre qué estás obteniendo con esa estrategia y qué podrías obtener si cambias el pedido."
+      }
+    ]
+  },
         {
     id: 6,
     titulo: "El método importa y la escuela puede marcar la diferencia",
