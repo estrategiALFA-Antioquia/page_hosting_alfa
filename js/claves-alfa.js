@@ -1,4 +1,21 @@
 var caSemanas = [
+            {
+    id: 8,
+    titulo: "Tus estudiantes no parten del mismo punto",
+    tarjetas: [
+      {
+        dia: "Lunes 20 jul",
+        src: "img/claves_alfa/sem_8/lunes.png",
+        desc: "🔍 El aprendizaje de la lectura empieza antes de llegar a la escuela. A ese proceso se le llama alfabetización emergente, y sus bases son tres: el lenguaje oral (la capacidad de comprender y producir lenguaje hablado, incluyendo vocabulario y gramática), la conciencia fonológica (la capacidad de identificar y manipular las unidades del habla: palabras, sílabas y fonemas, independientemente de su significado) y los conceptos de lo impreso (el conocimiento de las convenciones del texto escrito: dirección de la lectura, partes del libro, distinción entre letra, palabra y texto). La brecha entre quienes llegan con estas bases y quienes no es visible desde el primer día.\n\n ✅ Prueba esta semana: con cinco estudiantes, haz tres observaciones rápidas. Pídele a cada uno que te cuente algo que hizo ayer y escucha qué tan fluido es su relato y qué vocabulario usa. Luego pídeles que palmeen las sílabas de su nombre y te digan el primer sonido, no la primera letra. Por último, muéstrales un libro y pregúntales dónde se empieza a leer. Los que no puedan con alguna de las tres: ahí empieza la enseñanza."
+      },
+      {
+        dia: "Viernes 24 jul",
+        src: "img/claves_alfa/sem_8/viernes.png",
+        desc: "Esa diferencia no la produce la escuela, pero la recibe cada año desde el primer día.\n\n El aprendizaje de la lectura y la escritura inicia antes de llegar a la escuela: en eso consiste la alfabetización emergente. Al llegar, se inicia el aprendizaje formal, en el que se introduce el código escrito que permitirá a los estudiantes acceder a los textos del aula y del mundo que los rodea. Para que ese arranque funcione, los niños necesitan llegar con tres habilidades desarrolladas: lenguaje oral —que incluye vocabulario—, conciencia fonológica y conceptos de impresión. Cuando alguna de estas bases falta, el docente necesita saberlo para partir de donde el niño está, no de donde quisiera que estuviera.\n\n La conciencia fonológica es la habilidad que mejor anticipa si un niño aprenderá a leer con éxito en los primeros años. Empieza mucho antes de la escuela: palmotear sílabas en una canción, notar que "mamá" y "mesa" empiezan igual, identificar el primer sonido de una palabra. Hay niños que llegan a primero habiéndolo hecho cientos de veces, y hay niños que nunca lo han hecho. \n\n El docente no puede recuperar esos cinco años. Pero sí puede tomarse los primeros días para saber en qué punto está cada estudiante y organizar la enseñanza desde ahí, antes de que la brecha se agrande."
+      }
+    ]
+  },
+
           {
     id: 7,
     titulo: "Lo que le pida a las familias cambia lo que pasa en el aula",
