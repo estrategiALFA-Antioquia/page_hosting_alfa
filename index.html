@@ -351,6 +351,19 @@
     <div class="ns-wrap" id="nsWrap">
       <div class="ns-track" id="nsTrack">
 
+        <!-- NOTICIA 6-->
+        <div class="ns-card">
+          <p class="ns-date">2026</p>
+          <p class="ns-cat">Implementación</p>
+          <p class="ns-title">La estrategia ALFA avanza con la entrega de material pedagógico en el 80% de las instituciones educativas de Antioquia.</p>
+          <a href="https://www.antioquia.gov.co/index.php/antioquiacuenta/la-estrategia-alfa-avanza-con-la-entrega-de-material-pedagogico-en-el-80-de-las-instituciones-educativas-de-antioquia-para-fortalecer-la-lectura-y-escritura-desde-el-grado-transicion-de-los-estudiantes" target="_blank" class="ns-plus">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </a>
+          <!-- IMAGEN -->
+          <img class="ns-img" src="img/noticias/noticia_6.jpeg" alt="Alistamiento ALFA"> 
+         
+        </div>
+
           <!-- NOTICIA 5-->
         <div class="ns-card">
           <p class="ns-date">2026</p>
@@ -435,7 +448,7 @@
       var wrap = document.getElementById('nsWrap');
       var visible = getNsVisible();
       var cardW = wrap.offsetWidth / visible;
-      var max = 4 - visible;
+      var max = document.querySelectorAll('#nsTrack .ns-card').length - visible;;
       nsPos = Math.max(0, Math.min(nsPos + dir, max));
       track.style.transform = 'translateX(-' + (nsPos * cardW) + 'px)';
     }
