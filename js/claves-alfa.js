@@ -1,4 +1,20 @@
 var caSemanas = [
+  {
+    id: 9,
+    titulo: "Conciencia fonémica",
+    tarjetas: [
+      {
+        dia: "Lunes 27 jul",
+        src: "img/claves_alfa/sem_9/lunes.png",
+        desc: "🔍 La conciencia fonémica es la habilidad de identificar y manipular los sonidos del habla, y es el predictor más poderoso del éxito lector. Se trabaja solo en voz alta, sin cuaderno ni lápiz.\n\n ✅ Prueba esto esta semana: tres minutos al inicio de cada clase, solo oral. Pídeles a tus estudiantes que identifiquen el primer sonido de palabras cortas como \u201csol\u201d, \u201cmar\u201d o \u201cala\u201d, y confirma en voz alta: \u201csí, el primer sonido de 'sol' es /s/.\u201d Un ejercicio bien hecho vale más que varios a la carrera."
+      },
+      {
+        dia: "Viernes 31 jul",
+        src: "img/claves_alfa/sem_9/viernes.png",
+        desc: "Antes de que un niño pueda leer una sola letra, necesita poder identificar y manipular los sonidos del lenguaje hablado. A esa habilidad la llamamos conciencia fonémica, y es el predictor más poderoso del éxito lector en lenguas como el español. No es una actividad de lectura: es una actividad de escucha. Se trabaja sin libros, sin cuadernos, sin lápiz.\n\n De tus estudiantes, ¿quiénes pueden separar una palabra en sus sonidos sin ayuda y quiénes todavía no? En este momento del año, esa diferencia es uno de los mejores indicadores de quién leerá fluido en diciembre. ¿Qué vas a hacer diferente la semana que viene con los que todavía no pueden?"
+      }
+    ]
+  },
             {
     id: 8,
     titulo: "Tus estudiantes no parten del mismo punto",
