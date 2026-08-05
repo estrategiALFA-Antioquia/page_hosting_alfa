@@ -1,5 +1,21 @@
 var caSemanas = [
   {
+    id: 10,
+    titulo: "Conciencia fonémica",
+    tarjetas: [
+      {
+        dia: "Lunes 3 ago",
+        src: "img/claves_alfa/sem_10/lunes.png",
+        desc: "🔍 El código alfabético no es obvio para quien empieza: las letras representan sonidos y se leen de izquierda a derecha. La investigación muestra que hay que enseñarlo de forma explícita, una regla a la vez.\n\n ✅ Prueba esto esta semana: usa letras móviles para formar sílabas, cambiar el orden de las letras, practicar b/d y leer cada combinación de izquierda a derecha."
+      },
+      {
+        dia: "Viernes 7 ago",
+        src: "img/claves_alfa/sem_10/viernes.png",
+        desc: "Cuando tus estudiantes leen \u201csol\u201d, ¿decodifican de verdad cada grafema o reconocen la palabra de memoria? Ponlos a leer una palabra corta que no hayan visto escrita: ahí se nota quién domina las reglas y quién todavía adivina. ¿A quiénes viste adivinar, y qué vas a reforzar con ellos la semana que viene?"
+      }
+    ]
+  },
+  {
     id: 9,
     titulo: "Conciencia fonémica",
     tarjetas: [
