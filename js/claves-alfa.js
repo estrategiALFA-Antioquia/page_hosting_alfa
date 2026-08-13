@@ -1,5 +1,21 @@
 var caSemanas = [
   {
+    id: 11,
+    titulo: "Principio de progresión racional",
+    tarjetas: [
+      {
+        dia: "Lunes 10 ago",
+        src: "img/claves_alfa/sem_11/lunes.png",
+        desc: "🔍 En la progresión que ya vienes siguiendo, las letras están ordenadas de las más fáciles a las más difíciles: primero las que suenan siempre igual y aparecen en más palabras, y después las irregulares y los dígrafos (ch, ll, qu). Ese orden tiene una razón.\n\n ✅ Prueba esto: fíjate si el grafema de esta semana es de los fáciles o de los difíciles. Si es de los difíciles (una letra irregular o un dígrafo), no lo pases rápido: dale más días y más ejemplos antes de avanzar al siguiente."
+      },
+      {
+        dia: "Viernes 14 ago",
+        src: "img/claves_alfa/sem_11/viernes.jpeg",
+        desc: "El orden de enseñanza de los grafemas debe seguir una progresión racional, priorizando los más frecuentes y aquellos cuya correspondencia entre grafema y fonema es más regular. También conviene comenzar con consonantes fáciles de pronunciar de forma aislada y con estructuras silábicas simples (CV y VC), antes de avanzar hacia estructuras más complejas"
+      }
+    ]
+  },
+  {
     id: 10,
     titulo: "Conciencia fonémica",
     tarjetas: [
