@@ -1,4 +1,37 @@
 var caSemanas = [
+      {
+    id: 13,
+    titulo: "Principio de transferencia de lo explícito a lo implícito",
+    tarjetas: [
+      {
+        dia: "Lunes 24 ago",
+        src: "img/claves_alfa/sem_13/lunes.png",
+        desc: "🔍 Leer una palabra empieza siendo un trabajo lento y consciente: el estudiante la descifra letra por letra. Con mucha práctica, descifrar se vuelve automático, y solo entonces le queda atención libre para entender lo que lee. Ese salto se logra leyendo mucho y releyendo lo ya conocido, no explicando más.\n\n ✅ Prueba esto esta semana: deje que cada estudiante repita una lectura corta y a su alcance varias veces (en clase o en casa), en lugar de darle siempre un texto nuevo. Releer lo que ya dominan es justo lo que automatiza."
+      },
+      {
+        dia: "Viernes 28 ago",
+        src: "img/claves_alfa/sem_13/viernes.png",
+        desc: "Al principio, leer una palabra cuesta esfuerzo. El estudiante mira cada letra, recuerda qué sonido le corresponde y va uniendo los sonidos hasta reconocer la palabra. Es un trabajo lento, consciente y deliberado: está aplicando, una por una, las reglas que le enseñaron. Con la práctica repetida, ese mismo proceso se vuelve rutinario, hasta que reconocer la palabra deja de costar. A eso lo llamamos automatizar la lectura.\n\n Automatizar importa por una razón muy concreta. Mientras el estudiante gasta toda su atención en descifrar cada palabra, le queda muy poca para pensar en lo que el texto dice. Cuando descifrar deja de exigir esfuerzo, esa atención queda libre para lo que de verdad importa: entender. Por eso un estudiante que todavía va letra por letra puede llegar a pronunciar un texto sin entender casi nada: toda su atención se le va en las letras y le queda muy poco para el sentido."
+      }
+    ]
+  },
+
+    {
+    id: 12,
+    titulo: "Principio de aprendizaje activo",
+    tarjetas: [
+      {
+        dia: "Lunes 17 ago",
+        src: "img/claves_alfa/sem_12/lunes.png",
+        desc: "🔍 Esta semana el principio es simple: leer y escribir van juntos. Cada vez que tus estudiantes trazan una letra, están reforzando también su capacidad de leerla.\n\n ✅  Prueba esto: cuando introduzcas una letra o dígrafo nuevo esta semana, no te quedes solo en la lectura. Pide a las niñas y niños que la tracen en el aire, en papel o con letras móviles. Luego dicta palabras sencillas que la contengan y observa quién la escribe correctamente: ese niño ya entendió el código.\n\n Un detalle clave: si un estudiante escribe 'baca' en lugar de 'vaca', corrígelo de inmediato. Una ortografía incorrecta memorizada es difícil de desaprender."
+      },
+      {
+        dia: "Viernes 21 ago",
+        src: "img/claves_alfa/sem_12/viernes.png",
+        desc: "El gesto motor importa. Trazar la letra con la mano agrega un código motor al repertorio mental de letras, lo que facilita recordar cómo suena cada una. Por eso Dehaene recomienda practicar escritura todos los días, en estrecha asociación con la lectura, usando dictados, letras móviles y composición de palabras a partir de imágenes. Siempre con grafía correcta: una ortografía incorrecta memorizada es difícil de desaprender."
+      }
+    ]
+  },
   {
     id: 11,
     titulo: "Principio de progresión racional",
