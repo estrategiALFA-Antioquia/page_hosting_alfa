@@ -3299,3 +3299,11 @@ alfa-page { font-family: 'Prompt', sans-serif; }
   .kv-group-title{font-weight:600;}
   .kv-sub{margin-left:34px;padding:8px 10px;border-left:2px solid #d6ede2;border-radius:0 8px 8px 0;}
   @media (max-width:768px){.kv-wrap{grid-template-columns:1fr;}.kv-list{max-height:none;}}
+
+
+  @media (max-width:768px){
+    .ca-bg-title{left:0 !important; top:0 !important; font-size:52px !important; white-space:nowrap;}
+    .ca-head{flex-wrap:wrap; gap:12px;}
+    .ca-head h2{font-size:22px !important;}
+    #ca-grid{grid-template-columns:1fr !important; margin-top:24px !important;}
+  }
