@@ -248,6 +248,7 @@
 <div id="doc-kalulu" class="mat-panel">
   <div class="mat-subtabs" style="margin-top:20px; flex-wrap:wrap;">
     <button class="mat-subtab-btn active" onclick="matSubTab(this,'kal-presentacion','doc-kalulu')">Webinars</button>
+    <button class="mat-subtab-btn" onclick="matSubTab(this,'kal-videos','doc-kalulu')">Videos</button>
     <button class="mat-subtab-btn" onclick="matSubTab(this,'kal-materiales','doc-kalulu')">Materiales</button>
     <button class="mat-subtab-btn" onclick="matSubTab(this,'kal-evaluacion','doc-kalulu')">Evaluación</button>
     <button class="mat-subtab-btn" onclick="matSubTab(this,'kal-sonidos','doc-kalulu')">Recursos de apoyo</button>
@@ -266,6 +267,44 @@
         <p style="font-size:14px; font-weight:600; color:#0b3d25; margin:0; font-family:'Prompt',sans-serif;">Kalulu en contexto: qué es y cómo empezar</p>
         <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">Grabación del webinar para docentes de Antioquia de grado segundo que buscan potenciar la alfabetización inicial en sus aulas. Conoce el método Kalulu y el material que está llegando a las instituciones educativas.</p>
         <a href="https://drive.google.com/file/d/1IiGU6hVsqhRMQ4NsLN-ePL9DApD-b5RK/view?usp=sharing" target="_blank" class="mat-card-btn" style="width:fit-content;">↓ Descargar presentación</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIDEOS -->
+  <div id="kal-videos" class="mat-subpanel">
+    <div class="kv-wrap">
+      <div class="kv-main">
+        <div class="kv-player">
+          <iframe id="kv-iframe" src="https://www.youtube.com/embed/JIlf8vWGRkQ" title="Video Kalulu" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p id="kv-eyebrow" class="kv-eyebrow">Kalulu a lo largo de una semana · Día 1</p>
+        <h3 id="kv-title" class="kv-title">Introducción del grafema-fonema U u → /u/</h3>
+        <p id="kv-desc" class="kv-desc">Acompañamos una sesión de la semana 6 del programa, el día en que se presenta la letra U u y su sonido /u/. El video recorre los cuatro momentos de la clase: introducción del grafema-fonema, lectura diaria “Lee, lee, lee”, copia y escritura de letras, sílabas y palabras, y hora del cuento.</p>
+      </div>
+
+      <div class="kv-list">
+        <p class="kv-list-label">Serie Kalulu en el aula</p>
+
+        <div class="kv-item kv-soon"><span class="kv-num">1</span><span>Kalulu: una herramienta para recuperar aprendizajes en segundo grado<small>Próximamente</small></span></div>
+        <div class="kv-item kv-soon"><span class="kv-num">2</span><span>La base conceptual de Kalulu: cómo aprenden a leer los niños y las niñas<small>Próximamente</small></span></div>
+        <div class="kv-item kv-soon"><span class="kv-num">3</span><span>Cómo alistar la intervención en el aula<small>Próximamente</small></span></div>
+
+        <div class="kv-group">
+          <div class="kv-group-title"><span class="kv-num">4</span><span>Así se desarrolla el programa Kalulu a lo largo de una semana</span></div>
+          <div class="kv-item kv-sub active" onclick="kvPlay(this)"
+              data-id="ID_DIA1"
+              data-eyebrow="Video 5 · Semana 6 · Día 1"
+              data-title="Introducción del grafema-fonema U u → /u/"
+              data-desc="Acompañamos una sesión de la semana 6 del programa, el día en que se presenta la letra U u y su sonido /u/. El video recorre los cuatro momentos de la clase: introducción del grafema-fonema, lectura diaria “Lee, lee, lee”, copia y escritura de letras, sílabas y palabras, y hora del cuento.">
+            <span>Día 1. U u → /u/</span>
+          </div>
+          <div class="kv-item kv-sub kv-soon"><span>Día 2. Revisión del sonido aprendido<small>Próximamente</small></span></div>
+          <div class="kv-item kv-sub kv-soon"><span>Día 3. C c → /k/<small>Próximamente</small></span></div>
+          <div class="kv-item kv-sub kv-soon"><span>Día 4. Revisión y consolidación<small>Próximamente</small></span></div>
+        </div>
+
+        <div class="kv-item kv-soon"><span class="kv-num">6</span><span>¡Bien jugado! Actividades extra de apoyo<small>Próximamente</small></span></div>
       </div>
     </div>
   </div>
@@ -539,6 +578,16 @@
   </div>
 
   <script>
+function kvPlay(item){
+  if(item.classList.contains('kv-soon')) return;
+  document.getElementById('kv-iframe').src = 'https://www.youtube.com/embed/' + item.dataset.id;
+  document.getElementById('kv-eyebrow').textContent = item.dataset.eyebrow;
+  document.getElementById('kv-title').textContent = item.dataset.title;
+  document.getElementById('kv-desc').textContent = item.dataset.desc;
+  document.querySelectorAll('#kal-videos .kv-item').forEach(function(i){ i.classList.remove('active'); });
+  item.classList.add('active');
+}
+
 function matTab(btn, panelId) {
   var container = btn.closest('.doc-inner');
   container.querySelectorAll('.mat-tab-btn').forEach(function(b) { b.classList.remove('active'); });
