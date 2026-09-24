@@ -463,6 +463,89 @@
         </div>
 
       </div>
+      <!-- ==================== [TANGERINE] Sincronización y errores al actualizar ====================
+     Pegar dentro de <section id="tangerine">, justo después de </div> de .fac-tang-grid
+     y antes del bloque "INSTRUMENTOS DE OBSERVACIÓN".
+     Imágenes a subir en /img: tang_sincronizacion.png, tang_error_4.png, tang_error_2.png
+-->
+
+<!-- 1. ESTADO DE LA SINCRONIZACIÓN -->
+<div id="tang-sync" style="margin-top:40px; background:#fff; border:1px solid #d6ede2; border-radius:12px; padding:28px 24px;">
+  <p class="mat-sublabel" style="margin-top:0;">Sincronización</p>
+  <h3 style="font-size:18px; font-weight:600; color:#0b3d25; margin:0 0 8px; font-family:'Prompt',sans-serif;">¿Cuántas pruebas tiene sincronizadas?</h3>
+  <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0 0 20px; font-family:'Prompt',sans-serif;">
+    Antes de cerrar la jornada, entre a <strong>Sincronización</strong> en Tangerine y revise el resumen del estado.
+  </p>
+
+  <div style="display:flex; gap:24px; flex-wrap:wrap; align-items:flex-start;">
+    <div style="flex:1 1 280px; max-width:420px;">
+      <img src="img/tang_sincronizacion.png" alt="Pantalla de resumen del estado de la sincronización en Tangerine" style="width:100%; border-radius:8px; border:1px solid #d6ede2;">
+    </div>
+
+    <div style="flex:1 1 280px; display:flex; flex-direction:column; gap:12px;">
+      <div style="background:#fff7c2; border-radius:8px; padding:14px 16px;">
+        <p style="font-size:13px; font-weight:600; color:#0b3d25; margin:0 0 4px; font-family:'Prompt',sans-serif;">Número en fondo amarillo</p>
+        <p style="font-size:13px; color:#3d4a42; line-height:1.6; margin:0; font-family:'Prompt',sans-serif;">Pruebas que ya subieron correctamente a la nube.</p>
+      </div>
+      <div style="background:#ffd9a8; border-radius:8px; padding:14px 16px;">
+        <p style="font-size:13px; font-weight:600; color:#0b3d25; margin:0 0 4px; font-family:'Prompt',sans-serif;">Número en fondo naranja</p>
+        <p style="font-size:13px; color:#3d4a42; line-height:1.6; margin:0; font-family:'Prompt',sans-serif;">Pruebas que todavía no han subido. Al terminar el día este número debe quedar en 0.</p>
+      </div>
+      <div style="background:#0b5640; border-radius:8px; padding:14px 16px;">
+        <p style="font-size:13px; font-weight:600; color:#3AF9A2; margin:0 0 4px; font-family:'Prompt',sans-serif;">Si le quedan pruebas sin subir</p>
+        <p style="font-size:13px; color:#fff; line-height:1.6; margin:0; font-family:'Prompt',sans-serif;">Active el WiFi, toque el botón azul <strong>SINCRONIZAR DATOS PARA TODOS LOS USUARIOS</strong> y espere a que el porcentaje llegue a 100%.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. MENSAJES DE ERROR AL ACTUALIZAR -->
+<div id="tang-errores" style="margin-top:24px; background:#fff; border:1px solid #d6ede2; border-radius:12px; padding:28px 24px;">
+  <p class="mat-sublabel" style="margin-top:0;">Soporte</p>
+  <h3 style="font-size:18px; font-weight:600; color:#0b3d25; margin:0 0 8px; font-family:'Prompt',sans-serif;">Mensajes de error al actualizar</h3>
+  <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0 0 20px; font-family:'Prompt',sans-serif;">
+    Al actualizar la aplicación puede aparecer una alerta con un código. Busque el código en el mensaje y siga las indicaciones.
+  </p>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px;">
+
+     <!-- Error -4 -->
+    <div style="background:#fdf1f0; border:1.5px solid #e8b4ae; border-radius:10px; padding:20px;">
+      <p style="font-size:16px; font-weight:700; color:#b03a2e; margin:0; font-family:'Prompt',sans-serif;">Error Code: -4</p>
+      <p style="font-size:12px; font-style:italic; color:#7a6a68; margin:0 0 14px; font-family:'Prompt',sans-serif;">Failed to download update files</p>
+      <div style="text-align:center; margin-bottom:14px;">
+        <img src="img/tang_error_4.png" alt="Alerta de Tangerine con Error Code -4" style="width:100%; max-width:280px; border-radius:6px; border:1px solid #e8b4ae;">
+      </div>
+      <p style="font-size:13px; font-weight:600; color:#0b3d25; margin:0 0 4px; font-family:'Prompt',sans-serif;">Qué significa</p>
+      <p style="font-size:13px; color:#3d4a42; line-height:1.6; margin:0 0 12px; font-family:'Prompt',sans-serif;">La aplicación no pudo descargar la actualización.</p>
+      <p style="font-size:13px; font-weight:600; color:#0b3d25; margin:0 0 4px; font-family:'Prompt',sans-serif;">Qué hacer</p>
+      <ol style="font-size:13px; color:#3d4a42; line-height:1.6; margin:0; padding-left:18px; font-family:'Prompt',sans-serif;">
+        <li>Verifique que la tablet esté conectada a WiFi e intente de nuevo.</li>
+        <li>Si con WiFi activo el error continúa, sincronice primero (<a href="#tang-sync" style="color:#018d38;">vea el paso anterior</a>) y tome un pantallazo del resumen. Después desinstale Tangerine y vuelva a instalarla con el QR.</li>
+      </ol>
+    </div>
+
+    <!-- Error 2 -->
+    <div style="background:#f0f8f3; border:1.5px solid #d6ede2; border-radius:10px; padding:20px;">
+      <p style="font-size:16px; font-weight:700; color:#018d38; margin:0; font-family:'Prompt',sans-serif;">Error Code: 2</p>
+      <p style="font-size:12px; font-style:italic; color:#4a7a5e; margin:0 0 14px; font-family:'Prompt',sans-serif;">Nothing new to load from server</p>
+      <div style="text-align:center; margin-bottom:14px;">
+        <img src="img/tang_error_2.png" alt="Alerta de Tangerine con Error Code 2" style="width:100%; max-width:280px; border-radius:6px; border:1px solid #d6ede2;">
+      </div>
+      <p style="font-size:13px; font-weight:600; color:#0b3d25; margin:0 0 4px; font-family:'Prompt',sans-serif;">Qué significa</p>
+      <p style="font-size:13px; color:#3d4a42; line-height:1.6; margin:0 0 12px; font-family:'Prompt',sans-serif;">No hay actualizaciones nuevas o la tablet ya tiene instalada la última versión.</p>
+      <p style="font-size:13px; font-weight:600; color:#0b3d25; margin:0 0 4px; font-family:'Prompt',sans-serif;">Qué hacer</p>
+      <p style="font-size:13px; color:#3d4a42; line-height:1.6; margin:0; font-family:'Prompt',sans-serif;">Toque <strong>Aceptar</strong> y siga trabajando normalmente.</p>
+    </div>
+
+  </div>
+
+    <p style="font-size:12px; color:#4a7a5e; line-height:1.6; margin:18px 0 0; font-family:'Prompt',sans-serif;">
+    Si aparece un código distinto a estos. Comuníquese con su operador o escriba al WhatsApp
+    <a href="https://wa.me/573180755943" target="_blank" style="color:#018d38; font-weight:600; text-decoration:underline;">318 075 5943</a>.
+  </p>
+</div>
+<!-- ==================== FIN [TANGERINE] Sincronización y errores ==================== -->
       <!-- INSTRUMENTOS DE OBSERVACIÓN -->
       <div style="margin-top:40px; background:#fff; border:1px solid #d6ede2; border-radius:12px; padding:28px 24px;">
         <p class="mat-sublabel" style="margin-top:0;">Instrumentos de observación</p>
