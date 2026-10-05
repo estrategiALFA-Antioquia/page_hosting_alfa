@@ -3307,3 +3307,86 @@ alfa-page { font-family: 'Prompt', sans-serif; }
     .ca-head h2{font-size:22px !important;}
     #ca-grid{grid-template-columns:1fr !important; margin-top:24px !important;}
   }
+
+  #webinars.wb-sec{position:relative;overflow:hidden;background:#0b5640;padding:56px 0 44px;font-family:'Prompt',sans-serif;}
+  #webinars .wb-bg{position:absolute;top:14px;left:50%;transform:translateX(-50%);font-size:120px;font-weight:700;color:rgba(255,255,255,0.05);letter-spacing:-3px;line-height:1;white-space:nowrap;pointer-events:none;user-select:none;font-family:'Prompt',sans-serif;}
+  #webinars .wb-head{position:relative;max-width:720px;margin:0 auto 32px;padding:0 24px;text-align:center;}
+  #webinars .wb-eyebrow{font-family:'Prompt',sans-serif !important;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#3AF9A2 !important;margin:0 0 10px;}
+  #webinars .wb-h2{font-family:'Prompt',sans-serif !important;font-size:28px;font-weight:700;color:#ffffff !important;margin:0 0 12px;line-height:1.2;}
+  #webinars .wb-lead{font-family:'Prompt',sans-serif !important;font-size:15px;color:rgba(255,255,255,.85) !important;line-height:1.7;margin:0;}
+  #webinars .wb-stage{position:relative;max-width:1100px;margin:0 auto;}
+  #webinars .wb-track{position:relative;height:460px;touch-action:pan-y;}
+  #webinars .wb-card{position:absolute;top:0;left:50%;width:min(500px,84vw);background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(0,30,20,.35);transition:transform .55s cubic-bezier(.22,.8,.3,1),opacity .55s,filter .55s;cursor:pointer;will-change:transform;}
+  #webinars .wb-card.is-active{cursor:default;}
+  #webinars .wb-media{position:relative;aspect-ratio:16/9;background:#018d38;overflow:hidden;}
+  #webinars .wb-media img,#webinars .wb-media iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;display:block;}
+  #webinars .wb-poster{position:absolute;inset:0;background:linear-gradient(135deg,#018d38 0%,#0b5640 70%);display:flex;flex-direction:column;justify-content:center;padding:24px 28px;}
+  #webinars .wb-poster-date{font-family:'Prompt',sans-serif !important;font-size:40px;font-weight:700;line-height:1;color:#3AF9A2 !important;margin:0 0 10px;text-transform:uppercase;}
+  #webinars .wb-poster-title{font-family:'Prompt',sans-serif !important;font-size:18px;font-weight:600;line-height:1.3;margin:0;max-width:90%;color:#ffffff !important;}
+  #webinars .wb-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:60px;border-radius:50%;border:none;background:#018d38;box-shadow:0 6px 20px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .2s;}
+  #webinars .wb-play:hover{transform:translate(-50%,-50%) scale(1.08);}
+  #webinars .wb-info{padding:16px 20px 20px;}
+  #webinars .wb-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 8px;}
+  #webinars .wb-badge{font-family:'Prompt',sans-serif;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:20px;background:#d6ede2;color:#0b5640;}
+  #webinars .wb-badge.next{background:#3AF9A2;color:#0b3d25;}
+  #webinars .wb-badge.soon{background:#eef2f0;color:#4a6b5b;}
+  #webinars .wb-date{font-family:'Prompt',sans-serif;font-size:13px;color:#2f6b4c;font-weight:500;}
+  #webinars .wb-title{font-family:'Prompt',sans-serif !important;font-size:17px;font-weight:600;color:#0b3d25 !important;margin:0 0 6px;line-height:1.35;}
+  #webinars .wb-con{font-family:'Prompt',sans-serif !important;font-size:13px;color:#3d6b52 !important;margin:0;line-height:1.6;}
+  #webinars .wb-desc{font-family:'Prompt',sans-serif !important;font-size:13px;color:#2d4a38 !important;line-height:1.7;margin:10px 0 0;}
+  #webinars .wb-arr{position:absolute;top:120px;z-index:30;width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(255,255,255,.6);background:rgba(11,86,64,.6);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s;}
+  #webinars .wb-arr:hover{background:#018d38;}
+  #webinars .wb-prev{left:24px;} #webinars .wb-next{right:24px;}
+  #webinars .wb-dots{display:flex;justify-content:center;gap:8px;margin-top:8px;position:relative;}
+  #webinars .wb-dot{width:8px;height:8px;border-radius:50%;border:none;padding:0;background:rgba(255,255,255,.3);cursor:pointer;transition:all .3s;}
+  #webinars .wb-dot.on{width:24px;border-radius:4px;background:#3AF9A2;}
+
+  /* Tarjetas más pequeñas */
+#webinars .wb-card{width:min(400px,84vw);}
+#webinars .wb-poster{padding:18px 22px;}
+#webinars .wb-poster-date{font-size:32px;}
+#webinars .wb-poster-title{font-size:15px;}
+#webinars .wb-play{width:52px;height:52px;}
+#webinars .wb-info{padding:10px 16px 12px;}
+#webinars .wb-badge{font-size:10px;padding:3px 8px;}
+#webinars .wb-date{font-size:12px;}
+#webinars .wb-title{font-size:15px;}
+#webinars .wb-con,#webinars .wb-desc{font-size:12px;}
+#webinars .wb-arr{top:90px;}
+  @media (max-width:768px){
+    #webinars.wb-sec{padding:44px 0 32px;}
+    #webinars .wb-bg{font-size:60px;}
+    #webinars .wb-h2{font-size:22px;}
+    #webinars .wb-lead{font-size:14px;}
+    #webinars .wb-arr{display:none;}
+    #webinars .wb-poster{padding:16px 18px;}
+    #webinars .wb-poster-date{font-size:30px;}
+    #webinars .wb-poster-title{font-size:15px;}
+    #webinars .wb-info{padding:14px 16px 18px;}
+    #webinars .wb-title{font-size:16px;}
+  }
+
+
+  /* Tarjetas de inicio en una sola fila */
+.alfa-cards-grid{
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:16px !important;
+}
+.alfa-fc{height:190px !important;}
+.alfa-fi{height:100% !important;}
+.alfa-ff,.alfa-fb{padding:18px 16px !important;}
+.alfa-ic{width:40px !important;height:40px !important;margin-bottom:10px !important;}
+.alfa-ct,.alfa-bt{font-size:14px !important;margin-bottom:6px !important;}
+.alfa-cs{font-size:12px !important;line-height:1.5 !important;}
+.alfa-bd{font-size:12px !important;line-height:1.5 !important;margin-bottom:10px !important;}
+.alfa-bb{font-size:11px !important;padding:6px 14px !important;}
+
+/* Tablet: dos por fila · Celular: una por fila */
+@media (max-width:992px){
+  .alfa-cards-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+}
+@media (max-width:576px){
+  .alfa-cards-grid{grid-template-columns:1fr !important;}
+  .alfa-fc{height:170px !important;}
+}
