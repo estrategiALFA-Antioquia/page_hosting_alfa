@@ -7,7 +7,8 @@
     var WEBINARS = [
       {fecha:"2026-10-01", titulo:"ALFA: qué es y cómo se implementa", con:"Secretaría de Educación de Antioquia, Banco Mundial y expertos invitados", video:"01WPsBFQjVo",
        desc:"Recorrimos el contexto de las acciones que se adelantan en Antioquia, los ejes de la estrategia y algunos pasos prácticos para fortalecer la lectura y la escritura desde la infancia."},
-      {fecha:"2026-10-08", titulo:"Leer no es natural: lo que la ciencia nos enseña", con:"Especialista en ciencia de la lectura, Banco Mundial", video:""},
+                 {fecha:"2026-10-08", titulo:"Leer no es natural: lo que la ciencia nos enseña", con:"Especialista en ciencia de la lectura, Banco Mundial", video:"OPuEgDaUWTs",
+       desc:"Vimos cómo el cerebro reorganiza circuitos visuales y del lenguaje oral para aprender a leer, qué plantean el Modelo Simple de la Lectura y la Cuerda de Scarborough, y estrategias para el aula en conciencia fonológica, decodificación, fluidez y vocabulario."},
       {fecha:"2026-10-15", titulo:"ATAL: habilidades precursoras y ruta de aprendizaje", con:"Especialista ATAL y docente invitado", video:""},
       {fecha:"2026-10-22", titulo:"Kalulu: enseñanza fonética y remediación", con:"Especialista Kalulu y docente de segundo grado", video:""},
       {fecha:"2026-10-29", titulo:"El facilitador: acompañar para transformar la práctica", con:"Facilitadoras de CTA y Corpoeducación", video:""},
