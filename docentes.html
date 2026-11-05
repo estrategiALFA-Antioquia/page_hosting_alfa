@@ -77,6 +77,7 @@
       <a href="#rol">Tu rol</a>
       <a href="#materiales">Materiales</a>
       <a href="#acompanamiento">Acompañamiento</a>
+      <a href="#paneles">Paneles</a>
       <a href="#claves-alfa">Claves ALFA</a>
       <!--<a href="#canal">Canal WhatsApp</a>-->
     </div>
@@ -563,6 +564,91 @@
     </div>
   </section>
   
+  <!-- PANELES SUBREGIONALES -->
+  <section id="paneles" class="doc-section" style="background:#f8fdf9;">
+    <style>
+      #paneles .pn-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 18px;}
+      #paneles .pn-tab{font-family:'Prompt',sans-serif;font-weight:600;font-size:14px;padding:9px 20px;border-radius:999px;border:1.5px solid #0b5640;background:#fff;color:#0b5640;cursor:pointer;}
+      #paneles .pn-tab.active{background:#0b5640;color:#fff;}
+      #paneles .pn-tab small{font-weight:500;opacity:.8;margin-left:4px;}
+      #paneles .pn-panel{display:none;}
+      #paneles .pn-panel.active{display:grid;grid-template-columns:1.25fr 1fr;gap:26px;align-items:start;}
+      #paneles .pn-frame{position:relative;padding-top:56.25%;border-radius:14px;overflow:hidden;border:1px solid #d6ede2;box-shadow:0 2px 10px rgba(11,86,64,.08);}
+      #paneles .pn-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+      #paneles .pn-eyebrow{font-size:11px;font-weight:700;color:#018d38;letter-spacing:.1em;text-transform:uppercase;margin:0 0 6px;font-family:'Prompt',sans-serif;}
+      #paneles .pn-title{font-size:18px;font-weight:700;color:#0b5640;margin:0 0 8px;font-family:'Prompt',sans-serif;}
+      #paneles .pn-text{font-size:13.5px;color:#3a5a4a;line-height:1.65;margin:0 0 14px;font-family:'Prompt',sans-serif;}
+      #paneles .pn-aulas{display:flex;flex-direction:column;gap:8px;}
+      #paneles .pn-aula{display:flex;align-items:center;gap:10px;background:#fff;border:1.5px solid #e6efe9;border-radius:12px;padding:7px 8px 7px 7px;text-decoration:none;}
+      #paneles .pn-aula:hover{border-color:#018d38;}
+      #paneles .pn-num{flex:0 0 30px;height:30px;border-radius:50%;background:#1a8a4c;color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;font-family:'Prompt',sans-serif;}
+      #paneles .pn-name{flex:1;font-weight:600;font-size:13.5px;color:#0b3d25;font-family:'Prompt',sans-serif;}
+      #paneles .pn-dl{font-size:12px;font-weight:600;color:#0b5640;background:#dcece3;padding:5px 12px;border-radius:999px;font-family:'Prompt',sans-serif;white-space:nowrap;}
+      #paneles .pn-aula:hover .pn-dl{background:#0b5640;color:#fff;}
+      #paneles .pn-yt{font-size:13px;font-weight:600;color:#018d38;font-family:'Prompt',sans-serif;display:inline-block;margin-top:12px;}
+      #paneles .pn-next{background:#0b5640;border-radius:14px;padding:22px 24px;color:#fff;}
+      #paneles .pn-next p{color:#e3f3ea;}
+      #paneles .pn-next .pn-title{color:#fff;}
+      #paneles .pn-next-btn{display:inline-block;background:#fff;color:#0b5640;font-family:'Prompt',sans-serif;font-weight:700;font-size:14px;padding:9px 24px;border-radius:999px;text-decoration:none;}
+      #paneles .pn-next-btn:hover{background:#dcece3;}
+      #paneles .pn-dato{display:flex;gap:8px;font-size:13.5px;font-family:'Prompt',sans-serif;margin:0 0 6px;color:#e3f3ea;}
+      @media (max-width:900px){#paneles .pn-panel.active{grid-template-columns:1fr;}}
+    </style>
+    <div class="doc-inner">
+      <p class="doc-eyebrow">Paneles subregionales</p>
+      <h2 class="doc-title">Panel de Alfabetización Inicial</h2>
+      <p class="doc-body">Capacitación presencial para docentes de preescolar y primaria en cada subregión: un panel con invitados y aulas interactivas donde se simulan clases con Aprendamos Todos a Leer y Kalulu. Elige tu subregión para ver la grabación y descargar las diapositivas.</p>
+
+      <div class="pn-tabs">
+        <button class="pn-tab active" onclick="pnTab(this,'pn-uraba')">Urabá <small>· 28 oct</small></button>
+        <button class="pn-tab" onclick="pnTab(this,'pn-occidente')">Occidente <small>· 11 nov</small></button>
+      </div>
+
+      <!-- URABÁ -->
+      <div id="pn-uraba" class="pn-panel active">
+        <div class="pn-frame">
+          <iframe src="https://www.youtube.com/embed/ezwOxNdVGq4" title="Panel de Alfabetización Inicial – Subregión Urabá" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div>
+          <p class="pn-eyebrow">Carepa · 28 de octubre · Grabación completa</p>
+          <p class="pn-title">Panel Subregión Urabá</p>
+          <p class="pn-text">Conversación con los panelistas invitados e intervenciones de los docentes que asistieron. Debajo están las diapositivas de las cuatro aulas interactivas.</p>
+          <div class="pn-aulas">
+            <a class="pn-aula" href="https://drive.google.com/file/d/15Im93VmjPVUNf697VDwCn4RZUzlo9FpV/view?usp=sharing" target="_blank" rel="noopener"><span class="pn-num">1</span><span class="pn-name">Comprensión</span><span class="pn-dl">↓ Diapositivas</span></a>
+            <a class="pn-aula" href="https://drive.google.com/file/d/1HpMjM6BT4Wy325D5IAZ-pMYLYEc6dVvJ/view?usp=sharing" target="_blank" rel="noopener"><span class="pn-num">2</span><span class="pn-name">Kalulu</span><span class="pn-dl">↓ Diapositivas</span></a>
+            <a class="pn-aula" href="https://drive.google.com/file/d/1TuY-EUb5mY1a2pxJvrXKh3f3LHOz2zXG/view?usp=sharing" target="_blank" rel="noopener"><span class="pn-num">3</span><span class="pn-name">El muro de los sonidos</span><span class="pn-dl">↓ Diapositivas</span></a>
+            <a class="pn-aula" href="https://drive.google.com/file/d/1McEWMZeC56RjZvw3jJiqReby-70Kw7I9/view?usp=sharing" target="_blank" rel="noopener"><span class="pn-num">4</span><span class="pn-name">Del sonido al trazo de la letra</span><span class="pn-dl">↓ Diapositivas</span></a>
+          </div>
+          <a class="pn-yt" href="https://youtu.be/ezwOxNdVGq4" target="_blank" rel="noopener">▶ Abrir el video en YouTube</a>
+        </div>
+      </div>
+
+      <!-- OCCIDENTE (próximo) -->
+      <div id="pn-occidente" class="pn-panel">
+        <div class="pn-next">
+          <p class="pn-eyebrow" style="color:#bfe8cf;">Próximo panel</p>
+          <p class="pn-title">Panel Subregión Occidente</p>
+          <p class="pn-dato">📅 Miércoles 11 de noviembre de 2026</p>
+          <p class="pn-dato">🕑 2:00 p.m.</p>
+          <p class="pn-dato" style="margin-bottom:16px;">📍 Universidad de Antioquia, Campus Santa Fe de Antioquia (Cl. 9 # 7-36)</p>
+          <a class="pn-next-btn" href="https://forms.cloud.microsoft/r/r6BYgtjuGz" target="_blank" rel="noopener">Inscríbete</a>
+        </div>
+        <div>
+          <p class="pn-eyebrow">Para docentes de Occidente</p>
+          <p class="pn-text">Si eres docente de preescolar o primaria en Occidente, participa en el panel y en las aulas interactivas con las herramientas de Aprendamos Todos a Leer y Kalulu. Después del encuentro publicaremos aquí la grabación y las diapositivas.</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function pnTab(btn,id){
+        var s=document.getElementById('paneles');
+        s.querySelectorAll('.pn-tab').forEach(function(b){b.classList.remove('active');});
+        s.querySelectorAll('.pn-panel').forEach(function(p){p.classList.remove('active');});
+        btn.classList.add('active');document.getElementById(id).classList.add('active');
+      }
+    </script>
+  </section>
+
   <!-- CLAVES ALFA -->
 <section id="claves-alfa" class="doc-section" style="background:#e8f5ed;; overflow:hidden;">
   <div class="doc-inner" style="position:relative;">
