@@ -111,7 +111,7 @@ header .nav li.active ul.dropdown-menu li.active a{
     -ms-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
-	color: #3AF9A2 !important;
+	color: #8FE0B0 !important;
 	background: transparent !important;
 }
 
@@ -225,7 +225,7 @@ header ul.nav li ul li a {
 
 .navbar .nav a:hover {
 	background: none;
-	color: #3AF9A2 !important;
+	color: #8FE0B0 !important;
 }
 
 .navbar .nav > .active > a,.navbar .nav > .active > a:hover {
@@ -265,7 +265,7 @@ header ul.nav li ul li ul {
   content:none;
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-color: #3AF9A2; 
+color: #8FE0B0; 
 /* background: #52C2AD; */
 /* border: 1px solid #3AA994 !important; */
 }
@@ -1952,7 +1952,7 @@ alfa-page { font-family: 'Prompt', sans-serif; }
     inset: 0;
     font-size: 200px;
     font-weight: 900;
-    color: rgba(58,249,162,0.04);
+    color: rgba(143,224,176,0.04);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1965,7 +1965,7 @@ alfa-page { font-family: 'Prompt', sans-serif; }
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #3AF9A2;
+    color: #8FE0B0;
     margin-bottom: 12px;
     font-family: 'Prompt', sans-serif;
   }
@@ -1977,7 +1977,7 @@ alfa-page { font-family: 'Prompt', sans-serif; }
     margin-bottom: 16px;
     font-family: 'Prompt', sans-serif;
   }
-  .alfa-hero h1 span { color: #3AF9A2; }
+  .alfa-hero h1 span { color: #8FE0B0; }
   .alfa-hero-sub {
     font-size: 15px;
     color: rgba(255,255,255,0.75);
@@ -1998,7 +1998,7 @@ alfa-page { font-family: 'Prompt', sans-serif; }
   .alfa-hero-stat-num {
     font-size: 30px;
     font-weight: 700;
-    color: #3AF9A2;
+    color: #8FE0B0;
     display: block;
     font-family: 'Prompt', sans-serif;
   }
@@ -2135,7 +2135,7 @@ alfa-page { font-family: 'Prompt', sans-serif; }
 
   /* ECOSISTEMA */
   .alfa-eco { background: #0b5640; }
-  .alfa-eco .alfa-eyebrow { color: #3AF9A2; }
+  .alfa-eco .alfa-eyebrow { color: #8FE0B0; }
   .alfa-eco .alfa-section-title { color: #fff; }
   .alfa-eco-grid {
     display: grid;
@@ -2153,7 +2153,7 @@ alfa-page { font-family: 'Prompt', sans-serif; }
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: #3AF9A2;
+    background: #8FE0B0;
     color: #0b5640;
     font-size: 16px;
     font-weight: 700;
@@ -2248,7 +2248,7 @@ alfa-page { font-family: 'Prompt', sans-serif; }
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #3AF9A2;
+    color: #8FE0B0;
     margin-bottom: 12px;
     font-family: 'Prompt', sans-serif;
   }
@@ -2260,7 +2260,7 @@ alfa-page { font-family: 'Prompt', sans-serif; }
     margin-bottom: 16px;
     font-family: 'Prompt', sans-serif;
   }
-  .doc-hero h1 span { color: #3AF9A2; }
+  .doc-hero h1 span { color: #8FE0B0; }
   .doc-hero-sub {
     font-size: 15px;
     color: rgba(255,255,255,0.78);
@@ -2281,7 +2281,7 @@ alfa-page { font-family: 'Prompt', sans-serif; }
   .doc-hero-stat-num {
     font-size: 28px;
     font-weight: 700;
-    color: #3AF9A2;
+    color: #8FE0B0;
     font-family: 'Prompt', sans-serif;
   }
   .doc-hero-stat-label {
@@ -2544,7 +2544,7 @@ alfa-page { font-family: 'Prompt', sans-serif; }
     inset: 0;
     font-size: 140px;
     font-weight: 900;
-    color: rgba(58,249,162,0.04);
+    color: rgba(143,224,176,0.04);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2558,7 +2558,7 @@ alfa-page { font-family: 'Prompt', sans-serif; }
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #3AF9A2;
+    color: #8FE0B0;
     margin-bottom: 12px;
     font-family: 'Prompt', sans-serif;
   }
@@ -2570,7 +2570,7 @@ alfa-page { font-family: 'Prompt', sans-serif; }
     margin-bottom: 16px;
     font-family: 'Prompt', sans-serif;
   }
-  .fac-hero h1 span { color: #3AF9A2; }
+  .fac-hero h1 span { color: #8FE0B0; }
   .fac-hero-sub {
     font-size: 15px;
     color: rgba(255,255,255,0.78);
@@ -2596,7 +2596,7 @@ alfa-page { font-family: 'Prompt', sans-serif; }
     border-radius: 8px;
     padding: 12px 20px;
   }
-  .fac-hero-stat-num { font-size: 24px; font-weight: 700; color: #3AF9A2; font-family: 'Prompt', sans-serif; }
+  .fac-hero-stat-num { font-size: 24px; font-weight: 700; color: #8FE0B0; font-family: 'Prompt', sans-serif; }
   .fac-hero-stat-label { font-size: 13px; color: rgba(255,255,255,0.7); font-family: 'Prompt', sans-serif; }
 
   /* ÍNDICE STICKY */
@@ -2714,7 +2714,7 @@ alfa-page { font-family: 'Prompt', sans-serif; }
   }
   .fac-dia-badge {
     background: #0b5640;
-    color: #3AF9A2;
+    color: #8FE0B0;
     font-size: 11px;
     font-weight: 700;
     padding: 4px 14px;
@@ -2992,7 +2992,7 @@ alfa-page { font-family: 'Prompt', sans-serif; }
     inset: 0;
     font-size: 140px;
     font-weight: 900;
-    color: rgba(58,249,162,0.04);
+    color: rgba(143,224,176,0.04);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3004,7 +3004,7 @@ alfa-page { font-family: 'Prompt', sans-serif; }
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #3AF9A2;
+    color: #8FE0B0;
     margin-bottom: 12px;
     font-family: 'Prompt', sans-serif;
   }
@@ -3016,7 +3016,7 @@ alfa-page { font-family: 'Prompt', sans-serif; }
     margin-bottom: 16px;
     font-family: 'Prompt', sans-serif;
   }
-  .con-hero h1 span { color: #3AF9A2; }
+  .con-hero h1 span { color: #8FE0B0; }
   .con-hero-sub {
     font-size: 15px;
     color: rgba(255,255,255,0.78);
@@ -3311,7 +3311,7 @@ alfa-page { font-family: 'Prompt', sans-serif; }
   #webinars.wb-sec{position:relative;overflow:hidden;background:#0b5640;padding:56px 0 44px;font-family:'Prompt',sans-serif;}
   #webinars .wb-bg{position:absolute;top:14px;left:50%;transform:translateX(-50%);font-size:120px;font-weight:700;color:rgba(255,255,255,0.05);letter-spacing:-3px;line-height:1;white-space:nowrap;pointer-events:none;user-select:none;font-family:'Prompt',sans-serif;}
   #webinars .wb-head{position:relative;max-width:720px;margin:0 auto 32px;padding:0 24px;text-align:center;}
-  #webinars .wb-eyebrow{font-family:'Prompt',sans-serif !important;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#3AF9A2 !important;margin:0 0 10px;}
+  #webinars .wb-eyebrow{font-family:'Prompt',sans-serif !important;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8FE0B0 !important;margin:0 0 10px;}
   #webinars .wb-h2{font-family:'Prompt',sans-serif !important;font-size:28px;font-weight:700;color:#ffffff !important;margin:0 0 12px;line-height:1.2;}
   #webinars .wb-lead{font-family:'Prompt',sans-serif !important;font-size:15px;color:rgba(255,255,255,.85) !important;line-height:1.7;margin:0;}
   #webinars .wb-stage{position:relative;max-width:1100px;margin:0 auto;}
@@ -3321,14 +3321,14 @@ alfa-page { font-family: 'Prompt', sans-serif; }
   #webinars .wb-media{position:relative;aspect-ratio:16/9;background:#018d38;overflow:hidden;}
   #webinars .wb-media img,#webinars .wb-media iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;display:block;}
   #webinars .wb-poster{position:absolute;inset:0;background:linear-gradient(135deg,#018d38 0%,#0b5640 70%);display:flex;flex-direction:column;justify-content:center;padding:24px 28px;}
-  #webinars .wb-poster-date{font-family:'Prompt',sans-serif !important;font-size:40px;font-weight:700;line-height:1;color:#3AF9A2 !important;margin:0 0 10px;text-transform:uppercase;}
+  #webinars .wb-poster-date{font-family:'Prompt',sans-serif !important;font-size:40px;font-weight:700;line-height:1;color:#8FE0B0 !important;margin:0 0 10px;text-transform:uppercase;}
   #webinars .wb-poster-title{font-family:'Prompt',sans-serif !important;font-size:18px;font-weight:600;line-height:1.3;margin:0;max-width:90%;color:#ffffff !important;}
   #webinars .wb-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:60px;border-radius:50%;border:none;background:#018d38;box-shadow:0 6px 20px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .2s;}
   #webinars .wb-play:hover{transform:translate(-50%,-50%) scale(1.08);}
   #webinars .wb-info{padding:16px 20px 20px;}
   #webinars .wb-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 8px;}
   #webinars .wb-badge{font-family:'Prompt',sans-serif;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:20px;background:#d6ede2;color:#0b5640;}
-  #webinars .wb-badge.next{background:#3AF9A2;color:#0b3d25;}
+  #webinars .wb-badge.next{background:#8FE0B0;color:#0b3d25;}
   #webinars .wb-badge.soon{background:#eef2f0;color:#4a6b5b;}
   #webinars .wb-date{font-family:'Prompt',sans-serif;font-size:13px;color:#2f6b4c;font-weight:500;}
   #webinars .wb-title{font-family:'Prompt',sans-serif !important;font-size:17px;font-weight:600;color:#0b3d25 !important;margin:0 0 6px;line-height:1.35;}
@@ -3339,7 +3339,7 @@ alfa-page { font-family: 'Prompt', sans-serif; }
   #webinars .wb-prev{left:24px;} #webinars .wb-next{right:24px;}
   #webinars .wb-dots{display:flex;justify-content:center;gap:8px;margin-top:8px;position:relative;}
   #webinars .wb-dot{width:8px;height:8px;border-radius:50%;border:none;padding:0;background:rgba(255,255,255,.3);cursor:pointer;transition:all .3s;}
-  #webinars .wb-dot.on{width:24px;border-radius:4px;background:#3AF9A2;}
+  #webinars .wb-dot.on{width:24px;border-radius:4px;background:#8FE0B0;}
 
   /* Tarjetas más pequeñas */
 #webinars .wb-card{width:min(400px,84vw);}
