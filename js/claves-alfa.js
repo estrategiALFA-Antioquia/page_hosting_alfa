@@ -1,3 +1,45 @@
+// ===== TIPS NUEVOS =====
+// Cada tip es una pieza que se envió por el canal con su mensaje.
+// Para agregar uno nuevo: copiar un bloque y ponerlo DE PRIMERO en la lista.
+// Los que dicen PENDIENTE llevan el texto de la pieza mientras llega el mensaje original.
+var caTips = [
+  {
+    titulo: "Leer y escribir se aprende",
+    src: "img/claves_alfa/tips_alfa/leer_escribir_se_aprende.jpg",
+    desc: "A diferencia del lenguaje oral, leer y escribir requieren una enseñanza explícita, sistemática y estructurada."
+  },
+  {
+    titulo: "Hay cinco pilares para aprender a leer bien",
+    src: "img/claves_alfa/tips_alfa/cinco_pilares.jpg",
+    desc: "¡Aprender a leer bien es un proceso que se construye sobre 5 pilares fundamentales!\n\n1. Conciencia fonémica: reconocer los sonidos que componen cada palabra (por ejemplo, saber que sol empieza con /s/).\n\n2. Relación entre letras y sonidos: comprender la correspondencia entre lo que se escucha y lo que se ve escrito (como asociar el sonido /m/ con la letra m).\n\n3. Fluidez: leer con mayor precisión y agilidad para enfocar la energía en el significado de lo que se lee.\n\n4. Vocabulario: ampliar el conocimiento de palabras para entender mejor el texto.\n\n5. Comprensión: el propósito final de la lectura, construir significado, conectar ideas y conversar sobre lo leído."
+  },
+  {
+    titulo: "Las letras representan los sonidos del habla",
+    src: "img/claves_alfa/tips_alfa/letras_sonidos.jpg",
+    desc: "Enseñar de forma explícita las correspondencias entre letras y sonidos es clave para aprender a leer."
+  },
+  {
+    titulo: "La fluidez facilita la comprensión",
+    src: "img/claves_alfa/tips_alfa/fluidez_comprension.jpg",
+    desc: "Cuando los estudiantes leen con precisión y soltura, logran liberar su mente de la decodificación para concentrarse en lo más importante: el significado de lo que leen."
+  },
+  {
+    titulo: "Aprender a escribir fortalece la lectura",
+    src: "img/claves_alfa/tips_alfa/escribir_fortalece.jpg",
+    desc: "Leer y escribir se enseñan de manera conectada y se enriquecen mutuamente."
+  },
+  {
+    titulo: "Confundir \u201cb\u201d y \u201cd\u201d no es dislexia",
+    src: "img/claves_alfa/tips_alfa/confundir_b_d.jpg",
+    desc: "Que las niñas y niños confundan la \u201cb\u201d y la \u201cd\u201d al iniciar su lectura no es un signo de dislexia, sino un proceso natural del cerebro.\n\nEn esta etapa, la mente tiende a procesar imágenes reflejadas como un mismo objeto (al igual que ocurre con una bicicleta, sin importar hacia dónde apunte).\n\nAl compartir la misma forma con diferente orientación, las letras en espejo suelen parecer idénticas.\n\nLa clave para superar este reto está en la memoria motora: ejercitar la escritura ayuda a afianzar la dirección correcta de cada letra.\n\nDesde la Estrategia Alfabetización Inicial en Antioquia - ALFA, los invitamos a motivar el trazo y la práctica guiada en sus aulas para acompañar este aprendizaje con éxito."
+  },
+  {
+    titulo: "Intenta lo siguiente: traza la \u201cb\u201d en el aire",
+    src: "img/claves_alfa/tips_alfa/intenta_trazar_b.jpg",
+    desc: "¡Aplica este tip en el aula!\n\nPide a tus estudiantes trazar la \u201cb\u201d en el aire mientras dicen su sonido. El movimiento activa la memoria motora, fijando su dirección correcta y diferenciándola de la \u201cd\u201d.\n\nConfundir letras en espejo es un proceso natural del cerebro, y la escritura a mano es la clave para superarlo."
+  }
+];
+
 var caSemanas = [
       {
     id: 13,
@@ -212,40 +254,61 @@ var caSemanas = [
   }
 ];
 
-var caCur = 0;
+// ===== LÓGICA =====
+// Ambas series se muestran de a 2 tarjetas por página.
+function caPaginas(lista, porPag) {
+  var p = []; for (var i = 0; i < lista.length; i += porPag) p.push(lista.slice(i, i + porPag)); return p;
+}
+var caTipsItems = caTips.map(function(t) { return { src: t.src, titulo: t.titulo, tag: '', meta: '', desc: t.desc, head: t.titulo }; });
+var caClavesItems = [];
+caSemanas.forEach(function(s) {
+  s.tarjetas.forEach(function(t) {
+    caClavesItems.push({ src: t.src, titulo: s.titulo, tag: 'Semana ' + s.id, meta: t.dia, desc: t.desc,
+      head: 'Semana ' + s.id + ' · ' + s.titulo + ' · ' + t.dia });
+  });
+});
+var caGrupos = { tips: caPaginas(caTipsItems, 2), claves: caPaginas(caClavesItems, 2) };
+var caGrupoAct = 'tips', caCur = 0;
+
+function caGrupo(g, btn) {
+  caGrupoAct = g; caCur = 0;
+  document.querySelectorAll('.ca-gtab').forEach(function(b) { b.classList.remove('active'); });
+  if (btn) btn.classList.add('active');
+  caRender();
+}
 
 function caRender() {
-  var s = caSemanas[caCur];
-  document.getElementById('ca-grid').innerHTML = s.tarjetas.map(function(t, i) {
+  var pags = caGrupos[caGrupoAct], pag = pags[caCur];
+  document.getElementById('ca-grid').innerHTML = pag.map(function(t, i) {
     return '<div class="ca-card">'
-      + '<div class="ca-img-wrap" onclick="caOpen(' + caCur + ',' + i + ')">'
-      + '<img src="' + t.src + '" alt="' + t.dia + '" loading="lazy" />'
+      + '<div class="ca-img-wrap" onclick="caOpen(' + i + ')">'
+      + '<img src="' + t.src + '" alt="' + t.titulo + '" loading="lazy" />'
       + '<div class="ca-hint"><span>+</span></div>'
       + '</div>'
       + '<div class="ca-body">'
-      + '<div class="ca-tag">Semana ' + s.id + '</div>'
-      + '<div class="ca-title">' + s.titulo + '</div>'
+      + (t.tag ? '<div class="ca-tag">' + t.tag + '</div>' : '')
+      + '<div class="ca-title">' + t.titulo + '</div>'
+      + (t.meta ? '<div class="ca-day">' + t.meta + '</div>' : '')
       + '</div></div>';
   }).join('');
+  var last = pags.length - 1;
+  document.getElementById('ca-arrows').style.display = last > 0 ? 'flex' : 'none';
   document.getElementById('ca-prev').disabled = caCur === 0;
-  document.getElementById('ca-next').disabled = caCur === caSemanas.length - 1;
+  document.getElementById('ca-next').disabled = caCur === last;
   document.getElementById('ca-prev').style.opacity = caCur === 0 ? '0.35' : '1';
-  document.getElementById('ca-next').style.opacity = caCur === caSemanas.length - 1 ? '0.35' : '1';
+  document.getElementById('ca-next').style.opacity = caCur === last ? '0.35' : '1';
 }
 
 function caPrev() { if (caCur > 0) { caCur--; caRender(); } }
-function caNext() { if (caCur < caSemanas.length - 1) { caCur++; caRender(); } }
+function caNext() { if (caCur < caGrupos[caGrupoAct].length - 1) { caCur++; caRender(); } }
 
-function caOpen(semIdx, tarjIdx) {
-  var t = caSemanas[semIdx].tarjetas[tarjIdx];
-  var s = caSemanas[semIdx];
-  document.getElementById('ca-lb-sem').textContent = 'Semana ' + s.id + ' · ' + s.titulo;
+function caOpen(i) {
+  var t = caGrupos[caGrupoAct][caCur][i];
+  document.getElementById('ca-lb-sem').textContent = t.head;
   document.getElementById('ca-lb-desc').textContent = t.desc;
   document.getElementById('ca-lb').style.display = 'flex';
 }
-
-function caCloseLB() {
-  document.getElementById('ca-lb').style.display = 'none';
-}
+function caCloseLB() { document.getElementById('ca-lb').style.display = 'none'; }
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') caCloseLB(); });
 
 caRender();

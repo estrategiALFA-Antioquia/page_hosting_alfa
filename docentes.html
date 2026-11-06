@@ -76,9 +76,10 @@
     <div class="doc-nav-inner">
       <a href="#rol">Tu rol</a>
       <a href="#materiales">Materiales</a>
+      <a href="#podcast">Podcast</a>
       <a href="#acompanamiento">Acompañamiento</a>
       <a href="#paneles">Paneles</a>
-      <a href="#claves-alfa">Claves ALFA</a>
+      <a href="#claves-alfa">Tips ALFA</a>
       <!--<a href="#canal">Canal WhatsApp</a>-->
     </div>
   </nav>
@@ -348,6 +349,14 @@
           <span>Día 4. Revisión y consolidación</span>
         </div>
       </div>
+
+      <div class="kv-item" onclick="kvPlay(this)"
+          data-id="r70uctvEHpQ"
+          data-eyebrow="Serie Kalulu en el aula · Video 5"
+          data-title="¡Bien jugado! Actividades extra de apoyo"
+          data-desc="Muestra cómo usar dos juegos del material Kalulu, el Bingo y Revueltos, para que los estudiantes practiquen la lectura de sílabas, palabras y oraciones asociándolas con imágenes, y ganen fluidez jugando en grupo.">
+        <span class="kv-num">5</span><span>¡Bien jugado! Actividades extra de apoyo</span>
+      </div>
     </div>
   </div>
 </div>
@@ -538,6 +547,127 @@
     </div>
   </section>
  
+  <!-- PODCAST -->
+  <section id="podcast" class="doc-section" style="padding:0;">
+    <style>
+      #podcast{position:relative;overflow:hidden;background:#0b5640;}
+      #podcast .pc-deco{position:absolute;top:-40px;right:-30px;width:220px;fill:none;stroke:#1f7a52;stroke-width:8;stroke-linecap:round;pointer-events:none;}
+      #podcast .pc-in{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:64px 20px;font-family:'Prompt',sans-serif;color:#fff;}
+      #podcast .pc-ey{font-size:12px;letter-spacing:.12em;font-weight:700;color:#8fe0b0;text-transform:uppercase;margin:0 0 6px;}
+      #podcast .pc-h{font-size:36px;font-weight:700;margin:0 0 6px;color:#fff;}
+      #podcast .pc-sub{font-size:14.5px;color:#cfe9da;margin:0 0 28px;max-width:640px;line-height:1.6;}
+      #podcast .pc-grid{display:grid;grid-template-columns:1.7fr 1fr;gap:28px;align-items:start;}
+      #podcast .pc-feat{background:rgba(255,255,255,.07);border-radius:22px;padding:20px;display:grid;grid-template-columns:270px 1fr;gap:26px;align-items:center;}
+      #podcast .pc-cov{display:block;border:0;padding:0;background:none;cursor:pointer;border-radius:16px;overflow:hidden;box-shadow:0 10px 24px rgba(0,0,0,.3);transition:transform .25s;}
+      #podcast .pc-cov:hover{transform:scale(1.02);}
+      #podcast .pc-cov img{width:100%;display:block;}
+      #podcast .pc-pill{display:inline-block;background:#8fe0b0;color:#0b3d25;font-weight:700;font-size:12px;padding:5px 14px;border-radius:999px;}
+      #podcast .pc-t{font-size:23px;font-weight:700;margin:12px 0 6px;line-height:1.25;color:#fff;}
+      #podcast .pc-guest{color:#bfe8cf;font-size:14px;font-weight:600;margin:0 0 12px;}
+      #podcast .pc-d{color:#e3f3ea;font-size:14px;line-height:1.7;margin:0 0 20px;}
+      #podcast .pc-btn{display:inline-flex;gap:10px;align-items:center;background:#fff;color:#0b5640;font-family:'Prompt',sans-serif;font-weight:700;padding:11px 24px;border-radius:999px;font-size:15px;border:0;cursor:pointer;transition:background .2s;}
+      #podcast .pc-btn:hover{background:#dcece3;}
+      #podcast .pc-wave{display:flex;gap:4px;align-items:center;height:30px;margin-top:22px;}
+      #podcast .pc-wave i{width:5px;background:#8fe0b0;border-radius:3px;animation:pcw 1.4s ease-in-out infinite;}
+      #podcast .pc-wave i:nth-child(odd){animation-delay:.35s;} #podcast .pc-wave i:nth-child(3n){animation-delay:.7s;}
+      @keyframes pcw{0%,100%{transform:scaleY(.5);}50%{transform:scaleY(1);}}
+      #podcast .pc-lt{font-size:12px;letter-spacing:.1em;font-weight:700;color:#8fe0b0;text-transform:uppercase;margin:0 0 10px;}
+      #podcast .pc-list{display:flex;flex-direction:column;gap:10px;overflow-y:auto;padding-right:4px;}
+      #podcast .pc-list::-webkit-scrollbar{width:6px;} #podcast .pc-list::-webkit-scrollbar-thumb{background:rgba(255,255,255,.3);border-radius:3px;}
+      #podcast .pc-row{display:flex;align-items:center;gap:14px;padding:10px;border-radius:14px;background:rgba(255,255,255,.07);border:0;cursor:pointer;text-align:left;color:#fff;font-family:'Prompt',sans-serif;width:100%;flex:0 0 auto;transition:background .2s;}
+      #podcast .pc-row:hover{background:rgba(255,255,255,.14);}
+      #podcast .pc-row.active{background:#fff;color:#0b3d25;}
+      #podcast .pc-row img{width:64px;border-radius:8px;display:block;flex:0 0 64px;}
+      #podcast .pc-row b{display:block;font-size:14px;line-height:1.3;margin-bottom:3px;}
+      #podcast .pc-row small{font-size:12px;opacity:.8;}
+      #podcast .pc-row .pc-n{margin-left:auto;font-size:11px;font-weight:700;opacity:.75;white-space:nowrap;text-align:right;}
+      #podcast .pc-new{display:inline-block;background:#f5c518;color:#0b3d25;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:999px;margin-bottom:4px;opacity:1;}
+      #pc-lb{display:none;position:fixed;inset:0;background:rgba(5,30,20,.82);z-index:9999;align-items:center;justify-content:center;padding:16px;}
+      #pc-lb.open{display:flex;}
+      #pc-lb .pc-box{background:#000;border-radius:16px;max-width:960px;width:100%;position:relative;overflow:hidden;}
+      #pc-lb .pc-frame{position:relative;padding-top:56.25%;}
+      #pc-lb iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+      #pc-lb .pc-x{position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;border:0;background:#fff;color:#0b5640;font-size:18px;cursor:pointer;z-index:2;}
+      @media (max-width:900px){
+        #podcast .pc-grid{grid-template-columns:1fr;}
+        #podcast .pc-list{flex-direction:row;overflow-x:auto;overflow-y:hidden;max-height:none!important;padding-bottom:8px;}
+        #podcast .pc-row{flex:0 0 78%;}
+      }
+      @media (max-width:600px){
+        #podcast .pc-feat{grid-template-columns:1fr;} #podcast .pc-cov{max-width:260px;margin:0 auto;} #podcast .pc-h{font-size:28px;}
+      }
+    </style>
+    <svg class="pc-deco" viewBox="0 0 190 150"><path d="M10 0 C 10 70, 60 110, 120 100 C 170 92, 175 50, 145 48 C 115 46, 115 95, 190 105"/></svg>
+
+    <div class="pc-in">
+      <p class="pc-ey">🎙 Podcast</p>
+      <h2 class="pc-h">Maestros que enseñan a leer</h2>
+      <p class="pc-sub">Conversaciones con docentes y especialistas sobre cómo aprenden a leer los niños y las niñas, y qué pasa en las aulas de Antioquia con la Estrategia ALFA.</p>
+
+      <div class="pc-grid">
+        <div class="pc-feat" id="pc-feat">
+          <button class="pc-cov" onclick="pcOpen()" aria-label="Ver episodio"><img id="pc-img" src="img/podcast/ep3.jpg" alt="Portada del episodio"></button>
+          <div>
+            <span class="pc-pill" id="pc-pill">Episodio 3 · Nuevo</span>
+            <p class="pc-t" id="pc-t">Implementación creativa de ATAL</p>
+            <p class="pc-guest" id="pc-guest">Profe Yuri · Docente de Abejorral</p>
+            <p class="pc-d" id="pc-d">La profe Yuri, docente de Abejorral con 16 años de experiencia, cuenta cómo usa Aprendamos Todos a Leer en su aula y cómo combina la ciencia de la lectura con dinámicas propias.</p>
+            <button class="pc-btn" onclick="pcOpen()">▶ Escuchar episodio</button>
+            <div class="pc-wave" aria-hidden="true"><i style="height:8px"></i><i style="height:18px"></i><i style="height:12px"></i><i style="height:26px"></i><i style="height:10px"></i><i style="height:20px"></i><i style="height:14px"></i><i style="height:28px"></i><i style="height:9px"></i><i style="height:17px"></i><i style="height:22px"></i><i style="height:11px"></i><i style="height:19px"></i><i style="height:7px"></i></div>
+          </div>
+        </div>
+
+        <div>
+          <p class="pc-lt">Episodios</p>
+          <div class="pc-list" id="pc-list">
+            <!-- Nuevo episodio: copiar un botón ARRIBA de todos, cambiar data-* e imagen,
+                 ponerle data-new="1" y quitarle data-new al anterior -->
+            <button class="pc-row active" onclick="pcSel(this)" data-id="qbPkdXevWlk" data-ep="3" data-new="1" data-img="img/podcast/ep3.jpg"
+              data-title="Implementación creativa de ATAL" data-guest="Profe Yuri · Docente de Abejorral"
+              data-desc="La profe Yuri, docente de Abejorral con 16 años de experiencia, cuenta cómo usa Aprendamos Todos a Leer en su aula y cómo combina la ciencia de la lectura con dinámicas propias.">
+              <img src="img/podcast/ep3.jpg" alt=""><span><b>Implementación creativa de ATAL</b><small>Profe Yuri · Abejorral</small></span><span class="pc-n"><span class="pc-new">Nuevo</span><br>EP 3</span>
+            </button>
+            <button class="pc-row" onclick="pcSel(this)" data-id="cJk8JM5Rk5g" data-ep="2" data-img="img/podcast/ep2.jpg"
+              data-title="La ciencia de la lectura: ¿qué pasa en el cerebro cuando un niño aprende a leer?" data-guest="María Camila Gómez · Banco Mundial"
+              data-desc="María Camila Gómez, experta del Banco Mundial en ciencia de la lectura y la escritura en la primera infancia, explica por qué leer no es algo innato y cómo el cerebro conecta el lenguaje oral con el visual. También habla de la conciencia fonémica y de las prácticas con respaldo científico que sirven en el aula.">
+              <img src="img/podcast/ep2.jpg" alt=""><span><b>La ciencia de la lectura: ¿qué pasa en el cerebro?</b><small>María Camila Gómez · Banco Mundial</small></span><span class="pc-n">EP 2</span>
+            </button>
+            <button class="pc-row" onclick="pcSel(this)" data-id="Qj9wgYFoA0s" data-ep="1" data-img="img/podcast/ep1.jpg"
+              data-title="¿Qué es la estrategia ALFA y por qué funciona?" data-guest="Francisco Zavala · Banco Mundial"
+              data-desc="En Antioquia, uno de cada tres niños tiene dificultades para comprender lo que lee. Francisco, experto del Banco Mundial, explica qué es la pobreza de aprendizajes en América Latina y cómo ALFA trabaja en transición, primero y segundo grado para cambiar esa situación.">
+              <img src="img/podcast/ep1.jpg" alt=""><span><b>¿Qué es la estrategia ALFA y por qué funciona?</b><small>Francisco · Banco Mundial</small></span><span class="pc-n">EP 1</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="pc-lb" onclick="if(event.target===this)pcClose()">
+      <div class="pc-box">
+        <button class="pc-x" onclick="pcClose()" aria-label="Cerrar">✕</button>
+        <div class="pc-frame"><iframe id="pc-iframe" src="" title="Maestros que enseñan a leer" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+      </div>
+    </div>
+    <script>
+      var pcCur='qbPkdXevWlk';
+      function pcSel(r){
+        document.querySelectorAll('#pc-list .pc-row').forEach(function(x){x.classList.remove('active');});
+        r.classList.add('active'); pcCur=r.dataset.id;
+        document.getElementById('pc-img').src=r.dataset.img;
+        document.getElementById('pc-pill').textContent='Episodio '+r.dataset.ep+(r.dataset.new?' · Nuevo':'');
+        document.getElementById('pc-t').textContent=r.dataset.title;
+        document.getElementById('pc-guest').textContent=r.dataset.guest;
+        document.getElementById('pc-d').textContent=r.dataset.desc;
+      }
+      function pcOpen(){document.getElementById('pc-iframe').src='https://www.youtube.com/embed/'+pcCur+'?autoplay=1';document.getElementById('pc-lb').classList.add('open');}
+      function pcClose(){document.getElementById('pc-lb').classList.remove('open');document.getElementById('pc-iframe').src='';}
+      document.addEventListener('keydown',function(e){if(e.key==='Escape')pcClose();});
+      function pcFit(){var l=document.getElementById('pc-list'),f=document.getElementById('pc-feat');
+        l.style.maxHeight=(window.innerWidth>900)?f.offsetHeight+'px':'none';}
+      window.addEventListener('load',pcFit); window.addEventListener('resize',pcFit);
+    </script>
+  </section>
+
   <!-- ACOMPAÑAMIENTO -->
   <section id="acompanamiento" class="doc-section" style="background:#fff;">
     <div class="doc-inner">
@@ -653,43 +783,50 @@
 <section id="claves-alfa" class="doc-section" style="background:#e8f5ed;; overflow:hidden;">
   <div class="doc-inner" style="position:relative;">
     <!-- Título decorativo de fondo -->
-    <div class="ca-bg-title" style="position:absolute; top:-10px; left:230px; font-size:110px; font-weight:700; color:#c5e8d3; letter-spacing:-2px; line-height:1; pointer-events:none; user-select:none; font-family:'Prompt',sans-serif;">CLAVES ALFA</div>
+    <div class="ca-bg-title" style="position:absolute; top:-10px; left:230px; font-size:110px; font-weight:700; color:#c5e8d3; letter-spacing:-2px; line-height:1; pointer-events:none; user-select:none; font-family:'Prompt',sans-serif;">TIPS ALFA</div>
 
     <!-- Encabezado + flechas -->
     <div class="ca-head" style="display:flex; align-items:flex-start; justify-content:space-between; position:relative; z-index:1; margin-bottom:28px;">
       <div>
         <p style="font-size:11px; font-weight:700; color:#018d38; letter-spacing:0.1em; text-transform:uppercase; margin:0 0 6px; font-family:'Prompt',sans-serif;">Serie del canal de docentes · WhatsApp</p>
-        <h2 style="font-size:28px; font-weight:700; color:#0b5640; margin:0; font-family:'Prompt',sans-serif;">Claves ALFA para el aula</h2>
+        <h2 style="font-size:28px; font-weight:700; color:#0b5640; margin:0; font-family:'Prompt',sans-serif;">Tips ALFA para el aula</h2>
       </div>
-      <div style="display:flex; gap:8px; align-items:center;">
+      <div id="ca-arrows" style="display:flex; gap:8px; align-items:center;">
         <button id="ca-prev" onclick="caPrev()" aria-label="Anterior" style="width:36px; height:36px; border-radius:50%; border:1.5px solid #0b5640; background:transparent; display:flex; align-items:center; justify-content:center; cursor:pointer; color:#0b5640; font-size:16px;">&#8592;</button>
         <button id="ca-next" onclick="caNext()" aria-label="Siguiente" style="width:36px; height:36px; border-radius:50%; border:1.5px solid #0b5640; background:transparent; display:flex; align-items:center; justify-content:center; cursor:pointer; color:#0b5640; font-size:16px;">&#8594;</button>
       </div>
     </div>
 
+    <style>
+      .ca-gtabs{display:flex;gap:10px;flex-wrap:wrap;position:relative;z-index:1;margin-top:40px;}
+      .ca-gtab{font-family:'Prompt',sans-serif;font-weight:600;font-size:14px;padding:9px 20px;border-radius:999px;border:1.5px solid #0b5640;background:#fff;color:#0b5640;cursor:pointer;}
+      .ca-gtab.active{background:#0b5640;color:#fff;}
+      #ca-grid{margin-top:22px !important;}
+      .ca-lb-box{background:#fff;border-radius:16px;max-width:620px;width:100%;max-height:85vh;overflow-y:auto;padding:26px 30px 30px;font-family:'Prompt',sans-serif;}
+      .ca-lb-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #e3ece7;}
+      .ca-lb-title{font-size:17px;font-weight:600;color:#1f2d27;line-height:1.4;margin:0;}
+      .ca-lb-x{flex:0 0 34px;height:34px;border-radius:50%;border:none;background:#f0f0f0;color:#555;font-size:14px;cursor:pointer;}
+      .ca-lb-text{font-size:15.5px;color:#33423b;line-height:1.8;margin:0;white-space:pre-line;text-align:left;}
+      @media (max-width:600px){.ca-lb-box{padding:20px;} .ca-lb-text{font-size:15px;}}
+    </style>
+    <div class="ca-gtabs">
+      <button class="ca-gtab active" onclick="caGrupo('tips',this)">Piezas nuevas</button>
+      <button class="ca-gtab" onclick="caGrupo('claves',this)">Claves ALFA · Semanas 1 a 13</button>
+    </div>
     <!-- Grid de tarjetas -->
     <div id="ca-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:20px; position:relative; z-index:1; margin-top:60px;"></div>
 
-    <!-- Lightbox -->
-    <div id="ca-lb" onclick="caCloseLB()" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.75); z-index:9999; align-items:center; justify-content:center; padding:1rem;">
-    <div onclick="event.stopPropagation()" style="background:#fff; border-radius:12px; max-width:420px; width:100%; overflow-y:auto; max-height:90vh;">
-      <img id="ca-lb-img" src="" alt="" style="width:100%; display:block;" />
-      <div style="padding:16px 20px;">
-        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">
-          <div>
-            <div id="ca-lb-sem" style="font-size:13px; color:#0b5640; font-weight:600; font-family:'Prompt',sans-serif;"></div>
-            
-          </div>
-          <button type="button" onclick="caCloseLB(); return false;" style="width:32px; height:32px; border-radius:50%; border:none; background:#f0f0f0; color:#555; font-size:14px; cursor:pointer; display:flex; align-items:center; justify-content:center;">✕</button>
+    <!-- Visor de texto -->
+    <div id="ca-lb" onclick="caCloseLB()" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center; padding:1rem;">
+      <div onclick="event.stopPropagation()" class="ca-lb-box">
+        <div class="ca-lb-top">
+          <p id="ca-lb-sem" class="ca-lb-title"></p>
+          <button type="button" onclick="caCloseLB(); return false;" class="ca-lb-x" aria-label="Cerrar">✕</button>
         </div>
-        <p id="ca-lb-desc" style="font-size:13px; color:#3a5a4a; line-height:1.7; margin:0; font-family:'Prompt',sans-serif; text-align:justify; white-space:pre-line;"></p>
+        <p id="ca-lb-desc" class="ca-lb-text"></p>
       </div>
     </div>
   </div>
-
-
-    
-  
 </section>
  
 
