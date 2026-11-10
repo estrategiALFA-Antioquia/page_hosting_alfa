@@ -7,7 +7,8 @@
 
 var CSV_DATOS = 'data/egra_links_2026.csv';
 
-var todasLasSedes  = [];
+var todasLasSedes  = [];   // sedes con al menos un informe (tabla y cifras)
+var sedesMapa      = [];   // todas las sedes del CSV (denominador del mapa)
 var municipioActivo = null;
 var capaMapa       = null;
 var mapaLeaflet    = null;
@@ -16,10 +17,10 @@ var coberturaPorMunicipio = {};
 // ── Colores ───────────────────────────────────────────────────
 function colorCalor(pct, sinDatos) {
   if (sinDatos) return '#a0a0a0'; // gris para municipios no en ALFA
-  if (pct === 0)   return '#e8f5ee';
-  if (pct < 0.25)  return '#b3d9c5';
-  if (pct < 0.50)  return '#5dcaa5';
-  if (pct < 0.75)  return '#018d38';
+  if (pct < 0.60)  return '#e8f5ee';
+  if (pct < 0.75)  return '#b3d9c5';
+  if (pct < 0.90)  return '#5dcaa5';
+  if (pct < 1)     return '#018d38';
   return '#0b5640';
 }
 
@@ -179,10 +180,11 @@ function cargarCSV() {
     header: true,
     skipEmptyLines: true,
     complete: function (resultado) {
-      todasLasSedes = resultado.data.map(function (s) {
+            sedesMapa = resultado.data.map(function (s) {
         s.operador = (s.operador || '').trim() || 'SIN OPERADOR ASIGNADO';
         return s;
       });
+      todasLasSedes = sedesMapa.filter(tieneInforme);
       calcularCobertura();
       actualizarEstilosMapa();
       poblarFiltros();
@@ -198,7 +200,7 @@ function cargarCSV() {
 
 function calcularCobertura() {
   coberturaPorMunicipio = {};
-  todasLasSedes.forEach(function (s) {
+    sedesMapa.forEach(function (s) {
     var cod = s.municipio_id ? s.municipio_id.trim().padStart(5, '0') : '';
     if (!cod) return;
     if (!coberturaPorMunicipio[cod]) coberturaPorMunicipio[cod] = { total: 0, conLink: 0 };
@@ -212,6 +214,10 @@ function calcularCobertura() {
 
 function tieneLink(link) {
   return !!(link && link.trim() !== '');
+}
+
+function tieneInforme(s) {
+  return tieneLink(s.link_linea_base) || tieneLink(s.link_linea_final);
 }
 
 function actualizarContadorHero() {
