@@ -223,7 +223,7 @@
               </tr>
             </thead>
             <tbody id="tablaBody">
-              <tr><td colspan="5" class="egra-loading">Cargando datos…</td></tr>
+              <tr><td colspan="6" class="egra-loading">Cargando datos…</td></tr>
             </tbody>
           </table>
         </div>
@@ -277,6 +277,16 @@
   </footer>
 
 </div>
+
+<style>
+  /* Encabezado: las 4 cifras en una sola línea */
+  .egra-hero-inner { max-width: 1000px; }
+  .egra-hero-sub   { max-width: 560px; margin-left: auto; margin-right: auto; }
+  .egra-hero-stats { flex-wrap: nowrap; justify-content: center; }
+  @media (max-width: 900px) {
+    .egra-hero-stats { flex-wrap: wrap; }
+  }
+</style>
 
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
