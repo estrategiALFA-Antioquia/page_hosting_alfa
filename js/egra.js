@@ -1,8 +1,11 @@
 /**
  * egra.js — Resultados EGRA · estrategialfa.org
  * Dependencias: Leaflet 1.9.4, PapaParse 5.4
- * Datos: /data/antioquia_slim.geojson, /data/egra_links_completo.csv
+ * Datos: /data/antioquia_slim.geojson, /data/egra_links_2026.csv
+ *        (columnas de links: link_linea_base, link_linea_final)
  */
+
+var CSV_DATOS = 'data/egra_links_2026.csv';
 
 var todasLasSedes  = [];
 var municipioActivo = null;
@@ -156,7 +159,6 @@ function seleccionarMunicipio(codigo, nombre) {
   iluminarSubregion();
   filtrarTabla();
 
-  document.getElementById('btnResetMapa').style.display = 'none'; // se mueve arriba
   document.getElementById('btnMunicipioActivo').style.display = 'flex';
   document.getElementById('btnMunicipioActivo').textContent = '✕ ' + toTitleCase(nombre);
 }
@@ -172,12 +174,15 @@ function limpiarMunicipio() {
 
 // ── CSV ────────────────────────────────────────────────────────
 function cargarCSV() {
-  Papa.parse('data/egra_links_completo.csv', {
+  Papa.parse(CSV_DATOS, {
     download: true,
     header: true,
     skipEmptyLines: true,
     complete: function (resultado) {
-      todasLasSedes = resultado.data;
+      todasLasSedes = resultado.data.map(function (s) {
+        s.operador = (s.operador || '').trim() || 'SIN OPERADOR ASIGNADO';
+        return s;
+      });
       calcularCobertura();
       actualizarEstilosMapa();
       poblarFiltros();
@@ -186,7 +191,7 @@ function cargarCSV() {
     },
     error: function () {
       document.getElementById('tablaBody').innerHTML =
-        '<tr><td colspan="5" style="text-align:center;color:#c0392b;padding:24px;">Error al cargar los datos.</td></tr>';
+        '<tr><td colspan="6" style="text-align:center;color:#c0392b;padding:24px;">Error al cargar los datos.</td></tr>';
     }
   });
 }
@@ -198,18 +203,23 @@ function calcularCobertura() {
     if (!cod) return;
     if (!coberturaPorMunicipio[cod]) coberturaPorMunicipio[cod] = { total: 0, conLink: 0 };
     coberturaPorMunicipio[cod].total++;
-    if (s.link_linea_base && s.link_linea_base.trim() !== '') {
+    // Provisional: el mapa mide cobertura de línea final (se revisa después)
+    if (tieneLink(s.link_linea_final)) {
       coberturaPorMunicipio[cod].conLink++;
     }
   });
 }
 
+function tieneLink(link) {
+  return !!(link && link.trim() !== '');
+}
+
 function actualizarContadorHero() {
-  var conLink = todasLasSedes.filter(function (s) {
-    return s.link_linea_base && s.link_linea_base.trim() !== '';
-  }).length;
-  document.getElementById('statInformes').textContent = conLink.toLocaleString('es-CO');
-  document.getElementById('statSedes').textContent    = todasLasSedes.length.toLocaleString('es-CO');
+  var base  = todasLasSedes.filter(function (s) { return tieneLink(s.link_linea_base); }).length;
+  var final = todasLasSedes.filter(function (s) { return tieneLink(s.link_linea_final); }).length;
+  document.getElementById('statSedes').textContent        = todasLasSedes.length.toLocaleString('es-CO');
+  document.getElementById('statInformesBase').textContent  = base.toLocaleString('es-CO');
+  document.getElementById('statInformesFinal').textContent = final.toLocaleString('es-CO');
 }
 
 // ── FILTROS ────────────────────────────────────────────────────
@@ -311,7 +321,7 @@ function renderizarTabla(sedes) {
     ' sede' + (sedes.length !== 1 ? 's' : '');
 
   if (sedes.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="5" class="egra-empty">No se encontraron sedes con esos filtros.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="6" class="egra-empty">No se encontraron sedes con esos filtros.</td></tr>';
     return;
   }
 
@@ -327,18 +337,19 @@ function renderizarTabla(sedes) {
     html += '<td>' + escHtml(toTitleCase(s.institucion_principal)) + '</td>';
     html += '<td class="col-municipio">' + escHtml(toTitleCase(s.municipio)) + '</td>';
     html += '<td>' + escHtml(s.operador) + '</td>';
-    html += '<td>' + badgeLink(s.link_linea_base) + '</td>';
+    html += '<td>' + badgeLink(s.link_linea_base, 'No evaluada') + '</td>';
+    html += '<td>' + badgeLink(s.link_linea_final, 'En proceso') + '</td>';
     html += '</tr>';
   });
   tbody.innerHTML = html;
 }
 
 // ── Helpers ───────────────────────────────────────────────────
-function badgeLink(link) {
-  if (link && link.trim() !== '') {
-    return '<a href="' + link + '" target="_blank" class="egra-badge egra-badge-ok">Ver informe</a>';
+function badgeLink(link, textoSinLink) {
+  if (tieneLink(link)) {
+    return '<a href="' + escHtml(link) + '" target="_blank" rel="noopener" class="egra-badge egra-badge-ok">Ver informe</a>';
   }
-  return '<span class="egra-badge egra-badge-pending">En proceso</span>';
+  return '<span class="egra-badge egra-badge-pending">' + (textoSinLink || 'En proceso') + '</span>';
 }
 
 function toTitleCase(str) {
