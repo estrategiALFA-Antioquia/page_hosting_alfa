@@ -9,6 +9,7 @@ var CSV_DATOS = 'data/egra_links_2026.csv';
 
 var todasLasSedes  = [];   // sedes con al menos un informe (tabla y cifras)
 var sedesMapa      = [];   // todas las sedes del CSV (denominador del mapa)
+var medicionMapa   = 'link_linea_final';   // columna que colorea el mapa
 var municipioActivo = null;
 var capaMapa       = null;
 var mapaLeaflet    = null;
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
   iniciarMapa();
   cargarCSV();
   registrarFiltros();
+  registrarToggleMapa();
   //document.getElementById('btnResetMapa').addEventListener('click', limpiarMunicipio);
   document.getElementById('btnMunicipioActivo').addEventListener('click', limpiarMunicipio);
   // Toggle ayuda
@@ -106,7 +108,7 @@ function alRegistrarFeature(feature, layer) {
           '<span style="font-size:11px;font-family:Prompt,sans-serif;color:#ccc">No incluido en la Estrategia ALFA</span>'
         : '<strong style="font-family:Prompt,sans-serif">' + nombre + '</strong><br>' +
           '<span style="font-size:11px;font-family:Prompt,sans-serif">' +
-          conLink + ' de ' + total + ' sedes · ' + pct + '% con informe</span>';
+        conLink + ' de ' + total + ' sedes · ' + pct + '% con informe de ' + nombreMedicion() + '</span>';
 
       layer.bindTooltip(contenido, {
         permanent: false,
@@ -206,7 +208,7 @@ function calcularCobertura() {
     if (!coberturaPorMunicipio[cod]) coberturaPorMunicipio[cod] = { total: 0, conLink: 0 };
     coberturaPorMunicipio[cod].total++;
     // Provisional: el mapa mide cobertura de línea final (se revisa después)
-    if (tieneLink(s.link_linea_final)) {
+        if (tieneLink(s[medicionMapa])) {
       coberturaPorMunicipio[cod].conLink++;
     }
   });
@@ -215,6 +217,29 @@ function calcularCobertura() {
 function tieneLink(link) {
   return !!(link && link.trim() !== '');
 }
+function nombreMedicion() {
+  return medicionMapa === 'link_linea_base' ? 'línea base' : 'línea final';
+}
+
+function registrarToggleMapa() {
+  var botones = document.querySelectorAll('.egra-map-toggle-btn');
+  botones.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (btn.dataset.medicion === medicionMapa) return;
+      medicionMapa = btn.dataset.medicion;
+      botones.forEach(function (b) {
+        var activo = b === btn;
+        b.classList.toggle('activo', activo);
+        b.setAttribute('aria-pressed', activo ? 'true' : 'false');
+      });
+      calcularCobertura();
+      filtrarTabla();   // repinta el mapa y el % del municipio seleccionado
+    });
+  });
+}
+
+
+
 
 function tieneInforme(s) {
   return tieneLink(s.link_linea_base) || tieneLink(s.link_linea_final);
@@ -313,6 +338,7 @@ function actualizarContexto(sedes) {
   document.getElementById('ctxOperador').textContent  = ops;
   document.getElementById('ctxSedes').textContent     = cob.total;
   document.getElementById('ctxPct').textContent       = pct + '%';
+  document.getElementById('ctxPctLabel').textContent  = 'con informe de ' + nombreMedicion();
   ctx.classList.add('visible');
 }
 

@@ -126,7 +126,11 @@
     <aside class="egra-map-panel">
       <div class="egra-map-header">
         <p class="egra-map-title">Selecciona un municipio</p>
-        <p class="egra-map-hint">Haz clic para filtrar · Hover para ver cobertura</p>
+                <p class="egra-map-hint">Haz clic para filtrar · Hover para ver cobertura</p>
+        <div class="egra-map-toggle" role="group" aria-label="Medición que muestra el mapa">
+          <button type="button" class="egra-map-toggle-btn" data-medicion="link_linea_base" aria-pressed="false">Línea base</button>
+          <button type="button" class="egra-map-toggle-btn activo" data-medicion="link_linea_final" aria-pressed="true">Línea final</button>
+        </div>
       </div>
       <div id="egra-map"></div>
       <div class="egra-leyenda">
@@ -278,15 +282,6 @@
 
 </div>
 
-<style>
-  /* Encabezado: las 4 cifras en una sola línea */
-  .egra-hero-inner { max-width: 1000px; }
-  .egra-hero-sub   { max-width: 560px; margin-left: auto; margin-right: auto; }
-  .egra-hero-stats { flex-wrap: nowrap; justify-content: center; }
-  @media (max-width: 900px) {
-    .egra-hero-stats { flex-wrap: wrap; }
-  }
-</style>
 
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
