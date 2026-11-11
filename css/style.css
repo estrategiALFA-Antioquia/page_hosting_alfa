@@ -3614,3 +3614,15 @@ footer{
 @media (max-width:760px){
   #objetivos .obj-head{ grid-template-columns:1fr; gap:12px; }
 }
+
+/* Mismo estilo para los párrafos de introducción de Objetivos y Programas */
+#objetivos .obj-proposito,
+#programas .prog-intro{
+  max-width:none;
+  margin:0;
+  text-align:left;
+  font-size:16px;
+  font-weight:400;
+  line-height:1.7;
+  color:#2d4a38;
+}

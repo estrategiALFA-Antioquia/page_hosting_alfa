@@ -13,6 +13,7 @@
 <link href="css/jcarousel.css" rel="stylesheet" />
 <link href="css/flexslider.css" rel="stylesheet" />
 <link href="css/style.css" rel="stylesheet" />
+<link href="css/programas.css" rel="stylesheet" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -86,14 +87,6 @@
           <span class="alfa-hero-stat-label">docentes</span>
         </div>
         <div class="alfa-hero-stat">
-          <span class="alfa-hero-stat-num" data-count="492">492</span>
-          <span class="alfa-hero-stat-label">instituciones</span>
-        </div>
-        <div class="alfa-hero-stat">
-          <span class="alfa-hero-stat-num" data-count="3511">3.511</span>
-          <span class="alfa-hero-stat-label">sedes</span>
-        </div>
-        <div class="alfa-hero-stat">
           <span class="alfa-hero-stat-num" data-count="116">116</span>
           <span class="alfa-hero-stat-label">municipios</span>
         </div>
@@ -105,7 +98,7 @@
   <section id="objetivos" class="alfa-section" style="background:#fff;">
     <div class="alfa-section-inner obj-inner">
       <p class="alfa-eyebrow">Objetivos</p>
-      <h2 class="alfa-section-title">Qué busca la Estrategia ALFA</h2>
+      <h2 class="alfa-section-title">¿Qué busca la Estrategia ALFA?</h2>
       <p class="alfa-section-body obj-proposito">Es una estrategia de la Gobernación de Antioquia, liderada por la Secretaría de Educación con el acompañamiento de la Primera Dama, Susana Ochoa Henao. Su propósito es fortalecer la lectura y la escritura desde los primeros años de escolaridad, como base para los demás aprendizajes y para trayectorias educativas sólidas.</p>
 
       <div class="obj-panels">
@@ -133,68 +126,76 @@
     </div>
   </section>
 
-
-
-  <!-- LA CRISIS -->
-   <!--
-  <div class="alfa-section" style="background:#fff;">
-    <div class="alfa-section-inner">
-      <p class="alfa-eyebrow">Por qué existe ALFA</p>
-      <h2 class="alfa-section-title">Entre el 50% y el 60% de los niños de Antioquia no alcanzan el nivel esperado en lectura</h2>
-      <p class="alfa-section-body">Un niño que termina primero sin leer con fluidez enfrenta dificultades crecientes en todas las materias. Cada año escolar que pasa sin atender ese rezago aumenta el costo y la dificultad de cerrarlo. La Estrategia ALFA es la respuesta del departamento a esta urgencia.</p>
-      <div class="alfa-crisis-grid">
-        <div class="alfa-crisis-card">
-          <div class="alfa-crisis-num">25 PPM*</div>
-          <div class="alfa-crisis-text">Un niño que termina 1.° leyendo menos de 25 palabras por minuto tiene baja probabilidad de cerrar la brecha en 2.° sin intervención.</div>
-        </div>
-        <div class="alfa-crisis-card">
-          <div class="alfa-crisis-num">50–60%</div>
-          <div class="alfa-crisis-text">De los estudiantes de Antioquia no alcanzan los estándares esperados en lectura al finalizar los primeros grados.</div>
-        </div>
-        <div class="alfa-crisis-card">
-          <div class="alfa-crisis-num">+ costo</div>
-          <div class="alfa-crisis-text">Cada año escolar sin atender el rezago lector aumenta el costo y la dificultad de cerrarlo. El momento de actuar es ahora.</div>
-        </div>
-      </div>
-      <p class="alfa-footnote">* PPM: palabras por minuto. Indicador estándar para medir la fluidez lectora en los primeros grados.</p>
-    </div>
-  </div>
-  -->
   <!-- PROGRAMAS -->
-  <div class="alfa-section" style="background:#f8fdf9;">
-    <div class="alfa-section-inner">
+  <section id="programas" class="alfa-section" style="background:#f8fdf9;">
+    <div class="alfa-section-inner prog-inner">
       <p class="alfa-eyebrow">Los programas</p>
-      <h2 class="alfa-section-title">Tres intervenciones pedagógicas basadas en evidencia</h2>
-      <p class="alfa-section-body">ALFA articula tres programas que atienden distintos grados y perfiles de estudiantes, todos fundamentados en la ciencia de la lectura.</p>
-      <div class="alfa-prog-grid">
+      <h2 class="alfa-section-title">¿Cómo se implementa ALFA?</h2>
+      <p class="alfa-section-body prog-intro">ALFA se implementa con formación y acompañamiento a los docentes y con programas de enseñanza estructurada y basada en evidencia, adaptados a cada momento de la trayectoria escolar. Las pruebas EGRA permiten seguir los avances y orientar las decisiones en el aula.</p>
 
-        <div class="alfa-prog-card">
-          <span class="alfa-prog-badge">Censal</span>
+      <!-- Selectores -->
+      <div class="prog-pick" role="tablist" aria-label="Programas">
+        <button class="prog-pk atal" role="tab" id="tab-atal" aria-controls="prog-atal" aria-selected="true"><b>ATAL</b><small>Transición y primero</small></button>
+        <button class="prog-pk kal" role="tab" id="tab-kalulu" aria-controls="prog-kalulu" aria-selected="false" tabindex="-1"><b>Kalulu</b><small>Segundo grado</small></button>
+        <button class="prog-pk ava" role="tab" id="tab-avanza" aria-controls="prog-avanza" aria-selected="false" tabindex="-1"><b>Avanza+</b><small>Sexto a noveno · Piloto 2026</small></button>
+      </div>
+
+      <!-- ATAL -->
+      <div class="prog-detail atal" id="prog-atal" role="tabpanel" aria-labelledby="tab-atal">
+        <div class="prog-txt">
+          <div class="prog-tags"><span>Transición y primero</span></div>
           <h3>ATAL</h3>
-          <p class="alfa-prog-grado">Transición y 1.° grado</p>
-          <p>Aprendamos Todos a Leer es un programa fonético sistemático y explícito. Los facilitadores acompañan semanalmente a los docentes en el aula con tres modalidades progresivas: modelación, coanimación y observación.</p>
-          <div class="alfa-prog-num">54.501 <span class="alfa-prog-num-label">estudiantes</span></div>
+          <p class="prog-full">Aprendamos Todos a Leer</p>
+          <p>Aprendamos Todos a Leer es un programa de enseñanza de la lectura y la escritura dirigido principalmente a niñas y niños de los primeros grados escolares.</p>
+          <p>ATAL se utiliza como una herramienta pedagógica para fortalecer el aprendizaje de la lectura y la escritura desde los primeros años, especialmente en transición y primero. Su propuesta se basa en la ciencia de la lectura, con una enseñanza:</p>
+          <ul class="prog-princ">
+            <li><button type="button" aria-describedby="tip-1">Explícita</button><span class="prog-tip" role="tooltip" id="tip-1"><strong>Explícita</strong>El docente enseña de manera directa qué debe aprender el estudiante.</span></li>
+            <li><button type="button" aria-describedby="tip-2">Sistemática</button><span class="prog-tip" role="tooltip" id="tip-2"><strong>Sistemática</strong>Los aprendizajes se desarrollan siguiendo una secuencia organizada.</span></li>
+            <li><button type="button" aria-describedby="tip-3">Fonética</button><span class="prog-tip" role="tooltip" id="tip-3"><strong>Fonética</strong>Se trabaja la relación entre los sonidos (fonemas) y las letras (grafemas).</span></li>
+            <li><button type="button" aria-describedby="tip-4">Progresiva</button><span class="prog-tip" role="tooltip" id="tip-4"><strong>Progresiva</strong>Se avanza desde habilidades iniciales, como la conciencia fonológica, hacia la lectura de palabras, oraciones y textos.</span></li>
+            <li><button type="button" aria-describedby="tip-5">Acompañada</button><span class="prog-tip" role="tooltip" id="tip-5"><strong>Acompañada</strong>El docente modela, practica con los estudiantes, observa sus avances y ajusta la enseñanza.</span></li>
+          </ul>
+          <div class="prog-aliados"><span>Con</span>
+            <a href="https://www.iadb.org/es" target="_blank" rel="noopener" title="BID"><img src="img/programas/logo_bid.png" alt="BID"></a>
+            <a href="https://fundacionluker.org.co/en/" target="_blank" rel="noopener" title="Fundación Luker"><img src="img/programas/logo_luker.png" alt="Fundación Luker"></a>
+          </div>
         </div>
+        <div class="prog-pic"><img src="img/programas/atal.jpg" alt="Portada ilustrada de Aprendamos Todos a Leer"></div>
+      </div>
 
-        <div class="alfa-prog-card">
-          <span class="alfa-prog-badge">Focalizado en rezago</span>
+      <!-- KALULU -->
+      <div class="prog-detail kal" id="prog-kalulu" role="tabpanel" aria-labelledby="tab-kalulu" hidden>
+        <div class="prog-txt">
+          <div class="prog-tags"><span>Segundo grado</span></div>
           <h3>Kalulu</h3>
-          <p class="alfa-prog-grado">2.° grado</p>
-          <p>Intervención para estudiantes con rezago lector. Utiliza el método fonético con materiales integrados: guía pedagógica, cuadernillos de lectura y escritura, libro de historias y juegos pedagógicos.</p>
-          <div class="alfa-prog-num">34.567 <span class="alfa-prog-num-label">estudiantes</span></div>
+          <p class="prog-full">Método estructurado de alfabetización</p>
+          <p>Kalulu busca fortalecer las habilidades fundamentales de lectura de los estudiantes que aún no las han consolidado. Mediante una enseñanza fonética explícita, sistemática y progresiva, promueve el aprendizaje de las relaciones entre las letras y los sonidos y favorece la decodificación de palabras.</p>
+          <p>Se utiliza como una herramienta de remediación para brindar apoyo pedagógico a los estudiantes de segundo grado que requieren fortalecer sus aprendizajes y avanzar hacia una lectura cada vez más precisa y fluida, con entrega de materiales pedagógicos y acompañamiento grupal a los docentes de ese grado.</p>
+          <div class="prog-aliados"><span>Con</span>
+            <a href="https://www.fundacionaprenderaquererte.org/" target="_blank" rel="noopener" title="Fundación Aprender a Quererte"><img src="img/programas/logo_aaq.png" alt="Fundación Aprender a Quererte"></a>
+            <a href="https://excellolab.org/" target="_blank" rel="noopener" title="Excello"><img src="img/programas/logo_excello.png" alt="Excello"></a>
+            <a href="https://www.bancomundial.org/ext/es/home" target="_blank" rel="noopener" title="Banco Mundial"><img src="img/programas/logo_bm.png" alt="Banco Mundial"></a>
+          </div>
         </div>
+        <div class="prog-pic logo"><img src="img/programas/kalulu_logo.png" alt="Logo de Kalulu"></div>
+      </div>
 
-        <div class="alfa-prog-card">
-          <span class="alfa-prog-badge piloto">Piloto 2026</span>
+      <!-- AVANZA+ -->
+      <div class="prog-detail ava" id="prog-avanza" role="tabpanel" aria-labelledby="tab-avanza" hidden>
+        <div class="prog-txt">
+          <div class="prog-tags"><span>Sexto a noveno</span><span class="solid">Piloto 2026</span></div>
           <h3>Avanza+</h3>
-          <p class="alfa-prog-grado">6.° a 9.° grado</p>
-          <p>Diseñado por el Banco Mundial para estudiantes de secundaria con rezago en lectoescritura. Se implementa como piloto voluntario en 2026, con miras a una escala mayor en 2027.</p>
-          <div class="alfa-prog-num">50–130 <span class="alfa-prog-num-label">estudiantes (muestra)</span></div>
+          <p class="prog-full">Componente de secundaria</p>
+          <p>Avanza+ es el componente de secundaria de la estrategia ALFA, orientado a fortalecer las habilidades lectoras de estudiantes de sexto a noveno que requieren apoyo para avanzar en sus aprendizajes.</p>
+          <p>Algunos estudiantes ya relacionan las letras con sus sonidos y leen palabras, pero aún tienen dificultades para leer con fluidez y comprender lo que leen. Por eso, Avanza+ busca fortalecer la fluidez, la comprensión, el vocabulario, la ortografía y la producción escrita, con acciones pedagógicas acordes con las necesidades identificadas.</p>
+          <div class="prog-aliados"><span>Con</span>
+            <a href="https://www.bancomundial.org/ext/es/home" target="_blank" rel="noopener" title="Banco Mundial"><img src="img/programas/logo_bm.png" alt="Banco Mundial"></a>
+          </div>
         </div>
-
+                <div class="prog-pic logo"><img src="img/programas/avanza_logo.png" alt="Avanza+: mejora la fluidez lectora, comprensión lectora y escritura"></div>
       </div>
     </div>
-  </div>
+  </section>
 
 
   <!-- ECOSISTEMA -->
@@ -231,35 +232,7 @@
   <!-- CIFRAS CLAVE -->
   <div class="alfa-section" style="background:#fff;">
     <div class="alfa-section-inner">
-      <p class="alfa-eyebrow">ALFA en números</p>
-      <h2 class="alfa-section-title">La escala de la estrategia</h2>
-      <div class="alfa-cifras-grid">
-        <div class="alfa-cifra-card">
-          <span class="alfa-cifra-num">92.835</span>
-          <span class="alfa-cifra-label">Estudiantes beneficiados</span>
-        </div>
-        <div class="alfa-cifra-card">
-          <span class="alfa-cifra-num">116</span>
-          <span class="alfa-cifra-label">Municipios no certificados</span>
-        </div>
-        <div class="alfa-cifra-card">
-          <span class="alfa-cifra-num">160</span>
-          <span class="alfa-cifra-label">Facilitadores desplegados</span>
-        </div>
-        <div class="alfa-cifra-card">
-          <span class="alfa-cifra-num">6.845</span>
-          <span class="alfa-cifra-label">Docentes capacitados</span>
-        </div>
-        <div class="alfa-cifra-card">
-          <span class="alfa-cifra-num">3</span>
-          <span class="alfa-cifra-label">Programas pedagógicos</span>
-        </div>
-        <div class="alfa-cifra-card">
-          <span class="alfa-cifra-num">2026</span>
-          <span class="alfa-cifra-label">Ciclo escolar activo</span>
-        </div>
-      </div>
-    </div>
+      
   </div>
 
 	

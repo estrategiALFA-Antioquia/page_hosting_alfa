@@ -1,0 +1,115 @@
+/* =========================================================
+   Sobre ALFA: sección de programas (ATAL, Kalulu, Avanza+)
+   ========================================================= */
+#programas{
+  --atal:#00374e; --atal-soft:#e6eff3;
+  --kal:#5b2a86;  --kal-soft:#f4eff9;
+  --ava:#4c0f06;  --ava-soft:#f6ebe8;
+  --ease-prog:cubic-bezier(.2,.8,.2,1);
+}
+#programas .prog-inner{ max-width:1080px; text-align:left; }
+#programas .prog-intro{ max-width:72ch; margin:0; text-align:left; }
+
+/* Colores por programa */
+.prog-pk.atal, .prog-detail.atal{ --c:var(--atal); --c-soft:var(--atal-soft); }
+.prog-pk.kal,  .prog-detail.kal { --c:var(--kal);  --c-soft:var(--kal-soft); }
+.prog-pk.ava,  .prog-detail.ava { --c:var(--ava);  --c-soft:var(--ava-soft); }
+
+/* Selectores */
+.prog-pick{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-top:36px; }
+.prog-pk{
+  position:relative; cursor:pointer; text-align:left; font-family:'Prompt',sans-serif;
+  border:0; border-radius:18px; padding:18px 20px 18px 24px; background:var(--c-soft);
+  display:flex; flex-direction:column; gap:2px;
+  transition:transform .4s var(--ease-prog), box-shadow .4s var(--ease-prog), background .3s, opacity .3s;
+}
+.prog-pk b{ font-size:20px; font-weight:600; color:var(--c); transition:color .3s; }
+.prog-pk small{ font-size:13.5px; color:#4d6b5f; transition:color .3s; }
+.prog-pk::before{ content:""; position:absolute; left:0; top:16px; bottom:16px; width:4px; border-radius:0 4px 4px 0; background:var(--c); transition:opacity .3s; }
+.prog-pick:hover .prog-pk:not(:hover):not([aria-selected="true"]){ opacity:.7; }
+.prog-pk:hover{ transform:translateY(-3px); }
+.prog-pk[aria-selected="true"]{ background:var(--c); transform:translateY(-4px); box-shadow:0 14px 30px rgba(11,40,30,.18); }
+.prog-pk[aria-selected="true"] b, .prog-pk[aria-selected="true"] small{ color:#fff; }
+.prog-pk[aria-selected="true"]::before{ opacity:0; }
+.prog-pk[aria-selected="true"]::after{ content:""; position:absolute; left:50%; bottom:-7px; width:14px; height:14px; background:var(--c); transform:translateX(-50%) rotate(45deg); border-radius:2px; }
+.prog-pk:focus-visible{ outline:2px solid var(--c); outline-offset:3px; }
+
+/* Panel de detalle */
+.prog-detail{
+  margin-top:26px; background:#fff; border:1.5px solid #d6ede2; border-radius:24px; padding:36px;
+  display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); gap:36px; align-items:center;
+  animation:prog-entra .45s var(--ease-prog);
+}
+.prog-detail[hidden]{ display:none; }
+@keyframes prog-entra{ from{ opacity:0; transform:translateY(10px); } to{ opacity:1; transform:none; } }
+.prog-tags{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px; }
+.prog-tags span{ font-size:12px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; padding:4px 12px; border-radius:99px; background:var(--c-soft); color:var(--c); }
+.prog-tags span.solid{ background:var(--c); color:#fff; }
+.prog-txt h3{ font-size:30px; font-weight:600; margin:0; color:var(--c); line-height:1.2; }
+.prog-txt .prog-full{ font-size:15px; color:#4d6b5f; margin:2px 0 14px; }
+.prog-txt p{ font-size:15.5px; color:#2d4a38; line-height:1.65; margin:0; font-weight:400; }
+.prog-txt p + p{ margin-top:12px; }
+
+/* Principios con ventana emergente */
+.prog-princ{ list-style:none; padding:0; margin:16px 0 0; display:flex; flex-wrap:wrap; gap:8px; }
+.prog-princ li{ position:relative; }
+.prog-princ button{
+  cursor:help; font-family:'Prompt',sans-serif; font-size:13.5px; background:transparent;
+  padding:5px 12px; border-radius:99px; border:1px solid #d6ede2; color:var(--c);
+  display:inline-flex; align-items:center; gap:6px; transition:background .25s, color .25s, border-color .25s;
+}
+
+.prog-princ li:hover button, .prog-princ button:focus-visible, .prog-princ li.open button{ background:var(--c); color:#fff; border-color:var(--c); }
+.prog-tip{
+  position:absolute; z-index:5; left:50%; bottom:calc(100% + 12px); width:250px; max-width:calc(100vw - 32px);
+  background:var(--c); color:#fff; border-radius:16px; padding:14px 16px; font-size:14px; line-height:1.5;
+  box-shadow:0 16px 34px rgba(0,0,0,.2); opacity:0; pointer-events:none;
+  transform:translate(calc(-50% + var(--shift,0px)),8px) scale(.96); transform-origin:bottom center;
+  transition:opacity .2s, transform .3s var(--ease-prog);
+}
+.prog-tip strong{ display:block; font-size:15px; margin-bottom:2px; }
+.prog-tip::after{ content:""; position:absolute; left:calc(50% - var(--shift,0px)); bottom:-6px; width:12px; height:12px; background:inherit; transform:translateX(-50%) rotate(45deg); border-radius:2px; }
+.prog-princ li:hover .prog-tip, .prog-princ li:focus-within .prog-tip, .prog-princ li.open .prog-tip{ opacity:1; transform:translate(calc(-50% + var(--shift,0px)),0) scale(1); }
+
+/* Aliados con enlace */
+.prog-aliados{ margin-top:22px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.prog-aliados > span{ font-size:12px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:#4d6b5f; margin-right:4px; }
+.prog-aliados a{ display:inline-flex; background:#fff; border:1px solid #d6ede2; border-radius:12px; padding:8px 12px; transition:transform .3s var(--ease-prog), border-color .25s, box-shadow .3s; }
+.prog-aliados a:hover{ transform:translateY(-2px); border-color:var(--c); box-shadow:0 8px 18px rgba(11,40,30,.10); }
+.prog-aliados img{ height:30px; width:auto; display:block; }
+
+/* Imagen */
+.prog-pic{ border-radius:20px; overflow:hidden; aspect-ratio:4/3; max-width:100%; background:#f9f9f9; }
+.prog-pic img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform 1s var(--ease-prog); }
+.prog-detail:hover .prog-pic img{ transform:scale(1.03); }
+.prog-pic.logo{ background:#fff; border:1px solid #d6ede2; display:grid; place-items:center; }
+.prog-pic.logo img{ width:78%; height:auto; object-fit:contain; }
+
+@media (max-width:760px){
+  .prog-pick{ grid-template-columns:1fr; gap:10px; }
+  .prog-pk[aria-selected="true"]::after{ display:none; }
+  .prog-detail{ grid-template-columns:1fr; padding:22px; gap:22px; }
+  .prog-detail .prog-pic{ order:-1; }
+  .prog-txt h3{ font-size:24px; }
+}
+@media (prefers-reduced-motion:reduce){
+  #programas *, #programas *::before, #programas *::after{ transition:none !important; animation:none !important; }
+}
+
+
+/* Principios de ATAL en una sola línea */
+.prog-detail{ grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); }
+.prog-princ{ flex-wrap:nowrap; gap:6px; }
+.prog-princ button{ font-size:13px; padding:5px 10px; white-space:nowrap; }
+
+/* En pantallas angostas vuelven a acomodarse en dos líneas */
+@media (max-width:1000px){
+  .prog-princ{ flex-wrap:wrap; }
+}
+
+/* Logos de aliados centrados y sin la palabra "Con" */
+.prog-aliados{ justify-content:center; margin-top:28px; }
+.prog-aliados > span{ display:none; }
+
+#programas .prog-intro{ max-width:none; }
+#programas .prog-intro{ font-weight:400; color:#2d4a38; }
