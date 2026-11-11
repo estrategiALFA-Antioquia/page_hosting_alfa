@@ -3503,4 +3503,33 @@ footer{
           }
 
     #que-es-alfa .qa-bg{ top:-28px; }
-     
+    
+
+    /* Sobre ALFA: encabezado */
+.alfa-hero{ padding:88px 24px 80px; }
+.alfa-hero-bg{
+  color:rgba(143,224,176,.08);
+  font-size:clamp(120px, 24vw, 280px);
+  letter-spacing:-.04em;
+}
+.alfa-hero-sub{ margin-bottom:48px; }
+.alfa-hero-stats{ gap:32px 64px; }
+.alfa-hero-stat-num{
+  font-size:42px;
+  font-weight:600;
+  line-height:1.1;
+  letter-spacing:.01em;
+  font-variant-numeric:tabular-nums;
+}
+.alfa-hero-stat-label{
+  display:block;
+  margin-top:8px;
+  font-size:12px;
+  letter-spacing:.14em;
+  color:rgba(255,255,255,.7);
+}
+@media (max-width:768px){
+  .alfa-hero{ padding:64px 20px 56px; }
+  .alfa-hero-stats{ gap:24px 36px; }
+  .alfa-hero-stat-num{ font-size:32px; }
+}
