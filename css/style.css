@@ -5,7 +5,6 @@ Licence under Creative Commons Attribution 3.0
 Donate to remove the back-link (webthemez.com) in this web template 
 -------------------------------------------------------*/
 
-@import url('http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:400,600,700'); 
 @import url('font-awesome.css');  
 @import url('animate.css');
 
@@ -26,7 +25,7 @@ a:active {
 }
 
 h1,h2, h3, h4, h5, h6 {
-	font-family:'Open Sans', Arial, sans-serif;
+	font-family:'Prompt', sans-serif;
 	font-weight:700;
 	line-height:1.1em;
 	color:#333;
@@ -3389,4 +3388,78 @@ alfa-page { font-family: 'Prompt', sans-serif; }
 @media (max-width:576px){
   .alfa-cards-grid{grid-template-columns:1fr !important;}
   .alfa-fc{height:170px !important;}
+}
+
+/* Fondo de tiza (letras a mano) en el footer */
+footer{
+  background-image:url('../img/fondo-tiza.svg');
+  background-size:600px;
+  background-repeat:repeat;
+}
+
+/* Títulos de fondo: misma posición y tamaño en ALFA, WEBINARS y NOTICIAS */
+#que-es-alfa .qa-bg,
+#webinars .wb-bg,
+#noticias .ns-bg{
+  position:absolute;
+  top:10px;
+  left:max(24px, calc((100% - 1100px) / 2));
+  right:auto;
+  transform:none;
+  max-width:none;
+  overflow:visible;
+  font-family:'Prompt',sans-serif;
+  font-size:clamp(64px, 11vw, 150px);
+  font-weight:800;
+  letter-spacing:-.04em;
+  line-height:.85;
+  white-space:nowrap;
+  pointer-events:none;
+  user-select:none;
+  z-index:0;
+}
+#que-es-alfa .qa-bg,
+#noticias .ns-bg{ color:rgba(1,141,56,.10); }
+#webinars .wb-bg{ color:rgba(255,255,255,.07); }
+
+/* Noticias en celular: carrusel que se desliza con el dedo */
+@media (max-width:600px){
+  #noticias .ns-arrows{ display:none; }
+  #noticias .ns-wrap{
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scroll-padding-left:24px;
+    margin:0 -24px;
+    padding:0 24px 8px;
+    scrollbar-width:none;
+  }
+  #noticias .ns-wrap::-webkit-scrollbar{ display:none; }
+  #noticias .ns-track{ transform:none !important; gap:14px; }
+  #noticias .ns-card,
+  #noticias .ns-card:last-child{
+    width:82%;
+    margin:0;
+    padding:16px;
+    background:#fff;
+    border:1px solid #e0ede6;
+    border-radius:14px;
+    scroll-snap-align:start;
+  }
+  #noticias .ns-date,
+  #noticias .ns-cat,
+  #noticias .ns-title{ text-align:left; }
+  #noticias .ns-title{ font-size:14px; }
+}
+
+/* Footer compartido */
+#pie{
+  background-color:#0b5640;
+  color:#fff;
+  font-family:'Prompt',sans-serif;
+  padding:48px 0 0;
+}
+#pie a:hover{ color:#8FE0B0 !important; }
+#pie a.activo{ color:#8FE0B0 !important; }
+@media (max-width:768px){
+  #pie > div:first-child{ grid-template-columns:1fr !important; }
 }

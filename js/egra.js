@@ -240,7 +240,6 @@ function registrarToggleMapa() {
 
 
 
-
 function tieneInforme(s) {
   return tieneLink(s.link_linea_base) || tieneLink(s.link_linea_final);
 }
