@@ -3463,3 +3463,44 @@ footer{
 @media (max-width:768px){
   #pie > div:first-child{ grid-template-columns:1fr !important; }
 }
+
+/* Sección "Qué es ALFA" */
+    .qa-sec{background:#f0f8f3;padding:64px 0 70px;font-family:'Prompt',sans-serif;}
+    .qa-in{max-width:1100px;margin:0 auto;padding:0 24px;}
+    .qa-eyebrow{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#018d38;margin:0 0 12px;}
+    .qa-h2{font-size:30px;font-weight:700;color:#0b3d25;margin:0 0 18px;line-height:1.2;}
+    .qa-top{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center;}
+    .qa-lead{font-size:16px;font-weight:400;color:#2d4a38;line-height:1.75;margin:0 0 22px;}
+    .qa-lead b{font-weight:600;color:#0b5640;}
+    .qa-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;}
+    .qa-stat{display:flex;flex-direction:column;align-items:center;gap:4px;background:#fff;border:2px solid #e3ece7;border-radius:18px;padding:26px 16px;text-align:center;}
+    .qa-stat b{font-size:44px;font-weight:700;line-height:1.1;color:#0b5640;font-variant-numeric:tabular-nums;}
+    .qa-stat span{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#018d38;}
+    @media (max-width:600px){.qa-stats{grid-template-columns:1fr;gap:12px;margin-top:32px;}.qa-stat b{font-size:36px;}}
+    .qa-video{position:relative;}
+    #alfaVideo{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;cursor:pointer;background:#0b5640;}
+    #alfaVideo img,#alfaVideo iframe{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover;display:block;}
+    #alfaVideo .overlay{position:absolute;inset:0;background:rgba(11,56,37,.25);display:flex;align-items:center;justify-content:center;transition:background .2s;}
+    #alfaVideo .playbtn{width:50px;height:50px;border-radius:50%;background:#018d38;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(1,141,56,.4);transition:transform .2s;}
+    #alfaVideo .playbtn svg{margin-left:4px;}
+    #alfaVideo:hover .overlay,#alfaVideo:focus-visible .overlay{background:rgba(11,56,37,.45);}
+    #alfaVideo:hover .playbtn,#alfaVideo:focus-visible .playbtn{transform:scale(1.08);}
+    #alfaVideo.playing{cursor:default;}
+    .qa-sec{position:relative;overflow:hidden;}
+    .qa-bg{position:absolute;left:4%;top:-18px;font-size:190px;font-weight:900;letter-spacing:-6px;line-height:1;color:rgba(1,141,56,0.13);pointer-events:none;user-select:none;z-index:0;font-family:'Prompt',sans-serif;}
+    .qa-in{position:relative;z-index:1;}
+    .qa-top > div:first-child{text-align:left;}
+    @media (max-width:900px){.qa-bg{font-size:110px;top:-6px;}}
+    @media (max-width:900px){.qa-top{grid-template-columns:1fr;}}
+  
+    /* Slider de inicio*/
+          #main-slider .flex-caption.gal{left:5%;right:auto;bottom:40px;width:auto;max-width:62%;padding:11px 22px;border-radius:999px;background:rgba(11,86,64,.9);}
+          #main-slider .flex-caption.gal p{margin:0;font-size:15px;line-height:1.45;text-align:left;color:#fff;font-weight:500;font-family:'Prompt',sans-serif;}
+          #main-slider .flex-caption.gal .acc{color:#8FE0B0;font-weight:600;}
+          @media (max-width:768px){
+            #main-slider .flex-caption.gal{display:block !important;left:12px !important;right:12px !important;width:auto !important;max-width:none;bottom:34px !important;border-radius:16px;padding:9px 14px;text-align:left !important;}
+            #main-slider .flex-caption.gal p{font-size:12.5px !important;}
+          }
+
+    #que-es-alfa .qa-bg{ top:-28px; }
+     
