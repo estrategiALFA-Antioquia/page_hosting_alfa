@@ -113,3 +113,8 @@
 
 #programas .prog-intro{ max-width:none; }
 #programas .prog-intro{ font-weight:400; color:#2d4a38; }
+
+/* Principios de ATAL en una sola línea (solo en computador) */
+@media (min-width:761px){
+  .prog-detail{ grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); }
+}

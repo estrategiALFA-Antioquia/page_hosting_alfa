@@ -35,7 +35,13 @@
       });
     }
     tabs.forEach(function (t, i) {
-      t.addEventListener('click', function () { mostrar(t); });
+      t.addEventListener('click', function () {
+        mostrar(t);
+        if (window.innerWidth <= 760) {
+          document.getElementById(t.getAttribute('aria-controls'))
+            .scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
       t.addEventListener('keydown', function (e) {
         var n = null;
         if (e.key === 'ArrowRight' || e.key === 'ArrowDown') n = tabs[(i + 1) % tabs.length];
