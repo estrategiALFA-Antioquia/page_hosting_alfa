@@ -14,6 +14,7 @@
 <link href="css/flexslider.css" rel="stylesheet" />
 <link href="css/style.css" rel="stylesheet" />
 <link href="css/programas.css" rel="stylesheet" />
+<link href="css/aliados.css" rel="stylesheet" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -198,36 +199,64 @@
   </section>
 
 
-  <!-- ECOSISTEMA -->
-   
-  <div class="alfa-section alfa-eco">
-    <div class="alfa-section-inner">
-      <p class="alfa-eyebrow">¿Quiénes hacemos parte?</p>
-      <h2 class="alfa-section-title">Un ecosistema institucional articulado</h2>
-      <div class="alfa-eco-grid">
-        <div class="alfa-eco-card">
-          <div class="alfa-eco-num">1</div>
-          <h4>Gobernación de Antioquia</h4>
-          <p>Supervisores de contratos, experta metodológica, comunicaciones y apoyo administrativo desde la Secretaría de Educación.</p>
+  <!-- QUIÉNES HACEMOS PARTE -->
+  <section id="participan" class="eco-sec">
+    <div class="eco-grid">
+      <div class="eco-txt">
+        <p class="eco-eyebrow">Aliados y operadores</p>
+        <h2>¿Quiénes hacemos parte?</h2>
+        <p class="eco-lead">La implementación de la Estrategia ALFA es posible gracias a la articulación de aliados técnicos y operadores que suman capacidades para fortalecer la calidad, el alcance y la sostenibilidad de la iniciativa en el territorio.</p>
+        <div class="eco-arrows">
+          <button class="eco-arr" id="ecoPrev" aria-label="Anteriores"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+          <button class="eco-arr" id="ecoNext" aria-label="Siguientes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
-        <div class="alfa-eco-card">
-          <div class="alfa-eco-num">2</div>
-          <h4>Banco Mundial</h4>
-          <p>Asesoría técnica, diseño de los programas ATAL y Kalulu, formación de facilitadores y sistema de monitoreo y evaluación.</p>
-        </div>
-        <div class="alfa-eco-card">
-          <div class="alfa-eco-num">3</div>
-          <h4>Operadores</h4>
-          <p>Fraternidad Medellín–CTA, CIS–Corpoeducación, Universidad Católica del Norte y ROTAR implementan la estrategia en territorio.</p>
-        </div>
-        <div class="alfa-eco-card">
-          <div class="alfa-eco-num">4</div>
-          <h4>ACTIVA</h4>
-          <p>Empresa encargada de imprimir y distribuir los materiales pedagógicos de ATAL y Kalulu a los operadores en todo el departamento.</p>
+      </div>
+      <div class="eco-rail">
+        <div class="eco-track" id="ecoTrack">
+          <a class="eco-card" href="https://www.antioquia.gov.co/" target="_blank" rel="noopener" aria-label="Gobernación de Antioquia (se abre en otra pestaña)">
+            <div class="eco-logo"><img src="img/aliados/gobernacion_blanco.png" alt="Gobernación de Antioquia" class="tall"></div>
+            <div class="eco-cap"><div><b>Gobernación de Antioquia</b><small>Aliado</small></div><span class="eco-go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
+          </a>
+          <a class="eco-card" href="https://www.bancomundial.org/ext/es/home" target="_blank" rel="noopener" aria-label="Banco Mundial (se abre en otra pestaña)">
+            <div class="eco-logo"><img src="img/aliados/bm_2.png" alt="Banco Mundial"></div>
+            <div class="eco-cap"><div><b>Banco Mundial</b><small>Aliado</small></div><span class="eco-go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
+          </a>
+          <a class="eco-card" href="https://fraternidadmedellin.org/" target="_blank" rel="noopener" aria-label="Fundación Fraternidad Medellín (se abre en otra pestaña)">
+            <div class="eco-logo"><img src="img/aliados/Fundacion-Fraternidad-de-Medellin-1.png" alt="Fundación Fraternidad Medellín"></div>
+            <div class="eco-cap"><div><b>Fundación Fraternidad Medellín</b><small>Aliado</small></div><span class="eco-go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
+          </a>
+          <a class="eco-card" href="https://secretosparacontar.org/" target="_blank" rel="noopener" aria-label="Secretos para Contar (se abre en otra pestaña)">
+            <div class="eco-logo"><img src="img/aliados/secretos_para_contar.png" alt="Secretos para Contar" class="tall"></div>
+            <div class="eco-cap"><div><b>Secretos para Contar</b><small>Operador</small></div><span class="eco-go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
+          </a>
+          <a class="eco-card" href="https://sinfronteras.edu.co/" target="_blank" rel="noopener" aria-label="Sin Fronteras (se abre en otra pestaña)">
+            <div class="eco-logo"><img src="img/aliados/Sin_fronteras.png" alt="Sin Fronteras" class="tall"></div>
+            <div class="eco-cap"><div><b>Sin Fronteras</b><small>Operador</small></div><span class="eco-go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
+          </a>
+          <a class="eco-card" href="https://rotorr.co/" target="_blank" rel="noopener" aria-label="ROTOR (se abre en otra pestaña)">
+            <div class="eco-logo"><img src="img/aliados/rotor.png" alt="ROTOR" class="tall"></div>
+            <div class="eco-cap"><div><b>ROTOR</b><small>Operador</small></div><span class="eco-go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
+          </a>
+          <a class="eco-card" href="https://cta.org.co/" target="_blank" rel="noopener" aria-label="CTA (se abre en otra pestaña)">
+            <div class="eco-logo"><img src="img/aliados/cta.jpg" alt="CTA"></div>
+            <div class="eco-cap"><div><b>CTA</b><small>Operador</small></div><span class="eco-go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
+          </a>
+          <a class="eco-card" href="https://www.comfama.com/" target="_blank" rel="noopener" aria-label="Comfama (se abre en otra pestaña)">
+            <div class="eco-logo"><img src="img/aliados/Comfama.png" alt="Comfama"></div>
+            <div class="eco-cap"><div><b>Comfama</b><small>Operador</small></div><span class="eco-go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
+          </a>
+          <a class="eco-card" href="https://www.corpoeducacion.org.co/" target="_blank" rel="noopener" aria-label="Corpoeducación (se abre en otra pestaña)">
+            <div class="eco-logo"><img src="img/aliados/corpoeducacion.png" alt="Corpoeducación"></div>
+            <div class="eco-cap"><div><b>Corpoeducación</b><small>Operador</small></div><span class="eco-go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
+          </a>
+          <a class="eco-card" href="https://ucn.edu.co/" target="_blank" rel="noopener" aria-label="Católica del Norte (se abre en otra pestaña)">
+            <div class="eco-logo"><img src="img/aliados/ucn.svg" alt="Católica del Norte"></div>
+            <div class="eco-cap"><div><b>Católica del Norte</b><small>Operador</small></div><span class="eco-go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
+          </a>
         </div>
       </div>
     </div>
-  </div>
+  </section>
    
   <!-- CIFRAS CLAVE -->
   <div class="alfa-section" style="background:#fff;">

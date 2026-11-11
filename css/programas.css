@@ -118,3 +118,9 @@
 @media (min-width:761px){
   .prog-detail{ grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); }
 }
+
+/* Programas en celular: solo texto, a todo el ancho */
+@media (max-width:760px){
+  #programas .prog-detail{ grid-template-columns:1fr; }
+  #programas .prog-detail .prog-pic{ display:none; }
+}

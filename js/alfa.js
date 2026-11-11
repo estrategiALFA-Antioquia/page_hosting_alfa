@@ -51,7 +51,7 @@
     });
   }
 
-  /* Principios de ATAL: la ventana no se sale de la pantalla y en celular abre con un toque */
+   /* Principios de ATAL: la ventana no se sale de la pantalla y en celular abre con un toque */
   var seccion = document.getElementById('programas');
   if (seccion) {
     function ajustar(li) {
@@ -70,5 +70,21 @@
       seccion.querySelectorAll('.prog-princ li.open').forEach(function (o) { if (o !== li) o.classList.remove('open'); });
       if (li) { ajustar(li); li.classList.toggle('open'); }
     });
+  }
+ 
+  /* Quiénes hacemos parte: flechas del carrusel de aliados */
+  var eco = document.getElementById('ecoTrack');
+  if (eco) {
+    var prev = document.getElementById('ecoPrev'), next = document.getElementById('ecoNext');
+    function paso() { var c = eco.querySelector('.eco-card'); return c ? c.offsetWidth + 20 : 300; }
+    function estado() {
+      prev.disabled = eco.scrollLeft < 8;
+      next.disabled = eco.scrollLeft + eco.clientWidth > eco.scrollWidth - 8;
+    }
+    prev.addEventListener('click', function () { eco.scrollBy({ left: -paso(), behavior: 'smooth' }); });
+    next.addEventListener('click', function () { eco.scrollBy({ left: paso(), behavior: 'smooth' }); });
+    eco.addEventListener('scroll', estado, { passive: true });
+    window.addEventListener('resize', estado);
+    estado();
   }
 })();
