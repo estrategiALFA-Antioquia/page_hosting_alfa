@@ -3627,3 +3627,6 @@ footer{
   color:#2d4a38;
 }
 
+#podcast .pc-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:28px;align-items:start;}
+#podcast .pc-grid > *, #podcast .pc-feat > *{min-width:0;}
+        #podcast .pc-feat{grid-template-columns:minmax(0,1fr);} #podcast .pc-cov{max-width:260px;margin:0 auto;} #podcast .pc-h{font-size:28px;}
