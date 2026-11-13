@@ -120,438 +120,324 @@
     </div>
   </section>
   <!-- MATERIALES -->
-  <section id="materiales" class="doc-section" style="background:#f8fdf9;">
+  <section id="materiales" class="doc-section dc-mat">
     <div class="doc-inner">
       <p class="doc-eyebrow">Recursos y materiales</p>
       <h2 class="doc-title">Todo lo que necesitas para implementar ALFA</h2>
- 
-      <div style="margin-top:28px;">
-        <div class="mat-tabs">
-          <button class="mat-tab-btn active" onclick="matTab(this,'doc-atal')">ATAL</button>
-          <button class="mat-tab-btn" onclick="matTab(this,'doc-trans-gob')">Transición</button>
-          <button class="mat-tab-btn" onclick="matTab(this,'doc-kalulu')">Kalulu</button>
-          <button class="mat-tab-btn" onclick="matTab(this,'doc-avanza')">Avanza+</button>
+      <p class="dc-lead">Elige el programa y el grado. Cada material se abre en Drive para verlo o descargarlo.</p>
+
+      <!-- Programas -->
+      <div class="dc-progs" role="tablist" aria-label="Programa">
+        <button type="button" class="dc-prog atal" role="tab" data-prog="atal" aria-selected="true"><i>AT</i>ATAL<small>Transición y primero</small></button>
+        <button type="button" class="dc-prog kal" role="tab" data-prog="kalulu" aria-selected="false"><i>K</i>Kalulu<small>Segundo grado</small></button>
+        <button type="button" class="dc-prog ava" role="tab" data-prog="avanza" aria-selected="false"><i>A+</i>Avanza+<small>Sexto a noveno</small></button>
+        <button type="button" class="dc-prog gob" role="tab" data-prog="gobernacion" aria-selected="false"><i>GA</i>Gobernación<small>Transición</small></button>
+      </div>
+
+      <!-- ATAL -->
+      <div class="dc-panel atal" data-prog="atal">
+        <div class="dc-subtabs" role="tablist">
+          <button type="button" role="tab" data-sub="atal-tr" aria-selected="true">Transición</button>
+          <button type="button" role="tab" data-sub="atal-pr" aria-selected="false">Primero</button>
         </div>
- 
-        <!-- ATAL -->
-        <div id="doc-atal" class="mat-panel active">
-          <div class="mat-subtabs" style="margin-top:20px;">
-            <button class="mat-subtab-btn active" onclick="matSubTab(this,'atal-trans','doc-atal')">Transición</button>
-            <button class="mat-subtab-btn" onclick="matSubTab(this,'atal-prim','doc-atal')">Primero</button>
-          </div>
- 
-          <!-- ATAL Transición -->
-          <div id="atal-trans" class="mat-subpanel active">
-            <p class="mat-sublabel">Para el docente</p>
-            <div class="mat-cards">
-              <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-                <span class="mat-card-name">Guía docente — Primer semestre (Tomo 1)</span>
-                <span class="mat-card-desc">Secuencias para implementar ATAL en transición durante el primer semestre.</span>
-                <a href="https://drive.google.com/file/d/1wDUDPYgySaaPkGUst0yMiUKcIen11hyG/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+          <div class="dc-subpanel" data-sub="atal-tr">
+            <div class="dc-grupo">
+              <h4>Para el docente</h4>
+              <div class="dc-estante">
+                <a class="dc-libro" href="https://drive.google.com/file/d/1wDUDPYgySaaPkGUst0yMiUKcIen11hyG/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/atal-tr-guia-1.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Guía docente · Tomo 1</b><small>Secuencias para el primer semestre de transición.</small>
+                </a>
+                <a class="dc-libro" href="https://drive.google.com/file/d/1yW4RQ59LyxjZ6oLu5iQbdO4imFZMe3f8/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/atal-tr-guia-2.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Guía docente · Tomo 2</b><small>Secuencias para el segundo semestre de transición.</small>
+                </a>
               </div>
-              <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-                <span class="mat-card-name">Guía docente — Segundo semestre (Tomo 2)</span>
-                <span class="mat-card-desc">Secuencias para implementar ATAL en transición durante el segundo semestre.</span>
-                <a href="https://drive.google.com/file/d/1yW4RQ59LyxjZ6oLu5iQbdO4imFZMe3f8/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+            </div>
+            <div class="dc-grupo">
+              <h4>Para el aula</h4>
+              <div class="dc-estante">
+                <a class="dc-libro" href="https://drive.google.com/file/d/1w_dPL9vPQHswK2qgb1dN_uiUEY34meuO/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><span class="dc-tapa" data-sigla="AT"><span class="dc-tapa-k">Material de aula</span><span class="dc-tapa-t">Tarjetas didácticas</span><span class="dc-tapa-p">ATAL</span></span><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Tarjetas didácticas</b><small>Tarjetas para trabajar letras, sonidos y palabras en el aula.</small>
+                </a>
+                <a class="dc-libro" href="https://drive.google.com/file/d/1DEogVTTEPvz7zN9dRPPqudMzsdJisxzU/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><span class="dc-tapa" data-sigla="AT"><span class="dc-tapa-k">Material de aula</span><span class="dc-tapa-t">Big book</span><span class="dc-tapa-p">ATAL</span></span><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Big book</b><small>Libro gigante para la lectura compartida con todo el grupo.</small>
+                </a>
               </div>
-              </div>
-            <p class="mat-sublabel">Para el estudiante</p>
-            <div class="mat-cards">
-              <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-                <span class="mat-card-name">Cuaderno de trabajo — Unidad 1</span>
-                <span class="mat-card-desc">Material de trabajo para las actividades del primer periodo.</span>
-                <a href="https://drive.google.com/file/d/1C8rnPlRehTDcYRLOwK3aL4tNUVh5jHRr/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-              </div>
-              <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-                <span class="mat-card-name">Cuaderno de trabajo — Unidad 2</span>
-                <span class="mat-card-desc">Material de trabajo para las actividades del segundo periodo.</span>
-                <a href="https://drive.google.com/file/d/1sg2M42mi_1LsiQYdg7HNzE64Dd5o1CZw/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-              </div>
-              <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-                <span class="mat-card-name">Libro de cuentos para niños</span>
-                <span class="mat-card-desc">Textos para fortalecer el lenguaje oral y la comprensión lectora.</span>
-                <a href="https://drive.google.com/file/d/1j1M8Mn8cLCYyAnaFNhP_HoNwZI7XgA1L/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+            </div>
+            <div class="dc-grupo">
+              <h4>Para el estudiante</h4>
+              <div class="dc-estante">
+                <a class="dc-libro" href="https://drive.google.com/file/d/1C8rnPlRehTDcYRLOwK3aL4tNUVh5jHRr/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/atal-tr-cuaderno-1.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Cuaderno de trabajo · Unidad 1</b><small>Actividades del primer periodo.</small>
+                </a>
+                <a class="dc-libro" href="https://drive.google.com/file/d/1sg2M42mi_1LsiQYdg7HNzE64Dd5o1CZw/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/atal-tr-cuaderno-2.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Cuaderno de trabajo · Unidad 2</b><small>Actividades del segundo periodo.</small>
+                </a>
+                <a class="dc-libro" href="https://drive.google.com/file/d/1j1M8Mn8cLCYyAnaFNhP_HoNwZI7XgA1L/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/atal-tr-cuentos.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Libro de cuentos</b><small>Textos para el lenguaje oral y la comprensión lectora.</small>
+                </a>
               </div>
             </div>
           </div>
- 
-          <!-- ATAL Primero -->
-          <div id="atal-prim" class="mat-subpanel">
-            <p class="mat-sublabel">Para el docente</p>
-            <div class="mat-cards">
-              
-              <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-                <span class="mat-card-name">Guía docente — Primer semestre (Unidades 1 y 2)</span>
-                <span class="mat-card-desc">Secuencias para el primer semestre de primer grado.</span>
-                <a href="https://drive.google.com/file/d/1dsWomn-sdzfYQgBAHxzJCahpGQ01HKwG/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-              </div>
-              <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-                <span class="mat-card-name">Guía docente — Segundo semestre (Unidades 3 y 4)</span>
-                <span class="mat-card-desc">Secuencias para el segundo semestre de primer grado.</span>
-                <a href="https://drive.google.com/file/d/1rWE5QeidVlvzfHWDB5a9E3IV4EWP_RML/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+          <div class="dc-subpanel" data-sub="atal-pr" hidden>
+            <div class="dc-grupo">
+              <h4>Para el docente</h4>
+              <div class="dc-estante">
+                <a class="dc-libro" href="https://drive.google.com/file/d/1dsWomn-sdzfYQgBAHxzJCahpGQ01HKwG/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/atal-pr-guia-1.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Guía docente · Unidades 1 y 2</b><small>Secuencias para el primer semestre de primero.</small>
+                </a>
+                <a class="dc-libro" href="https://drive.google.com/file/d/1rWE5QeidVlvzfHWDB5a9E3IV4EWP_RML/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/atal-pr-guia-2.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Guía docente · Unidades 3 y 4</b><small>Secuencias para el segundo semestre de primero.</small>
+                </a>
               </div>
             </div>
-            <p class="mat-sublabel">Para el estudiante</p>
-            <div class="mat-cards">
-              <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-                <span class="mat-card-name">Cuaderno de trabajo — Unidad 1</span>
-                <span class="mat-card-desc">Actividades de lectura y escritura para la primera unidad.</span>
-                <a href="https://drive.google.com/file/d/1FC2BbovxJHOY6DHS_oiSP_3_rRuSn11h/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-              </div>
-              <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-                <span class="mat-card-name">Cuaderno de trabajo — Unidad 2</span>
-                <span class="mat-card-desc">Actividades de lectura y escritura para la segunda unidad.</span>
-                <a href="https://drive.google.com/file/d/12vS7Ct9PRyZjgwfC8RU4i4pcZpEwKHBb/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-              </div>
-              <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-                <span class="mat-card-name">Cuaderno de trabajo — Unidad 3</span>
-                <span class="mat-card-desc">Actividades de lectura y escritura para la tercera unidad.</span>
-                <a href="https://drive.google.com/file/d/1eO2jyhgbqzS7z61sY66HU0rZ9Qm2K6iS/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-              </div>
-              <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-                <span class="mat-card-name">Cuaderno de trabajo — Unidad 4</span>
-                <span class="mat-card-desc">Actividades de lectura y escritura para la cuarta unidad.</span>
-                <a href="https://drive.google.com/file/d/1y3HqTNBRwyzh5PzuQ_KR62KiURAwlAwz/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-              </div>
-              <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-                <span class="mat-card-name">Libro de cuentos para niños</span>
-                <span class="mat-card-desc">Textos para fortalecer el lenguaje oral y la comprensión lectora.</span>
-                <a href="https://drive.google.com/file/d/1y9jOOEeepdYL9wqom9y3Q43Gu-CPA3fb/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+            <div class="dc-grupo">
+              <h4>Para el aula</h4>
+              <div class="dc-estante">
+                <a class="dc-libro" href="https://drive.google.com/file/d/1w_dPL9vPQHswK2qgb1dN_uiUEY34meuO/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><span class="dc-tapa" data-sigla="AT"><span class="dc-tapa-k">Material de aula</span><span class="dc-tapa-t">Tarjetas didácticas</span><span class="dc-tapa-p">ATAL</span></span><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Tarjetas didácticas</b><small>Tarjetas para trabajar letras, sonidos y palabras en el aula.</small>
+                </a>
+                <a class="dc-libro" href="https://drive.google.com/file/d/1DEogVTTEPvz7zN9dRPPqudMzsdJisxzU/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><span class="dc-tapa" data-sigla="AT"><span class="dc-tapa-k">Material de aula</span><span class="dc-tapa-t">Big book</span><span class="dc-tapa-p">ATAL</span></span><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Big book</b><small>Libro gigante para la lectura compartida con todo el grupo.</small>
+                </a>
               </div>
             </div>
-          </div>
-        </div>
-        
-        <!-- TRANSICIÓN GOBERNACIÓN -->
-    <div id="doc-trans-gob" class="mat-panel">
-      <div style="margin-top:20px;">
-        <p class="mat-sublabel">Para el docente</p>
-        <div class="mat-cards">
-          <div class="mat-card">
-            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-            <span class="mat-card-name">Libro de lectura — Transición</span>
-            <span class="mat-card-desc">Libro de lectura para el grado transición, recurso complementario de la Gobernación de Antioquia.</span>
-            <a href="https://drive.google.com/file/d/15yHW5RXJIC3G8qmuLWM8mYVs8WnkKpDA/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-          </div>
-          <div class="mat-card">
-            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-            <span class="mat-card-name">Guías de transición — Semanas 1 a 10</span>
-            <span class="mat-card-desc">Guías semanales de apoyo pedagógico para las primeras diez semanas del grado transición.</span>
-            <a href="https://drive.google.com/file/d/12R1P341IV-tJfCCKuZwAs0OeCCt7XNhC/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-          </div>
-          </div>
-      </div>
-    </div>
-
-          <!-- KALULU -->
-<div id="doc-kalulu" class="mat-panel">
-  <div class="mat-subtabs" style="margin-top:20px; flex-wrap:wrap;">
-    <button class="mat-subtab-btn active" onclick="matSubTab(this,'kal-presentacion','doc-kalulu')">Webinars</button>
-    <button class="mat-subtab-btn" onclick="matSubTab(this,'kal-videos','doc-kalulu')">Tutoriales</button>
-    <button class="mat-subtab-btn" onclick="matSubTab(this,'kal-materiales','doc-kalulu')">Materiales</button>
-    <button class="mat-subtab-btn" onclick="matSubTab(this,'kal-evaluacion','doc-kalulu')">Evaluación</button>
-    <button class="mat-subtab-btn" onclick="matSubTab(this,'kal-sonidos','doc-kalulu')">Recursos de apoyo</button>
-    <button class="mat-subtab-btn" onclick="matSubTab(this,'kal-web','doc-kalulu')">Kalulu Web</button>
-    
-  </div>
-
-  <!-- PRESENTACIÓN -->
-  <div id="kal-presentacion" class="mat-subpanel active">
-    <div class="kv-wrap">
-    <!--<div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:20px;">-->
-      <div style="position:relative; padding-top:56.25%; overflow:hidden; border-radius:10px; border:1px solid #d6ede2;">
-      
-        <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/b4yv6vTyFxc" title="Kalulu en contexto" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div style="display:flex; flex-direction:column; gap:12px; justify-content:center;">
-        <p style="font-size:11px; font-weight:700; color:#018d38; letter-spacing:0.1em; text-transform:uppercase; margin:0 0 8px; font-family:'Prompt',sans-serif;">Webinar - Miércoles 29 de abril</p>
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin:0; font-family:'Prompt',sans-serif;">Kalulu en contexto: qué es y cómo empezar</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">Grabación del webinar para docentes de Antioquia de grado segundo que buscan potenciar la alfabetización inicial en sus aulas. Conoce el método Kalulu y el material que está llegando a las instituciones educativas.</p>
-        <a href="https://drive.google.com/file/d/1IiGU6hVsqhRMQ4NsLN-ePL9DApD-b5RK/view?usp=sharing" target="_blank" class="mat-card-btn" style="width:fit-content;">↓ Descargar presentación</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- VIDEOS -->
-<div id="kal-videos" class="mat-subpanel">
-  <div class="kv-wrap">
-    <div class="kv-main">
-      <div class="kv-player">
-        <iframe id="kv-iframe" src="https://www.youtube.com/embed/ZuSiEx1OrU4" title="Video Kalulu" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <p id="kv-eyebrow" class="kv-eyebrow">Serie Kalulu en el aula · Video 1</p>
-      <h3 id="kv-title" class="kv-title">Kalulu: una herramienta para recuperar aprendizajes en segundo grado</h3>
-      <p id="kv-desc" class="kv-desc">Presenta Kalulu como parte de la Estrategia ALFA para las niñas y los niños de segundo grado que aún no han consolidado la lectura. Explica qué significa recuperar aprendizajes, en qué consiste la enseñanza fonética explícita, cómo se relaciona con la ciencia de la lectura y qué ventajas tiene el programa para estudiantes y docentes.</p>
-    </div>
-
-    <div class="kv-list">
-      <p class="kv-list-label">Serie Kalulu en el aula</p>
-
-      <div class="kv-item active" onclick="kvPlay(this)"
-          data-id="ZuSiEx1OrU4"
-          data-eyebrow="Serie Kalulu en el aula · Video 1"
-          data-title="Kalulu: una herramienta para recuperar aprendizajes en segundo grado"
-          data-desc="Presenta Kalulu como parte de la Estrategia ALFA para las niñas y los niños de segundo grado que aún no han consolidado la lectura. Explica qué significa recuperar aprendizajes, en qué consiste la enseñanza fonética explícita, cómo se relaciona con la ciencia de la lectura y qué ventajas tiene el programa para estudiantes y docentes.">
-        <span class="kv-num">1</span><span>Kalulu: una herramienta para recuperar aprendizajes en segundo grado</span>
-      </div>
-
-      <div class="kv-item" onclick="kvPlay(this)"
-          data-id="rfq8uCeWdz4"
-          data-eyebrow="Serie Kalulu en el aula · Video 2"
-          data-title="La base conceptual de Kalulu: cómo aprenden a leer los niños y las niñas"
-          data-desc="Explica los principios pedagógicos detrás de Kalulu a partir del modelo simple de lectura, que combina el reconocimiento de palabras con la comprensión del lenguaje. Muestra los cinco tipos de materiales del programa, la progresión de las correspondencias de lo simple a lo complejo y el ritmo de avance recomendado cada semana.">
-        <span class="kv-num">2</span><span>La base conceptual de Kalulu: cómo aprenden a leer los niños y las niñas</span>
-      </div>
-
-      <div class="kv-item" onclick="kvPlay(this)"
-          data-id="mkmKc2CShzM"
-          data-eyebrow="Serie Kalulu en el aula · Video 3"
-          data-title="Cómo alistar la intervención en el aula"
-          data-desc="Recorre los cinco pasos para preparar la implementación: evaluar a los estudiantes en Tangerine para identificar quiénes necesitan el programa, conocer y organizar los materiales, planear la progresión semanal de correspondencias, establecer las rutinas diarias y preparar recursos de apoyo como imágenes y flashcards.">
-        <span class="kv-num">3</span><span>Cómo alistar la intervención en el aula</span>
-      </div>
-
-      <div class="kv-group">
-        <div class="kv-group-title"><span class="kv-num">4</span><span>Así se desarrolla el programa Kalulu a lo largo de una semana</span></div>
-
-        <div class="kv-item kv-sub" onclick="kvPlay(this)"
-            data-id="GMgDo2f0FI4"
-            data-eyebrow="Kalulu a lo largo de una semana · Día 1"
-            data-title="Introducción del grafema-fonema U u → /u/"
-            data-desc="Acompañamos una sesión de la semana 6 del programa, el día en que se presenta la letra U u y su sonido /u/. El video recorre los cuatro momentos de la clase: introducción del grafema-fonema, lectura diaria “Lee, lee, lee”, copia y escritura de letras, sílabas y palabras, y hora del cuento.">
-          <span>Día 1. U u → /u/</span>
-        </div>
-
-        <div class="kv-item kv-sub" onclick="kvPlay(this)"
-            data-id="Jqca0Lxh0cA"
-            data-eyebrow="Kalulu a lo largo de una semana · Día 2"
-            data-title="Revisión del sonido /u/"
-            data-desc="El segundo día se dedica a consolidar el sonido /u/. Los estudiantes practican la lectura en voz alta y silenciosa, escriben palabras conocidas a partir de un dictado y vuelven al cuento “Úrsula, la urraca única” para profundizar en su vocabulario. Al final, el video muestra cómo aplicar la evaluación formativa de la semana.">
-          <span>Día 2. Revisión del sonido /u/</span>
-        </div>
-
-        <div class="kv-item kv-sub" onclick="kvPlay(this)"
-            data-id="8pzRdUH4wxo"
-            data-eyebrow="Kalulu a lo largo de una semana · Día 3"
-            data-title="Introducción del grafema-fonema C c → /k/"
-            data-desc="En el tercer día el docente presenta la letra C c y su sonido /k/, junto con su regla de uso: cuando la c va con a, o, u, suena /k/. Los estudiantes reconocen el sonido en palabras, leen sílabas, palabras y oraciones en el Cuadernillo 1, copian y escriben, y hacen una tercera lectura del cuento.">
-          <span>Día 3. C c → /k/</span>
-        </div>
-
-        <div class="kv-item kv-sub" onclick="kvPlay(this)"
-            data-id="x9LondT5AAc"
-            data-eyebrow="Kalulu a lo largo de una semana · Día 4"
-            data-title="Revisión y consolidación"
-            data-desc="El cuarto día cierra la semana con un repaso de lo aprendido. El docente retoma las letras U u y C c, su sonido, su trazo y sus reglas de uso; a partir de ahí, los estudiantes leen, escriben palabras al dictado y vuelven una vez más al cuento antes del cierre de la semana.">
-          <span>Día 4. Revisión y consolidación</span>
-        </div>
-      </div>
-
-      <div class="kv-item" onclick="kvPlay(this)"
-          data-id="r70uctvEHpQ"
-          data-eyebrow="Serie Kalulu en el aula · Video 5"
-          data-title="¡Bien jugado! Actividades extra de apoyo"
-          data-desc="Muestra cómo usar dos juegos del material Kalulu, el Bingo y Revueltos, para que los estudiantes practiquen la lectura de sílabas, palabras y oraciones asociándolas con imágenes, y ganen fluidez jugando en grupo.">
-        <span class="kv-num">5</span><span>¡Bien jugado! Actividades extra de apoyo</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <!-- RECURSOS DE APOYO -->
-  <div id="kal-sonidos" class="mat-subpanel">
-    <div class="mat-cards" style="margin-top:20px;">
-      <div class="mat-card">
-        <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></div>
-        <span class="mat-card-name">Videos de fonemas</span>
-        <span class="mat-card-desc">Recursos de audio y video para trabajar los fonemas con los estudiantes en el aula.</span>
-        <a href="https://sites.google.com/fundacionaprenderaquererte.org/manglar/inicio/fonemas_1" target="_blank" class="mat-card-btn">↗ Abrir recurso</a>
-      </div>
-    </div>
-    <div class="mat-cards" style="margin-top:20px;">
-      <div class="mat-card">
-         <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-        <span class="mat-card-name">Hoja de pauta Montessori</span>
-        <span class="mat-card-desc">Papel pautado con triple línea para guiar la escritura de letras mayúsculas y minúsculas. Recurso complementario para trabajar la dimensión y proporción de las letras en el aula.</span>
-        <a href="https://drive.google.com/file/d/1-7dU8ORyWF6u2UjItLsUJ5WtZqLrPHao/view?usp=sharing" target="_blank" class="mat-card-btn">↗ Descargar</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- MATERIALES DIGITALES -->
-  <div id="kal-materiales" class="mat-subpanel">
-    <div style="margin-top:20px;">
-      <p class="mat-sublabel">Para el docente</p>
-      <div class="mat-cards" style="margin-bottom:20px;">
-          <div class="mat-card">
-          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-          <span class="mat-card-name">Calendario Kalulu</span>
-          <span class="mat-card-desc">Planificador de sesiones para organizar la implementación en el aula.</span>
-          <a href="https://drive.google.com/file/d/1fBYekyKiXfL4NDve6bvoJ5JtbRoeZYEH/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-        </div>
-        <div class="mat-card">
-          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-          <span class="mat-card-name">Guía pedagógica</span>
-          <span class="mat-card-desc">Fundamentos metodológicos y rutinas de implementación para 2.° grado.</span>
-          <a href="https://drive.google.com/file/d/1oPFxmdzQQcUHkSnO-rspJNugFlBnsxza/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-        </div>
-        <div class="mat-card">
-          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
-          <span class="mat-card-name">Juego revueltos</span>
-          <span class="mat-card-desc">Juego para reforzar correspondencias grafema-fonema en el aula.</span>
-          <a href="https://drive.google.com/file/d/11Kse-L8BSJkMcUb7TNIRYswwqKgmu6d8/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-        </div>
-        <div class="mat-card">
-          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
-          <span class="mat-card-name">Bingo</span>
-          <span class="mat-card-desc">Bingo pedagógico para reforzar el aprendizaje fonético.</span>
-          <a href="https://drive.google.com/file/d/1dGzRjvNJk-E3gRhXtsVOQ7xniFwA6ZmG/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-        </div>
-        <div class="mat-card">
-          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-          <span class="mat-card-name">Lectómetro</span>
-          <span class="mat-card-desc">Herramienta para medir el nivel lector de los estudiantes.</span>
-          <a href="https://drive.google.com/file/d/1Y5TWCNUUHAebdIsSSnl8eBE6kReZJU0p/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-        </div>
-
-      </div>
-      <p class="mat-sublabel">Para el estudiante</p>
-      <div class="mat-cards">
-        <div class="mat-card">
-          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-          <span class="mat-card-name">Cuadernillo 1</span>
-          <span class="mat-card-desc">Primer cuadernillo de lectura y escritura para 2.° grado.</span>
-          <a href="https://drive.google.com/file/d/1kxyeROd3osdFSDuzN96b4-g7B4b24OUl/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-        </div>
-        <div class="mat-card">
-          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-          <span class="mat-card-name">Cuadernillo 2</span>
-          <span class="mat-card-desc">Segundo cuadernillo de lectura y escritura para 2.° grado.</span>
-          <a href="https://drive.google.com/file/d/1RyZRa5TAL9RKf0f1pb-N0tZhxKrJKNA4/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-        </div>
-        <div class="mat-card">
-          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-          <span class="mat-card-name">Cuadernillo 3</span>
-          <span class="mat-card-desc">Tercer cuadernillo de lectura y escritura para 2.° grado.</span>
-          <a href="https://drive.google.com/file/d/1pxuPPwi7x-uuMDp9IrNwcHZAqF0uJA1V/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- KALULU WEB -->
-  <div id="kal-web" class="mat-subpanel">
-    <div class="mat-cards" style="margin-top:20px;">
-      <div class="mat-card">
-        <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-        <span class="mat-card-name">Kalulu Web</span>
-        <span class="mat-card-desc">Accede a la aplicación Kalulu directamente desde el navegador, sin necesidad de instalar nada.</span>
-        <a href="https://kalulu.excellolab.org/langue/colombie/" target="_blank" class="mat-card-btn">↗ Abrir página</a>
-      </div>
-      <div class="mat-card">
-        <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
-        <span class="mat-card-name">Kalulu — Google Play</span>
-        <span class="mat-card-desc">Descarga la aplicación Kalulu en dispositivos Android desde la Play Store.</span>
-        <a href="https://play.google.com/store/apps/details?id=org.godotengine.kalulu&hl=fr" target="_blank" class="mat-card-btn">↗ Descargar en Play Store</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- EVALUACIÓN -->
-  <div id="kal-evaluacion" class="mat-subpanel">
-    <div style="margin-top:20px;">
-      <p class="mat-sublabel">Evaluación inicial — Para el docente</p>
-      <div class="mat-cards" style="margin-bottom:20px;">
-        <div class="mat-card">
-          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-          <span class="mat-card-name">Archivos para el docente</span>
-          <span class="mat-card-desc">Materiales de apoyo para aplicar la evaluación inicial.</span>
-          <a href="https://drive.google.com/file/d/1V_U0gsAbuuha9J0sj9KtBlTuJWAz-pAk/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-        </div>
-        <div class="mat-card">
-          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-          <span class="mat-card-name">Instrucciones para la aplicación</span>
-          <span class="mat-card-desc">Guía paso a paso para aplicar la evaluación inicial correctamente.</span>
-          <a href="https://drive.google.com/file/d/1ZJNrG6kltMzVSPUpVQA4eappGkeSUy7T/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-        </div>
-        <div class="mat-card">
-          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-          <span class="mat-card-name">Herramienta de sistematización</span>
-          <span class="mat-card-desc">Hoja de cálculo para registrar los resultados de la evaluación inicial.</span>
-          <a href="https://docs.google.com/spreadsheets/d/1QuV-28oT1h7HVsFMq7hhvR7aHO5fuS9o/edit?usp=sharing" target="_blank" class="mat-card-btn">↗ Abrir en Sheets</a>
-        </div>
-      </div>
-      <p class="mat-sublabel">Evaluación inicial — Para el estudiante</p>
-      <div class="mat-cards" style="margin-bottom:20px;">
-        <div class="mat-card">
-          <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-          <span class="mat-card-name">Archivos para los niños y niñas</span>
-          <span class="mat-card-desc">Material para que los estudiantes realicen la evaluación inicial.</span>
-          <a href="https://drive.google.com/file/d/1ZSC8jECO_3_JazsuoMcKNxHe3bIBP-us/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-        </div>
-              </div>
-              <p class="mat-sublabel">Evaluación formativa</p>
-              <div class="mat-cards">
-                <div class="mat-card">
-                  <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-                  <span class="mat-card-name">Evaluación formativa</span>
-                  <span class="mat-card-desc">Hoja de cálculo para el seguimiento formativo del proceso lector.</span>
-                  <a href="https://docs.google.com/spreadsheets/d/14MNrFioqSp2wWrLB5azXswlLmlnsl5Eh/edit?usp=sharing" target="_blank" class="mat-card-btn">↗ Abrir en Sheets</a>
-                </div>
+            <div class="dc-grupo">
+              <h4>Para el estudiante</h4>
+              <div class="dc-estante">
+                <a class="dc-libro" href="https://drive.google.com/file/d/1FC2BbovxJHOY6DHS_oiSP_3_rRuSn11h/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/atal-pr-cuaderno-1.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Cuaderno de trabajo · Unidad 1</b><small>Lectura y escritura, primera unidad.</small>
+                </a>
+                <a class="dc-libro" href="https://drive.google.com/file/d/12vS7Ct9PRyZjgwfC8RU4i4pcZpEwKHBb/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/atal-pr-cuaderno-2.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Cuaderno de trabajo · Unidad 2</b><small>Lectura y escritura, segunda unidad.</small>
+                </a>
+                <a class="dc-libro" href="https://drive.google.com/file/d/1eO2jyhgbqzS7z61sY66HU0rZ9Qm2K6iS/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/atal-pr-cuaderno-3.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Cuaderno de trabajo · Unidad 3</b><small>Lectura y escritura, tercera unidad.</small>
+                </a>
+                <a class="dc-libro" href="https://drive.google.com/file/d/1y3HqTNBRwyzh5PzuQ_KR62KiURAwlAwz/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/atal-pr-cuaderno-4.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Cuaderno de trabajo · Unidad 4</b><small>Lectura y escritura, cuarta unidad.</small>
+                </a>
+                <a class="dc-libro" href="https://drive.google.com/file/d/1y9jOOEeepdYL9wqom9y3Q43Gu-CPA3fb/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/atal-pr-cuentos.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Libro de cuentos</b><small>Textos para el lenguaje oral y la comprensión lectora.</small>
+                </a>
               </div>
             </div>
           </div>
+      </div>
 
+      <!-- KALULU -->
+      <div class="dc-panel kal" data-prog="kalulu" hidden>
+        <div class="dc-subtabs" role="tablist">
+          <button type="button" role="tab" data-sub="kal-mat" aria-selected="true">Materiales</button>
+          <button type="button" role="tab" data-sub="kal-eva" aria-selected="false">Evaluación</button>
+          <button type="button" role="tab" data-sub="kal-linea" aria-selected="false">Recursos en línea</button>
+          <button type="button" role="tab" data-sub="kal-web" aria-selected="false">Webinar</button>
+          <button type="button" role="tab" data-sub="kal-tut" aria-selected="false">Tutoriales</button>
         </div>
-      
-        <!-- AVANZA+ -->
-        <div id="doc-avanza" class="mat-panel">
-          <div style="margin-top:20px;">
-            <p class="mat-sublabel">Para el docente</p>
-            <div class="mat-cards">
-              <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-                <span class="mat-card-name">Manual docente — Módulo 1</span>
-                <span class="mat-card-desc">Guía de implementación del primer módulo para 6.° a 9.° grado.</span>
-                <a href="https://drive.google.com/file/d/1FTgO6Gu8Gh7ztfAS5_act0Hg-ylE6ZOK/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-              </div>
-              <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-                <span class="mat-card-name">Manual docente — Módulo 2</span>
-                <span class="mat-card-desc">Guía de implementación del segundo módulo para 6.° a 9.° grado.</span>
-                <a href="https://drive.google.com/file/d/1LzW9QaTuJ6vLLG9_qvCrQpVjC8hOr23Z/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+          <div class="dc-subpanel" data-sub="kal-mat">
+            <div class="dc-grupo">
+              <h4>Para el docente</h4>
+              <div class="dc-estante">
+                <a class="dc-libro" href="https://drive.google.com/file/d/1oPFxmdzQQcUHkSnO-rspJNugFlBnsxza/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/kal-guia.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Guía pedagógica</b><small>Fundamentos y rutinas de implementación en segundo grado.</small>
+                </a>
+                <a class="dc-libro" href="https://drive.google.com/file/d/1fBYekyKiXfL4NDve6bvoJ5JtbRoeZYEH/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/kal-calendario.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Calendario Kalulu</b><small>Planificador de sesiones para organizar el trabajo en el aula.</small>
+                </a>
+                <a class="dc-libro" href="https://drive.google.com/file/d/11Kse-L8BSJkMcUb7TNIRYswwqKgmu6d8/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><span class="dc-tapa" data-sigla="K"><span class="dc-tapa-k">Juego</span><span class="dc-tapa-t">Revueltos</span><span class="dc-tapa-p">KALULU</span></span><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Juego Revueltos</b><small>Refuerza las correspondencias grafema-fonema.</small>
+                </a>
+                <a class="dc-libro" href="https://drive.google.com/file/d/1dGzRjvNJk-E3gRhXtsVOQ7xniFwA6ZmG/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><span class="dc-tapa" data-sigla="K"><span class="dc-tapa-k">Juego</span><span class="dc-tapa-t">Bingo</span><span class="dc-tapa-p">KALULU</span></span><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Bingo</b><small>Bingo pedagógico para reforzar el aprendizaje fonético.</small>
+                </a>
+                <a class="dc-libro" href="https://drive.google.com/file/d/1Y5TWCNUUHAebdIsSSnl8eBE6kReZJU0p/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><span class="dc-tapa" data-sigla="K"><span class="dc-tapa-k">Herramienta</span><span class="dc-tapa-t">Lectómetro</span><span class="dc-tapa-p">KALULU</span></span><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Lectómetro</b><small>Herramienta para medir el nivel lector de los estudiantes.</small>
+                </a>
+                <a class="dc-libro" href="https://drive.google.com/file/d/1-7dU8ORyWF6u2UjItLsUJ5WtZqLrPHao/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><span class="dc-tapa" data-sigla="K"><span class="dc-tapa-k">Recurso</span><span class="dc-tapa-t">Hoja de pauta Montessori</span><span class="dc-tapa-p">KALULU</span></span><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Hoja de pauta Montessori</b><small>Papel con triple línea para guiar el trazo de las letras.</small>
+                </a>
               </div>
             </div>
-            <p class="mat-sublabel">Para el estudiante</p>
-            <div class="mat-cards">
-              <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-                <span class="mat-card-name">Cuadernillo del estudiante — Módulo 1</span>
-                <span class="mat-card-desc">Material de trabajo para el primer módulo de Avanza+.</span>
-                <a href="https://drive.google.com/file/d/1QFitOVzytCHL5aU6ewoB_YEHpzDxyEZJ/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-              </div>
-              <div class="mat-card">
-                <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-                <span class="mat-card-name">Cuadernillo del estudiante — Módulo 2</span>
-                <span class="mat-card-desc">Material de trabajo para el segundo módulo de Avanza+.</span>
-                <a href="https://drive.google.com/file/d/1tvBCctpXEak1clB9WDKtt84-BKxbNG82/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
+            <div class="dc-grupo">
+              <h4>Para el estudiante</h4>
+              <div class="dc-estante">
+                <a class="dc-libro" href="https://drive.google.com/file/d/1kxyeROd3osdFSDuzN96b4-g7B4b24OUl/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/kal-cuadernillo-1.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Cuadernillo 1</b><small>Lectura y escritura para segundo grado.</small>
+                </a>
+                <a class="dc-libro" href="https://drive.google.com/file/d/1RyZRa5TAL9RKf0f1pb-N0tZhxKrJKNA4/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/kal-cuadernillo-2.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Cuadernillo 2</b><small>Lectura y escritura para segundo grado.</small>
+                </a>
+                <a class="dc-libro" href="https://drive.google.com/file/d/1pxuPPwi7x-uuMDp9IrNwcHZAqF0uJA1V/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/kal-cuadernillo-3.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Cuadernillo 3</b><small>Lectura y escritura para segundo grado.</small>
+                </a>
               </div>
             </div>
           </div>
-        </div>
- 
+          <div class="dc-subpanel" data-sub="kal-eva" hidden>
+            <div class="dc-grupo">
+              <h4>Evaluación inicial · Para el docente</h4>
+              <div class="dc-estante">
+                <a class="dc-libro" href="https://drive.google.com/file/d/1V_U0gsAbuuha9J0sj9KtBlTuJWAz-pAk/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><span class="dc-tapa" data-sigla="K"><span class="dc-tapa-k">Evaluación inicial</span><span class="dc-tapa-t">Archivos para el docente</span><span class="dc-tapa-p">KALULU</span></span><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Archivos para el docente</b><small>Materiales de apoyo para aplicar la evaluación inicial.</small>
+                </a>
+                <a class="dc-libro" href="https://drive.google.com/file/d/1ZJNrG6kltMzVSPUpVQA4eappGkeSUy7T/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><span class="dc-tapa" data-sigla="K"><span class="dc-tapa-k">Evaluación inicial</span><span class="dc-tapa-t">Instrucciones</span><span class="dc-tapa-p">KALULU</span></span><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Instrucciones de aplicación</b><small>Guía paso a paso para aplicar la evaluación inicial.</small>
+                </a>
+                <a class="dc-libro" href="https://docs.google.com/spreadsheets/d/1QuV-28oT1h7HVsFMq7hhvR7aHO5fuS9o/edit?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><span class="dc-tapa" data-sigla="K"><span class="dc-tapa-k">Hoja de cálculo</span><span class="dc-tapa-t">Sistematización</span><span class="dc-tapa-p">KALULU</span></span><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></i></span>
+                  <b>Herramienta de sistematización</b><small>Hoja de cálculo para registrar los resultados.</small>
+                </a>
+              </div>
+            </div>
+            <div class="dc-grupo">
+              <h4>Evaluación inicial · Para el estudiante</h4>
+              <div class="dc-estante">
+                <a class="dc-libro" href="https://drive.google.com/file/d/1ZSC8jECO_3_JazsuoMcKNxHe3bIBP-us/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><span class="dc-tapa" data-sigla="K"><span class="dc-tapa-k">Evaluación inicial</span><span class="dc-tapa-t">Para los niños y niñas</span><span class="dc-tapa-p">KALULU</span></span><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Archivos para los niños y niñas</b><small>Material para que los estudiantes realicen la evaluación.</small>
+                </a>
+              </div>
+            </div>
+            <div class="dc-grupo">
+              <h4>Evaluación formativa</h4>
+              <div class="dc-estante">
+                <a class="dc-libro" href="https://docs.google.com/spreadsheets/d/14MNrFioqSp2wWrLB5azXswlLmlnsl5Eh/edit?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><span class="dc-tapa" data-sigla="K"><span class="dc-tapa-k">Hoja de cálculo</span><span class="dc-tapa-t">Evaluación formativa</span><span class="dc-tapa-p">KALULU</span></span><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></i></span>
+                  <b>Evaluación formativa</b><small>Hoja de cálculo para el seguimiento del proceso lector.</small>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="dc-subpanel" data-sub="kal-linea" hidden>
+            <div class="dc-grupo">
+              <h4>Aplicación y recursos en línea</h4>
+              <div class="dc-enlaces">
+                <a class="dc-enlace" href="https://kalulu.excellolab.org/langue/colombie/" target="_blank" rel="noopener">
+                  <span class="dc-enlace-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
+                  <span class="dc-enlace-tx"><b>Kalulu Web</b><small>Usa la aplicación desde el navegador, sin instalar nada.</small></span>
+                  <span class="dc-enlace-go">Abrir <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+                </a>
+                <a class="dc-enlace" href="https://play.google.com/store/apps/details?id=org.godotengine.kalulu&hl=fr" target="_blank" rel="noopener">
+                  <span class="dc-enlace-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span>
+                  <span class="dc-enlace-tx"><b>Kalulu en Google Play</b><small>Descarga la aplicación en dispositivos Android.</small></span>
+                  <span class="dc-enlace-go">Descargar <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+                </a>
+                <a class="dc-enlace" href="https://sites.google.com/fundacionaprenderaquererte.org/manglar/inicio/fonemas_1" target="_blank" rel="noopener">
+                  <span class="dc-enlace-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2"/></svg></span>
+                  <span class="dc-enlace-tx"><b>Videos de fonemas</b><small>Audio y video para trabajar los fonemas con los estudiantes.</small></span>
+                  <span class="dc-enlace-go">Abrir <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="dc-subpanel" data-sub="kal-web" hidden>
+            <div class="dc-webinar">
+              <div class="dc-video"><iframe src="https://www.youtube.com/embed/b4yv6vTyFxc" title="Kalulu en contexto: qué es y cómo empezar" allowfullscreen loading="lazy"></iframe></div>
+              <div class="dc-webinar-tx">
+                <p class="dc-tv-eyebrow">Webinar · Miércoles 29 de abril</p>
+                <h3 class="dc-tv-title">Kalulu en contexto: qué es y cómo empezar</h3>
+                <p class="dc-tv-desc">Grabación del webinar para docentes de segundo grado de Antioquia que buscan potenciar la alfabetización inicial en sus aulas. Conoce el método Kalulu y el material que está llegando a las instituciones educativas.</p>
+                <a class="dc-btn" href="https://drive.google.com/file/d/1IiGU6hVsqhRMQ4NsLN-ePL9DApD-b5RK/view?usp=sharing" target="_blank" rel="noopener">Descargar presentación <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="dc-subpanel" data-sub="kal-tut" hidden>
+            <div class="dc-tv">
+              <div class="dc-tv-main">
+                <div class="dc-video"><iframe class="dc-tv-iframe" src="https://www.youtube.com/embed/ZuSiEx1OrU4" title="Serie Kalulu en el aula" allowfullscreen loading="lazy"></iframe></div>
+                <p class="dc-tv-eyebrow">Serie Kalulu en el aula · Video 1</p>
+                <h3 class="dc-tv-title">Kalulu: una herramienta para recuperar aprendizajes en segundo grado</h3>
+                <p class="dc-tv-desc">Presenta Kalulu como parte de la Estrategia ALFA para las niñas y los niños de segundo grado que aún no han consolidado la lectura. Explica qué significa recuperar aprendizajes, en qué consiste la enseñanza fonética explícita, cómo se relaciona con la ciencia de la lectura y qué ventajas tiene el programa para estudiantes y docentes.</p>
+              </div>
+              <div class="dc-tv-list">
+                <p class="dc-tv-label">Serie Kalulu en el aula</p>
+                  <button type="button" class="dc-tv-item activo" data-video="ZuSiEx1OrU4" data-eyebrow="Serie Kalulu en el aula · Video 1" data-title="Kalulu: una herramienta para recuperar aprendizajes en segundo grado" data-desc="Presenta Kalulu como parte de la Estrategia ALFA para las niñas y los niños de segundo grado que aún no han consolidado la lectura. Explica qué significa recuperar aprendizajes, en qué consiste la enseñanza fonética explícita, cómo se relaciona con la ciencia de la lectura y qué ventajas tiene el programa para estudiantes y docentes."><span class="dc-tv-num">1</span><span>Kalulu: una herramienta para recuperar aprendizajes en segundo grado</span></button>
+                  <button type="button" class="dc-tv-item" data-video="rfq8uCeWdz4" data-eyebrow="Serie Kalulu en el aula · Video 2" data-title="La base conceptual de Kalulu: cómo aprenden a leer los niños y las niñas" data-desc="Explica los principios pedagógicos detrás de Kalulu a partir del modelo simple de lectura, que combina el reconocimiento de palabras con la comprensión del lenguaje. Muestra los cinco tipos de materiales del programa, la progresión de las correspondencias de lo simple a lo complejo y el ritmo de avance recomendado cada semana."><span class="dc-tv-num">2</span><span>La base conceptual de Kalulu: cómo aprenden a leer los niños y las niñas</span></button>
+                  <button type="button" class="dc-tv-item" data-video="mkmKc2CShzM" data-eyebrow="Serie Kalulu en el aula · Video 3" data-title="Cómo alistar la intervención en el aula" data-desc="Recorre los cinco pasos para preparar la implementación: evaluar a los estudiantes en Tangerine para identificar quiénes necesitan el programa, conocer y organizar los materiales, planear la progresión semanal de correspondencias, establecer las rutinas diarias y preparar recursos de apoyo como imágenes y flashcards."><span class="dc-tv-num">3</span><span>Cómo alistar la intervención en el aula</span></button>
+                  <div class="dc-tv-grupo">
+                    <p class="dc-tv-grupo-t"><span class="dc-tv-num">4</span><span>Así se desarrolla el programa Kalulu a lo largo de una semana</span></p>
+                    <button type="button" class="dc-tv-item dc-tv-sub" data-video="GMgDo2f0FI4" data-eyebrow="Kalulu a lo largo de una semana · Día 1" data-title="Introducción del grafema-fonema U u → /u/" data-desc="Acompañamos una sesión de la semana 6 del programa, el día en que se presenta la letra U u y su sonido /u/. El video recorre los cuatro momentos de la clase: introducción del grafema-fonema, lectura diaria “Lee, lee, lee”, copia y escritura de letras, sílabas y palabras, y hora del cuento.">Día 1. U u → /u/</button>
+                    <button type="button" class="dc-tv-item dc-tv-sub" data-video="Jqca0Lxh0cA" data-eyebrow="Kalulu a lo largo de una semana · Día 2" data-title="Revisión del sonido /u/" data-desc="El segundo día se dedica a consolidar el sonido /u/. Los estudiantes practican la lectura en voz alta y silenciosa, escriben palabras conocidas a partir de un dictado y vuelven al cuento “Úrsula, la urraca única” para profundizar en su vocabulario. Al final, el video muestra cómo aplicar la evaluación formativa de la semana.">Día 2. Revisión del sonido /u/</button>
+                    <button type="button" class="dc-tv-item dc-tv-sub" data-video="8pzRdUH4wxo" data-eyebrow="Kalulu a lo largo de una semana · Día 3" data-title="Introducción del grafema-fonema C c → /k/" data-desc="En el tercer día el docente presenta la letra C c y su sonido /k/, junto con su regla de uso: cuando la c va con a, o, u, suena /k/. Los estudiantes reconocen el sonido en palabras, leen sílabas, palabras y oraciones en el Cuadernillo 1, copian y escriben, y hacen una tercera lectura del cuento.">Día 3. C c → /k/</button>
+                    <button type="button" class="dc-tv-item dc-tv-sub" data-video="x9LondT5AAc" data-eyebrow="Kalulu a lo largo de una semana · Día 4" data-title="Revisión y consolidación" data-desc="El cuarto día cierra la semana con un repaso de lo aprendido. El docente retoma las letras U u y C c, su sonido, su trazo y sus reglas de uso; a partir de ahí, los estudiantes leen, escriben palabras al dictado y vuelven una vez más al cuento antes del cierre de la semana.">Día 4. Revisión y consolidación</button>
+                  </div>
+                  <button type="button" class="dc-tv-item" data-video="r70uctvEHpQ" data-eyebrow="Serie Kalulu en el aula · Video 5" data-title="¡Bien jugado! Actividades extra de apoyo" data-desc="Muestra cómo usar dos juegos del material Kalulu, el Bingo y Revueltos, para que los estudiantes practiquen la lectura de sílabas, palabras y oraciones asociándolas con imágenes, y ganen fluidez jugando en grupo."><span class="dc-tv-num">5</span><span>¡Bien jugado! Actividades extra de apoyo</span></button>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <!-- AVANZA+ -->
+      <div class="dc-panel ava" data-prog="avanza" hidden>
+            <div class="dc-grupo">
+              <h4>Para el docente</h4>
+              <div class="dc-estante">
+                <a class="dc-libro" href="https://drive.google.com/file/d/1FTgO6Gu8Gh7ztfAS5_act0Hg-ylE6ZOK/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/ava-manual-1.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Manual docente · Módulo 1</b><small>Guía de implementación del primer módulo.</small>
+                </a>
+                <a class="dc-libro" href="https://drive.google.com/file/d/1LzW9QaTuJ6vLLG9_qvCrQpVjC8hOr23Z/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/ava-manual-2.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Manual docente · Módulo 2</b><small>Guía de implementación del segundo módulo.</small>
+                </a>
+              </div>
+            </div>
+            <div class="dc-grupo">
+              <h4>Para el estudiante</h4>
+              <div class="dc-estante">
+                <a class="dc-libro" href="https://drive.google.com/file/d/1QFitOVzytCHL5aU6ewoB_YEHpzDxyEZJ/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/ava-cuadernillo-1.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Cuadernillo del estudiante · Módulo 1</b><small>Material de trabajo del primer módulo.</small>
+                </a>
+                <a class="dc-libro" href="https://drive.google.com/file/d/1tvBCctpXEak1clB9WDKtt84-BKxbNG82/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/ava-cuadernillo-2.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Cuadernillo del estudiante · Módulo 2</b><small>Material de trabajo del segundo módulo.</small>
+                </a>
+              </div>
+            </div>
+      </div>
+
+      <!-- GOBERNACIÓN -->
+      <div class="dc-panel gob" data-prog="gobernacion" hidden>
+            <div class="dc-grupo">
+              <h4>Para el docente</h4>
+              <div class="dc-estante">
+                <a class="dc-libro" href="https://drive.google.com/file/d/15yHW5RXJIC3G8qmuLWM8mYVs8WnkKpDA/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/gob-libro-historias.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Libro de historias · Transición</b><small>Lecturas para transición, recurso complementario de la Gobernación.</small>
+                </a>
+                <a class="dc-libro" href="https://drive.google.com/file/d/12R1P341IV-tJfCCKuZwAs0OeCCt7XNhC/view?usp=sharing" target="_blank" rel="noopener">
+                  <span class="dc-portada"><img src="img/materiales/gob-guias-transicion.jpg" alt="" loading="lazy"><i class="dc-dl" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i></span>
+                  <b>Guías de transición · Semanas 1 a 10</b><small>Guías semanales de apoyo pedagógico.</small>
+                </a>
+              </div>
+            </div>
       </div>
     </div>
   </section>
