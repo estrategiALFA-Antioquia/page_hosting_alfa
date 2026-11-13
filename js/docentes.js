@@ -159,3 +159,36 @@
       obs.observe(fases);
     }
   }
+
+  /* ---------------------------------------------------------
+     PANELES: cuenta regresiva y video de los paneles realizados
+     --------------------------------------------------------- */
+  var proximo = document.querySelector('.dc-pan-next[data-fecha]');
+  if (proximo) {
+    var meta = new Date(proximo.dataset.fecha).getTime();
+    var cnt = proximo.querySelector('.dc-pan-cnt');
+    function actualizar() {
+      var ms = meta - Date.now();
+      if (ms <= 0) { cnt.hidden = true; return; }
+      cnt.querySelector('[data-u="d"]').textContent = Math.floor(ms / 864e5);
+      cnt.querySelector('[data-u="h"]').textContent = Math.floor(ms % 864e5 / 36e5);
+      cnt.querySelector('[data-u="m"]').textContent = Math.floor(ms % 36e5 / 6e4);
+    }
+    actualizar();
+    setInterval(actualizar, 30000);
+  }
+
+  /* El video de YouTube se carga solo cuando se hace clic */
+  document.querySelectorAll('.dc-pan-video[data-video]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube.com/embed/' + b.dataset.video + '?autoplay=1&rel=0';
+      f.title = b.getAttribute('aria-label');
+      f.allow = 'autoplay; encrypted-media';
+      f.allowFullscreen = true;
+      var marco = document.createElement('div');
+      marco.className = 'dc-video';
+      marco.appendChild(f);
+      b.replaceWith(marco);
+    }, { once: true });
+  });
