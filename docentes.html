@@ -13,6 +13,7 @@
 <link href="css/jcarousel.css" rel="stylesheet" />
 <link href="css/flexslider.css" rel="stylesheet" />
 <link href="css/style.css" rel="stylesheet" />
+<link href="css/docentes.css?v=1" rel="stylesheet" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -85,31 +86,39 @@
   </nav>
  
   <!-- TU ROL -->
-  <section id="rol" class="doc-section" style="background:#fff;">
+  <section id="rol" class="doc-section dc-rol">
     <div class="doc-inner">
       <p class="doc-eyebrow">Tu rol en ALFA</p>
       <h2 class="doc-title">El docente lidera la transformación pedagógica</h2>
-      <p class="doc-body">ALFA no reemplaza tu experiencia — la potencia. Tú llevas la propuesta a la práctica y dinamizas el cambio en tu institución educativa.</p>
-      <div class="doc-rol-grid">
-        <div class="doc-rol-card">
-          <span class="doc-rol-badge">Transición y 1.° grado</span>
+      <p class="dc-lead">ALFA se apoya en tu experiencia: tú llevas la propuesta al aula y dinamizas el cambio en tu institución educativa.</p>
+
+      <div class="dc-rol-grid">
+        <article class="dc-rol-card atal" data-sigla="AT">
+          <span class="dc-rol-grado">Transición y primero</span>
           <h3>Con ATAL</h3>
-          <p>Implementas el método fonético sistemático con los materiales ATAL. Un facilitador te acompaña en el aula con tres modalidades progresivas: modelación, coanimación y observación.</p>
-        </div>
-        <div class="doc-rol-card">
-          <span class="doc-rol-badge">2.° grado</span>
+          <p>Implementas el método fonético sistemático con los materiales ATAL. Un facilitador te acompaña en el aula en tres fases: modelación, coanimación y observación.</p>
+          <a class="dc-rol-link" href="#materiales" data-programa="atal">Ver materiales
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+
+        <article class="dc-rol-card kal" data-sigla="K">
+          <span class="dc-rol-grado">Segundo grado</span>
           <h3>Con Kalulu</h3>
-          <p>Identificas los estudiantes con rezago lector e implementas las rutinas Kalulu. Cuentas con videos de apoyo y encuentros de formación presenciales y virtuales.</p>
-        </div>
-        <div class="doc-rol-card">
-          <span class="doc-rol-badge" style="background:#0b5640;">6.° a 9.° grado — Piloto</span>
+          <p>Identificas a los estudiantes que aún no han consolidado la lectura e implementas las rutinas Kalulu, con videos de apoyo y encuentros de formación.</p>
+          <a class="dc-rol-link" href="#materiales" data-programa="kalulu">Ver materiales
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+
+        <article class="dc-rol-card ava" data-sigla="A+">
+          <span class="dc-rol-grado">Sexto a noveno · Piloto 2026</span>
           <h3>Con Avanza+</h3>
-          <p>Implementas el programa Avanza+ para estudiantes de secundaria con rezago en lectoescritura. Este es un piloto voluntario en 2026 con miras a una escala mayor en 2027.</p>
-        </div>
+          <p>Acompañas a estudiantes de secundaria que requieren apoyo para fortalecer la fluidez, la comprensión y la escritura.</p>
+          <a class="dc-rol-link" href="#materiales" data-programa="avanza">Ver materiales
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
       </div>
     </div>
   </section>
- 
   <!-- MATERIALES -->
   <section id="materiales" class="doc-section" style="background:#f8fdf9;">
     <div class="doc-inner">
@@ -910,5 +919,6 @@ document.querySelectorAll('.doc-nav a').forEach(function(a) {
 <script src="js/custom.js"></script>
 <script src="js/claves-alfa.js"></script>
 <script src="js/footer.js"></script>
+<script src="js/docentes.js?v=1"></script>
 </body>
 </html>
