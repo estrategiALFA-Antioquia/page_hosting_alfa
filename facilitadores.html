@@ -83,9 +83,7 @@
       <a href="#rol">Tu rol</a>
       <a href="#capacitacion">Capacitación</a>
       <a href="#tangerine">Tangerine</a>
-      <a href="#faq">Preguntas frecuentes</a>
-      <a href="#materiales">Materiales</a>
-      
+      <a href="#faq">Preguntas frecuentes</a>      
     </div>
   </nav>
 
@@ -435,312 +433,161 @@
       </div>
     </div>
   </section>
-<!-- FAQ -->
-<section id="faq" class="fac-section" style="background:#f8fdf9;">
-  <div class="fac-inner">
-    <p class="fac-eyebrow">Preguntas frecuentes</p>
-    <h2 class="fac-title">Resolvemos tus dudas</h2>
+<!-- PREGUNTAS FRECUENTES
+       Buscador + filtros (Todas · Tangerine · EGRA). Cada pregunta es un <details> con data-tema. -->
+  <section id="faq" class="fac-section fc-faq">
+    <div class="fac-inner">
+      <p class="fac-eyebrow">Preguntas frecuentes</p>
+      <h2 class="fac-title">Resolvemos tus dudas</h2>
 
-    <div style="display:flex; gap:0; border-bottom:2px solid #d6ede2; margin:24px 0 0;">
-      <button onclick="mostrarTab('tangerine')" id="tab-tangerine" style="font-size:13px; font-weight:600; color:#018d38; background:none; border:none; border-bottom:2px solid #018d38; margin-bottom:-2px; padding:12px 24px; cursor:pointer; font-family:'Prompt',sans-serif;">Aplicativo Tangerine</button>
-      <button onclick="mostrarTab('egra')" id="tab-egra" style="font-size:13px; font-weight:600; color:#4a7a5e; background:none; border:none; border-bottom:2px solid transparent; margin-bottom:-2px; padding:12px 24px; cursor:pointer; font-family:'Prompt',sans-serif;">Prueba EGRA</button>
-    </div>
-
-    <!-- TANGERINE -->
-    <div id="panel-tangerine" style="margin-top:8px;">
-
-      <div style="padding:16px 0; border-bottom:0.5px solid #d6ede2;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">1. ¿Qué hacer si no se conoce la fecha de nacimiento exacta del estudiante?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">En caso de que el estudiante no tenga clara su fecha de nacimiento, dejar esta observación en comentarios al finalizar la prueba. Si el estudiante sabe su edad, agregar este dato a los comentarios.</p>
-      </div>
-
-      <div style="padding:16px 0; border-bottom:0.5px solid #d6ede2;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">2. ¿Se puede confirmar la fecha de nacimiento con el docente?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">Se puede confirmar con el docente en caso de que esto no represente una interrupción significativa para la aplicación de la prueba.</p>
-      </div>
-
-      <div style="padding:16px 0; border-bottom:0.5px solid #d6ede2;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">3. ¿A quién contactar si hay fallas técnicas?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">En caso de fallas técnicas, contactar al respectivo operador, quien se pondrá en contacto con la Secretaría de Educación de Antioquia para resolver los inconvenientes.</p>
-      </div>
-
-      <div style="padding:16px 0; border-bottom:0.5px solid #d6ede2;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">4. ¿Cómo se guarda una prueba incompleta?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">En caso de que el estudiante se retire en mitad de la prueba o se presente algún inconveniente, dejar en comentarios la explicación del incidente.</p>
-      </div>
-
-      <div style="padding:16px 0; border-bottom:0.5px solid #d6ede2;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">5. ¿Cómo y cuándo se sincronizan las pruebas?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">Las pruebas se deben sincronizar idealmente todos los días al final de la jornada de aplicación, con una conexión estable de internet.</p>
-      </div>
-
-      <div style="padding:16px 0;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">6. ¿Qué hacer si se daña, pierde o roban la tablet?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">En caso de daño, pérdida o robo de la tableta, ponerse en contacto con el respectivo operador.</p>
-      </div>
-
-    </div>
-
-    <!-- EGRA -->
-    <div id="panel-egra" style="display:none; margin-top:8px;">
-
-      <div style="padding:16px 0; border-bottom:0.5px solid #d6ede2;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">1. ¿A qué grados se aplica la prueba EGRA?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">Para la Estrategia ALFA, la prueba EGRA solo se aplica a los estudiantes de primer grado.</p>
-      </div>
-
-      <div style="padding:16px 0; border-bottom:0.5px solid #d6ede2;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">2. ¿Cuántas veces se aplica la prueba EGRA durante el año?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">Inicialmente, está diseñada para aplicarse al inicio y al final del año escolar. Es posible que haya una tercera aplicación a mitad de año como prueba formativa, pero, en caso tal, se informa con anticipación.</p>
-      </div>
-
-      <div style="padding:16px 0; border-bottom:0.5px solid #d6ede2;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">3. ¿La prueba es la misma en los tres momentos?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">La prueba es la misma en todas las aplicaciones realizadas durante el año escolar.</p>
-      </div>
-
-      <div style="padding:16px 0; border-bottom:0.5px solid #d6ede2;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">4. ¿Se evalúa a los mismos estudiantes en cada momento?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">No. En cada aplicación se eligen al azar los estudiantes a evaluar, siguiendo el protocolo de aleatorización (ver pregunta 6).</p>
-      </div>
-
-      <div style="padding:16px 0; border-bottom:0.5px solid #d6ede2;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">5. ¿Cuántos estudiantes se evalúan por institución o sede?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">Por cada sede se evalúan 35 estudiantes. Si la sede tiene menos de 35, se evalúan todos.</p>
-      </div>
-
-      <div style="padding:16px 0; border-bottom:0.5px solid #d6ede2;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">6. ¿Cómo se seleccionan los estudiantes a evaluar?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0 0 8px; font-family:'Prompt',sans-serif;">Se seleccionan al azar mediante el protocolo de aleatorización:</p>
-        <ul style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; padding-left:20px; font-family:'Prompt',sans-serif;">
-          <li>Definir número de estudiantes a evaluar (objetivo: 35 estudiantes).</li>
-          <li>Sentar a los estudiantes en filas orientadas hacia adelante.</li>
-          <li>Enumerar de izquierda a derecha y de adelante hacia atrás.</li>
-          <li>Usar bolsa con papeles enumerados y elegir al azar a los que serán evaluados.</li>
-        </ul>
-      </div>
-
-      <div style="padding:16px 0; border-bottom:0.5px solid #d6ede2;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">7. ¿Qué pasa si faltan estudiantes el día de la aplicación?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">Se evalúan solo los estudiantes que están presentes.</p>
-      </div>
-
-      <div style="padding:16px 0; border-bottom:0.5px solid #d6ede2;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">8. ¿Qué hacer si una sede tiene muy pocos estudiantes?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">Si una sede tiene menos de 35 estudiantes, se evalúan todos los estudiantes de la sede.</p>
-      </div>
-
-      <div style="padding:16px 0; border-bottom:0.5px solid #d6ede2;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">9. ¿En qué casos no se aplica la prueba?</p>
-        <ul style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; padding-left:20px; font-family:'Prompt',sans-serif;">
-          <li>Discapacidad cognitiva.</li>
-          <li>Discapacidad física.</li>
-          <li>Español no es el idioma nativo.</li>
-        </ul>
-      </div>
-
-      <div style="padding:16px 0; border-bottom:0.5px solid #d6ede2;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">10. ¿Qué hacer si un estudiante tiene discapacidad, alerta de lenguaje u otra condición particular?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">No se aplica la prueba.</p>
-      </div>
-
-      <div style="padding:16px 0; border-bottom:0.5px solid #d6ede2;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">11. ¿Se necesita consentimiento de las familias?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">No. Para aplicar la prueba EGRA dentro del marco de la Estrategia ALFA no se necesita consentimiento de las familias.</p>
-      </div>
-
-      <div style="padding:16px 0; border-bottom:0.5px solid #d6ede2;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">12. ¿Qué hacer si la institución pone restricciones para la aplicación?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">Ponerse en contacto con el respectivo operador, quien escalará la situación con la Secretaría de Educación de Antioquia para resolver el inconveniente.</p>
-      </div>
-
-      <div style="padding:16px 0; border-bottom:0.5px solid #d6ede2;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">13. ¿Se puede mover a los estudiantes a un punto central para aplicar la prueba?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">Es ideal contar con un espacio tranquilo y silencioso dentro de la institución, por ejemplo la biblioteca.</p>
-      </div>
-
-      <div style="padding:16px 0; border-bottom:0.5px solid #d6ede2;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">14. ¿Qué pasa si el facilitador no puede asistir el día programado?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">Ponerse en contacto con el respectivo operador para encontrar soluciones.</p>
-      </div>
-
-      <div style="padding:16px 0; border-bottom:0.5px solid #d6ede2;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">15. ¿Cómo se aplica la regla de suspensión en lectura?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">La prueba de Comprensión Lectora solo se aplica a los estudiantes que leen más de 24 palabras por minuto (PPM) en la prueba de Fluidez. La misma aplicación de Tangerine se encarga de focalizar a los estudiantes.</p>
-      </div>
-
-      <div style="padding:16px 0;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">16. ¿Cómo se califican las respuestas en comprensión lectora y comprensión oral?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">Las respuestas deben contener todos los elementos necesarios, pero no deben ser textuales. En Tangerine aparecen los elementos necesarios en color gris debajo de la pregunta como guía para el aplicador.</p>
-      </div>
-
-      <div style="padding:16px 0;">
-        <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">17. Si es evidente que el niño no sabe leer, ¿se puede detener la prueba de fluidez lectora oral antes de que acabe el tiempo?</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0; font-family:'Prompt',sans-serif;">No se puede detener manualmente. La subprueba de fluidez lectora oral tiene un autostop que la para automáticamente si el niño lee incorrectamente las primeras 10 palabras. Para llegar a ese punto sin prolongar innecesariamente la incomodidad del niño, se puede agilizar agrupando las preguntas: "¿Conoces esta? ¿Y esta? ¿Alguna de estas?", e ir seleccionando las incorrectas de forma rápida. El autostop se activa al completar las 10 primeras palabras incorrectas.</p>
-      </div>
-
-      <div style="padding:16px 0;">
-      <p style="font-size:14px; font-weight:600; color:#0b3d25; margin-bottom:8px; font-family:'Prompt',sans-serif;">18. ¿La letra que aparece en la primera fila al final de la hoja es una L o una i mayúscula?</p>
-      <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0 0 12px 0; font-family:'Prompt',sans-serif;">Es una <strong>I mayúscula</strong>, vocal, sonido /i/. Las primeras 10 posiciones de la subprueba son todas vocales (O, i, U, o, A, e, u, a, E, I). La confusión es visual por la tipografía, pero en la hoja física la distinción es clara.</p>
-      <div style="text-align:center;">
-        <img src="img/prueba_EGRA_sonido_letras.png" alt="Hoja de conocimiento del sonido de las letras con la I mayúscula señalada" style="max-width:50%; border-radius:8px; border:1px solid #c8e6c9;"/>
-        <p style="font-size:11px; color:#888; margin-top:6px; font-family:'Prompt',sans-serif;">Hoja de aplicación — la última letra de la primera fila es I mayúscula (vocal)</p>
-      </div>
-      </div>
-
-
-
-    </div>
-  </div>
-</section>
-
-<script>
-function mostrarTab(tab) {
-  document.getElementById('panel-tangerine').style.display = tab === 'tangerine' ? 'block' : 'none';
-  document.getElementById('panel-egra').style.display = tab === 'egra' ? 'block' : 'none';
-  document.getElementById('tab-tangerine').style.color = tab === 'tangerine' ? '#018d38' : '#4a7a5e';
-  document.getElementById('tab-tangerine').style.borderBottom = tab === 'tangerine' ? '2px solid #018d38' : '2px solid transparent';
-  document.getElementById('tab-egra').style.color = tab === 'egra' ? '#018d38' : '#4a7a5e';
-  document.getElementById('tab-egra').style.borderBottom = tab === 'egra' ? '2px solid #018d38' : '2px solid transparent';
-}
-</script>
-
-
-
-  <!-- MATERIALES -->
-   <script>
-function matTab(btn, panelId) {
-  var container = btn.closest('.fac-inner, .doc-inner');
-  container.querySelectorAll('.mat-tab-btn').forEach(function(b) { b.classList.remove('active'); });
-  container.querySelectorAll('.mat-panel').forEach(function(p) { p.classList.remove('active'); });
-  btn.classList.add('active');
-  document.getElementById(panelId).classList.add('active');
-}
-function matSubTab(btn, subPanelId, parentPanelId) {
-  var parentPanel = document.getElementById(parentPanelId);
-  parentPanel.querySelectorAll('.mat-subtab-btn').forEach(function(b) { b.classList.remove('active'); });
-  parentPanel.querySelectorAll('.mat-subpanel').forEach(function(p) { p.classList.remove('active'); });
-  btn.classList.add('active');
-  document.getElementById(subPanelId).classList.add('active');
-}
-</script>
- <!-- ==================== [FACILITADORES] section id="materiales" ==================== -->
-<section id="materiales" class="fac-section" style="background:#fff;">
-  <div class="fac-inner">
-    <p class="fac-eyebrow">Materiales pedagógicos</p>
-    <h2 class="fac-title">Recursos para el acompañamiento en aula</h2>
-    <p class="fac-body">Aquí encuentras los materiales del programa ATAL para transición y primer grado, diferenciados por grado y por destinatario.</p>
- 
-    <div style="margin-top:28px;">
-      <div class="mat-tabs">
-        <button class="mat-tab-btn active" onclick="matTab(this,'fac-trans')">ATAL Transición</button>
-        <button class="mat-tab-btn" onclick="matTab(this,'fac-prim')">ATAL Primero</button>
-      </div>
- 
-      <!-- TRANSICIÓN -->
-      <div id="fac-trans" class="mat-panel active">
-        <p class="mat-sublabel">Para el docente</p>
-        <div class="mat-cards">
-          <div class="mat-card">
-            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-            <span class="mat-card-name">Guía docente — Primer semestre (Tomo 1)</span>
-            <span class="mat-card-desc">Secuencias y estrategias para implementar ATAL en transición durante el primer semestre.</span>
-            <a href="https://drive.google.com/file/d/1wDUDPYgySaaPkGUst0yMiUKcIen11hyG/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-          </div>
-          <div class="mat-card">
-            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-            <span class="mat-card-name">Guía docente — Segundo semestre (Tomo 2)</span>
-            <span class="mat-card-desc">Secuencias y estrategias para implementar ATAL en transición durante el segundo semestre.</span>
-            <a href="https://drive.google.com/file/d/1yW4RQ59LyxjZ6oLu5iQbdO4imFZMe3f8/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-          </div>
-               
-        </div>
- 
-        <p class="mat-sublabel">Para el estudiante</p>
-        <div class="mat-cards">
-          <div class="mat-card">
-            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-            <span class="mat-card-name">Cuaderno de trabajo 1</span>
-            <span class="mat-card-desc">Material de trabajo para las actividades de lectura y escritura.</span>
-            <a href="https://drive.google.com/file/d/1C8rnPlRehTDcYRLOwK3aL4tNUVh5jHRr/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-          </div>
-          <div class="mat-card">
-            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-            <span class="mat-card-name">Cuaderno de trabajo 2</span>
-            <span class="mat-card-desc">Material de trabajo para las actividades de lectura y escritura.</span>
-            <a href="https://drive.google.com/file/d/1sg2M42mi_1LsiQYdg7HNzE64Dd5o1CZw/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-          </div>
-          <div class="mat-card">
-            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-            <span class="mat-card-name">Libro de cuentos para niños</span>
-            <span class="mat-card-desc">Textos para fortalecer el lenguaje oral y la comprensión lectora en transición.</span>
-            <a href="https://drive.google.com/file/d/1j1M8Mn8cLCYyAnaFNhP_HoNwZI7XgA1L/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-          </div>
+      <div class="fc-faq-barra">
+        <label class="fc-buscar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <input type="search" placeholder="Busca: sincronizar, tablet, grado…" aria-label="Buscar en las preguntas frecuentes" autocomplete="off">
+        </label>
+        <div class="fc-filtros" role="group" aria-label="Filtrar por tema">
+          <button type="button" data-filtro="todas" aria-pressed="true">Todas <span></span></button>
+          <button type="button" data-filtro="tangerine" aria-pressed="false">Tangerine <span></span></button>
+          <button type="button" data-filtro="egra" aria-pressed="false">EGRA <span></span></button>
         </div>
       </div>
- 
-      <!-- PRIMERO -->
-      <div id="fac-prim" class="mat-panel">
-        <p class="mat-sublabel">Para el docente</p>
-        <div class="mat-cards">
-          <div class="mat-card">
-            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-            <span class="mat-card-name">Guía docente</span>
-            <span class="mat-card-desc">Guía pedagógica completa para implementar ATAL en primer grado.</span>
-            <a href="https://drive.google.com/file/d/142b2a9PvCkX1DRO1zKO0OmWjXbYzpZIx/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-          </div>
-          <div class="mat-card">
-            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-            <span class="mat-card-name">Guía docente — Primer semestre (Unidades 1 y 2)</span>
-            <span class="mat-card-desc">Secuencias para el primer semestre de primer grado.</span>
-            <a href="https://drive.google.com/file/d/1dsWomn-sdzfYQgBAHxzJCahpGQ01HKwG/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-          </div>
-          <div class="mat-card">
-            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-            <span class="mat-card-name">Guía docente — Segundo semestre (Unidades 3 y 4)</span>
-            <span class="mat-card-desc">Secuencias para el segundo semestre de primer grado.</span>
-            <a href="https://drive.google.com/file/d/1rWE5QeidVlvzfHWDB5a9E3IV4EWP_RML/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-          </div>
-        </div>
- 
-        <p class="mat-sublabel">Para el estudiante</p>
-        <div class="mat-cards">
-          <div class="mat-card">
-            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-            <span class="mat-card-name">Cuaderno de trabajo — Unidad 1</span>
-            <span class="mat-card-desc">Actividades de lectura y escritura para la primera unidad.</span>
-            <a href="https://drive.google.com/file/d/1FC2BbovxJHOY6DHS_oiSP_3_rRuSn11h/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-          </div>
-          <div class="mat-card">
-            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-            <span class="mat-card-name">Cuaderno de trabajo — Unidad 2</span>
-            <span class="mat-card-desc">Actividades de lectura y escritura para la segunda unidad.</span>
-            <a href="https://drive.google.com/file/d/12vS7Ct9PRyZjgwfC8RU4i4pcZpEwKHBb/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-          </div>
-          <div class="mat-card">
-            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-            <span class="mat-card-name">Cuaderno de trabajo — Unidad 3</span>
-            <span class="mat-card-desc">Actividades de lectura y escritura para la tercera unidad.</span>
-            <a href="https://drive.google.com/file/d/1eO2jyhgbqzS7z61sY66HU0rZ9Qm2K6iS/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-          </div>
-          <div class="mat-card">
-            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-            <span class="mat-card-name">Cuaderno de trabajo — Unidad 4</span>
-            <span class="mat-card-desc">Actividades de lectura y escritura para la cuarta unidad.</span>
-            <a href="https://drive.google.com/file/d/1y3HqTNBRwyzh5PzuQ_KR62KiURAwlAwz/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-          </div>
-          <div class="mat-card">
-            <div class="mat-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-            <span class="mat-card-name">Libro de cuentos para niños</span>
-            <span class="mat-card-desc">Textos para fortalecer el lenguaje oral y la comprensión lectora en primer grado.</span>
-            <a href="https://drive.google.com/file/d/1y9jOOEeepdYL9wqom9y3Q43Gu-CPA3fb/view?usp=sharing" target="_blank" class="mat-card-btn">↓ Descargar</a>
-          </div>
-        </div>
+      <p class="fc-faq-cuenta" aria-live="polite"></p>
+
+      <!-- ===== TANGERINE ===== -->
+      <div class="fc-faq-grupo" data-tema="tangerine">
+        <h3 class="fc-faq-gt"><i class="tang" aria-hidden="true"></i>Aplicativo Tangerine</h3>
+
+        <details class="fc-faq-item" id="faq-fecha-nacimiento">
+          <summary><span>¿Qué hago si no se conoce la fecha de nacimiento exacta del estudiante?</span></summary>
+          <div class="fc-faq-r"><p>Deja esa observación en los comentarios al finalizar la prueba. Si el estudiante sabe su edad, agrégala también en los comentarios.</p></div>
+        </details>
+        <details class="fc-faq-item" id="faq-fecha-docente">
+          <summary><span>¿Puedo confirmar la fecha de nacimiento con el docente?</span></summary>
+          <div class="fc-faq-r"><p>Sí, siempre que preguntarle no interrumpa de forma importante la aplicación de la prueba.</p></div>
+        </details>
+        <details class="fc-faq-item" id="faq-fallas">
+          <summary><span>¿A quién contacto si hay fallas técnicas?</span></summary>
+          <div class="fc-faq-r"><p>Contacta a tu operador. Él se comunica con la Secretaría de Educación de Antioquia para resolver el problema. Si te aparece un mensaje de error al actualizar, revisa primero <a href="#tangerine" data-tang="t-errores">los errores más comunes</a>.</p></div>
+        </details>
+        <details class="fc-faq-item" id="faq-incompleta">
+          <summary><span>¿Cómo guardo una prueba incompleta?</span></summary>
+          <div class="fc-faq-r"><p>Si el estudiante se retira en mitad de la prueba o se presenta algún inconveniente, explica en los comentarios qué pasó.</p></div>
+        </details>
+        <details class="fc-faq-item" id="faq-sincronizar">
+          <summary><span>¿Cómo y cuándo se sincronizan las pruebas?</span></summary>
+          <div class="fc-faq-r"><p>Lo ideal es sincronizar todos los días al terminar la jornada de aplicación, con una conexión a internet estable. Aquí puedes ver <a href="#tangerine" data-tang="t-sync">cómo revisar que todo quedó sincronizado</a>.</p></div>
+        </details>
+        <details class="fc-faq-item" id="faq-tablet">
+          <summary><span>¿Qué hago si la tablet se daña, se pierde o me la roban?</span></summary>
+          <div class="fc-faq-r"><p>Comunícate con tu operador.</p></div>
+        </details>
       </div>
- 
+
+      <!-- ===== PRUEBA EGRA ===== -->
+      <div class="fc-faq-grupo" data-tema="egra">
+        <h3 class="fc-faq-gt"><i class="egra" aria-hidden="true"></i>Prueba EGRA</h3>
+
+        <details class="fc-faq-item" id="faq-grados">
+          <summary><span>¿A qué grados se aplica la prueba EGRA?</span></summary>
+          <div class="fc-faq-r"><p>En la Estrategia ALFA la prueba EGRA se aplica solo a estudiantes de primer grado.</p></div>
+        </details>
+        <details class="fc-faq-item" id="faq-veces">
+          <summary><span>¿Cuántas veces se aplica la prueba durante el año?</span></summary>
+          <div class="fc-faq-r"><p>Está diseñada para aplicarse al inicio y al final del año escolar. Puede haber una tercera aplicación a mitad de año como prueba formativa; si es así, se avisa con anticipación.</p></div>
+        </details>
+        <details class="fc-faq-item" id="faq-misma">
+          <summary><span>¿La prueba es la misma en los tres momentos?</span></summary>
+          <div class="fc-faq-r"><p>Sí, es la misma prueba en todas las aplicaciones del año escolar.</p></div>
+        </details>
+        <details class="fc-faq-item" id="faq-mismos">
+          <summary><span>¿Se evalúa a los mismos estudiantes en cada momento?</span></summary>
+          <div class="fc-faq-r"><p>No. En cada aplicación los estudiantes se eligen al azar, siguiendo el <a href="#faq-seleccion" data-faq>protocolo de aleatorización</a>.</p></div>
+        </details>
+        <details class="fc-faq-item" id="faq-cuantos">
+          <summary><span>¿Cuántos estudiantes se evalúan por sede?</span></summary>
+          <div class="fc-faq-r"><p>35 estudiantes por sede. Si la sede tiene menos de 35, se evalúan todos.</p></div>
+        </details>
+        <details class="fc-faq-item" id="faq-seleccion">
+          <summary><span>¿Cómo se seleccionan los estudiantes a evaluar?</span></summary>
+          <div class="fc-faq-r">
+            <p>Al azar, con el protocolo de aleatorización:</p>
+            <ol>
+              <li>Define cuántos estudiantes vas a evaluar (el objetivo es 35).</li>
+              <li>Sienta a los estudiantes en filas mirando hacia adelante.</li>
+              <li>Numéralos de izquierda a derecha y de adelante hacia atrás.</li>
+              <li>Saca de una bolsa papeles numerados para elegir al azar a quienes vas a evaluar.</li>
+            </ol>
+          </div>
+        </details>
+        <details class="fc-faq-item" id="faq-faltan">
+          <summary><span>¿Qué pasa si faltan estudiantes el día de la aplicación?</span></summary>
+          <div class="fc-faq-r"><p>Se evalúa solo a los estudiantes que están presentes.</p></div>
+        </details>
+        <details class="fc-faq-item" id="faq-pocos">
+          <summary><span>¿Qué hago si una sede tiene muy pocos estudiantes?</span></summary>
+          <div class="fc-faq-r"><p>Si la sede tiene menos de 35 estudiantes, evalúa a todos.</p></div>
+        </details>
+        <details class="fc-faq-item" id="faq-no-aplica">
+          <summary><span>¿En qué casos no se aplica la prueba?</span></summary>
+          <div class="fc-faq-r">
+            <ul>
+              <li>Discapacidad cognitiva.</li>
+              <li>Discapacidad física.</li>
+              <li>Cuando el español no es el idioma nativo del estudiante.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="fc-faq-item" id="faq-condicion">
+          <summary><span>¿Qué hago si un estudiante tiene discapacidad, alerta de lenguaje u otra condición particular?</span></summary>
+          <div class="fc-faq-r"><p>No le apliques la prueba.</p></div>
+        </details>
+        <details class="fc-faq-item" id="faq-consentimiento">
+          <summary><span>¿Se necesita consentimiento de las familias?</span></summary>
+          <div class="fc-faq-r"><p>No. Para aplicar la prueba EGRA en el marco de la Estrategia ALFA no se necesita consentimiento de las familias.</p></div>
+        </details>
+        <details class="fc-faq-item" id="faq-restricciones">
+          <summary><span>¿Qué hago si la institución pone restricciones para la aplicación?</span></summary>
+          <div class="fc-faq-r"><p>Comunícate con tu operador. Él escala la situación con la Secretaría de Educación de Antioquia.</p></div>
+        </details>
+        <details class="fc-faq-item" id="faq-lugar">
+          <summary><span>¿Puedo llevar a los estudiantes a un punto central para aplicar la prueba?</span></summary>
+          <div class="fc-faq-r"><p>Lo ideal es usar un espacio tranquilo y silencioso dentro de la misma institución, por ejemplo la biblioteca.</p></div>
+        </details>
+        <details class="fc-faq-item" id="faq-no-asiste">
+          <summary><span>¿Qué pasa si no puedo asistir el día programado?</span></summary>
+          <div class="fc-faq-r"><p>Comunícate con tu operador para buscar una solución.</p></div>
+        </details>
+        <details class="fc-faq-item" id="faq-suspension">
+          <summary><span>¿Cómo funciona la regla de suspensión en lectura?</span></summary>
+          <div class="fc-faq-r"><p>La subprueba de Comprensión lectora solo se aplica a los estudiantes que leen más de 24 palabras por minuto (PPM) en Fluidez. Tangerine hace ese filtro automáticamente.</p></div>
+        </details>
+        <details class="fc-faq-item" id="faq-calificar">
+          <summary><span>¿Cómo califico las respuestas de comprensión lectora y comprensión oral?</span></summary>
+          <div class="fc-faq-r"><p>La respuesta debe tener todos los elementos necesarios, pero no tiene que ser textual. En Tangerine esos elementos aparecen en gris debajo de cada pregunta como guía.</p></div>
+        </details>
+        <details class="fc-faq-item" id="faq-autostop">
+          <summary><span>Si es evidente que el niño no sabe leer, ¿puedo detener la prueba de fluidez antes de que acabe el tiempo?</span></summary>
+          <div class="fc-faq-r"><p>No se puede detener a mano. La subprueba de fluidez lectora oral tiene un autostop que la para sola cuando el niño lee mal las primeras 10 palabras. Para llegar ahí sin alargar la incomodidad del niño, puedes agrupar las preguntas («¿Conoces esta? ¿Y esta? ¿Alguna de estas?») e ir marcando rápido las incorrectas.</p></div>
+        </details>
+        <details class="fc-faq-item" id="faq-letra-i">
+          <summary><span>¿La letra al final de la primera fila es una L o una i mayúscula?</span></summary>
+          <div class="fc-faq-r fc-faq-con-img">
+            <p>Es una <b>I mayúscula</b>, vocal, sonido /i/. Las primeras 10 posiciones de la subprueba son todas vocales (O, i, U, o, A, e, u, a, E, I). La confusión viene de la tipografía en pantalla; en la hoja física se distingue bien.</p>
+            <figure>
+              <img src="img/prueba_EGRA_sonido_letras.png" alt="Hoja de conocimiento del sonido de las letras con la I mayúscula señalada" loading="lazy">
+              <figcaption>La última letra de la primera fila es una I mayúscula.</figcaption>
+            </figure>
+          </div>
+        </details>
+      </div>
+
+      <div class="fc-faq-vacio" hidden>
+        <p>No encontramos preguntas con <b class="fc-faq-termino"></b>.</p>
+        <p>Escríbenos al WhatsApp de soporte <a href="https://wa.me/573180755943" target="_blank" rel="noopener">318 075 5943</a> y te ayudamos.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
 <!-- ==================== FIN [FACILITADORES] ==================== -->
 
 

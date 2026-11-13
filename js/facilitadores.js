@@ -98,3 +98,96 @@
       });
     });
   }
+
+  /* ---------------------------------------------------------
+     PREGUNTAS FRECUENTES: buscador y filtros por tema
+     --------------------------------------------------------- */
+  var faq = document.getElementById('faq');
+  if (faq) {
+    var campo = faq.querySelector('.fc-buscar input');
+    var filtros = faq.querySelectorAll('.fc-filtros button');
+    var grupos = faq.querySelectorAll('.fc-faq-grupo');
+    var items = faq.querySelectorAll('.fc-faq-item');
+    var cuenta = faq.querySelector('.fc-faq-cuenta');
+    var vacio = faq.querySelector('.fc-faq-vacio');
+    var tema = 'todas';
+
+    /* Quita tildes y mayúsculas para que "sincronizacion" encuentre "sincronización" */
+    function normal(t) { return t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
+
+    items.forEach(function (it) {
+      var s = it.querySelector('summary span');
+      it.dataset.pregunta = s.textContent;
+      it.dataset.texto = normal(it.textContent);
+      it.dataset.tema = it.closest('.fc-faq-grupo').dataset.tema;
+    });
+
+    /* Números en los filtros */
+    filtros.forEach(function (b) {
+      var f = b.dataset.filtro;
+      b.querySelector('span').textContent = f === 'todas' ? items.length : faq.querySelectorAll('.fc-faq-grupo[data-tema="' + f + '"] .fc-faq-item').length;
+    });
+
+    /* Resalta la palabra buscada dentro de la pregunta */
+    function resaltar(it, q) {
+      var s = it.querySelector('summary span');
+      var txt = it.dataset.pregunta;
+      s.textContent = txt;
+      if (!q) return;
+      var n = normal(txt), i = n.indexOf(q);
+      if (i < 0) return;
+      s.textContent = '';
+      s.append(txt.slice(0, i));
+      var m = document.createElement('mark');
+      m.textContent = txt.slice(i, i + q.length);
+      s.append(m, txt.slice(i + q.length));
+    }
+
+    function aplicar() {
+      var q = normal(campo.value.trim());
+      var visibles = 0;
+      items.forEach(function (it) {
+        var ok = (tema === 'todas' || it.dataset.tema === tema) && (!q || it.dataset.texto.indexOf(q) > -1);
+        it.hidden = !ok;
+        if (ok) visibles++;
+        resaltar(it, q);
+      });
+      grupos.forEach(function (g) { g.hidden = !g.querySelector('.fc-faq-item:not([hidden])'); });
+      vacio.hidden = visibles > 0;
+      vacio.querySelector('.fc-faq-termino').textContent = '«' + campo.value.trim() + '»';
+      cuenta.textContent = q ? visibles + (visibles === 1 ? ' pregunta encontrada' : ' preguntas encontradas') : '';
+    }
+
+    campo.addEventListener('input', aplicar);
+    filtros.forEach(function (b) {
+      b.addEventListener('click', function () {
+        tema = b.dataset.filtro;
+        filtros.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+        aplicar();
+      });
+    });
+
+    /* Enlace a otra pregunta (ej.: "protocolo de aleatorización") */
+    faq.querySelectorAll('a[data-faq]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        var destino = document.querySelector(a.getAttribute('href'));
+        if (!destino) return;
+        e.preventDefault();
+        campo.value = ''; tema = 'todas';
+        filtros.forEach(function (x) { x.setAttribute('aria-pressed', x.dataset.filtro === 'todas' ? 'true' : 'false'); });
+        aplicar();
+        destino.open = true;
+        destino.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    });
+
+    /* Enlace a una pestaña de la sección Tangerine (ej.: Sincronización) */
+    faq.querySelectorAll('a[data-tang]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var tab = document.querySelector('#tangerine .fc-tabs button[data-tab="' + a.dataset.tang + '"]');
+        if (tab) tab.click();
+      });
+    });
+
+    aplicar();
+  }
