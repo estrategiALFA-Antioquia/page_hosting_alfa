@@ -1,3 +1,8 @@
+// =========================================================
+// claves-alfa.js — DATOS de Tips ALFA (página Docentes)
+// Solo contiene las piezas. Cómo se muestran está en docentes.js.
+// =========================================================
+
 // ===== TIPS NUEVOS =====
 // Cada tip es una pieza que se envió por el canal con su mensaje.
 // Para agregar uno nuevo: copiar un bloque y ponerlo DE PRIMERO en la lista.
@@ -253,62 +258,3 @@ var caSemanas = [
     ]
   }
 ];
-
-// ===== LÓGICA =====
-// Ambas series se muestran de a 2 tarjetas por página.
-function caPaginas(lista, porPag) {
-  var p = []; for (var i = 0; i < lista.length; i += porPag) p.push(lista.slice(i, i + porPag)); return p;
-}
-var caTipsItems = caTips.map(function(t) { return { src: t.src, titulo: t.titulo, tag: '', meta: '', desc: t.desc, head: t.titulo }; });
-var caClavesItems = [];
-caSemanas.forEach(function(s) {
-  s.tarjetas.forEach(function(t) {
-    caClavesItems.push({ src: t.src, titulo: s.titulo, tag: 'Semana ' + s.id, meta: t.dia, desc: t.desc,
-      head: 'Semana ' + s.id + ' · ' + s.titulo + ' · ' + t.dia });
-  });
-});
-var caGrupos = { tips: caPaginas(caTipsItems, 2), claves: caPaginas(caClavesItems, 2) };
-var caGrupoAct = 'tips', caCur = 0;
-
-function caGrupo(g, btn) {
-  caGrupoAct = g; caCur = 0;
-  document.querySelectorAll('.ca-gtab').forEach(function(b) { b.classList.remove('active'); });
-  if (btn) btn.classList.add('active');
-  caRender();
-}
-
-function caRender() {
-  var pags = caGrupos[caGrupoAct], pag = pags[caCur];
-  document.getElementById('ca-grid').innerHTML = pag.map(function(t, i) {
-    return '<div class="ca-card">'
-      + '<div class="ca-img-wrap" onclick="caOpen(' + i + ')">'
-      + '<img src="' + t.src + '" alt="' + t.titulo + '" loading="lazy" />'
-      + '<div class="ca-hint"><span>+</span></div>'
-      + '</div>'
-      + '<div class="ca-body">'
-      + (t.tag ? '<div class="ca-tag">' + t.tag + '</div>' : '')
-      + '<div class="ca-title">' + t.titulo + '</div>'
-      + (t.meta ? '<div class="ca-day">' + t.meta + '</div>' : '')
-      + '</div></div>';
-  }).join('');
-  var last = pags.length - 1;
-  document.getElementById('ca-arrows').style.display = last > 0 ? 'flex' : 'none';
-  document.getElementById('ca-prev').disabled = caCur === 0;
-  document.getElementById('ca-next').disabled = caCur === last;
-  document.getElementById('ca-prev').style.opacity = caCur === 0 ? '0.35' : '1';
-  document.getElementById('ca-next').style.opacity = caCur === last ? '0.35' : '1';
-}
-
-function caPrev() { if (caCur > 0) { caCur--; caRender(); } }
-function caNext() { if (caCur < caGrupos[caGrupoAct].length - 1) { caCur++; caRender(); } }
-
-function caOpen(i) {
-  var t = caGrupos[caGrupoAct][caCur][i];
-  document.getElementById('ca-lb-sem').textContent = t.head;
-  document.getElementById('ca-lb-desc').textContent = t.desc;
-  document.getElementById('ca-lb').style.display = 'flex';
-}
-function caCloseLB() { document.getElementById('ca-lb').style.display = 'none'; }
-document.addEventListener('keydown', function(e) { if (e.key === 'Escape') caCloseLB(); });
-
-caRender();

@@ -192,3 +192,104 @@
       b.replaceWith(marco);
     }, { once: true });
   });
+
+  /* ---------------------------------------------------------
+     TIPS ALFA: historias tipo Instagram
+     Los datos vienen de js/claves-alfa.js (caTips y caSemanas).
+     --------------------------------------------------------- */
+  var tips = document.getElementById('claves-alfa');
+  if (tips && window.caTips && window.caSemanas) {
+    var DURACION = 8000;
+    var visor = tips.querySelector('.dc-visor');
+    var barras = visor.querySelector('.dc-visor-barras');
+    var tx = visor.querySelector('.dc-visor-tx');
+    var lista = [], actual = 0, reloj = null, inicio = 0, restante = DURACION, origen = null;
+
+    /* Recordar qué piezas ya vio esta persona (solo en su navegador) */
+    function vistos() { try { return JSON.parse(localStorage.getItem('alfaTipsVistos') || '[]'); } catch (e) { return []; } }
+    function marcarVisto(id) {
+      var v = vistos(); if (v.indexOf(id) === -1) { v.push(id); try { localStorage.setItem('alfaTipsVistos', JSON.stringify(v)); } catch (e) {} }
+    }
+
+    function circulo(opc) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'dc-hist' + (opc.semana ? ' semana' : '') + (vistos().indexOf(opc.id) > -1 ? ' visto' : '');
+      b.innerHTML = '<span class="dc-hist-aro">' + (opc.img ? '<img src="' + opc.img + '" alt="" loading="lazy">' : '<b>' + opc.numero + '</b>') + '</span>' +
+        '<span class="dc-hist-txt">' + (opc.nuevo ? '<span class="dc-hist-nuevo">Nuevo</span><br>' : '') + opc.texto + '</span>';
+      b.addEventListener('click', function () { abrir(opc.piezas, 0, b, opc.id); });
+      return b;
+    }
+
+    /* Piezas nuevas: cada pieza es una historia; la primera de la lista lleva "Nuevo" */
+    var filaTips = tips.querySelector('[data-hist="tips"]');
+    var todasTips = window.caTips.map(function (t, i) {
+      return { id: t.src, img: t.src, titulo: t.titulo, desc: t.desc, tag: i === 0 ? 'Nuevo' : 'Tip ALFA', nuevo: i === 0 };
+    });
+    todasTips.forEach(function (p, i) {
+      filaTips.appendChild(circulo({ id: p.id, img: p.img, texto: p.titulo, nuevo: p.nuevo, piezas: todasTips.slice(i) }));
+    });
+
+    /* Claves por semana: cada semana es una historia con sus piezas (lunes y viernes) */
+    var filaSem = tips.querySelector('[data-hist="semanas"]');
+    window.caSemanas.forEach(function (s) {
+      var piezas = s.tarjetas.map(function (t) {
+        return { id: t.src, img: t.src, titulo: s.titulo, desc: t.desc, tag: 'Semana ' + s.id + ' · ' + t.dia };
+      });
+      filaSem.appendChild(circulo({ id: 'semana-' + s.id, numero: s.id, texto: 'Semana ' + s.id, semana: true, piezas: piezas }));
+    });
+
+    function mostrar(i) {
+      actual = i;
+      var p = lista[i];
+      visor.querySelector('.dc-visor-img img').src = p.img;
+      visor.querySelector('.dc-visor-img img').alt = p.titulo;
+      var tag = visor.querySelector('.dc-visor-tag');
+      tag.textContent = p.tag; tag.classList.toggle('nuevo', !!p.nuevo);
+      visor.querySelector('#dcVisorTitulo').textContent = p.titulo;
+      visor.querySelector('.dc-visor-desc').textContent = p.desc;
+      tx.scrollTop = 0; tx.classList.remove('cambia'); void tx.offsetWidth; tx.classList.add('cambia');
+      barras.innerHTML = lista.map(function (_, j) { return '<i class="' + (j < i ? 'lista' : j === i ? 'actual' : '') + '"></i>'; }).join('');
+      barras.style.setProperty('--dur', DURACION + 'ms');
+      visor.querySelector('[data-paso="-1"]').disabled = (i === 0);
+      visor.querySelector('[data-paso="1"]').disabled = (i === lista.length - 1);
+      marcarVisto(p.id);
+      programar(DURACION);
+    }
+
+    /* Avance automático, con pausa mientras el mouse o el dedo están encima */
+    function programar(ms) {
+      clearTimeout(reloj); restante = ms; inicio = Date.now();
+      reloj = setTimeout(function () { if (actual < lista.length - 1) mostrar(actual + 1); }, ms);
+    }
+    function pausar() { if (visor.classList.contains('pausa')) return; clearTimeout(reloj); restante -= Date.now() - inicio; visor.classList.add('pausa'); }
+    function seguir() { if (!visor.classList.contains('pausa')) return; visor.classList.remove('pausa'); programar(Math.max(restante, 800)); }
+
+    function abrir(piezas, i, boton, id) {
+      lista = piezas; origen = boton;
+      visor.hidden = false; document.body.style.overflow = 'hidden';
+      mostrar(i);
+      if (boton) { boton.classList.add('visto'); marcarVisto(id); }
+      visor.querySelector('.dc-visor-x').focus();
+    }
+    function cerrar() {
+      visor.hidden = true; document.body.style.overflow = ''; clearTimeout(reloj); visor.classList.remove('pausa');
+      if (origen) origen.focus();
+    }
+    function paso(n) { var j = actual + n; if (j >= 0 && j < lista.length) mostrar(j); }
+
+    visor.querySelector('.dc-visor-x').addEventListener('click', cerrar);
+    visor.querySelectorAll('[data-paso]').forEach(function (b) { b.addEventListener('click', function () { paso(+b.dataset.paso); }); });
+    visor.querySelector('.dc-visor-zona.ant').addEventListener('click', function () { paso(-1); });
+    visor.querySelector('.dc-visor-zona.sig').addEventListener('click', function () { paso(1); });
+    visor.addEventListener('click', function (e) { if (e.target === visor) cerrar(); });
+    var caja = visor.querySelector('.dc-visor-caja');
+    caja.addEventListener('mouseenter', pausar); caja.addEventListener('mouseleave', seguir);
+    tx.addEventListener('touchstart', pausar, { passive: true }); tx.addEventListener('scroll', pausar, { passive: true });
+    document.addEventListener('keydown', function (e) {
+      if (visor.hidden) return;
+      if (e.key === 'Escape') cerrar();
+      if (e.key === 'ArrowRight') paso(1);
+      if (e.key === 'ArrowLeft') paso(-1);
+    });
+  }

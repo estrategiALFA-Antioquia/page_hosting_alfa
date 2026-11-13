@@ -620,121 +620,65 @@
       </div>
     </div>
   </section>
+<!-- TIPS ALFA -->
+  <section id="claves-alfa" class="doc-section dc-tips">
+    <div class="doc-inner">
+      <p class="doc-eyebrow">Tips ALFA</p>
+      <h2 class="doc-title">Claves para el aula</h2>
+      <p class="dc-lead">Piezas cortas sobre cómo se aprende a leer y qué hacer en clase. Toca una para verla; avanza sola y también puedes usar las flechas.</p>
+
+      <!-- Las historias se arman solas con los datos de js/claves-alfa.js -->
+      <div class="dc-hist-fila" data-hist="tips" aria-label="Piezas nuevas"></div>
+
+      <div class="dc-grupo">
+        <h4>Claves ALFA por semana</h4>
+        <div class="dc-hist-fila" data-hist="semanas" aria-label="Claves por semana"></div>
+      </div>
+    </div>
+
+    <!-- Visor de historias -->
+    <div class="dc-visor" hidden>
+      <div class="dc-visor-caja" role="dialog" aria-modal="true" aria-labelledby="dcVisorTitulo">
+        <div class="dc-visor-barras" aria-hidden="true"></div>
+        <button type="button" class="dc-visor-x" aria-label="Cerrar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+        <div class="dc-visor-img">
+          <img src="" alt="">
+          <button type="button" class="dc-visor-zona ant" aria-label="Pieza anterior"></button>
+          <button type="button" class="dc-visor-zona sig" aria-label="Pieza siguiente"></button>
+        </div>
+        <div class="dc-visor-tx">
+          <span class="dc-visor-tag"></span>
+          <h3 id="dcVisorTitulo"></h3>
+          <p class="dc-visor-desc"></p>
+        </div>
+        <div class="dc-visor-nav">
+          <button type="button" data-paso="-1" aria-label="Anterior"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button type="button" data-paso="1" aria-label="Siguiente"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- CANAL DE WHATSAPP -->
+  <section class="dc-cta">
+    <div class="dc-cta-in">
+      <span class="dc-cta-ic" aria-hidden="true">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-5.6c-.2-.1-1.4-.7-1.7-.8s-.4-.1-.5.1-.6.8-.8.9-.3.2-.5 0a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.7-1.3.1-.1 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.6.3 2.7 2.7 0 0 0-.8 2 4.6 4.6 0 0 0 1 2.5 10.6 10.6 0 0 0 4 3.6c1.5.6 2.1.7 2.8.6a2.4 2.4 0 0 0 1.6-1.1 2 2 0 0 0 .1-1.1c0-.1-.2-.2-.4-.3z"/></svg>
+      </span>
+      <div class="dc-cta-tx">
+        <h2>¿Tienes dudas sobre la implementación?</h2>
+        <p>Únete al canal de docentes en WhatsApp para recibir videos de apoyo, orientaciones y novedades de la Estrategia ALFA.</p>
+      </div>
+      <a class="dc-cta-btn" href="https://whatsapp.com/channel/0029Vb7o5m5Chq6RY1tsXY0P" target="_blank" rel="noopener">
+        Unirme al canal
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
 
   
-  <!-- CLAVES ALFA -->
-<section id="claves-alfa" class="doc-section" style="background:#e8f5ed;; overflow:hidden;">
-  <div class="doc-inner" style="position:relative;">
-    <!-- Título decorativo de fondo -->
-    <div class="ca-bg-title" style="position:absolute; top:-10px; left:230px; font-size:110px; font-weight:700; color:#c5e8d3; letter-spacing:-2px; line-height:1; pointer-events:none; user-select:none; font-family:'Prompt',sans-serif;">TIPS ALFA</div>
-
-    <!-- Encabezado + flechas -->
-    <div class="ca-head" style="display:flex; align-items:flex-start; justify-content:space-between; position:relative; z-index:1; margin-bottom:28px;">
-      <div>
-        <p style="font-size:11px; font-weight:700; color:#018d38; letter-spacing:0.1em; text-transform:uppercase; margin:0 0 6px; font-family:'Prompt',sans-serif;">Serie del canal de docentes · WhatsApp</p>
-        <h2 style="font-size:28px; font-weight:700; color:#0b5640; margin:0; font-family:'Prompt',sans-serif;">Tips ALFA para el aula</h2>
-      </div>
-      <div id="ca-arrows" style="display:flex; gap:8px; align-items:center;">
-        <button id="ca-prev" onclick="caPrev()" aria-label="Anterior" style="width:36px; height:36px; border-radius:50%; border:1.5px solid #0b5640; background:transparent; display:flex; align-items:center; justify-content:center; cursor:pointer; color:#0b5640; font-size:16px;">&#8592;</button>
-        <button id="ca-next" onclick="caNext()" aria-label="Siguiente" style="width:36px; height:36px; border-radius:50%; border:1.5px solid #0b5640; background:transparent; display:flex; align-items:center; justify-content:center; cursor:pointer; color:#0b5640; font-size:16px;">&#8594;</button>
-      </div>
-    </div>
-
-    <style>
-      .ca-gtabs{display:flex;gap:10px;flex-wrap:wrap;position:relative;z-index:1;margin-top:40px;}
-      .ca-gtab{font-family:'Prompt',sans-serif;font-weight:600;font-size:14px;padding:9px 20px;border-radius:999px;border:1.5px solid #0b5640;background:#fff;color:#0b5640;cursor:pointer;}
-      .ca-gtab.active{background:#0b5640;color:#fff;}
-      #ca-grid{margin-top:22px !important;}
-      .ca-lb-box{background:#fff;border-radius:16px;max-width:620px;width:100%;max-height:85vh;overflow-y:auto;padding:26px 30px 30px;font-family:'Prompt',sans-serif;}
-      .ca-lb-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #e3ece7;}
-      .ca-lb-title{font-size:17px;font-weight:600;color:#1f2d27;line-height:1.4;margin:0;}
-      .ca-lb-x{flex:0 0 34px;height:34px;border-radius:50%;border:none;background:#f0f0f0;color:#555;font-size:14px;cursor:pointer;}
-      .ca-lb-text{font-size:15.5px;color:#33423b;line-height:1.8;margin:0;white-space:pre-line;text-align:left;}
-      @media (max-width:600px){.ca-lb-box{padding:20px;} .ca-lb-text{font-size:15px;}}
-    </style>
-    <div class="ca-gtabs">
-      <button class="ca-gtab active" onclick="caGrupo('tips',this)">Piezas nuevas</button>
-      <button class="ca-gtab" onclick="caGrupo('claves',this)">Claves ALFA · Semanas 1 a 13</button>
-    </div>
-    <!-- Grid de tarjetas -->
-    <div id="ca-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:20px; position:relative; z-index:1; margin-top:60px;"></div>
-
-    <!-- Visor de texto -->
-    <div id="ca-lb" onclick="caCloseLB()" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center; padding:1rem;">
-      <div onclick="event.stopPropagation()" class="ca-lb-box">
-        <div class="ca-lb-top">
-          <p id="ca-lb-sem" class="ca-lb-title"></p>
-          <button type="button" onclick="caCloseLB(); return false;" class="ca-lb-x" aria-label="Cerrar">✕</button>
-        </div>
-        <p id="ca-lb-desc" class="ca-lb-text"></p>
-      </div>
-    </div>
-  </div>
-</section>
- 
-
-
-  <!-- CTA WHATSAPP -->
-  <div class="doc-cta">
-    <h2>¿Tiene dudas sobre la implementación?</h2>
-    <p>Únase al canal de docentes en WhatsApp para recibir videos de apoyo, orientaciones y novedades de la Estrategia ALFA.</p>
-    <!-- Reemplace el número por el del canal de docentes -->
-    <a href="https://whatsapp.com/channel/0029Vb7o5m5Chq6RY1tsXY0P" target="_blank" class="doc-cta-btn">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.28 7.044L.787 23.25l4.332-1.428A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.374l-.359-.213-3.722 1.228 1.25-3.615-.234-.372A9.818 9.818 0 1 1 12 21.818z"/></svg>
-      Canal de docentes — WhatsApp
-    </a>
-  </div>
-
-  <script>
-function kvPlay(item){
-  if(item.classList.contains('kv-soon')) return;
-  document.getElementById('kv-iframe').src = 'https://www.youtube.com/embed/' + item.dataset.id;
-  document.getElementById('kv-eyebrow').textContent = item.dataset.eyebrow;
-  document.getElementById('kv-title').textContent = item.dataset.title;
-  document.getElementById('kv-desc').textContent = item.dataset.desc;
-  document.querySelectorAll('#kal-videos .kv-item').forEach(function(i){ i.classList.remove('active'); });
-  item.classList.add('active');
-}
-
-function matTab(btn, panelId) {
-  var container = btn.closest('.doc-inner');
-  container.querySelectorAll('.mat-tab-btn').forEach(function(b) { b.classList.remove('active'); });
-  container.querySelectorAll('.mat-panel').forEach(function(p) { p.classList.remove('active'); });
-  btn.classList.add('active');
-  document.getElementById(panelId).classList.add('active');
-}
-function matSubTab(btn, subPanelId, parentPanelId) {
-  var parentPanel = document.getElementById(parentPanelId);
-  parentPanel.querySelectorAll('.mat-subtab-btn').forEach(function(b) { b.classList.remove('active'); });
-  parentPanel.querySelectorAll('.mat-subpanel').forEach(function(p) { p.classList.remove('active'); });
-  btn.classList.add('active');
-  document.getElementById(subPanelId).classList.add('active');
-}
- 
-/* Sticky nav activo al hacer scroll */
-var secciones = ['rol','materiales','acompanamiento','canal'];
-window.addEventListener('scroll', function() {
-  var scrollPos = window.scrollY + 100;
-  secciones.forEach(function(id) {
-    var el = document.getElementById(id);
-    var link = document.querySelector('.doc-nav a[href="#' + id + '"]');
-    if (el && link) {
-      if (el.offsetTop <= scrollPos && el.offsetTop + el.offsetHeight > scrollPos) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
-    }
-  });
-});
-document.querySelectorAll('.doc-nav a').forEach(function(a) {
-  a.addEventListener('click', function(e) {
-    e.preventDefault();
-    var target = document.querySelector(this.getAttribute('href'));
-    if (target) { window.scrollTo({ top: target.offsetTop - 60, behavior: 'smooth' }); }
-  });
-});
-</script>
 
 <!-- Footer -->	
 <footer id="pie"></footer>
