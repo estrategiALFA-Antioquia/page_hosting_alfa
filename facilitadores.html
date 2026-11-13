@@ -293,175 +293,148 @@
       </div>
     </div>
   </section>
-  <!-- TANGERINE -->
-  <section id="tangerine" class="fac-section fac-tang-section">
+  <!-- TANGERINE
+       Pestañas: Instalar y usar · Sincronización · Errores al actualizar · Observación de aula -->
+  <section id="tangerine" class="fac-section fc-tang">
     <div class="fac-inner">
       <p class="fac-eyebrow">Tangerine</p>
       <h2 class="fac-title">Instalación y uso de la aplicación</h2>
-      <p class="fac-body">Tangerine es la herramienta para aplicar las pruebas EGRA y registrar los resultados. Escanee el QR para instalarla y vea los videos de apoyo.</p>
-      <div class="fac-tang-grid">
+      <p class="fc-lead">Tangerine es la herramienta para aplicar la prueba EGRA y registrar los resultados. Elige lo que necesitas.</p>
 
-        <div class="fac-qr-block">
-          <!-- Reemplace con img src="img/qr-tangerine.png" cuando tenga el QR en el servidor -->
-          <img src="img/qr_tangerine.jpeg" alt="QR instalación Tangerine" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-          
-          <p class="fac-qr-label">Instalar Tangerine</p>
-          <p class="fac-qr-sub">Escanee con la cámara de su tablet Android</p>
-        </div>
+      <div class="fc-tabs" role="tablist" aria-label="Tangerine">
+        <button type="button" role="tab" data-tab="t-usar" aria-selected="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>
+          Instalar y usar
+        </button>
+        <button type="button" role="tab" data-tab="t-sync" aria-selected="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg>
+          Sincronización
+        </button>
+        <button type="button" role="tab" data-tab="t-errores" aria-selected="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9.5 16.5h-19z"/><path d="M12 10v4M12 17.5v.5"/></svg>
+          Errores al actualizar
+        </button>
+        <button type="button" role="tab" data-tab="t-obs" aria-selected="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>
+          Observación de aula
+        </button>
+      </div>
 
-        <div class="fac-tang-videos">
-          <a href="https://youtu.be/6KoOr9rViH0" target="_blank" class="fac-tang-video-row">
-            <div class="fac-tang-play"><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div>
-            <div>
-              <p class="fac-tang-video-title">Instalación de Tangerine</p>
-              <p class="fac-tang-video-sub">Cómo instalar la aplicación paso a paso</p>
-            </div>
-          </a>
-          <a href="https://youtu.be/LiIRI74QMPw" target="_blank" class="fac-tang-video-row">
-            <div class="fac-tang-play"><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div>
-            <div>
-              <p class="fac-tang-video-title">Actualización de la aplicación</p>
-              <p class="fac-tang-video-sub">Cómo mantener Tangerine actualizado</p>
-            </div>
-          </a>
-          <a href="https://youtu.be/GNpe_gNGRrs" target="_blank" class="fac-tang-video-row">
-            <div class="fac-tang-play"><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div>
-            <div>
-              <p class="fac-tang-video-title">Sincronización de pruebas</p>
-              <p class="fac-tang-video-sub">Cómo sincronizar los resultados</p>
-            </div>
-          </a>
-          <!--registro asistencia-->
-          <!--<a href="https://youtu.be/Z9O4wb93rJE" target="_blank" class="fac-tang-video-row">
-            <div class="fac-tang-play"><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div>
-            <div>
-              <p class="fac-tang-video-title">Registro de asistencia</p>
-              <p class="fac-tang-video-sub">Cómo registrar la asistencia en la app</p>
-            </div>
-          </a>-->
-          <div style="margin-top:8px;">
-            <a href="https://drive.google.com/file/d/1tKtYp8MoIKQrZ1Vzu6DKSXYgQNGzcFaI/view?usp=sharing" target="_blank" class="fac-recurso-btn">↓ Imprimibles de la prueba EGRA</a>
+      <!-- ===== INSTALAR Y USAR ===== -->
+      <div class="fc-tab-panel" data-tab="t-usar">
+        <div class="fc-usar">
+          <div class="fc-qr">
+            <img src="img/qr_tangerine.jpeg" alt="Código QR para instalar Tangerine" loading="lazy">
+            <b>Instalar Tangerine</b>
+            <small>Escanea con la cámara de la tablet Android</small>
+          </div>
+          <div class="fc-filas">
+            <a class="fc-fila" href="https://youtu.be/6KoOr9rViH0" target="_blank" rel="noopener">
+              <i aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="7,4 20,12 7,20"/></svg></i>
+              <span><b>Instalación de Tangerine</b><small>Cómo instalar la aplicación paso a paso</small></span>
+            </a>
+            <a class="fc-fila" href="https://youtu.be/LiIRI74QMPw" target="_blank" rel="noopener">
+              <i aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="7,4 20,12 7,20"/></svg></i>
+              <span><b>Actualización de la aplicación</b><small>Cómo mantener Tangerine actualizado</small></span>
+            </a>
+            <a class="fc-fila" href="https://youtu.be/GNpe_gNGRrs" target="_blank" rel="noopener">
+              <i aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="7,4 20,12 7,20"/></svg></i>
+              <span><b>Sincronización de pruebas</b><small>Cómo subir los resultados a la nube</small></span>
+            </a>
+            <a class="fc-fila" href="https://drive.google.com/file/d/1tKtYp8MoIKQrZ1Vzu6DKSXYgQNGzcFaI/view?usp=sharing" target="_blank" rel="noopener">
+              <i aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></i>
+              <span><b>Imprimibles de la prueba EGRA</b><small>Para tener a mano durante la aplicación</small></span>
+            </a>
           </div>
         </div>
-
       </div>
-      <!-- ==================== [TANGERINE] Sincronización y errores al actualizar ====================
-     Pegar dentro de <section id="tangerine">, justo después de </div> de .fac-tang-grid
-     y antes del bloque "INSTRUMENTOS DE OBSERVACIÓN".
-     Imágenes a subir en /img: tang_sincronizacion.png, tang_error_4.png, tang_error_2.png
--->
 
-<!-- 1. ESTADO DE LA SINCRONIZACIÓN -->
-<div id="tang-sync" style="margin-top:40px; background:#fff; border:1px solid #d6ede2; border-radius:12px; padding:28px 24px;">
-  <p class="mat-sublabel" style="margin-top:0;">Sincronización</p>
-  <h3 style="font-size:18px; font-weight:600; color:#0b3d25; margin:0 0 8px; font-family:'Prompt',sans-serif;">¿Cuántas pruebas tiene sincronizadas?</h3>
-  <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0 0 20px; font-family:'Prompt',sans-serif;">
-    Antes de cerrar la jornada, entre a <strong>Sincronización</strong> en Tangerine y revise el resumen del estado.
-  </p>
-
-  <div style="display:flex; gap:24px; flex-wrap:wrap; align-items:flex-start;">
-    <div style="flex:1 1 280px; max-width:420px;">
-      <img src="img/tang_sincronizacion.png" alt="Pantalla de resumen del estado de la sincronización en Tangerine" style="width:100%; border-radius:8px; border:1px solid #d6ede2;">
-    </div>
-
-    <div style="flex:1 1 280px; display:flex; flex-direction:column; gap:12px;">
-      <div style="background:#fff7c2; border-radius:8px; padding:14px 16px;">
-        <p style="font-size:13px; font-weight:600; color:#0b3d25; margin:0 0 4px; font-family:'Prompt',sans-serif;">Número en fondo amarillo</p>
-        <p style="font-size:13px; color:#3d4a42; line-height:1.6; margin:0; font-family:'Prompt',sans-serif;">Pruebas que ya subieron correctamente a la nube.</p>
-      </div>
-      <div style="background:#ffd9a8; border-radius:8px; padding:14px 16px;">
-        <p style="font-size:13px; font-weight:600; color:#0b3d25; margin:0 0 4px; font-family:'Prompt',sans-serif;">Número en fondo naranja</p>
-        <p style="font-size:13px; color:#3d4a42; line-height:1.6; margin:0; font-family:'Prompt',sans-serif;">Pruebas que todavía no han subido. Al terminar el día este número debe quedar en 0.</p>
-      </div>
-      <div style="background:#0b5640; border-radius:8px; padding:14px 16px;">
-        <p style="font-size:13px; font-weight:600; color:#3AF9A2; margin:0 0 4px; font-family:'Prompt',sans-serif;">Si le quedan pruebas sin subir</p>
-        <p style="font-size:13px; color:#fff; line-height:1.6; margin:0; font-family:'Prompt',sans-serif;">Active el WiFi, toque el botón azul <strong>SINCRONIZAR DATOS PARA TODOS LOS USUARIOS</strong> y espere a que el porcentaje llegue a 100%.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 2. MENSAJES DE ERROR AL ACTUALIZAR -->
-<div id="tang-errores" style="margin-top:24px; background:#fff; border:1px solid #d6ede2; border-radius:12px; padding:28px 24px;">
-  <p class="mat-sublabel" style="margin-top:0;">Soporte</p>
-  <h3 style="font-size:18px; font-weight:600; color:#0b3d25; margin:0 0 8px; font-family:'Prompt',sans-serif;">Mensajes de error al actualizar</h3>
-  <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0 0 20px; font-family:'Prompt',sans-serif;">
-    Al actualizar la aplicación puede aparecer una alerta con un código. Busque el código en el mensaje y siga las indicaciones.
-  </p>
-
-  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px;">
-
-     <!-- Error -4 -->
-    <div style="background:#fdf1f0; border:1.5px solid #e8b4ae; border-radius:10px; padding:20px;">
-      <p style="font-size:16px; font-weight:700; color:#b03a2e; margin:0; font-family:'Prompt',sans-serif;">Error Code: -4</p>
-      <p style="font-size:12px; font-style:italic; color:#7a6a68; margin:0 0 14px; font-family:'Prompt',sans-serif;">Failed to download update files</p>
-      <div style="text-align:center; margin-bottom:14px;">
-        <img src="img/tang_error_4.png" alt="Alerta de Tangerine con Error Code -4" style="width:100%; max-width:280px; border-radius:6px; border:1px solid #e8b4ae;">
-      </div>
-      <p style="font-size:13px; font-weight:600; color:#0b3d25; margin:0 0 4px; font-family:'Prompt',sans-serif;">Qué significa</p>
-      <p style="font-size:13px; color:#3d4a42; line-height:1.6; margin:0 0 12px; font-family:'Prompt',sans-serif;">La aplicación no pudo descargar la actualización.</p>
-      <p style="font-size:13px; font-weight:600; color:#0b3d25; margin:0 0 4px; font-family:'Prompt',sans-serif;">Qué hacer</p>
-      <ol style="font-size:13px; color:#3d4a42; line-height:1.6; margin:0; padding-left:18px; font-family:'Prompt',sans-serif;">
-        <li>Verifique que la tablet esté conectada a WiFi e intente de nuevo.</li>
-        <li>Si con WiFi activo el error continúa, sincronice primero (<a href="#tang-sync" style="color:#018d38;">vea el paso anterior</a>) y tome un pantallazo del resumen. Después desinstale Tangerine y vuelva a instalarla con el QR.</li>
-      </ol>
-    </div>
-
-    <!-- Error 2 -->
-    <div style="background:#f0f8f3; border:1.5px solid #d6ede2; border-radius:10px; padding:20px;">
-      <p style="font-size:16px; font-weight:700; color:#018d38; margin:0; font-family:'Prompt',sans-serif;">Error Code: 2</p>
-      <p style="font-size:12px; font-style:italic; color:#4a7a5e; margin:0 0 14px; font-family:'Prompt',sans-serif;">Nothing new to load from server</p>
-      <div style="text-align:center; margin-bottom:14px;">
-        <img src="img/tang_error_2.png" alt="Alerta de Tangerine con Error Code 2" style="width:100%; max-width:280px; border-radius:6px; border:1px solid #d6ede2;">
-      </div>
-      <p style="font-size:13px; font-weight:600; color:#0b3d25; margin:0 0 4px; font-family:'Prompt',sans-serif;">Qué significa</p>
-      <p style="font-size:13px; color:#3d4a42; line-height:1.6; margin:0 0 12px; font-family:'Prompt',sans-serif;">No hay actualizaciones nuevas o la tablet ya tiene instalada la última versión.</p>
-      <p style="font-size:13px; font-weight:600; color:#0b3d25; margin:0 0 4px; font-family:'Prompt',sans-serif;">Qué hacer</p>
-      <p style="font-size:13px; color:#3d4a42; line-height:1.6; margin:0; font-family:'Prompt',sans-serif;">Toque <strong>Aceptar</strong> y siga trabajando normalmente.</p>
-    </div>
-
-  </div>
-
-    <p style="font-size:12px; color:#4a7a5e; line-height:1.6; margin:18px 0 0; font-family:'Prompt',sans-serif;">
-    Si aparece un código distinto a estos. Comuníquese con su operador o escriba al WhatsApp
-    <a href="https://wa.me/573180755943" target="_blank" style="color:#018d38; font-weight:600; text-decoration:underline;">318 075 5943</a>.
-  </p>
-</div>
-<!-- ==================== FIN [TANGERINE] Sincronización y errores ==================== -->
-      <!-- INSTRUMENTOS DE OBSERVACIÓN -->
-      <div style="margin-top:40px; background:#fff; border:1px solid #d6ede2; border-radius:12px; padding:28px 24px;">
-        <p class="mat-sublabel" style="margin-top:0;">Instrumentos de observación</p>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.7; margin:0 0 20px; font-family:'Prompt',sans-serif;">
-          Tutoriales completos sobre el diligenciamiento de los formatos de observación de aula en Tangerine.
-        </p>
-
-        <div class="fac-videos-grid" style="grid-template-columns: repeat(2, 1fr);">
-
-          <div class="fac-video-card">
-            <div class="fac-video-thumb" style="padding-top:56.25%; position:relative;">
-              <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/VyE5iuVEe4Y" title="Instrumento de observación — Transición" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <div class="fac-video-body">
-              <p class="fac-video-part">Tutorial completo</p>
-              <p class="fac-video-name">Observación de aula — Transición</p>
-            </div>
+      <!-- ===== SINCRONIZACIÓN ===== -->
+      <div class="fc-tab-panel" data-tab="t-sync" hidden>
+        <h3 class="fc-tab-t">¿Cuántas pruebas tienes sincronizadas?</h3>
+        <p class="fc-tab-sub">Antes de cerrar la jornada, entra a <b>Sincronización</b> en Tangerine y revisa el resumen del estado.</p>
+        <div class="fc-sync">
+          <div class="fc-sync-img">
+            <img src="img/tang_sincronizacion.png" alt="Pantalla de resumen del estado de la sincronización en Tangerine" loading="lazy">
+            <button type="button" class="fc-pin" data-paso="1" aria-label="Ver paso 1">1</button>
+            <button type="button" class="fc-pin" data-paso="2" aria-label="Ver paso 2">2</button>
+            <button type="button" class="fc-pin" data-paso="3" aria-label="Ver paso 3">3</button>
           </div>
+          <ol class="fc-pasos">
+            <li data-paso="1"><span class="fc-paso-n">1</span><div><b>Responses uploaded <i class="fc-chip am">105</i></b><p>Pruebas que ya subieron a la nube. Están a salvo.</p></div></li>
+            <li data-paso="2"><span class="fc-paso-n">2</span><div><b>Responses not uploaded <i class="fc-chip na">2</i></b><p>Pruebas que <b>todavía están solo en la tablet</b>: si la tablet se daña, se pierden. Al terminar el día este número debe quedar en <b>0</b>.</p></div></li>
+            <li data-paso="3"><span class="fc-paso-n">3</span><div><b>Si el número naranja no es 0</b><p>Conéctate a WiFi, toca el botón azul <b>Sincronizar datos para todos los usuarios</b> y espera a que el porcentaje llegue a <b>100 %</b>.</p></div></li>
+          </ol>
+        </div>
+      </div>
 
-          <div class="fac-video-card">
-            <div class="fac-video-thumb" style="padding-top:56.25%; position:relative;">
-              <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/0QUhd1kJauw" title="Instrumento de observación — Primer grado" allowfullscreen loading="lazy"></iframe>
+      <!-- ===== ERRORES AL ACTUALIZAR ===== -->
+      <div class="fc-tab-panel" data-tab="t-errores" hidden>
+        <h3 class="fc-tab-t">Mensajes de error al actualizar</h3>
+        <p class="fc-tab-sub">Al actualizar la aplicación puede aparecer una alerta con un código. Busca el código en el mensaje y sigue las indicaciones.</p>
+        <div class="fc-errores">
+          <details class="fc-error" open>
+            <summary>
+              <code>Error Code: -4</code><span>Failed to download update files</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="fc-error-bd">
+              <img src="img/tang_error_4.png" alt="Alerta de Tangerine con Error Code -4" loading="lazy">
+              <div>
+                <p class="fc-error-k">Qué significa</p>
+                <p>La aplicación no pudo descargar la actualización.</p>
+                <p class="fc-error-k">Qué hacer</p>
+                <ol>
+                  <li>Verifica que la tablet esté conectada a WiFi e intenta de nuevo.</li>
+                  <li>Si con WiFi el error continúa, <button type="button" class="fc-ir" data-ir="t-sync">sincroniza primero</button> y toma un pantallazo del resumen. Después comunícate al WhatsApp de soporte.</li>
+                </ol>
+              </div>
             </div>
-            <div class="fac-video-body">
-              <p class="fac-video-part">Tutorial completo</p>
-              <p class="fac-video-name">Observación de aula — Primer grado</p>
+          </details>
+          <details class="fc-error">
+            <summary>
+              <code>Error Code: 2</code><span>Nothing new to load from server</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="fc-error-bd">
+              <img src="img/tang_error_2.png" alt="Alerta de Tangerine con Error Code 2" loading="lazy">
+              <div>
+                <p class="fc-error-k">Qué significa</p>
+                <p>No hay actualizaciones nuevas: la tablet ya tiene la última versión.</p>
+                <p class="fc-error-k">Qué hacer</p>
+                <p>Toca <b>Aceptar</b> y sigue trabajando normalmente.</p>
+              </div>
             </div>
+          </details>
+        </div>
+        <p class="fc-tab-nota">¿Te aparece un código distinto? Comunícate con tu operador o escribe al WhatsApp de soporte <a href="https://wa.me/573180755943" target="_blank" rel="noopener">318 075 5943</a>.</p>
+      </div>
+
+      <!-- ===== OBSERVACIÓN DE AULA ===== -->
+      <div class="fc-tab-panel" data-tab="t-obs" hidden>
+        <h3 class="fc-tab-t">Instrumentos de observación</h3>
+        <p class="fc-tab-sub">Tutoriales completos para diligenciar los formatos de observación de aula en Tangerine.</p>
+        <div class="fc-obs">
+          <div>
+            <button type="button" class="fc-player" data-video="VyE5iuVEe4Y" aria-label="Reproducir: observación de aula en transición">
+              <img src="https://img.youtube.com/vi/VyE5iuVEe4Y/hqdefault.jpg" alt="" loading="lazy">
+              <span class="fc-player-play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7,4 20,12 7,20"/></svg></span>
+              <span class="fc-player-et">Transición</span>
+            </button>
+            <p class="fc-obs-t">Observación de aula · Transición</p>
           </div>
-
+          <div>
+            <button type="button" class="fc-player" data-video="0QUhd1kJauw" aria-label="Reproducir: observación de aula en primer grado">
+              <img src="https://img.youtube.com/vi/0QUhd1kJauw/hqdefault.jpg" alt="" loading="lazy">
+              <span class="fc-player-play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7,4 20,12 7,20"/></svg></span>
+              <span class="fc-player-et">Primer grado</span>
+            </button>
+            <p class="fc-obs-t">Observación de aula · Primer grado</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
 <!-- FAQ -->
 <section id="faq" class="fac-section" style="background:#f8fdf9;">
   <div class="fac-inner">
