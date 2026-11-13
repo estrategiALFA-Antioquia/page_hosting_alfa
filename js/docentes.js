@@ -80,3 +80,59 @@
     if (enlace) elegirPrograma(enlace.dataset.programa);
   });
 })();
+
+/* ---------------------------------------------------------
+     PODCAST
+     El primer episodio de la lista se muestra destacado y con "Nuevo".
+     --------------------------------------------------------- */
+  var pod = document.getElementById('podcast');
+  if (pod) {
+    var filas = pod.querySelectorAll('.dc-pod-row');
+    var info = pod.querySelector('.dc-pod-info');
+    var lb = pod.querySelector('.dc-pod-lb');
+    var iframe = lb.querySelector('iframe');
+    var videoActual = '';
+
+    if (filas.length) {
+      var etiqueta = document.createElement('em');
+      etiqueta.textContent = 'Nuevo';
+      filas[0].querySelector('.dc-pod-n').prepend(etiqueta);
+    }
+
+    function mostrarEpisodio(fila, animar) {
+      videoActual = fila.dataset.video;
+      var esNuevo = (fila === filas[0]);
+      pod.querySelector('.dc-pod-cov img').src = fila.dataset.img;
+      pod.querySelector('.dc-pod-cov img').alt = 'Portada del episodio ' + fila.dataset.ep;
+      pod.querySelector('.dc-pod-pill').textContent = 'Episodio ' + fila.dataset.ep + (esNuevo ? ' · Nuevo' : '');
+      pod.querySelector('.dc-pod-t').textContent = fila.dataset.title;
+      pod.querySelector('.dc-pod-guest').textContent = fila.dataset.guest;
+      pod.querySelector('.dc-pod-d').textContent = fila.dataset.desc;
+      filas.forEach(function (f) { f.classList.toggle('activo', f === fila); });
+      if (animar) { info.classList.remove('cambia'); void info.offsetWidth; info.classList.add('cambia'); }
+    }
+
+    function abrir() {
+      iframe.src = 'https://www.youtube.com/embed/' + videoActual + '?autoplay=1';
+      lb.hidden = false;
+      lb.querySelector('.dc-pod-x').focus();
+    }
+    function cerrar() {
+      lb.hidden = true;
+      iframe.src = '';
+    }
+
+    filas.forEach(function (f) { f.addEventListener('click', function () { mostrarEpisodio(f, true); }); });
+    pod.querySelectorAll('[data-accion="escuchar"]').forEach(function (b) { b.addEventListener('click', abrir); });
+    lb.querySelector('.dc-pod-x').addEventListener('click', cerrar);
+    lb.addEventListener('click', function (e) { if (e.target === lb) cerrar(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !lb.hidden) cerrar(); });
+
+    /* En computador, la lista mide lo mismo que el episodio destacado */
+    var feat = pod.querySelector('.dc-pod-feat'), lista = pod.querySelector('.dc-pod-list');
+    function ajustarAlto() { lista.style.maxHeight = (window.innerWidth > 900) ? (feat.offsetHeight - 30) + 'px' : ''; }
+    window.addEventListener('resize', ajustarAlto);
+    window.addEventListener('load', ajustarAlto);
+
+    if (filas.length) mostrarEpisodio(filas[0], false);
+  }
