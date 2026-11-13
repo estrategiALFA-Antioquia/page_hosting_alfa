@@ -1,0 +1,50 @@
+/* =========================================================
+   facilitadores.css — estilos de la página Facilitadores
+   Estrategia ALFA
+   Las secciones se van migrando aquí una por una.
+   ========================================================= */
+:root{
+  --fc-ease:cubic-bezier(.2,.8,.2,1);
+  --fc-tang:#f28c28; --fc-tang-soft:#fff1e3;
+}
+
+/* Párrafo de introducción: mismo ancho que el contenido */
+.fc-lead{ font-family:'Prompt',sans-serif; font-size:16px; font-weight:400; line-height:1.7; color:#2d4a38; margin:0; max-width:none; }
+
+/* ---------------------------------------------------------
+   TU ROL
+   --------------------------------------------------------- */
+.fc-rol{ background:#fff; }
+.fc-rol-grid{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; margin-top:32px; }
+
+.fc-rol-card{
+  position:relative; overflow:hidden; border-radius:20px; padding:22px;
+  background:#f0f8f3; display:flex; flex-direction:column; gap:10px; font-family:'Prompt',sans-serif;
+  transition:transform .45s var(--fc-ease), box-shadow .45s var(--fc-ease), background .3s;
+}
+.fc-rol-card::after{
+  content:attr(data-num); position:absolute; right:14px; top:4px;
+  font-size:56px; font-weight:800; line-height:1; color:#018d38; opacity:.08; pointer-events:none;
+  transition:opacity .4s, transform .5s var(--fc-ease);
+}
+.fc-rol-ic{
+  width:46px; height:46px; border-radius:14px; background:#fff; color:#018d38;
+  display:grid; place-items:center;
+  transition:background .3s, color .3s, transform .4s var(--fc-ease);
+}
+.fc-rol-card h3{ font-family:'Prompt',sans-serif; font-size:17px; font-weight:700; color:#0b3d25; line-height:1.3; margin:0; }
+.fc-rol-card p{ font-size:14px; line-height:1.6; color:#2d4a38; margin:0; }
+
+.fc-rol-card:hover{ transform:translateY(-6px); box-shadow:0 20px 40px rgba(11,40,30,.12); background:#fff; }
+.fc-rol-card:hover .fc-rol-ic{ background:#018d38; color:#fff; transform:rotate(-6deg); }
+.fc-rol-card:hover::after{ opacity:.14; transform:translateY(4px); }
+
+@media (max-width:900px){ .fc-rol-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:560px){ .fc-rol-grid{ grid-template-columns:minmax(0,1fr); gap:12px; } }
+
+/* ---------------------------------------------------------
+   Movimiento reducido
+   --------------------------------------------------------- */
+@media (prefers-reduced-motion:reduce){
+  [class^="fc-"], [class^="fc-"]::before, [class^="fc-"]::after, [class^="fc-"] *{ transition:none !important; animation:none !important; }
+}

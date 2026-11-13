@@ -15,6 +15,7 @@
 <link href="css/style.css" rel="stylesheet" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="css/facilitadores.css?v=1" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
  
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -88,44 +89,48 @@
     </div>
   </nav>
 
-  <!-- SU ROL -->
-<section id="rol" class="fac-section" style="background:#fff;">
-  <div class="fac-inner">
-    <p class="fac-eyebrow">Tu rol en ALFA</p>
-    <h2 class="fac-title">¿Qué haces como facilitador?</h2>
-    <p class="fac-body">Eres el vínculo directo entre el programa y el aula. Tu trabajo garantiza que los docentes implementen ATAL y Kalulu con fidelidad instruccional.</p>
-    <div class="fac-rol-grid">
-      <div class="fac-rol-card">
-        <div class="fac-rol-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <h3>Acompañamiento en aula</h3>
-        <p>Realiza las visitas en transición y en primer grado, siguiendo la progresión de modelación → coanimación → observación.</p>
-      </div>
-      <div class="fac-rol-card">
-        <div class="fac-rol-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-        </div>
-        <h3>Aplicación de EGRA</h3>
-        <p>Aplica las pruebas EGRA en dos momentos del año — línea base y final — usando Tangerine.</p>
-      </div>
-      <div class="fac-rol-card">
-        <div class="fac-rol-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-        </div>
-        <h3>Entrega de materiales</h3>
-        <p>Distribuye los materiales ATAL y Kalulu a rectores y docentes en la primera visita in situ a cada institución.</p>
-      </div>
-      <div class="fac-rol-card">
-        <div class="fac-rol-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <h3>Registro y monitoreo</h3>
-        <p>Registra los indicadores de fidelidad instruccional y reporta al operador para el seguimiento de la estrategia.</p>
+  <!-- TU ROL -->
+  <section id="rol" class="fac-section fc-rol">
+    <div class="fac-inner">
+      <p class="fac-eyebrow">Tu rol en ALFA</p>
+      <h2 class="fac-title">¿Qué haces como facilitador?</h2>
+      <p class="fc-lead">Eres el vínculo directo entre la estrategia y el aula: acompañas a los docentes para que implementen ATAL y Kalulu con fidelidad.</p>
+
+      <div class="fc-rol-grid">
+        <article class="fc-rol-card" data-num="1">
+          <span class="fc-rol-ic" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><path d="M16 4h5v6h-5"/></svg>
+          </span>
+          <h3>Acompañamiento en aula</h3>
+          <p>Realizas las visitas en transición y primero, con la progresión modelación, coanimación y observación.</p>
+        </article>
+
+        <article class="fc-rol-card" data-num="2">
+          <span class="fc-rol-ic" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>
+          </span>
+          <h3>Aplicación de EGRA</h3>
+          <p>Aplicas la prueba en dos momentos del año, línea base y final, con Tangerine.</p>
+        </article>
+
+        <article class="fc-rol-card" data-num="3">
+          <span class="fc-rol-ic" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-5 9 5-9 5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>
+          </span>
+          <h3>Entrega de materiales</h3>
+          <p>Llevas los materiales ATAL y Kalulu a rectores y docentes en la primera visita a cada institución.</p>
+        </article>
+
+        <article class="fc-rol-card" data-num="4">
+          <span class="fc-rol-ic" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="M7 16v-5M12 16V7M17 16v-8"/></svg>
+          </span>
+          <h3>Registro y monitoreo</h3>
+          <p>Registras los indicadores de fidelidad y los reportas al operador para el seguimiento de la estrategia.</p>
+        </article>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 <!-- CAPACITACIÓN -->
   <section id="capacitacion" class="fac-section" style="background:#f8fdf9;">
@@ -905,5 +910,6 @@ function matSubTab(btn, subPanelId, parentPanelId) {
 <script src="js/animate.js"></script>
 <script src="js/custom.js"></script>
 <script src="js/footer.js"></script>
+<script src="js/facilitadores.js?v=1"></script>
 </body>
 </html>
