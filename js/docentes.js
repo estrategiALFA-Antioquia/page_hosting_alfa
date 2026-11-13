@@ -136,3 +136,26 @@
 
     if (filas.length) mostrarEpisodio(filas[0], false);
   }
+
+  /* ---------------------------------------------------------
+     ACOMPAÑAMIENTO: la línea y las barras se animan al llegar
+     --------------------------------------------------------- */
+  var fases = document.querySelector('.dc-fases');
+  if (fases) {
+    /* Cada barra toma el porcentaje de data-facilitador */
+    fases.querySelectorAll('.dc-fase').forEach(function (f) {
+      var fac = parseInt(f.dataset.facilitador, 10) || 50;
+      f.style.setProperty('--fac', fac + '%');
+      f.style.setProperty('--doc', (100 - fac) + '%');
+    });
+
+    var sinAnimar = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (sinAnimar || !('IntersectionObserver' in window)) {
+      fases.classList.add('visible');
+    } else {
+      var obs = new IntersectionObserver(function (entradas) {
+        if (entradas[0].isIntersecting) { fases.classList.add('visible'); obs.disconnect(); }
+      }, { threshold: 0.3 });
+      obs.observe(fases);
+    }
+  }

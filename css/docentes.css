@@ -319,3 +319,64 @@
   .dc-pod-cov{ width:100%; max-width:240px; margin:0 auto; }
   .dc-pod-t{ font-size:20px; }
 }
+
+
+/* ---------------------------------------------------------
+   ACOMPAÑAMIENTO
+   --------------------------------------------------------- */
+.dc-acomp{ background:#fff; }
+.dc-fases{ position:relative; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin-top:44px; font-family:'Prompt',sans-serif; }
+
+/* Línea que une las fases y se dibuja al llegar a la sección */
+.dc-fases-linea{ position:absolute; left:16.6%; right:16.6%; top:27px; height:3px; background:#d6ede2; border-radius:3px; overflow:hidden; }
+.dc-fases-linea i{ display:block; width:0; height:100%; background:#018d38; transition:width 1.6s var(--dc-ease); }
+.dc-fases.visible .dc-fases-linea i{ width:100%; }
+
+.dc-fase{ position:relative; display:flex; flex-direction:column; align-items:center; gap:10px; text-align:center; }
+.dc-fase-num{
+  position:relative; z-index:1; width:56px; height:56px; border-radius:50%;
+  background:#fff; border:3px solid #d6ede2; color:#4d6b5f;
+  display:grid; place-items:center; font-size:20px; font-weight:700;
+  transition:background .4s, border-color .4s, color .4s, transform .4s var(--dc-ease);
+}
+.dc-fases.visible .dc-fase-num{ background:#018d38; border-color:#018d38; color:#fff; }
+.dc-fases.visible .dc-fase:nth-of-type(2) .dc-fase-num{ transition-delay:.1s; }
+.dc-fases.visible .dc-fase:nth-of-type(3) .dc-fase-num{ transition-delay:.7s; }
+.dc-fases.visible .dc-fase:nth-of-type(4) .dc-fase-num{ transition-delay:1.3s; }
+.dc-fase:hover .dc-fase-num{ transform:scale(1.08); }
+.dc-fase h3{ font-family:'Prompt',sans-serif; font-size:20px; font-weight:700; color:#0b3d25; margin:4px 0 0; }
+.dc-fase p{ font-size:15px; line-height:1.65; color:#2d4a38; margin:0; max-width:30ch; }
+
+/* Barra de quién lidera la clase */
+.dc-lidera{ width:100%; max-width:240px; margin-top:6px; }
+.dc-lidera-barra{ display:flex; height:8px; border-radius:999px; overflow:hidden; background:#f0f8f3; }
+.dc-lidera-barra span{ width:0; transition:width 1.2s var(--dc-ease); }
+.dc-lidera-barra .fac{ background:#8FE0B0; }
+.dc-lidera-barra .doc{ background:#0b5640; }
+.dc-fases.visible .dc-lidera-barra .fac{ width:var(--fac); }
+.dc-fases.visible .dc-lidera-barra .doc{ width:var(--doc); }
+.dc-lidera-et{ display:flex; justify-content:space-between; font-size:11.5px; color:#4d6b5f; margin-top:6px; }
+
+.dc-fases-ley{ display:flex; flex-wrap:wrap; justify-content:center; gap:8px 18px; margin-top:28px; font-family:'Prompt',sans-serif; font-size:13px; color:#4d6b5f; }
+.dc-fases-ley span{ display:inline-flex; align-items:center; gap:8px; }
+.dc-fases-ley i{ width:12px; height:12px; border-radius:3px; }
+.dc-fases-ley i.fac{ background:#8FE0B0; }
+.dc-fases-ley i.doc{ background:#0b5640; }
+
+/* En celular, las fases van una debajo de la otra con la línea vertical */
+@media (max-width:760px){
+  .dc-fases{ grid-template-columns:minmax(0,1fr); gap:36px; }
+  .dc-fases-linea{ display:none; }
+  /* Tramo de línea entre una fase y la siguiente */
+  .dc-fase:not(:last-of-type)::before{
+    content:""; position:absolute; left:27px; top:56px; bottom:-36px; width:3px;
+    background:linear-gradient(#018d38,#018d38) top / 100% 0 no-repeat, #d6ede2;
+    transition:background-size .8s var(--dc-ease);
+  }
+  .dc-fases.visible .dc-fase:not(:last-of-type)::before{ background-size:100% 100%; }
+  .dc-fases.visible .dc-fase:nth-of-type(3)::before{ transition-delay:.6s; }
+  .dc-fase{ align-items:flex-start; text-align:left; padding-left:76px; }
+  .dc-fase-num{ position:absolute; left:0; top:0; }
+  .dc-fase h3{ margin-top:12px; }
+  .dc-fases-ley{ justify-content:flex-start; }
+}
