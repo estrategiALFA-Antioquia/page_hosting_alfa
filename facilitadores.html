@@ -132,290 +132,167 @@
     </div>
   </section>
 
-<!-- CAPACITACIÓN -->
-  <section id="capacitacion" class="fac-section" style="background:#f8fdf9;">
+<!-- CAPACITACIÓN
+       Cada día tiene un solo reproductor: el video se carga cuando se hace clic.
+       Para agregar una parte: copiar un botón "fc-parte" con su data-video. -->
+  <section id="capacitacion" class="fac-section fc-cap">
     <div class="fac-inner">
       <p class="fac-eyebrow">Capacitación</p>
       <h2 class="fac-title">Videos de formación</h2>
-      <p class="fac-body">Aquí encuentras las capacitaciones realizadas en el 2026. Cada una incluye los videos de las sesiones y las presentaciones para descargar.</p>
+      <p class="fc-lead">Las capacitaciones realizadas en 2026, con los videos de cada sesión y las presentaciones para descargar. Elige la sesión y el día.</p>
 
-      <!-- PESTAÑAS -->
-      <div class="mat-tabs" style="margin-top:28px;">
-        <button class="mat-tab-btn active" onclick="matTab(this,'cap-marzo')">Capacitación inicial · 24–27 de marzo</button>
-        <button class="mat-tab-btn" onclick="matTab(this,'cap-julio')">Sesión del 2 de julio</button>
+      <div class="fc-sesiones" role="tablist" aria-label="Sesiones de capacitación">
+        <button type="button" role="tab" data-ses="marzo" aria-selected="true">Capacitación inicial · 24 al 27 de marzo</button>
+        <button type="button" role="tab" data-ses="julio" aria-selected="false">Sesión del 2 de julio</button>
       </div>
 
-      <!-- ===== PESTAÑA 1: MARZO ===== -->
-      <div id="cap-marzo" class="mat-panel active">
-
-        
-      <!-- DÍA 1 -->
-      <div class="fac-dia-block" style="margin-top:36px;">
-        <div class="fac-dia-header">
-          <span class="fac-dia-badge">Día 1</span>
-          <h3 class="fac-dia-title">Fundamentos de la Estrategia ALFA</h3>
+      <!-- ===== CAPACITACIÓN INICIAL · 24 AL 27 DE MARZO ===== -->
+      <div class="fc-sesion" data-ses="marzo">
+        <div class="fc-dias" role="tablist">
+          <button type="button" role="tab" data-dia="m1" aria-selected="true"><small>Día 1</small><b>Fundamentos de la Estrategia ALFA</b></button>
+          <button type="button" role="tab" data-dia="m2" aria-selected="false"><small>Día 2</small><b>Ciencia de la lectura y alfabetización inicial</b></button>
+          <button type="button" role="tab" data-dia="m3" aria-selected="false"><small>Día 3</small><b>Programa ATAL: Aprendamos Todos a Leer</b></button>
+          <button type="button" role="tab" data-dia="m4" aria-selected="false"><small>Día 4</small><b>Tangerine: evaluación formativa y monitoreo</b></button>
         </div>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.75; margin-bottom:20px; font-family:'Prompt',sans-serif;">El primer día estableció el marco institucional completo de la estrategia: por qué existe ALFA, qué pretende lograr y cuál es el rol de cada actor. Se presentó la magnitud de la crisis de alfabetización en Antioquia, la teoría de cambio del programa y la ruta de implementación en cuatro fases. El mensaje central fue claro: el facilitador es el eslabón más crítico entre el programa y el aula, y su impacto se mide por lo que el docente puede hacer sin él.</p>
-              <div class="fac-recursos" style="margin-bottom:20px; justify-content:center;">
-          <a href="https://www.canva.com/design/DAHE3cm1o90/Ya7pkXwsBcuM8A1EJqRkwg/view?utm_content=DAHE3cm1o90&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h01b5e45436#3" target="_blank" class="fac-recurso-btn">📊 Presentación 1 — Canva</a>
-          <a href="https://drive.google.com/file/d/1Cj9yIIa6qeZW73lt7wRP7U0mKSrrciTf/view?usp=sharing" target="_blank" class="fac-recurso-btn">↓ Presentación 2</a>
-          <a href="https://drive.google.com/file/d/18p9KXkjucWdl3Un8EHTsSaV9lbaQ5iCj/view?usp=sharing" target="_blank" class="fac-recurso-btn">↓ Presentación 3</a>
-          <a href="https://drive.google.com/file/d/1z1mj7RaxE9d9VjUYIERF1wguZ3SIkf_W/view?usp=sharing" target="_blank" class="fac-recurso-btn">↓ Presentación 4</a>
-        </div>
-		
-		<div class="fac-videos-grid">
 
-          <div class="fac-video-card">
-            <div class="fac-video-thumb" style="padding-top:56.25%; position:relative;">
-              <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/qFvbF51tpj4" title="Día 1 Primera parte" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <div class="fac-video-body">
-              <p class="fac-video-part">Primera parte · 19:55</p>
-              <p class="fac-video-name">Fundamentos de la Estrategia ALFA</p>
+        <div class="fc-dia" data-dia="m1">
+          <div class="fc-dia-main">
+            <button type="button" class="fc-player" data-video="qFvbF51tpj4" aria-label="Reproducir: Fundamentos de la Estrategia ALFA, primera parte">
+              <img src="https://img.youtube.com/vi/qFvbF51tpj4/hqdefault.jpg" alt="" loading="lazy">
+              <span class="fc-player-play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7,4 20,12 7,20"/></svg></span>
+              <span class="fc-player-et">Primera parte</span>
+            </button>
+            <p class="fc-dia-desc">El primer día estableció el marco institucional completo de la estrategia: por qué existe ALFA, qué pretende lograr y cuál es el rol de cada actor. Se presentó la magnitud de la crisis de alfabetización en Antioquia, la teoría de cambio del programa y la ruta de implementación en cuatro fases. El mensaje central fue claro: el facilitador es el eslabón más crítico entre el programa y el aula, y su impacto se mide por lo que el docente puede hacer sin él.</p>
+            <div class="fc-recursos">
+              <a href="https://www.canva.com/design/DAHE3cm1o90/Ya7pkXwsBcuM8A1EJqRkwg/view?utm_content=DAHE3cm1o90&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=uniquelinks&amp;utlId=h01b5e45436#3" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg> Presentación 1 · Canva</a>
+              <a href="https://drive.google.com/file/d/1Cj9yIIa6qeZW73lt7wRP7U0mKSrrciTf/view?usp=sharing" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg> Presentación 2</a>
+              <a href="https://drive.google.com/file/d/18p9KXkjucWdl3Un8EHTsSaV9lbaQ5iCj/view?usp=sharing" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg> Presentación 3</a>
+              <a href="https://drive.google.com/file/d/1z1mj7RaxE9d9VjUYIERF1wguZ3SIkf_W/view?usp=sharing" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg> Presentación 4</a>
             </div>
           </div>
-
-          <div class="fac-video-card">
-            <div class="fac-video-thumb" style="padding-top:56.25%; position:relative;">
-              <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/UpdsaOo3rlM" title="Día 1 Segunda parte" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <div class="fac-video-body">
-              <p class="fac-video-part">Segunda parte · 17:54</p>
-              <p class="fac-video-name">Fundamentos de la Estrategia ALFA</p>
-            </div>
+          <div class="fc-partes">
+            <p class="fc-partes-t">Fundamentos de la Estrategia ALFA</p>
+            <button type="button" class="fc-parte activo" data-video="qFvbF51tpj4"><span class="fc-parte-n">1</span><span class="fc-parte-t">Primera parte</span><em>19:55</em></button>
+            <button type="button" class="fc-parte" data-video="UpdsaOo3rlM"><span class="fc-parte-n">2</span><span class="fc-parte-t">Segunda parte</span><em>17:54</em></button>
+            <button type="button" class="fc-parte" data-video="wAPVaSiUtrY"><span class="fc-parte-n">3</span><span class="fc-parte-t">Tercera parte</span><em>59:52</em></button>
+            <button type="button" class="fc-parte" data-video="3zwO3YVTg0A"><span class="fc-parte-n">4</span><span class="fc-parte-t">Cuarta parte</span><em>1:09:01</em></button>
           </div>
-
-          <div class="fac-video-card">
-            <div class="fac-video-thumb" style="padding-top:56.25%; position:relative;">
-              <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/wAPVaSiUtrY" title="Día 1 Tercera parte" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <div class="fac-video-body">
-              <p class="fac-video-part">Tercera parte · 59:52</p>
-              <p class="fac-video-name">Fundamentos de la Estrategia ALFA</p>
-            </div>
-          </div>
-
-          <div class="fac-video-card">
-            <div class="fac-video-thumb" style="padding-top:56.25%; position:relative;">
-              <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/3zwO3YVTg0A" title="Día 1 Cuarta parte" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <div class="fac-video-body">
-              <p class="fac-video-part">Cuarta parte · 1:09:01</p>
-              <p class="fac-video-name">Fundamentos de la Estrategia ALFA</p>
-            </div>
-          </div>
-
         </div>
-  
-      </div>
 
-      <!-- DÍA 2 -->
-      <div class="fac-dia-block">
-        <div class="fac-dia-header">
-          <span class="fac-dia-badge">Día 2</span>
-          <h3 class="fac-dia-title">Ciencia de la lectura y alfabetización inicial</h3>
-        </div>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.75; margin-bottom:20px; font-family:'Prompt',sans-serif;">El segundo día respondió la pregunta de fondo: ¿por qué enseñamos a leer de esta manera y no de otra? Se abordaron los fundamentos neurobiológicos del aprendizaje lector, el modelo simple de la lectura (reconocimiento de palabras + comprensión del lenguaje), y la importancia de la enseñanza explícita y sistemática. El mensaje central: la comprensión lectora es el producto de dos componentes, y si alguno está débil el otro no puede compensarlo.</p>
-       <div class="fac-recursos" style="margin-bottom:20px; justify-content:center;">
-          <a href="https://drive.google.com/file/d/1WNnfu_kGliWDn9jLfq1WB_ejA3hbHOc-/view?usp=sharing" target="_blank" class="fac-recurso-btn">↓ Presentación 1</a>
-          <a href="https://drive.google.com/file/d/1UVXXA8_5fwo9oTxq6dikdeuJWJFTNUzB/view?usp=sharing" target="_blank" class="fac-recurso-btn">↓ Presentación 2</a>
-          <a href="https://drive.google.com/file/d/1EuUSRmV5fTAJv6lF4kcuKST3LmuuM9Yt/view?usp=sharing" target="_blank" class="fac-recurso-btn">↓ Imprimible 1</a>
-          <a href="https://drive.google.com/file/d/1MFfzKtynPmX-XtqNvIIOSVM1WAIXplxj/view?usp=sharing" target="_blank" class="fac-recurso-btn">↓ Imprimible 2</a>
-        </div>
-		<div class="fac-videos-grid">
-
-          <div class="fac-video-card">
-            <div class="fac-video-thumb" style="padding-top:56.25%; position:relative;">
-              <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/Fa15PHioa_g" title="Día 2 Primera parte" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <div class="fac-video-body">
-              <p class="fac-video-part">Primera parte · 2:21:41</p>
-              <p class="fac-video-name">Ciencia de la lectura y alfabetización inicial</p>
+        <div class="fc-dia" data-dia="m2" hidden>
+          <div class="fc-dia-main">
+            <button type="button" class="fc-player" data-video="Fa15PHioa_g" aria-label="Reproducir: Ciencia de la lectura y alfabetización inicial, primera parte">
+              <img src="https://img.youtube.com/vi/Fa15PHioa_g/hqdefault.jpg" alt="" loading="lazy">
+              <span class="fc-player-play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7,4 20,12 7,20"/></svg></span>
+              <span class="fc-player-et">Primera parte</span>
+            </button>
+            <p class="fc-dia-desc">El segundo día respondió la pregunta de fondo: ¿por qué enseñamos a leer de esta manera y no de otra? Se abordaron los fundamentos neurobiológicos del aprendizaje lector, el modelo simple de la lectura (reconocimiento de palabras + comprensión del lenguaje), y la importancia de la enseñanza explícita y sistemática. El mensaje central: la comprensión lectora es el producto de dos componentes, y si alguno está débil el otro no puede compensarlo.</p>
+            <div class="fc-recursos">
+              <a href="https://drive.google.com/file/d/1WNnfu_kGliWDn9jLfq1WB_ejA3hbHOc-/view?usp=sharing" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg> Presentación 1</a>
+              <a href="https://drive.google.com/file/d/1UVXXA8_5fwo9oTxq6dikdeuJWJFTNUzB/view?usp=sharing" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg> Presentación 2</a>
+              <a href="https://drive.google.com/file/d/1EuUSRmV5fTAJv6lF4kcuKST3LmuuM9Yt/view?usp=sharing" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg> Imprimible 1</a>
+              <a href="https://drive.google.com/file/d/1MFfzKtynPmX-XtqNvIIOSVM1WAIXplxj/view?usp=sharing" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg> Imprimible 2</a>
             </div>
           </div>
+          <div class="fc-partes">
+            <p class="fc-partes-t">Ciencia de la lectura y alfabetización inicial</p>
+            <button type="button" class="fc-parte activo" data-video="Fa15PHioa_g"><span class="fc-parte-n">1</span><span class="fc-parte-t">Primera parte</span><em>2:21:41</em></button>
+            <button type="button" class="fc-parte" data-video="ydASuyz2W80"><span class="fc-parte-n">2</span><span class="fc-parte-t">Segunda parte</span><em>1:49:28</em></button>
+          </div>
+        </div>
 
-          <div class="fac-video-card">
-            <div class="fac-video-thumb" style="padding-top:56.25%; position:relative;">
-              <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/ydASuyz2W80" title="Día 2 Segunda parte" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <div class="fac-video-body">
-              <p class="fac-video-part">Segunda parte · 1:49:28</p>
-              <p class="fac-video-name">Ciencia de la lectura y alfabetización inicial</p>
+        <div class="fc-dia" data-dia="m3" hidden>
+          <div class="fc-dia-main">
+            <button type="button" class="fc-player" data-video="a52Clk1DJvs" aria-label="Reproducir: Programa ATAL: Aprendamos Todos a Leer, primera parte">
+              <img src="https://img.youtube.com/vi/a52Clk1DJvs/hqdefault.jpg" alt="" loading="lazy">
+              <span class="fc-player-play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7,4 20,12 7,20"/></svg></span>
+              <span class="fc-player-et">Primera parte</span>
+            </button>
+            <p class="fc-dia-desc">El tercer día fue la transición de la teoría a la práctica: si el Día 1 explicó el qué y el quién, y el Día 2 el por qué, este día fue el cómo. Se presentaron los materiales ATAL, las rutas metodológicas para transición y primer grado, y se realizaron simulaciones prácticas de aula. La idea central: la fidelidad de la implementación es lo que garantiza los resultados. Mezclar actividades o alterar la progresión fonémica hace imposible saber qué está funcionando.</p>
+            <div class="fc-recursos">
+              <a href="https://drive.google.com/file/d/1BL4VFZnWF8u4yyAe8wuWMKpqUPsr5j7A/view?usp=sharing" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg> Presentación</a>
             </div>
           </div>
-
+          <div class="fc-partes">
+            <p class="fc-partes-t">Programa ATAL: Aprendamos Todos a Leer</p>
+            <button type="button" class="fc-parte activo" data-video="a52Clk1DJvs"><span class="fc-parte-n">1</span><span class="fc-parte-t">Primera parte</span><em>1:24:23</em></button>
+            <button type="button" class="fc-parte" data-video="05tEBev-LGA"><span class="fc-parte-n">2</span><span class="fc-parte-t">Segunda parte</span><em>1:25:19</em></button>
+          </div>
         </div>
-        
-      </div>
 
-      <!-- DÍA 3 -->
-      <div class="fac-dia-block">
-        <div class="fac-dia-header">
-          <span class="fac-dia-badge">Día 3</span>
-          <h3 class="fac-dia-title">Programa ATAL: Aprendamos Todos a Leer</h3>
-        </div>
-        <p style="font-size:13px; color:#4a7a5e; line-height:1.75; margin-bottom:20px; font-family:'Prompt',sans-serif;">El tercer día fue la transición de la teoría a la práctica: si el Día 1 explicó el qué y el quién, y el Día 2 el por qué, este día fue el cómo. Se presentaron los materiales ATAL, las rutas metodológicas para transición y primer grado, y se realizaron simulaciones prácticas de aula. La idea central: la fidelidad de la implementación es lo que garantiza los resultados. Mezclar actividades o alterar la progresión fonémica hace imposible saber qué está funcionando.</p>
-         <div class="fac-recursos" style="margin-bottom:20px; justify-content:center;">
-          <a href="https://drive.google.com/file/d/1BL4VFZnWF8u4yyAe8wuWMKpqUPsr5j7A/view?usp=sharing" target="_blank" class="fac-recurso-btn">↓ Presentación</a></div>
-        
-		<div class="fac-videos-grid">
-
-          <div class="fac-video-card">
-            <div class="fac-video-thumb" style="padding-top:56.25%; position:relative;">
-              <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/a52Clk1DJvs" title="Día 3 Primera parte" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <div class="fac-video-body">
-              <p class="fac-video-part">Primera parte · 1:24:23</p>
-              <p class="fac-video-name">Programa ATAL: Aprendamos Todos a Leer</p>
+        <div class="fc-dia" data-dia="m4" hidden>
+          <div class="fc-dia-main">
+            <button type="button" class="fc-player" data-video="Q2EZxqJtbSs" aria-label="Reproducir: Tangerine: evaluación formativa y monitoreo, primera parte">
+              <img src="https://img.youtube.com/vi/Q2EZxqJtbSs/hqdefault.jpg" alt="" loading="lazy">
+              <span class="fc-player-play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7,4 20,12 7,20"/></svg></span>
+              <span class="fc-player-et">Primera parte</span>
+            </button>
+            <p class="fc-dia-desc">El cuarto día fue completamente práctico: instalación de Tangerine, protocolo de aplicación de las pruebas EGRA, interpretación de resultados y reporte de información. Se trabajó con simulaciones en tríos para preparar el trabajo de campo. Dos ideas fundamentales: sin datos no hay evidencia de que la estrategia funciona; y sincronizar todos los días, porque una tablet dañada antes de sincronizar significa perder el trabajo del día.</p>
+            <div class="fc-recursos">
+              <a href="https://drive.google.com/file/d/18BjU1fOYkl7EVjb1ZZwZTB1bhVr9cy36/view?usp=sharing" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg> Presentación</a>
             </div>
           </div>
-
-          <div class="fac-video-card">
-            <div class="fac-video-thumb" style="padding-top:56.25%; position:relative;">
-              <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/05tEBev-LGA" title="Día 3 Segunda parte" allowfullscreen loading="lazy"></iframe>
-            </div>
-            <div class="fac-video-body">
-              <p class="fac-video-part">Segunda parte · 1:25:19</p>
-              <p class="fac-video-name">Programa ATAL: Aprendamos Todos a Leer</p>
-            </div>
+          <div class="fc-partes">
+            <p class="fc-partes-t">Tangerine: evaluación formativa y monitoreo</p>
+            <button type="button" class="fc-parte activo" data-video="Q2EZxqJtbSs"><span class="fc-parte-n">1</span><span class="fc-parte-t">Primera parte</span><em>48:48</em></button>
+            <button type="button" class="fc-parte" data-video="Sen1iVGVEgo"><span class="fc-parte-n">2</span><span class="fc-parte-t">Segunda parte</span><em>24:12</em></button>
+            <button type="button" class="fc-parte" data-video="HtzpHr5lCls"><span class="fc-parte-n">3</span><span class="fc-parte-t">Tercera parte</span><em>55:05</em></button>
           </div>
         </div>
       </div>
 
-      <!-- DÍA 4 -->
-<div class="fac-dia-block">
-  <div class="fac-dia-header">
-    <span class="fac-dia-badge">Día 4</span>
-    <h3 class="fac-dia-title">Tangerine: evaluación formativa y monitoreo</h3>
-  </div>
-  <p style="font-size:13px; color:#4a7a5e; line-height:1.75; margin-bottom:20px; font-family:'Prompt',sans-serif;">El cuarto día fue completamente práctico: instalación de Tangerine, protocolo de aplicación de las pruebas EGRA, interpretación de resultados y reporte de información. Se trabajó con simulaciones en tríos para preparar el trabajo de campo. Dos ideas fundamentales: sin datos no hay evidencia de que la estrategia funciona; y sincronizar todos los días, porque una tablet dañada antes de sincronizar significa perder el trabajo del día.</p>
+      <!-- ===== SESIÓN DEL 2 DE JULIO ===== -->
+      <div class="fc-sesion" data-ses="julio" hidden>
+        <div class="fc-dias" role="tablist">
+          <button type="button" role="tab" data-dia="j1" aria-selected="true"><small>Formación magistral</small><b>De la sesión al territorio</b></button>
+          <button type="button" role="tab" data-dia="j2" aria-selected="false"><small>Mesas de trabajo</small><b>Mesas de trabajo por operador</b></button>
+        </div>
 
-  <div class="fac-recursos" style="margin-bottom:16px; justify-content:center;">
-    <a href="https://drive.google.com/file/d/18BjU1fOYkl7EVjb1ZZwZTB1bhVr9cy36/view?usp=sharing" target="_blank" class="fac-recurso-btn">↓ Presentación</a>
-  </div>
+        <div class="fc-dia" data-dia="j1">
+          <div class="fc-dia-main">
+            <button type="button" class="fc-player" data-video="iXvA_me85Nk" aria-label="Reproducir: De la sesión al territorio, primera parte">
+              <img src="https://img.youtube.com/vi/iXvA_me85Nk/hqdefault.jpg" alt="" loading="lazy">
+              <span class="fc-player-play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7,4 20,12 7,20"/></svg></span>
+              <span class="fc-player-et">Primera parte</span>
+            </button>
+            <p class="fc-dia-desc">Esta sesión marcó el paso de la formación inicial al trabajo en territorio: formación técnica para acompañar, evaluar y diferenciar la enseñanza con fidelidad al programa ATAL. Se trabajaron las prácticas basadas en evidencia que complementan el programa, qué observar durante cada visita y cómo registrarlo en los formatos, cómo se ve una sesión de primer grado y cada modalidad de acompañamiento pedagógico.</p>
+            <div class="fc-recursos">
+              <a href="https://drive.google.com/file/d/1Q21nV3ToZkaELR0dF2w-GollAykZs3wz/view?usp=sharing" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg> Presentación</a>
+            </div>
+            <div class="fc-padlet">
+              <div>
+                <b>¿Te quedaron dudas de la sesión?</b>
+                <p>Déjalas en el tablero de Padlet: las preguntas registradas allí se responderán en el próximo webinar.</p>
+              </div>
+              <a href="https://padlet.com/gomezpmaria/formacion-2-de-julio-estrategia-alfa-dtuabxx18sprfrv9" target="_blank" rel="noopener">Ir al Padlet <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+            </div>
+          </div>
+          <div class="fc-partes">
+            <p class="fc-partes-t">De la sesión al territorio</p>
+            <button type="button" class="fc-parte activo" data-video="iXvA_me85Nk"><span class="fc-parte-n">1</span><span class="fc-parte-t">Primera parte</span></button>
+            <button type="button" class="fc-parte" data-video="KtHbuQvwF9g"><span class="fc-parte-n">2</span><span class="fc-parte-t">Segunda parte</span></button>
+          </div>
+        </div>
 
-  <div class="fac-videos-grid" style="grid-template-columns: repeat(2, 1fr);">
-
-    <div class="fac-video-card">
-      <div class="fac-video-thumb" style="padding-top:56.25%; position:relative;">
-        <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/Q2EZxqJtbSs" title="Día 4 Primera parte" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="fac-video-body">
-        <p class="fac-video-part">Primera parte · 48:48</p>
-        <p class="fac-video-name">Evaluación formativa con Tangerine y monitoreo</p>
+        <div class="fc-dia" data-dia="j2" hidden>
+          <div class="fc-dia-main">
+            <button type="button" class="fc-player" data-video="BX67dsgG5C0" aria-label="Reproducir: Mesas de trabajo por operador, equipo rotor">
+              <img src="https://img.youtube.com/vi/BX67dsgG5C0/hqdefault.jpg" alt="" loading="lazy">
+              <span class="fc-player-play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="7,4 20,12 7,20"/></svg></span>
+              <span class="fc-player-et">Equipo ROTOR</span>
+            </button>
+            <p class="fc-dia-desc">Grabaciones de las mesas de trabajo de cada equipo operador durante la sesión del 2 de julio.</p>
+          </div>
+          <div class="fc-partes">
+            <p class="fc-partes-t">Mesas de trabajo por operador</p>
+            <button type="button" class="fc-parte activo" data-video="BX67dsgG5C0"><span class="fc-parte-n">1</span><span class="fc-parte-t">Equipo ROTOR</span></button>
+            <button type="button" class="fc-parte" data-video="18ONIT1OEa0"><span class="fc-parte-n">2</span><span class="fc-parte-t">Equipo Fraternidad Medellín · CTA</span></button>
+            <button type="button" class="fc-parte" data-video="MQgsC8hlHbc"><span class="fc-parte-n">3</span><span class="fc-parte-t">Equipo Universidad Católica del Norte</span></button>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="fac-video-card">
-      <div class="fac-video-thumb" style="padding-top:56.25%; position:relative;">
-        <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/Sen1iVGVEgo" title="Día 4 Segunda parte" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="fac-video-body">
-        <p class="fac-video-part">Segunda parte · 24:12</p>
-        <p class="fac-video-name">Evaluación formativa con Tangerine y monitoreo</p>
-      </div>
-    </div>
-
-    <div class="fac-video-card" style="grid-column: 1 / -1; width: calc(50% - 8px); margin: 0 auto;">
-      <div class="fac-video-thumb" style="padding-top:56.25%; position:relative;">
-        <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/HtzpHr5lCls" title="Día 4 Tercera parte" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="fac-video-body">
-        <p class="fac-video-part">Tercera parte · 55:05</p>
-        <p class="fac-video-name">Evaluación formativa con Tangerine y monitoreo</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-      </div><!-- fin cap-marzo -->
-
-      <!-- ===== PESTAÑA 2: JULIO ===== -->
-      <div id="cap-julio" class="mat-panel">
-        <div class="fac-dia-block" style="margin-top:8px;">
-          <div class="fac-dia-header">
-            <span class="fac-dia-badge">2 de julio</span>
-            <h3 class="fac-dia-title">Acompañamiento y evaluación con fidelidad a ATAL</h3>
-          </div>
-          <p style="font-size:13px; color:#4a7a5e; line-height:1.75; margin-bottom:20px; font-family:'Prompt',sans-serif;">Esta sesión marcó el paso de la formación inicial al trabajo en territorio: formación técnica para acompañar, evaluar y diferenciar la enseñanza con fidelidad al programa ATAL. Se trabajaron las prácticas basadas en evidencia que complementan el programa, qué observar durante cada visita y cómo registrarlo en los formatos, cómo se ve una sesión de primer grado y cada modalidad de acompañamiento pedagógico.</p>
-          <div class="fac-recursos" style="margin-bottom:20px; justify-content:center;">
-            <a href="https://drive.google.com/file/d/1Q21nV3ToZkaELR0dF2w-GollAykZs3wz/view?usp=sharing" target="_blank" class="fac-recurso-btn">↓ Presentación</a>
-          </div>
-          <!-- PADLET -->
-            <div style="background:#f0f8f3; border:1.5px solid #d6ede2; border-radius:10px; padding:20px 22px; margin-bottom:28px; display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
-              <div style="flex:1; min-width:240px;">
-                <p style="font-size:13px; font-weight:600; color:#0b3d25; margin:0 0 4px; font-family:'Prompt',sans-serif;">¿Te quedaron dudas de la sesión?</p>
-                <p style="font-size:12px; color:#4a7a5e; line-height:1.65; margin:0; font-family:'Prompt',sans-serif;">Déjalas en el tablero de Padlet: las preguntas registradas allí se responderán en el próximo webinar.</p>
-              </div>
-              <a href="https://padlet.com/gomezpmaria/formacion-2-de-julio-estrategia-alfa-dtuabxx18sprfrv9" target="_blank" class="fac-recurso-btn" style="flex-shrink:0;">✏️ Ir al Padlet</a>
-            </div>
-          <!-- FORMACIÓN MAGISTRAL -->
-          <p class="mat-sublabel" style="margin-top:8px;">Formación magistral</p>
-          <div class="fac-videos-grid">
-
-            <div class="fac-video-card">
-              <div class="fac-video-thumb" style="padding-top:56.25%; position:relative;">
-                <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/iXvA_me85Nk" title="Formación magistral Primera parte" allowfullscreen loading="lazy"></iframe>
-              </div>
-              <div class="fac-video-body">
-                <p class="fac-video-part">Primera parte</p>
-                <p class="fac-video-name">De la sesión al territorio — Formación magistral</p>
-              </div>
-            </div>
-
-            <div class="fac-video-card">
-              <div class="fac-video-thumb" style="padding-top:56.25%; position:relative;">
-                <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/KtHbuQvwF9g?si=G_bkXxbrRXQq2gku" title="Formación magistral Segunda parte" allowfullscreen loading="lazy"></iframe>
-              </div>
-              <div class="fac-video-body">
-                <p class="fac-video-part">Segunda parte</p>
-                <p class="fac-video-name">De la sesión al territorio — Formación magistral</p>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- MESAS DE TRABAJO POR OPERADOR -->
-          <p class="mat-sublabel">Mesas de trabajo por operador</p>
-          <div class="fac-videos-grid">
-
-            <div class="fac-video-card">
-              <div class="fac-video-thumb" style="padding-top:56.25%; position:relative;">
-                <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/BX67dsgG5C0" title="Mesa de trabajo ROTOR" allowfullscreen loading="lazy"></iframe>
-              </div>
-              <div class="fac-video-body">
-                <p class="fac-video-part">Mesa de trabajo</p>
-                <p class="fac-video-name">Equipo ROTOR</p>
-              </div>
-            </div>
-
-            <div class="fac-video-card">
-              <div class="fac-video-thumb" style="padding-top:56.25%; position:relative;">
-                <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/18ONIT1OEa0" title="Mesa de trabajo Fraternidad Medellín CTA" allowfullscreen loading="lazy"></iframe>
-              </div>
-              <div class="fac-video-body">
-                <p class="fac-video-part">Mesa de trabajo</p>
-                <p class="fac-video-name">Equipo Fraternidad Medellín — CTA</p>
-              </div>
-            </div>
-
-            <div class="fac-video-card">
-              <div class="fac-video-thumb" style="padding-top:56.25%; position:relative;">
-                <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/MQgsC8hlHbc" title="Mesa de trabajo Universidad Católica del Norte" allowfullscreen loading="lazy"></iframe>
-              </div>
-              <div class="fac-video-body">
-                <p class="fac-video-part">Mesa de trabajo</p>
-                <p class="fac-video-name">Equipo Universidad Católica del Norte</p>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-
-    </div><!-- fin fac-inner -->
   </section>
-
   <!-- TANGERINE -->
   <section id="tangerine" class="fac-section fac-tang-section">
     <div class="fac-inner">
