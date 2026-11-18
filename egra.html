@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Resultados EGRA — Estrategia ALFA</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Resultados de la evaluación EGRA por institución educativa en los 116 municipios de Antioquia." />
+<meta name="description" content="Qué es la prueba EGRA, cómo leer el informe y resultados por institución educativa en los 116 municipios de Antioquia." />
 <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 <link href="css/bootstrap.min.css" rel="stylesheet" />
 <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
@@ -12,15 +12,15 @@
 <link href="css/flexslider.css" rel="stylesheet" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
-<link href="css/egra.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/vendor/leaflet.css" />
+<link href="css/egra.css?v=6" rel="stylesheet" />
 </head>
 <body>
 <div id="wrapper">
 
-  <!-- HEADER -->
+  <!-- HEADER (igual en todas las páginas) -->
   <header>
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
@@ -50,200 +50,325 @@
   </header>
 
   <!-- HERO -->
-  <section class="egra-hero">
-    <div class="egra-hero-bg">EGRA</div>
-    <div class="egra-hero-inner">
-      <p class="egra-hero-label">Evaluación de Lectura en Grados Iniciales</p>
-      <h1 class="egra-hero-title">Resultados <span class="egra-hero-accent">EGRA</span> por institución</h1>
-      <p class="egra-hero-sub">Consulta los informes de línea base y línea final 2026 de cada sede educativa en los 116 municipios de Antioquia.</p>
-      <div class="egra-hero-stats">
-        <div class="egra-stat">
-          <span class="egra-stat-n" id="statSedes">—</span>
-          <span class="egra-stat-l">sedes evaluadas</span>
+  <section class="eg-hero">
+    <div class="eg-hero-bg" aria-hidden="true">EGRA</div>
+    <div class="eg-hero-in">
+      <p class="eg-hero-ey">Evaluación de Lectura en Grados Iniciales</p>
+      <h1>Resultados <span>EGRA</span> por institución</h1>
+      <p class="eg-hero-sub">Consulta los informes de línea base y línea final 2026 de cada sede educativa en los 116 municipios de Antioquia.</p>
+      <div class="eg-stats">
+        <div class="eg-stat"><b id="statSedes">—</b><small>sedes</small></div>
+        <div class="eg-stat"><b data-count="116">0</b><small>municipios</small></div>
+        <div class="eg-stat"><b id="statInformesBase">—</b><small>informes de línea base</small></div>
+        <div class="eg-stat"><b id="statInformesFinal">—</b><small>informes de línea final</small></div>
+      </div>
+      <a class="eg-hero-cta" href="#resultados" data-buscar>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        Buscar mi sede
+      </a>
+    </div>
+  </section>
+
+  <!-- MENÚ DE SECCIONES (sticky) -->
+  <nav class="eg-nav" aria-label="Secciones de la página">
+    <div class="eg-wrap">
+      <a href="#que-es">¿Qué es EGRA?</a>
+      <a href="#como-leer">¿Cómo leer tu informe?</a>
+      <a href="#resultados">Resultados por sede</a>
+    </div>
+  </nav>
+
+  <!-- ¿QUÉ ES EGRA? · ENTRADA -->
+  <section id="que-es" class="eg-intro">
+    <div class="eg-wrap eg-intro-grid">
+      <div>
+        <p class="eg-ey eg-rv">¿Qué es la prueba EGRA?</p>
+        <h2 class="eg-frase" data-frase>Aprender a leer es como <em>construir una casa:</em> requiere bases sólidas desde el principio.</h2>
+        <p class="eg-intro-p eg-rv" data-i="3"><b>EGRA</b> es una prueba individual y oral que evalúa cómo leen niñas y niños de primer grado. No busca poner una nota: sus resultados son el mapa para planear y acompañar a tiempo a quien lo necesita.</p>
+        <div class="eg-chips eg-rv" data-i="4"><span>Individual y oral</span><span>5 a 10 minutos</span><span>Inicio y final del año</span></div>
+      </div>
+      <div class="eg-rv" data-i="2">
+        <div class="eg-cel">
+          <div class="eg-cel-pant">
+            <!-- Mientras no exista video/que-es-egra.mp4 se muestra el enlace a Instagram -->
+            <a class="eg-cel-ig" href="https://www.instagram.com/p/De-LRn2OgMo/" target="_blank" rel="noopener" aria-label="Ver en Instagram: ¿Qué son las pruebas EGRA?">
+              <span class="eg-cel-play"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="8,5 19,12 8,19"/></svg></span>
+            </a>
+            <video class="eg-cel-video" data-src="video/que-es-egra.mp4" poster="img/que-es-egra.jpg" muted loop playsinline preload="none" hidden aria-label="Video: ¿Qué son las pruebas EGRA?"></video>
+            <!-- Controles del video: pausar/reproducir y barra para adelantar o devolver -->
+            <div class="eg-cel-ctrl" hidden>
+              <button type="button" class="eg-cel-pp" aria-label="Pausar">
+                <svg class="eg-ic-pausa" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+                <svg class="eg-ic-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="8,5 19,12 8,19"/></svg>
+              </button>
+              <input type="range" class="eg-cel-barra" min="0" max="1000" step="1" value="0" aria-label="Avance del video">
+            </div>
+            <button type="button" class="eg-cel-son" aria-label="Activar sonido" aria-pressed="false" hidden>
+              <svg class="eg-son-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v4h3l5 4V6L7 10H4z"/><path d="M17 9l4 6M21 9l-4 6"/></svg>
+              <svg class="eg-son-on" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v4h3l5 4V6L7 10H4z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/></svg>
+            </button>
+          </div>
         </div>
-        <div class="egra-stat">
-          <span class="egra-stat-n">116</span>
-          <span class="egra-stat-l">municipios</span>
-        </div>
-        <div class="egra-stat">
-          <span class="egra-stat-n" id="statInformesBase">—</span>
-          <span class="egra-stat-l">informes de línea base</span>
-        </div>
-        <div class="egra-stat">
-          <span class="egra-stat-n" id="statInformesFinal">—</span>
-          <span class="egra-stat-l">informes de línea final</span>
-        </div>
+        <p class="eg-cel-tit">¿Qué son las pruebas EGRA?</p>
       </div>
     </div>
   </section>
-  <!-- GUÍA: cómo leer el informe -->
-  <section class="egra-guia">
-    <div class="egra-guia-inner">
-      <p class="egra-guia-eyebrow">Cómo leer tu informe</p>
-      <h2 class="egra-guia-title">Entiende los resultados EGRA</h2>
-      <p class="egra-guia-sub">
-        Cada informe muestra en qué punto de la lectura está el grupo evaluado de una sede. Mira este video para
-        entender cómo interpretar cada parte y qué significan los resultados.
-      </p>
-      <div class="egra-guia-row">
-        <div class="egra-guia-video">
-          <div class="egra-guia-thumb">
-            <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/5suhDsYaacY" title="Cómo leer el informe de resultados EGRA" allowfullscreen loading="lazy"></iframe>
+
+  <!-- ¿QUÉ ES EGRA? · PESTAÑAS QUE SE DESLIZAN -->
+  <section class="eg-exp">
+    <div class="eg-wrap">
+      <div class="eg-tabs eg-rv" role="tablist" aria-label="Explicación de la prueba EGRA">
+        <span class="eg-tabs-ind" aria-hidden="true"></span>
+        <button type="button" role="tab" aria-selected="true" data-t="0"><span>1</span>La prueba</button>
+        <button type="button" role="tab" aria-selected="false" data-t="1"><span>2</span>Cómo se aplica</button>
+        <button type="button" role="tab" aria-selected="false" data-t="2"><span>3</span>Perfil lector y riesgo</button>
+      </div>
+      <div class="eg-prog" aria-hidden="true"><b></b></div>
+
+      <div class="eg-vent">
+        <div class="eg-pista">
+
+          <!-- 1 · LA PRUEBA -->
+          <div class="eg-pnl" role="tabpanel">
+            <div class="eg-pnl-cab">
+              <h3 class="eg-it" data-k="0">¿Qué son las pruebas EGRA?</h3>
+              <div class="eg-it" data-k="1">
+                <p><b>EGRA</b> (Early Grade Reading Assessment) es una prueba individual y oral que evalúa las habilidades de lectura temprana.</p>
+                <p class="eg-dest">Mide desde el reconocimiento de los sonidos de las letras hasta la comprensión de lo que se lee.</p>
+              </div>
+            </div>
+            <div class="eg-mide">
+              <div class="eg-mc eg-it" data-k="2">
+                <i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4H9a3 3 0 0 1 3 3v13a2.5 2.5 0 0 0-2.5-2.5H3.5A1.5 1.5 0 0 1 2 16z"/><path d="M22 5.5A1.5 1.5 0 0 0 20.5 4H15a3 3 0 0 0-3 3v13a2.5 2.5 0 0 1 2.5-2.5h6a1.5 1.5 0 0 0 1.5-1.5z"/></svg></i>
+                <b>Fluidez lectora</b><p>Palabras leídas correctamente por minuto (PPM).</p>
+              </div>
+              <div class="eg-mc eg-it" data-k="3">
+                <i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></i>
+                <b>Comprensión lectora</b><p>Respuestas correctas a preguntas sobre un texto leído.</p>
+              </div>
+              <div class="eg-mc eg-it" data-k="4">
+                <i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v4h3l5 4V6L7 10H4z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/></svg></i>
+                <b>Comprensión oral</b><p>Respuestas correctas a preguntas sobre un texto narrado por el evaluador.</p>
+              </div>
+              <div class="eg-mc eg-it" data-k="5">
+                <i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 18v-3M10 18v-6M14 18V9M18 18V6"/></svg></i>
+                <b>Perfil lector</b><p>Clasificación según las PPM que logra el estudiante.</p>
+              </div>
+            </div>
           </div>
-          <div class="egra-guia-vbody">
-            <p class="egra-guia-vname">Cómo leer el informe de resultados EGRA</p>
+
+          <!-- 2 · CÓMO SE APLICA -->
+          <div class="eg-pnl" role="tabpanel">
+            <div class="eg-pnl-cab">
+              <h3 class="eg-it" data-k="0">¿Cómo se desarrolla la prueba?</h3>
+              <p class="eg-it" data-k="1">Un aplicador la hace de forma <b>individual y directa</b> con cada estudiante, en <b>5 a 10 minutos</b>, procurando que esté cómodo y con poco estrés. Tiene filtros para que participen también quienes tienen bajo desempeño.</p>
+            </div>
+            <div class="eg-pasos">
+              <div class="eg-paso eg-it" data-k="2"><span class="eg-paso-n">1</span><div class="eg-paso-c"><b>Sonido de las letras</b><p>Ve una cuadrícula de letras en desorden y dice el <strong>sonido</strong> de cada una, no su nombre.</p><em>1 minuto</em></div></div>
+              <div class="eg-paso eg-it" data-k="3"><span class="eg-paso-n">2</span><div class="eg-paso-c"><b>Fluidez lectora</b><p>Lee en voz alta un texto narrativo mientras el evaluador marca errores y omisiones.</p><em>1 minuto · PPM</em></div></div>
+              <div class="eg-paso eg-it" data-k="4"><span class="eg-paso-n">3</span><div class="eg-paso-c"><b>Comprensión lectora</b><p>Lee un texto a su nivel y responde <strong>6 preguntas</strong> sobre lo que leyó.</p><em>Solo desde 24 PPM</em></div></div>
+              <div class="eg-paso eg-it" data-k="5"><span class="eg-paso-n">4</span><div class="eg-paso-c"><b>Comprensión oral</b><p>Escucha una historia leída por el evaluador y responde <strong>6 preguntas</strong>.</p><em>Escucha y responde</em></div></div>
+            </div>
           </div>
+
+          <!-- 3 · PERFIL LECTOR Y RIESGO -->
+          <div class="eg-pnl" role="tabpanel">
+            <div class="eg-defs">
+              <div class="eg-def eg-it" data-k="0">
+                <h4><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 18v-3M10 18v-6M14 18V9M18 18V6"/></svg></i>¿Qué es el perfil lector?</h4>
+                <p>Clasifica a cada estudiante en <b>7 etapas</b> según su avance en lectura: el principio alfabético, la decodificación, la fluidez y la comprensión.</p>
+              </div>
+              <div class="eg-def eg-it" data-k="1">
+                <h4><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9.5 16.5h-19z"/><path d="M12 10v4M12 17.5v.5"/></svg></i>¿Qué es el nivel de riesgo?</h4>
+                <p>Agrupa esas etapas en <b>3 niveles</b> para identificar a tiempo a quienes pueden tener dificultades en su avance.</p>
+              </div>
+            </div>
+            <!-- Las barras y las franjas de riesgo las arma js/egra.js -->
+            <div class="eg-esc" id="egEscalera"></div>
+            <p class="eg-pista-hint eg-it" data-k="3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V10m0-1.5a1.5 1.5 0 0 1 3 0V11m0-1a1.5 1.5 0 0 1 3 0v4.5a5.5 5.5 0 0 1-5.5 5.5h-1a5 5 0 0 1-4-2l-2.8-3.6a1.5 1.5 0 0 1 2.3-1.9L9 14"/></svg>
+              Toca un nivel de riesgo para ver qué significa y qué actividades ayudan.
+            </p>
+            <p class="eg-fuente">PPM: palabras leídas correctamente por minuto. Rangos de primer grado. Fuente: Antioquia, análisis de resultados de la evaluación EGRA 2024, Banco Mundial.</p>
+          </div>
+
         </div>
-        <div class="egra-guia-tips">
+      </div>
+
+      <div class="eg-navx">
+        <button type="button" data-mov="-1">← <span></span></button>
+        <button type="button" class="eg-sig" data-mov="1"><span></span> →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ventana emergente del nivel de riesgo -->
+  <dialog class="eg-pop" id="egPop" aria-label="Nivel de riesgo">
+    <button type="button" class="eg-pop-x" aria-label="Cerrar">×</button>
+    <div class="eg-pop-c" id="egPopC"></div>
+  </dialog>
+
+  <!-- CÓMO LEER TU INFORME -->
+  <section id="como-leer" class="eg-guia">
+    <div class="eg-wrap">
+      <div class="eg-cab eg-rv">
+        <div>
+          <p class="eg-ey">¿Cómo leer tu informe?</p>
+          <h2>Entiende los resultados de tu sede</h2>
+        </div>
+        <p>Cada informe muestra en qué punto de la lectura está el grupo evaluado de una sede. Mira el video para entender cada parte.</p>
+      </div>
+      <div class="eg-guia-row">
+        <div class="eg-guia-video eg-rv" data-i="1">
+          <button type="button" class="eg-yt" data-video="5suhDsYaacY" aria-label="Reproducir: Cómo leer el informe de resultados EGRA">
+            <img src="https://img.youtube.com/vi/5suhDsYaacY/hqdefault.jpg" alt="" loading="lazy">
+            <span class="eg-yt-play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="8,5 19,12 8,19"/></svg></span>
+          </button>
+          <p class="eg-guia-vname">Cómo leer el informe de resultados EGRA</p>
+        </div>
+        <div class="eg-guia-tips eg-rv" data-i="2">
           <h3>Ten en cuenta</h3>
-          <div class="egra-guia-group">
-            <p class="egra-guia-group-label">Al socializar</p>
-            <ul class="egra-guia-list">
-              <li>Cada sede tiene dos mediciones: la <strong>línea base</strong> (punto de partida) y la <strong>línea final</strong>. Compararlas muestra el avance del grupo durante el año.</li>
-              <li><strong>Úsalos con responsabilidad</strong>, para fortalecer la planeación y el acompañamiento, sin sacar los datos de su contexto.</li>
-            </ul>
-          </div>
-          <div class="egra-guia-group">
-            <p class="egra-guia-group-label">Al leer el informe</p>
-            <ul class="egra-guia-list">
-              <li>Antes de priorizar, <strong>contrasta con la progresión de ATAL</strong>: una letra con error puede no haberse enseñado aún.</li>
-              <li><strong>Perfiles lectores:</strong> al terminar primero se espera estar al menos en Automatizado (35–49 PPM).</li>
-              <li>La <strong>comprensión lectora</strong> puede aparecer "sin datos": solo se evalúa en quienes ya leen 24 PPM.</li>
-
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- CONTENIDO PRINCIPAL -->
-  <div class="egra-main">
-
-    <!-- PANEL IZQUIERDO: MAPA -->
-    <aside class="egra-map-panel">
-      <div class="egra-map-header">
-        <p class="egra-map-title">Selecciona un municipio</p>
-                <p class="egra-map-hint">Haz clic para filtrar · Hover para ver cobertura</p>
-        <div class="egra-map-toggle" role="group" aria-label="Medición que muestra el mapa">
-          <button type="button" class="egra-map-toggle-btn" data-medicion="link_linea_base" aria-pressed="false">Línea base</button>
-          <button type="button" class="egra-map-toggle-btn activo" data-medicion="link_linea_final" aria-pressed="true">Línea final</button>
-        </div>
-      </div>
-      <div id="egra-map"></div>
-      <div class="egra-leyenda">
-        <div class="egra-leyenda-row">
-          <span class="egra-leyenda-label">&lt;60%</span>
-          <div class="egra-leyenda-bar"></div>
-          <span class="egra-leyenda-label">100%</span>
-        </div>
-        <div class="egra-leyenda-ends">
-          <span class="egra-leyenda-end">Sin informes</span>
-          <span class="egra-leyenda-end">Cobertura completa</span>
-        </div>
-        <div class="egra-leyenda-gris">
-          <span class="egra-leyenda-gris-box"></span>
-          <span class="egra-leyenda-end">Municipio no incluido en ALFA</span>
-        </div>
-      </div>
-      <button class="egra-map-reset" id="btnMunicipioActivo" style="display:none; margin-bottom:8px;">✕ Ver todos</button>
-    </aside>
-
-    <!-- PANEL DERECHO -->
-    <section class="egra-table-panel">
-
-      <!-- AYUDA -->
-      <div class="egra-ayuda-wrap">
-        <button class="egra-ayuda-btn" id="btnAyuda">¿Cómo usar esta página?</button>
-        <div class="egra-ayuda-panel" id="panelAyuda" style="display:none;">
-          <ul class="egra-ayuda-lista">
-            <li><strong>Mapa:</strong> haz clic en un municipio para ver solo sus sedes en la tabla. Haz clic en "Limpiar filtros" para borrar la selección actual.</li>
-            <li><strong>Subregión / Operador:</strong> filtra por zona geográfica u operador responsable.</li>
-            <li><strong>Buscar:</strong> escribe el nombre de una sede, institución o municipio para encontrarla directamente.</li>
+          <p class="eg-guia-k">Al socializar</p>
+          <ul>
+            <li>Cada sede tiene dos mediciones: la <strong>línea base</strong> (punto de partida) y la <strong>línea final</strong>. Compararlas muestra el avance del grupo durante el año.</li>
+            <li><strong>Úsalos con responsabilidad</strong>, para fortalecer la planeación y el acompañamiento, sin sacar los datos de su contexto.</li>
+          </ul>
+          <p class="eg-guia-k">Al leer el informe</p>
+          <ul>
+            <li>Antes de priorizar, <strong>contrasta con la progresión de ATAL</strong>: una letra con error puede no haberse enseñado aún.</li>
+            <li><strong>Perfiles lectores:</strong> al terminar primero se espera estar al menos en Automatizado (35–49 PPM).</li>
+            <li>La <strong>comprensión lectora</strong> puede aparecer "sin datos": solo se evalúa en quienes ya leen 24 PPM.</li>
           </ul>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- ENCABEZADO CONTEXTUAL -->
-      <div class="egra-contexto" id="egraContexto">
-        <div class="egra-contexto-info">
-          <span class="egra-contexto-municipio" id="ctxMunicipio"></span>
-          <div class="egra-contexto-meta">
-            <span class="egra-contexto-chip">Subregión: <strong id="ctxSubregion"></strong></span>
-            <span class="egra-contexto-chip">Operador: <strong id="ctxOperador"></strong></span>
-            <span class="egra-contexto-chip">Sedes: <strong id="ctxSedes"></strong></span>
+  <!-- RESULTADOS POR SEDE -->
+  <section id="resultados" class="eg-res">
+    <div class="eg-wrap eg-res-cab">
+      <div class="eg-cab">
+        <div>
+          <p class="eg-ey">Resultados por sede</p>
+          <h2>Encuentra el informe de tu sede</h2>
+        </div>
+        <p>Informes EGRA 2026: línea base, aplicada entre abril y mayo, y línea final. La tabla se actualiza a medida que los informes estén disponibles.</p>
+      </div>
+    </div>
+
+    <div class="egra-main">
+
+      <!-- MAPA -->
+      <aside class="egra-map-panel">
+        <div class="egra-map-header">
+          <p class="egra-map-title">Selecciona un municipio</p>
+          <p class="egra-map-hint">Toca o haz clic en un municipio para ver sus sedes</p>
+          <div class="egra-map-toggle" role="group" aria-label="Medición que muestra el mapa">
+            <button type="button" class="egra-map-toggle-btn" data-medicion="link_linea_base" aria-pressed="false">Línea base</button>
+            <button type="button" class="egra-map-toggle-btn activo" data-medicion="link_linea_final" aria-pressed="true">Línea final</button>
           </div>
         </div>
-        <div class="egra-contexto-cobertura">
-          <div class="egra-contexto-pct" id="ctxPct">—</div>
-          <div class="egra-contexto-pct-label">con informe</div>
+        <div id="egra-map"></div>
+        <div class="egra-leyenda">
+          <div class="egra-leyenda-row">
+            <span class="egra-leyenda-label">&lt;60%</span>
+            <div class="egra-leyenda-bar"></div>
+            <span class="egra-leyenda-label">100%</span>
+          </div>
+          <div class="egra-leyenda-ends">
+            <span class="egra-leyenda-end">Sin informes</span>
+            <span class="egra-leyenda-end">Cobertura completa</span>
+          </div>
+          <div class="egra-leyenda-gris">
+            <span class="egra-leyenda-gris-box"></span>
+            <span class="egra-leyenda-end">Municipio no incluido en ALFA</span>
+          </div>
         </div>
-      </div>
-
-      <!-- NOTA (arriba de los filtros) -->
-      <div class="egra-nota">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#018d38" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:1px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        Informes EGRA 2026: línea base, aplicada entre abril y mayo, y línea final. La tabla se actualiza a medida que los informes estén disponibles.
-      </div>
-
-      <!-- FILTROS -->
-      <div class="egra-filters">
-        <div class="egra-filter-group" style="justify-content:flex-end; align-self:flex-end;">
-        <button class="egra-limpiar-btn" onclick="limpiarFiltros()">✕ Limpiar filtros</button>
-        </div>
-        <div class="egra-filter-group">
-          <label class="egra-filter-label">Subregión</label>
-          <select class="egra-select" id="filtroSubregion">
-            <option value="">Todas</option>
-          </select>
-        </div>
-        <div class="egra-filter-group">
-          <label class="egra-filter-label">Operador</label>
-          <select class="egra-select" id="filtroOperador">
-            <option value="">Todos</option>
-          </select>
-        </div>
-        <div class="egra-filter-group egra-filter-search">
-          <label class="egra-filter-label">Buscar sede, institución o municipio</label>
-          <input type="text" class="egra-input" id="filtroBusqueda" placeholder="Ej: Escuela Rural El Pino…">
-        </div>
-      </div>
+        <button type="button" class="egra-map-reset" id="btnMunicipioActivo" hidden>✕ Ver todos</button>
+      </aside>
 
       <!-- TABLA -->
-      <div class="egra-table-wrap">
-        <p class="egra-count" id="contadorResultados">Cargando…</p>
-        <div class="egra-table-scroll">
-          <table class="egra-table" id="tablaEGRA">
-            <thead>
-              <tr>
-                <th>Sede</th>
-                <th>Institución</th>
-                <th class="col-municipio">Municipio</th>
-                <th>Operador</th>
-                <th>Línea base 2026</th>
-                <th>Línea final 2026</th>
-              </tr>
-            </thead>
-            <tbody id="tablaBody">
-              <tr><td colspan="6" class="egra-loading">Cargando datos…</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+      <div class="egra-table-panel">
 
-    </section>
-  </div>
+        <div class="egra-ayuda-wrap">
+          <button type="button" class="egra-ayuda-btn" id="btnAyuda" aria-expanded="false" aria-controls="panelAyuda">¿Cómo usar esta página?</button>
+          <div class="egra-ayuda-panel" id="panelAyuda" hidden>
+            <ul class="egra-ayuda-lista">
+              <li><strong>Mapa:</strong> haz clic en un municipio para ver solo sus sedes en la tabla. Haz clic en "Limpiar filtros" para borrar la selección.</li>
+              <li><strong>Subregión / Operador:</strong> filtra por zona geográfica u operador responsable.</li>
+              <li><strong>Buscar:</strong> escribe el nombre de una sede, institución o municipio. No importan las tildes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="egra-contexto" id="egraContexto">
+          <div class="egra-contexto-info">
+            <span class="egra-contexto-municipio" id="ctxMunicipio"></span>
+            <div class="egra-contexto-meta">
+              <span class="egra-contexto-chip">Subregión: <strong id="ctxSubregion"></strong></span>
+              <span class="egra-contexto-chip">Operador: <strong id="ctxOperador"></strong></span>
+              <span class="egra-contexto-chip">Sedes: <strong id="ctxSedes"></strong></span>
+            </div>
+          </div>
+          <div class="egra-contexto-cobertura">
+            <div class="egra-contexto-pct" id="ctxPct">—</div>
+            <div class="egra-contexto-pct-label" id="ctxPctLabel">con informe</div>
+          </div>
+        </div>
+
+        <div class="egra-filters">
+          <div class="egra-filter-group egra-filter-search">
+            <label class="egra-filter-label" for="filtroBusqueda">Buscar sede, institución o municipio</label>
+            <input type="search" class="egra-input" id="filtroBusqueda" placeholder="Ej: Escuela Rural El Pino…" autocomplete="off">
+          </div>
+          <div class="egra-filter-group">
+            <label class="egra-filter-label" for="filtroSubregion">Subregión</label>
+            <select class="egra-select" id="filtroSubregion"><option value="">Todas</option></select>
+          </div>
+          <div class="egra-filter-group">
+            <label class="egra-filter-label" for="filtroOperador">Operador</label>
+            <select class="egra-select" id="filtroOperador"><option value="">Todos</option></select>
+          </div>
+          <div class="egra-filter-group egra-filter-limpiar">
+            <button type="button" class="egra-limpiar-btn" id="btnLimpiar">✕ Limpiar filtros</button>
+          </div>
+        </div>
+
+        <div class="egra-table-wrap">
+          <p class="egra-count" id="contadorResultados" aria-live="polite">Cargando…</p>
+          <div class="egra-table-scroll">
+            <table class="egra-table" id="tablaEGRA">
+              <thead>
+                <tr>
+                  <th>Sede</th>
+                  <th>Institución</th>
+                  <th class="col-municipio">Municipio</th>
+                  <th>Operador</th>
+                  <th>Línea base 2026</th>
+                  <th>Línea final 2026</th>
+                </tr>
+              </thead>
+              <tbody id="tablaBody">
+                <tr><td colspan="6" class="egra-loading">Cargando datos…</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <button type="button" class="egra-ver-mas" id="btnVerMas" hidden></button>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer id="pie"></footer>
+</div>
 
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
-<script src="js/egra.js"></script>
+<script src="js/vendor/leaflet.js"></script>
+<script src="js/vendor/papaparse.min.js"></script>
+<script src="js/egra.js?v=5"></script>
 <script src="js/footer.js"></script>
 </body>
 </html>
