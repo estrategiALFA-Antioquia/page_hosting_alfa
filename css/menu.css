@@ -1,0 +1,65 @@
+/* ─────────────────────────────────────────────────────────────
+   menu.css — Desplegables del menú principal · estrategialfa.org
+   Los paneles los arma js/menu.js. Solo se ven en computador (992 px o más);
+   en celular el menú sigue siendo la lista de páginas.
+   Va después de style.css porque algunas reglas de la plantilla
+   (header .nav li a) pintan de menta todos los enlaces del menú.
+───────────────────────────────────────────────────────────── */
+
+.mn-dd{ display:none; }
+
+@media (min-width:992px){
+  header .navbar-nav > li.mn-tiene{ position:relative; }
+    /* La flecha ocupa el espacio que se le quita al relleno derecho: el menú mide lo mismo que antes y no baja de línea */
+  header .navbar-nav > li.mn-tiene > a{ display:flex; align-items:center; gap:3px; padding-right:4px; }
+  .mn-flecha{ width:8px; height:8px; opacity:.7; transition:transform .3s cubic-bezier(.2,.8,.2,1); }
+  li.mn-tiene:hover .mn-flecha, li.mn-tiene:focus-within .mn-flecha{ transform:rotate(180deg); }
+
+  /* Panel */
+  .mn-dd{
+    display:block; position:absolute; z-index:1000; top:100%; left:50%;
+    min-width:280px; padding:10px; border-radius:16px;
+    background:#0a3a2c; border:1px solid rgba(143,224,176,.25); box-shadow:0 24px 50px rgba(0,0,0,.3);
+    opacity:0; visibility:hidden; transform:translate(calc(-50% + var(--mn-x, 0px)), 8px);
+    transition:opacity .25s, transform .35s cubic-bezier(.2,.8,.2,1), visibility 0s .25s;
+  }
+  /* Puente invisible para que el panel no se cierre al bajar el mouse */
+  .mn-dd::before{ content:""; position:absolute; left:0; right:0; top:-14px; height:14px; }
+  li.mn-tiene:hover > .mn-dd, li.mn-tiene:focus-within > .mn-dd{
+    opacity:1; visibility:visible; transform:translate(calc(-50% + var(--mn-x, 0px)), 0);
+    transition:opacity .25s, transform .35s cubic-bezier(.2,.8,.2,1), visibility 0s;
+  }
+  li.mn-tiene.mn-cerrado > .mn-dd{ opacity:0; visibility:hidden; }
+
+  .mn-dd ul{ list-style:none; margin:0; padding:0; }
+  .mn-dd.mn-dos{ min-width:520px; }
+  .mn-dd.mn-dos ul{ display:grid; grid-template-columns:1fr 1fr; column-gap:8px; }
+
+  /* Enlaces: selector largo a propósito para ganarle a "header .nav li a" de la plantilla */
+  header .nav .mn-dd li a.mn-link{
+    display:block; padding:12px 14px; border-radius:12px; text-decoration:none;
+    font-family:'Prompt',sans-serif; text-transform:none; letter-spacing:0; line-height:1.3; white-space:normal;
+    color:#eaf6ef !important; background:transparent !important;
+    border-bottom:1px solid rgba(255,255,255,.07); transition:background .2s;
+  }
+  header .nav .mn-dd li:last-child a.mn-link,
+  header .nav .mn-dd.mn-dos li:nth-last-child(-n+2) a.mn-link{ border-bottom:0; }
+  header .nav .mn-dd li a.mn-link:hover,
+  header .nav .mn-dd li a.mn-link:focus-visible{ background:rgba(143,224,176,.1) !important; outline:none; }
+
+  .mn-link b{ display:block; font-size:14px; font-weight:500; transition:color .2s; }
+  /* Punto menta al pasar el mouse: va en el margen para que el texto no se mueva */
+  header .nav .mn-dd li a.mn-link{ position:relative; }
+  .mn-link b::before{
+    content:""; position:absolute; left:5px; top:19px; width:5px; height:5px; border-radius:50%;
+    background:#8FE0B0; opacity:0; transform:scale(.4); transition:opacity .2s, transform .3s cubic-bezier(.2,.8,.2,1);
+  }
+    .mn-link small{ display:block; margin-top:2px; font-size:12px; font-weight:400; line-height:1.4; color:rgba(234,246,239,.65); }
+  header .nav .mn-dd li a.mn-link:hover b,
+  header .nav .mn-dd li a.mn-link:focus-visible b{ color:#8FE0B0; }
+  .mn-link:hover b::before, .mn-link:focus-visible b::before{ opacity:1; transform:none; }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .mn-dd, .mn-flecha, .mn-link b::before{ transition:none !important; }
+}
